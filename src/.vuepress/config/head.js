@@ -16,7 +16,18 @@ module.exports = [
   // Twitter
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@vue_a11y' }],
-  ['meta', { vmid: 'twitter-image', name: 'twitter:image', content: ''}],
+  ['meta', { vmid: 'twitter-image', name: 'twitter:image', content: '/img/social-share.png'}],
+
+  // Facebook
+  ['meta', { property: 'og:site_name', content: 'Vue A11y' }],
+  ['meta', { property: 'og:type', content: 'website' }],
+  ['meta', { property: 'og:image', content: '/img/social-share.png' }],
+  ['meta', { property: 'og:image:type', content: 'image/png' }],
+  ['meta', { property: 'og:image:width', content: '1200' }],
+  ['meta', { property: 'og:image:height', content: '360' }],
+  
+  // Schema and google+
+  ['meta', {  itemprop: 'image', content: '/img/social-share.png' }],
 
   // Link
   ['link', { href: "//cdn-images.mailchimp.com/embedcode/classic-10_7.css", rel: "stylesheet", type: "text/css" }],
