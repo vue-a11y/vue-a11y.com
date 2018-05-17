@@ -1,0 +1,32 @@
+{
+  "name": "vue-a11y-website",
+  "version": "0.0.1",
+  "description": "The website of Vue-a11y project, powered by Vuepress",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "deploy": "surge src/.vuepress/dist vue-a11y.surge.sh",
+    "eject": "vuepress eject src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue-a11y/website.git"
+  },
+  "keywords": [
+    "vuepress",
+    "accessibility",
+    "a11y",
+    "Vue.js",
+    "static",
+    "site",
+    "prerender",
+    "docs"
+  ],
+  "author": "Alan Ktquez <ktquez@gmail.com> (https://medium.com/@ktquez)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vue-a11y/website/issues"
+  },
+  "homepage": "https://github.com/vue-a11y/website#readme"
+}
