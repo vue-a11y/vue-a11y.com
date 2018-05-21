@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "deploy": "gh-pages src/.vuepress/dist",
+    "deploy": "gh-pages -d src/.vuepress/dist",
     "eject": "vuepress eject src"
   },
   "repository": {
