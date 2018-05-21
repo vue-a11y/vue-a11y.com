@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "deploy": "surge src/.vuepress/dist vue-a11y.surge.sh",
+    "deploy": "gh-pages src/.vuepress/dist",
     "eject": "vuepress eject src"
   },
   "repository": {
@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/vue-a11y/website/issues"
   },
-  "homepage": "https://github.com/vue-a11y/website#readme"
+  "homepage": "https://github.com/vue-a11y/website#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
 }
