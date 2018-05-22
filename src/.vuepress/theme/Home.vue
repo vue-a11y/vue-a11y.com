@@ -149,6 +149,18 @@ export default {
   width:60%
   margin: 0 auto
 
+  .asterisk
+    color: #D12B0B
+    font-weight: bold
+
+  .button
+    background-color: #f2f2f2
+    color: #333
+    font-weight: bold
+
+    &:hover
+      color: white
+
 @media (max-width: $MQMobile)
   .home
     .features
