@@ -12,6 +12,7 @@ module.exports = [
   ['meta', { name: 'msapplication-TileColor', content: '#ffffff' }],
   ['meta', { name: 'msapplication-TileImage', content: '/favicon/ms-icon-144x144.png' }],
   ['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
+  ['meta', { name: 'google-site-verification', content: 'MaDIE9Fijg7-DVWlElmQbfhqA18pvbLnJzNYX7NHmCo' }],
   
   // Twitter
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
