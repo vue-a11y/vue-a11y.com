@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/vue-a11y/website#readme",
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^3.1.0",
+    "vuepress": "^1.5.2"
   }
 }
