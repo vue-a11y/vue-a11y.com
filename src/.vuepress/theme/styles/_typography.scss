@@ -1,0 +1,51 @@
+$font-default: 'DM Sans', Roboto, 'Segoe UI', 'Helvetica Neue', Arial, Geneva;
+
+/* Open Dyslexic */
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('OpenDyslexic'), local('DMSans-Regular'),
+       url('../../public/fonts/opendyslexic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../public/fonts/opendyslexic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('OpenDyslexic'), local('DMSans-Bold'),
+       url('../../public/fonts/opendyslexic-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../public/fonts/opendyslexic-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Hack */
+@font-face {
+  font-family: 'Hack';
+  src: url('../../public/fonts/hack-regular.woff2?sha=3114f1256') format('woff2'), 
+       url('../../public/fonts/hack-regular.woff?sha=3114f1256') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DM Sans - latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Sans Regular'), local('DMSans-Regular'),
+       url('../../public/fonts/dm-sans-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../public/fonts/dm-sans-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('DM Sans Bold'), local('DMSans-Bold'),
+       url('../../public/fonts/dm-sans-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../public/fonts/dm-sans-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

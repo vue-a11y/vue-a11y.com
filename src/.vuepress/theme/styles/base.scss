@@ -1,0 +1,7 @@
+@import './typography';
+@import './a11y';
+
+body {
+  @apply antialiased;
+  font-family: $font-default;
+}
