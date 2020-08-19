@@ -1,0 +1,4 @@
+---
+layout: Full
+view: Home
+---
