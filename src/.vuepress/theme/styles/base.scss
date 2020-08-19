@@ -1,7 +1,10 @@
+@import './_themes';
 @import './typography';
 @import './a11y';
 
 body {
   @apply antialiased;
   font-family: $font-default;
+  color: var(--color);
+  background-color: var(--bg);
 }
