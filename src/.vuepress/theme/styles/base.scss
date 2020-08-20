@@ -4,7 +4,7 @@
 
 body {
   @apply antialiased;
-  font-family: $font-default;
+  font-family: $font-family;
   color: var(--color);
   background-color: var(--bg);
 }
