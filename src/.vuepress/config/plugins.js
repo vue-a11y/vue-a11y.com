@@ -10,6 +10,13 @@ module.exports = [
       updatePopup: false
     }
   ],
+  // https://vuepress.vuejs.org/plugin/official/plugin-search.html
+  [
+    '@vuepress/search',
+    {
+      searchMaxSuggestions: 10
+    }
+  ],
   // https://vuepress.vuejs.org/plugin/official/plugin-register-components.html
   [
     '@vuepress/register-components', {
