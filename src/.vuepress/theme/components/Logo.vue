@@ -64,7 +64,7 @@
         fill="#34495f"
       />
     </svg>
-    <span class="font-bold sr-only sm:ml-2 text-22 sm:not-sr-only ">Vue A11y</span>
+    <span class="font-bold sr-only text-22 lg:ml-2 lg:not-sr-only ">Vue A11y</span>
   </a>
 </template>
 
