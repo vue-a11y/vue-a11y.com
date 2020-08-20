@@ -1,10 +1,32 @@
 @import './_themes';
 @import './typography';
 @import './a11y';
+@import './override';
 
 body {
   @apply antialiased;
   font-family: $font-family;
   color: var(--color);
   background-color: var(--bg);
+}
+
+.container {
+  transition: max-width .5s;
+}
+
+.bg-sidebar {
+  @screen lg {
+    background-color: var(--bg-sidebar)
+  }
+}
+
+.container {
+  @screen xl {
+    &-pl {
+      padding-left: 10% !important;
+    }
+    &-pr {
+      padding-right: 10% !important;
+    }
+  }
 }

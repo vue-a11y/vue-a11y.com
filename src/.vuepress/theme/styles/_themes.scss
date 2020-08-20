@@ -1,15 +1,18 @@
 :root {
   --bg: white;
   --color: theme('colors.gray.800');
+  --bg-sidebar: theme('colors.light.200')
 }
 
 html.dark-mode {
   --bg: theme('colors.dark.700');
   --color: theme('colors.gray.200');
+  --bg-sidebar: theme('colors.dark.500')
 }
 
 
 html.sepia-mode {
   --bg: theme('colors.sepia.200');
   --color: theme('colors.sepia.text');
+  --bg-sidebar: theme('colors.sepia.400')
 }
