@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="flex justify-center w-full px-4 py-24 lg:py-40 bg-light-400">
+    <div class="flex justify-center w-full px-4 py-24 lg:py-40 bg-light-200">
       <div class="max-w-md">
         <div class="flex justify-center">
           <vp-icon
@@ -27,7 +27,7 @@
             <input
               id="email"
               type="email"
-              class="w-full p-4"
+              class="w-full p-4 border border-solid border-light-400"
             >
           </label>
           <button
@@ -37,6 +37,37 @@
             {{ $themeLocaleConfig.newsletter.textButton }}
           </button>
         </form>
+
+        <ul class="flex justify-center mt-16">
+          <li>
+            <a
+              href="#"
+              class="block p-5 border border-solid rounded-full border-light-400 btn-social"
+              target="_blank"
+              rel="noopener"
+              :aria-label="`Vue accesibility Twitter (${$localeConfig.externalLinkText})`"
+            >
+              <vp-icon
+                name="twitter"
+                size="1.5rem"
+              />
+            </a>
+          </li>
+          <li class="ml-4">
+            <a
+              href="#"
+              class="block p-5 border border-solid rounded-full border-light-400 btn-social"
+              target="_blank"
+              rel="noopener"
+              :aria-label="`Vue accesibility Github (${$localeConfig.externalLinkText})`"
+            >
+              <vp-icon
+                name="github"
+                size="1.5rem"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="w-full py-6 text-center">
@@ -50,10 +81,13 @@ export default {
   name: 'TheFooter',
 
   components: {
-    SendIcon: () => import('@/theme/components/SendIcon'),
     Copyright: () => import('@/theme/components/Copyright')
   }
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.btn-social {
+  background-color: var(--bg);
+}
+</style>

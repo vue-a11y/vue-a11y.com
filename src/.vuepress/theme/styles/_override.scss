@@ -6,7 +6,7 @@ div.search-box {
   input {
     @apply w-full bg-light-400 py-5 pl-10 border-none rounded-none;
     left: 0;
-    background-image: url('~@/theme/assets/images/search.svg');
+    background-image: url('~@/theme/assets/sprite/svg/search.svg');
     background-position: 16px center;
 
     &:focus {
