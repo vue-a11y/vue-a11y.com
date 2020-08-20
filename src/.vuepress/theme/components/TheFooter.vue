@@ -3,7 +3,10 @@
     <div class="flex justify-center w-full px-4 py-24 lg:py-40 bg-light-400">
       <div class="max-w-md">
         <div class="flex justify-center">
-          <SendIcon />
+          <vp-icon
+            name="send"
+            size="1.6rem"
+          />
           <span class="ml-2 text-3xl font-bold leading-7">{{ $themeLocaleConfig.newsletter.title }}</span>
         </div>
         <p

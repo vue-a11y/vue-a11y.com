@@ -17,6 +17,13 @@ module.exports = [
       searchMaxSuggestions: 10
     }
   ],
+  // https://github.com/ntnyq/vuepress-plugin-svg-icons
+  [
+    '@goy/svg-icons',
+    {
+      svgsDir: resolve('../theme/assets/sprite/svg')
+    }
+  ],
   // https://vuepress.vuejs.org/plugin/official/plugin-register-components.html
   [
     '@vuepress/register-components', {

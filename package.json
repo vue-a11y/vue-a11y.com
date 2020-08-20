@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src --no-cache && echo vue-a11y.com >> src/.vuepress/dist/CNAME",
+    "build": "npm run svgo && vuepress build src --no-cache && echo vue-a11y.com >> src/.vuepress/dist/CNAME",
+    "svgo": "svgo --disable=convertColors -f ./src/.vuepress/theme/assets/sprite/svg",
     "deploy": "npm run build && gh-pages -d src/.vuepress/dist",
     "staging": "npm run build && surge src/.vuepress/dist/ https://vue-a11y.surge.sh/"
   },
@@ -31,6 +32,7 @@
   "homepage": "https://github.com/vue-a11y/website#readme",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@goy/vuepress-plugin-svg-icons": "^4.2.1",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vuepress/plugin-pwa": "^1.5.3",
     "@vuepress/plugin-search": "^1.5.3",
