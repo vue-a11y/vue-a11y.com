@@ -3,10 +3,7 @@
     <div
       class="container relative z-10 px-4 mx-auto"
     >
-      <section
-        class="flex items-center justify-center h-fulllg:justify-between hero"
-        aria-label="Hero"
-      >
+      <div class="flex items-center justify-center h-fulllg:justify-between hero">
         <div class="max-w-sm lg:-mt-48">
           <h1 class="text-4xl font-bold">
             {{ $title }}
@@ -26,6 +23,7 @@
               href="https://github.com/vue-a11y"
               class="ml-4 btn btn-light"
               rel="noopener"
+              target="_blank"
             >
               Github
               <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
@@ -38,7 +36,7 @@
             :alt="$frontmatter.heroImageAlternativeText"
           >
         </div>
-      </section>
+      </div>
 
       <section
         class="flex flex-wrap items-center pt-20 mt-20 border-t border-solid border-light-400 lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
