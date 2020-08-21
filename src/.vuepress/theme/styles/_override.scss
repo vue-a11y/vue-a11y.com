@@ -4,7 +4,7 @@
 
 div.search-box {
   input {
-    @apply w-full bg-light-400 py-5 pl-10 border-none rounded-none;
+    @apply w-full bg-light-200 py-5 pl-10 border-light-400 rounded-none;
     left: 0;
     background-image: url('~@/theme/assets/sprite/svg/search.svg');
     background-position: 16px center;
@@ -15,6 +15,10 @@ div.search-box {
 
     &.focused {
       @apply w-full left-0 #{!important};
+    }
+
+    &::placeholder {
+      @apply text-gray-700;
     }
   }
 
