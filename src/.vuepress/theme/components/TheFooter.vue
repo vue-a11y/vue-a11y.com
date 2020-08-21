@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <div class="flex justify-center w-full px-4 py-24 lg:py-40 bg-light-200">
+  <footer class="relative z-10 footer">
+    <div class="flex justify-center w-full px-4 py-24 lg:py-32 bg-light-200">
       <div class="max-w-md">
         <div class="flex justify-center">
           <vp-icon
@@ -32,7 +32,7 @@
           </label>
           <button
             type="submit"
-            class="self-end ml-2 text-xl text-black btn btn-accent"
+            class="self-end ml-2 text-black btn btn-accent"
           >
             {{ $themeLocaleConfig.newsletter.textButton }}
           </button>
@@ -41,7 +41,7 @@
         <ul class="flex justify-center mt-16">
           <li>
             <a
-              href="#"
+              href="https://twitter.com/vue_a11y"
               class="block p-5 border border-solid rounded-full border-light-400 btn-social"
               target="_blank"
               rel="noopener"
@@ -55,7 +55,7 @@
           </li>
           <li class="ml-4">
             <a
-              href="#"
+              href="https://github.com/vue-a11y"
               class="block p-5 border border-solid rounded-full border-light-400 btn-social"
               target="_blank"
               rel="noopener"
