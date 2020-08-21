@@ -20,13 +20,37 @@ body {
   }
 }
 
-.container {
+.container-layout {
+  @apply px-3;
   @screen xl {
+    @apply px-0;
+    &-px {
+      padding-left: 10% !important;
+      padding-right: 10% !important;
+    }
+
     &-pl {
       padding-left: 10% !important;
     }
+
     &-pr {
       padding-right: 10% !important;
     }
+  }
+}
+
+.btn {
+  @apply py-3 px-4 font-bold text-xl;
+  max-height: 57px;
+  border-bottom: 6px solid transparent;
+
+  &-light {
+    @apply bg-light-200;
+    border-bottom-color: theme('colors.light.400');
+  }
+
+  &-accent {
+    @apply bg-accent;
+    border-bottom-color: theme('colors.accentDark');
   }
 }

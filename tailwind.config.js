@@ -42,6 +42,8 @@ module.exports = {
     },
     fontFamily: {}
   },
-  variants: {},
+  variants: {
+    margin: ['responsive', 'last']
+  },
   plugins: []
 }
