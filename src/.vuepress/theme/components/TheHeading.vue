@@ -2,7 +2,7 @@
   <header class="relative z-10 flex flex-wrap w-full border header border-botton border-light-400 container-layout">
     <div
       class="flex items-center justify-end w-1/4 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
-      :class="bgSidebar ? 'bg-sidebar' : null"
+      :class="bgSidebar ? 'header-logo--bg' : null"
     >
       <div class="w-full">
         <Logo />
@@ -46,6 +46,16 @@ export default {
 
   @media (min-width: theme('screens.md')) {
     height: 65px;
+  }
+
+  @media (max-width: theme('screens.lg')) {
+    @apply px-3;
+  }
+
+  &-logo--bg {
+    @media (min-width: theme('screens.lg')) {
+      background-color: var(--bg-sidebar)
+    }
   }
 
   &-nav {
