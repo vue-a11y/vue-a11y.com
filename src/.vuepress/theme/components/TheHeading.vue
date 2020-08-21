@@ -1,5 +1,5 @@
 <template>
-  <header class="relative z-10 flex flex-wrap border header border-botton border-light-400 md:h-16 container-layout">
+  <header class="relative z-10 flex flex-wrap w-full border header border-botton border-light-400 container-layout">
     <div
       class="flex items-center justify-end w-1/4 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
       :class="bgSidebar ? 'bg-sidebar' : null"
@@ -43,6 +43,11 @@ export default {
 <style lang="scss">
 .header {
   background-color: var(--bg);
+
+  @media (min-width: theme('screens.md')) {
+    height: 65px;
+  }
+
   &-nav {
     @media (max-width: theme('screens.sm')) {
       max-width: 100vw;
