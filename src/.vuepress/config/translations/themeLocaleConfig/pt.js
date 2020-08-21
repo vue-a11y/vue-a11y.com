@@ -22,5 +22,13 @@ module.exports = {
       text: 'Configurações',
       link: '/configuracoes/'
     }
-  ]
+  ],
+  a11y: {
+    landmarks: {
+      nav: {
+        main: 'Principal',
+        secondary: 'Secundária'
+      }
+    }
+  }
 }

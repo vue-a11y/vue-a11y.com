@@ -22,5 +22,13 @@ module.exports = {
       text: 'Settings',
       link: '/settings/'
     }
-  ]
+  ],
+  a11y: {
+    landmarks: {
+      nav: {
+        main: 'Main',
+        secondary: 'Secondary'
+      }
+    }
+  }
 }

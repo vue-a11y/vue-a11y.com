@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Main">
+  <nav :aria-label="$themeLocaleConfig.a11y.landmarks.nav.main">
     <ul class="flex">
       <li
         v-for="item in $themeLocaleConfig.nav"
@@ -19,7 +19,7 @@
           rel="noopener"
           class="px-3 py-3 ml-1 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
         >
-          <span>Github</span>
+          Github
           <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
           <OutboundLink />
         </a>
