@@ -21,11 +21,11 @@
         >
           <label
             for="email-newsletter"
-            aria-describedby="a-newsletter-description"
             class="w-full mt-6"
           >
+            <span class="sr-only">Enter your email</span>
             <input
-              id="email"
+              id="email-newsletter"
               type="email"
               class="w-full p-4 border border-solid border-light-400"
             >
