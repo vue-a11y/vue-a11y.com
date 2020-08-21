@@ -34,9 +34,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.full-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-</style>
+<style lang="scss"></style>

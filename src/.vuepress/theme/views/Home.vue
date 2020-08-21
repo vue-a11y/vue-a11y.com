@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
+  <div class="mt-24 home">
     <div
       class="container relative z-10 px-4 mx-auto"
     >
       <section
-        class="flex items-center justify-center h-full mt-24 lg:justify-between hero"
+        class="flex items-center justify-center h-fulllg:justify-between hero"
         aria-label="Hero"
       >
         <div class="max-w-sm lg:-mt-48">
