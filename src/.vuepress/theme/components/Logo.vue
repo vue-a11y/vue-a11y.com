@@ -1,6 +1,6 @@
 <template>
   <a
-    href="/"
+    :href="$localePath"
     class="inline-flex p-3"
   >
     <img
