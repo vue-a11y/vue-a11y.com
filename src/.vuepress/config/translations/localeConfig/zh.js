@@ -1,4 +1,6 @@
 module.exports = {
-  label: '中文',
-  nav: []
+  lang: 'zh-CN',
+  title: 'Vue A11y',
+  description: '',
+  editLinkText: ''
 }

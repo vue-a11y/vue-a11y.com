@@ -11,7 +11,7 @@ module.exports = {
   head: require('./config/head'),
   plugins: require('./config/plugins'),
   postcss: require('./config/postcss'),
-  locales: require('./config/translations/locales'),
+  locales: require('./config/translations/localeConfig'),
   themeConfig: require('./config/themeConfig'),
   configureWebpack () {
     return {

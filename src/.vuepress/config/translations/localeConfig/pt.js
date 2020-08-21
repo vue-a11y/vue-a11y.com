@@ -1,26 +1,7 @@
 module.exports = {
-  label: 'Português',
-  newsletter: {
-    title: 'Inscreva-se na newsletter',
-    description: 'Digite seu email abaixo e receba artigos, vídeos, atualizações e eventos da comunidade Vue.js e acessibilidade.',
-    textButton: 'Cadastrar'
-  },
-  nav: [
-    {
-      text: 'Guia',
-      link: '/guia/'
-    },
-    {
-      text: 'Blog',
-      link: '/posts/'
-    },
-    {
-      text: 'Exemplos',
-      link: '/exemplos/'
-    },
-    {
-      text: 'Configurações',
-      link: '/configuracoes/'
-    }
-  ]
+  lang: 'pt-BR',
+  title: 'Vue A11y',
+  description: 'Projeto da comunidade Vue.js para melhorar a accessibilidade na web.',
+  editLinkText: 'Editar página no GitHub',
+  externalLinkText: 'Abre em uma nova guia'
 }
