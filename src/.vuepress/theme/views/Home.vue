@@ -1,17 +1,5 @@
 <template>
   <div class="home">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1154.695"
-      height="1222.419"
-      viewBox="0 0 1154.695 1222.419"
-      class="absolute top-0 right-0 z-0 hidden bg-hero-rotate lg:block"
-    ><path
-      d="M-576.635,0H574l4.061,1222.419L250.269,857.9Z"
-      transform="translate(576.635)"
-      fill="#fbfcfc"
-    /></svg>
-
     <div
       class="container relative z-10 px-4 mx-auto"
     >
@@ -35,10 +23,12 @@
             </a>
 
             <a
-              href="#"
+              href="https://github.com/vue-a11y"
               class="ml-4 btn btn-light"
+              rel="noopener"
             >
               Github
+              <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
             </a>
           </div>
         </div>
