@@ -14,14 +14,7 @@ body {
   transition: max-width .5s;
 }
 
-.bg-sidebar {
-  @screen lg {
-    background-color: var(--bg-sidebar)
-  }
-}
-
 .container-layout {
-  @apply px-3;
   @screen xl {
     @apply px-0;
     &-px {
@@ -35,6 +28,21 @@ body {
 
     &-pr {
       padding-right: 10% !important;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    &-px {
+      padding-left: 15% !important;
+      padding-right: 15% !important;
+    }
+
+    &-pl {
+      padding-left: 15% !important;
+    }
+
+    &-pr {
+      padding-right: 15% !important;
     }
   }
 }
