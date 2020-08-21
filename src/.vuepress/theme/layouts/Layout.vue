@@ -1,16 +1,16 @@
 <template>
-  <div class="main-layout">
-    <TheHeading />
-    <TheSidebar />
-    <TheMain>
+  <div class="flex flex-wrap main-layout">
+    <TheHeading bg-sidebar />
+    <div class="flex justify-end w-64 h-full sidebar-wrapper container-layout-pl lg:w-2/7">
+      <TheSidebar />
+    </div>
+    <TheMain class="flex w-full main-wrapper container-layout-pr md:w-6/7 lg:w-5/7">
       <Page />
     </TheMain>
-    <TheFooter />
   </div>
 </template>
 
 <script>
-import TheFooter from '@/theme/components/TheFooter'
 import TheHeading from '@/theme/components/TheHeading'
 import TheMain from '@/theme/components/TheMain'
 import TheSidebar from '@/theme/components/TheSidebar'
@@ -19,7 +19,6 @@ export default {
   name: 'Layout',
 
   components: {
-    TheFooter,
     TheHeading,
     TheMain,
     TheSidebar
@@ -28,9 +27,12 @@ export default {
 </script>
 
 <style lang="scss">
-.main-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 30% 70%;
+.sidebar-wrapper {
+  background-color: var(--bg-sidebar);
+}
+
+.sidebar-wrapper, .main-wrapper {
+  height: calc(100vh - 65px);
+  overflow: auto;
 }
 </style>

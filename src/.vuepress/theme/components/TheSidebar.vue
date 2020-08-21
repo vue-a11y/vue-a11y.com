@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="w-full sidebar">
     SIDEBAR
   </div>
 </template>
