@@ -9,5 +9,3 @@ export default {
   name: 'Page'
 }
 </script>
-
-<style lang="scss"></style>

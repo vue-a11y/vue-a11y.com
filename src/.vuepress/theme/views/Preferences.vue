@@ -9,5 +9,3 @@ export default {
   name: 'Preferences'
 }
 </script>
-
-<style lang="scss"></style>
