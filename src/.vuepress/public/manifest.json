@@ -5,7 +5,7 @@
  "theme_color": "#41B883",
  "background_color": "#FBFCFC",
  "display": "standalone",
- "description": "Vue.js community project to improve web accessibility",
+ "description": "Vue.js community effort to improve web accessibility",
  "start_url": "/?utm_source=pwahomescreen",
  "icons": [
   {
