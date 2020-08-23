@@ -3,7 +3,7 @@ layout: Full
 view: Home
 
 actionText: Get Started
-actionLink: /guide/
+actionLink: /project/
 
 heroImage: /hero-accessibility.svg
 heroImageAlternativeText: Illustration of a visually impaired man standing and a woman in a wheelchair
