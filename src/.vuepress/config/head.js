@@ -3,7 +3,7 @@ module.exports = [
   ['meta', { charset: 'utf-8' }],
   ['meta', { name: 'application-name', content: 'Vue A11y' }],
   ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui, shrink-to-fit=no' }],
-  ['meta', { name: 'apple-mobile-web-app-title', content: 'Vue.js community project to improve web accessibility.' }],
+  ['meta', { name: 'apple-mobile-web-app-title', content: 'Vue.js community effort to improve web accessibility.' }],
   ['meta', { name: 'theme-color', content: '#FBFCFC' }],
   ['meta', { name: 'msapplication-navbutton-color', content: '#41B883' }],
   ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
