@@ -1,11 +1,15 @@
 :root {
   --bg: white;
+  --accent: theme('colors.accent');
   --color: theme('colors.gray.800');
   --bg-sidebar: theme('colors.light.200');
+  --bg-hover-sidebar: theme('colors.light.400');
+  --bg-left: linear-gradient(90deg, var(--bg-sidebar) calc(100% - 13px), var(--bg) 13px);
 }
 
 html.dark-mode {
   --bg: theme('colors.dark.700');
+  --accent: theme('colors.accent');
   --color: theme('colors.gray.200');
   --bg-sidebar: theme('colors.dark.500');
 }
@@ -13,6 +17,7 @@ html.dark-mode {
 
 html.sepia-mode {
   --bg: theme('colors.sepia.200');
+  --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
   --bg-sidebar: theme('colors.sepia.400');
 }

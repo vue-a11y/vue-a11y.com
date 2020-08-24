@@ -12,12 +12,12 @@
             {{ $description }}
           </p>
           <div class="flex mt-10">
-            <a
-              :href="$frontmatter.actionLink"
+            <router-link
+              :to="$frontmatter.actionLink"
               class="btn btn-accent"
             >
               {{ $frontmatter.actionText }}
-            </a>
+            </router-link>
 
             <a
               href="https://github.com/vue-a11y"

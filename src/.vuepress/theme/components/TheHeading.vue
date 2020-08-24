@@ -1,15 +1,30 @@
 <template>
   <header class="relative z-10 flex flex-wrap w-full border-b header border-light-400 container-layout">
     <div
-      class="flex items-center justify-end w-1/4 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
+      class="flex items-center justify-end w-1/5 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
       :class="bgSidebar ? 'header-logo--bg' : null"
     >
       <div class="w-full">
         <Logo />
       </div>
     </div>
-    <div class="flex items-center flex-grow-0 w-3/4 h-16 md:pr-0 md:w-auto md:flex-grow">
+    <div class="flex items-center flex-grow-0 w-3/5 h-16 md:pr-0 md:w-auto md:flex-grow">
       <SearchBox class="w-full lg:pl-8 xl:pl-16" />
+    </div>
+    <div class="flex items-center justify-end w-1/5 md:hidden">
+      <button
+        type="button"
+        class="flex px-4 py-2 mr-1 md:hidden"
+        aria-controls="s-sidebar-wrapper"
+        :aria-label="menuButtonAriaLabel"
+        :aria-expanded="isSidebarOpen.toString()"
+        @click="$emit('toggle-sidebar')"
+      >
+        <vp-icon
+          :name="isSidebarOpen ? 'close' : 'menu'"
+          size="23"
+        />
+      </button>
     </div>
     <div class="flex items-center h-16 header-nav md:justify-end container-layout-pr md:flex-grow">
       <TheNavigation />
@@ -18,6 +33,8 @@
 </template>
 
 <script>
+import { watch, watchEffect, computed } from '@vue/composition-api'
+
 import Logo from '@/theme/components/Logo'
 import TheNavigation from '@/theme/components/TheNavigation'
 import SearchBox from '@SearchBox'
@@ -35,6 +52,22 @@ export default {
     bgSidebar: {
       type: Boolean,
       default: false
+    },
+
+    isSidebarOpen: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  setup (props, { root, emit }) {
+    const labels = root.$themeLocaleConfig.a11y.labels
+    const menuButtonAriaLabel = labels.menuButton ? computed(() => props.isSidebarOpen ? labels.menuButton.close : labels.menuButton.open) : 'Menu sidebar button'
+
+    watch(() => root.$route, () => emit('toggle-sidebar'))
+
+    return {
+      menuButtonAriaLabel
     }
   }
 }
@@ -54,7 +87,7 @@ export default {
 
   &-logo--bg {
     @media (min-width: theme('screens.lg')) {
-      background-color: var(--bg-sidebar)
+      background-image: var(--bg-left);
     }
   }
 

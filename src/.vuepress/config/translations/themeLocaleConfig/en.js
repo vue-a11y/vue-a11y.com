@@ -1,3 +1,5 @@
+const { generateSidebar } = require('./utils')
+
 module.exports = {
   label: 'English',
   newsletter: {
@@ -7,12 +9,12 @@ module.exports = {
   },
   nav: [
     {
-      text: 'Guide',
-      link: '/guide/'
+      text: 'Project',
+      link: '/project/'
     },
     {
       text: 'Blog',
-      link: '/posts/'
+      link: '/blog/'
     },
     {
       text: 'Recipes',
@@ -23,7 +25,18 @@ module.exports = {
       link: '/settings/'
     }
   ],
+  sidebar: {
+    '/project/': generateSidebar('project'),
+    '/blog/': generateSidebar('blog'),
+    '/recipes/': generateSidebar('recipes')
+  },
   a11y: {
+    labels: {
+      menuButton: {
+        open: 'Open sidebar navigation',
+        close: 'close sidebar navigation'
+      }
+    },
     landmarks: {
       nav: {
         main: 'Main',

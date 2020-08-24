@@ -1,3 +1,5 @@
+const { generateSidebar } = require('./utils')
+
 module.exports = {
   label: 'Português',
   newsletter: {
@@ -7,23 +9,34 @@ module.exports = {
   },
   nav: [
     {
-      text: 'Guia',
-      link: '/guia/'
+      text: 'Projeto',
+      link: '/pt/project/'
     },
     {
       text: 'Blog',
-      link: '/posts/'
+      link: '/pt/blog/'
     },
     {
-      text: 'Exemplos',
-      link: '/exemplos/'
+      text: 'Receitas',
+      link: '/pt/recipes/'
     },
     {
       text: 'Configurações',
-      link: '/configuracoes/'
+      link: '/pt/settings/'
     }
   ],
+  sidebar: {
+    '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade']),
+    '/pt/blog/': generateSidebar('blog', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
+  },
   a11y: {
+    labels: {
+      menuButton: {
+        open: 'Abrir navegação da sidebar',
+        close: 'Fechar navegação da sidebar'
+      }
+    },
     landmarks: {
       nav: {
         main: 'Principal',

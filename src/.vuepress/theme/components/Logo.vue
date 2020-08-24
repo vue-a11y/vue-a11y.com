@@ -1,7 +1,7 @@
 <template>
   <a
     :href="$localePath"
-    class="inline-flex p-3"
+    class="inline-flex p-3 pt-2"
   >
     <img
       src="/vue-a11y-logo.svg"

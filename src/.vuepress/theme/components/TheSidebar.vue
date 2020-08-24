@@ -1,13 +1,92 @@
 <template>
-  <div class="w-full sidebar">
-    SIDEBAR
+  <div class="relative w-full sidebar ">
+    <button
+      type="button"
+      class="absolute top-0 left-0 flex ml-4 -mt-10 text-xs md:hidden"
+      @click="$emit('toggle-sidebar')"
+    >
+      <vp-icon
+        name="corner-up-left"
+        size="8"
+        class="mt-1"
+      />
+      <span class="ml-2 font-bold uppercase">Close</span>
+      <span class="sr-only">menu sidebar</span>
+    </button>
+    <nav
+      :aria-label="$themeLocaleConfig.a11y.landmarks.nav.secondary"
+      class="mt-12"
+    >
+      <template v-for="(nav, index) in items">
+        <span
+          :key="`nav-heading-${index}`"
+          class="mt-12 ml-4 text-xl font-bold"
+        >{{ nav.title }}</span>
+        <ul
+          :key="`nav-list-${index}`"
+          class="mt-3 mb-10 sidebar-list"
+        >
+          <li
+            v-for="(item, itemIndex) in nav.children"
+            :key="`nav-list-${index}-item-${itemIndex}`"
+            class="pr-2 sidebar-list-item"
+          >
+            <a
+              v-if="item.external"
+              :href="item.path"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block px-4 py-2"
+            >
+              {{ item.title }}
+              <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
+              <OutboundLink />
+            </a>
+
+            <router-link
+              v-else
+              :to="item.path"
+              class="block px-4 py-2 router-link"
+            >
+              {{ item.title }}
+            </router-link>
+          </li>
+        </ul>
+      </template>
+    </nav>
   </div>
 </template>
 
 <script>
+import { resolveSidebarItems } from '@/theme/utils/sidebar'
+
 export default {
-  name: 'TheSidebar'
+  name: 'TheSidebar',
+
+  setup (_, { root }) {
+    const items = resolveSidebarItems(root.$page.regularPath, root.$site, root.$themeLocaleConfig)
+    return {
+      items
+    }
+  }
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.sidebar {
+  &-list {
+    &-item {
+      a:focus, a:hover, a.router-link-exact-active {
+        position: relative;
+        background-color: var(--bg-hover-sidebar);
+
+        &:before {
+          @apply absolute top-0 right-0 h-full bg-accent;
+          content: '';
+          width: 6px;
+        }
+      }
+    }
+  }
+}
+</style>

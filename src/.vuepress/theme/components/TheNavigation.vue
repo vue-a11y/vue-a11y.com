@@ -1,6 +1,6 @@
 <template>
   <nav :aria-label="$themeLocaleConfig.a11y.landmarks.nav.main">
-    <ul class="flex">
+    <ul class="flex items-center">
       <li
         v-for="item in $themeLocaleConfig.nav"
         :key="item.text"
