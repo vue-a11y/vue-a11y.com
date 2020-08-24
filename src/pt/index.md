@@ -3,7 +3,7 @@ layout: Full
 view: Home
 
 actionText: Começar
-actionLink: /pt/guia/
+actionLink: /pt/project/
 
 heroImage: /hero-accessibility.svg
 heroImageAlternativeText: Ilustração de um homem defciente visual e uma mulher na cadeira de rodas

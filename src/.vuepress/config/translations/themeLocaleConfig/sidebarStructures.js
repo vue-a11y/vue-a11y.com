@@ -4,7 +4,6 @@ module.exports = {
       title: 'The Project',
       children: [
         '',
-        'why-the-project',
         'roadmap',
         'supporting',
         'contributors'
@@ -13,9 +12,7 @@ module.exports = {
     {
       title: 'Accessibility',
       children: [
-        'basics',
         'resources',
-        'best-pratices',
         'tools-testing',
         'vue-a11y-checklist'
       ]
@@ -25,7 +22,6 @@ module.exports = {
       children: [
         'a11y-vue-packages',
         'ui-projects',
-        'People',
         'cases',
         'awesome-a11y-vue'
       ]
