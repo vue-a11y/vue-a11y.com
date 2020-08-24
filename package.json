@@ -54,7 +54,8 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.10",
+    "@vue-a11y/focus-loop": "^0.1.2",
+    "@vue/composition-api": "^1.0.0-beta.11",
     "tailwindcss": "^1.7.0"
   }
 }
