@@ -28,11 +28,11 @@
 
     <div
       v-if="isSidebarOpen"
-      class="fixed top-0 left-0 z-0 w-full h-full bg-transparent md:hidden"
+      class="fixed top-0 left-0 z-0 w-full h-full opacity-50 sidebar-overlay md:hidden"
       @click="toggleSidebar"
     />
 
-    <TheMain class="flex w-full main-wrapper container-layout-pr md:w-6/7 lg:w-5/7">
+    <TheMain class="flex flex-grow main-wrapper container-layout-pr md:w-4/7 lg:flex-grow-0 lg:w-5/7">
       <Page />
     </TheMain>
   </div>
@@ -70,8 +70,11 @@ export default {
 
 <style lang="scss">
 .sidebar-wrapper, .main-wrapper {
-  height: calc(100vh - 65px);
   overflow: auto;
+
+  @screen md {
+    height: calc(100vh - 65px);
+  }
 }
 
 .sidebar-wrapper {
@@ -89,7 +92,12 @@ export default {
   }
 
   @screen md {
+    // width: 250px;
     @apply relative visible opacity-100 left-0;
   }
+}
+
+.sidebar-overlay {
+  background-color: var(--bg);
 }
 </style>
