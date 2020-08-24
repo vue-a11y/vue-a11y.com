@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-wrap main-layout">
     <TheHeading
+      has-sidebar
       bg-sidebar
       :is-sidebar-open="isSidebarOpen"
       class="relative z-10"

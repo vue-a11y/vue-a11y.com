@@ -8,10 +8,16 @@
         <Logo />
       </div>
     </div>
-    <div class="flex items-center flex-grow-0 w-3/5 h-16 md:pr-0 md:w-auto md:flex-grow">
+    <div
+      class="flex items-center flex-grow-0 w-3/5 h-16 md:pr-0 md:w-auto md:flex-grow"
+      :class="{ 'w-4/5': !hasSidebar }"
+    >
       <SearchBox class="w-full lg:pl-8 xl:pl-16" />
     </div>
-    <div class="flex items-center justify-end w-1/5 md:hidden">
+    <div
+      v-show="hasSidebar"
+      class="flex items-center justify-end w-1/5 md:hidden"
+    >
       <button
         type="button"
         class="flex px-4 py-2 mr-1 md:hidden"
@@ -33,7 +39,7 @@
 </template>
 
 <script>
-import { watch, watchEffect, computed } from '@vue/composition-api'
+import { watch, computed } from '@vue/composition-api'
 
 import Logo from '@/theme/components/Logo'
 import TheNavigation from '@/theme/components/TheNavigation'
@@ -50,6 +56,11 @@ export default {
 
   props: {
     bgSidebar: {
+      type: Boolean,
+      default: false
+    },
+
+    hasSidebar: {
       type: Boolean,
       default: false
     },
