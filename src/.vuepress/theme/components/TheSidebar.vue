@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full sidebar ">
+  <div class="relative w-full sidebar">
     <button
       type="button"
       class="absolute top-0 left-0 flex ml-4 -mt-10 text-xs md:hidden"
@@ -100,6 +100,10 @@ export default {
 
 <style lang="scss">
 .sidebar {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
   &-list {
     &-item {
       margin-top: 1px;
