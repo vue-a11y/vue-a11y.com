@@ -14,7 +14,7 @@
       >
         <router-link
           v-slot="{ href, route, isExactActive }"
-          :to="{ path: $route.path, hash: header.slug }"
+          :to="{ path: $route.path, hash: header.hash }"
         >
           <a
             :href="href"
