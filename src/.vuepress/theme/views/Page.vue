@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div class="w-full">
     <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
-      <Content class="h-full" />
+      <div class="page-content">
+        <Content />
+        <PageEdit class="flex flex-wrap justify-between w-full py-6 pb-24 border-t border-light-400 md:mt-4" />
+      </div>
       <div class="sticky top-0 flex hidden h-full page-float-toc xl:block">
         <TableOfContents
           v-if="headers.length && $frontmatter.sidebarDepth !== 0"
@@ -11,7 +14,6 @@
         />
       </div>
     </article>
-    <PageEdit class="flex flex-wrap justify-between w-full p-6 pb-32 md:mt-4 lg:px-10" />
   </div>
 </template>
 
@@ -51,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-div.content__default {
+.page-content {
   @apply w-full;
   @screen md {
     @apply w-auto;

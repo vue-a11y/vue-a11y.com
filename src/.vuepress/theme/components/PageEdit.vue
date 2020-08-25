@@ -1,11 +1,14 @@
 <template>
-  <div class="page-edit">
+  <footer
+    class="page-edit"
+    aria-label="page"
+  >
     <a
       v-if="$themeConfig.editLinks"
       :href="editLink"
       target="_blank"
       rel="noopener"
-      class="border-b-2 border-accent"
+      class="mb-4 border-b-2 border-accent"
     >
       {{ $themeLocaleConfig.editLinkText }}
       <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
@@ -27,7 +30,7 @@
         </time>
       </p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -43,11 +46,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.page-edit {
-  @screen xl {
-    width: calc(100% - var(--toc-w-size));
-  }
-}
-</style>
