@@ -8,11 +8,11 @@
       for="sidebar-email-newsletter"
       class="flex flex-1"
     >
-      <span class="sr-only">Email for subscription</span>
+      <span class="sr-only">{{ $themeLocaleConfig.a11y.newsletter.placeholder }}</span>
       <input
         id="sidebar-email-newsletter"
         type="email"
-        placeholder="Email for subscription"
+        :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
         class="w-full p-3 bg-white border-b-4 border-solid border-light-400"
       >
     </label>

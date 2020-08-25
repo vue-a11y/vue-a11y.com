@@ -37,6 +37,9 @@ module.exports = {
     '/recipes/': generateSidebar('recipes')
   },
   a11y: {
+    newsletter: {
+      placeholder: 'Email for subscription'
+    },
     labels: {
       menuButton: {
         open: 'Open sidebar navigation',

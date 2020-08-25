@@ -17,22 +17,24 @@
         </p>
         <form
           action="#"
-          class="flex"
+          class="flex mt-6"
         >
           <label
             for="email-newsletter"
-            class="w-full mt-6"
+            class="w-full"
           >
-            <span class="sr-only">Enter your email</span>
+            <span class="sr-only">{{ $themeLocaleConfig.a11y.newsletter.placeholder }}</span>
             <input
               id="email-newsletter"
               type="email"
-              class="w-full p-4 border border-solid border-light-400"
+              class="w-full p-4 border-solid border-light-400"
+              :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
+              style="border-bottom-width: 6px"
             >
           </label>
           <button
             type="submit"
-            class="self-end ml-2 text-black btn btn-accent"
+            class="ml-2 text-black btn btn-accent"
           >
             {{ $themeLocaleConfig.newsletter.textButton }}
           </button>
