@@ -106,10 +106,6 @@ export default {
 
 <style lang="scss">
 .sidebar {
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
   &-list {
     &-item {
       margin-top: 1px;

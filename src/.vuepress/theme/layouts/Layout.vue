@@ -90,6 +90,15 @@ export default {
   background-image: var(--bg-left);
   transition: visibility .3s, opacity .3s, left .3s;
 
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--bg-hover-sidebar);
+    border-radius: 10px;
+  }
+
   &-show {
     @apply visible opacity-100 left-0;
   }
