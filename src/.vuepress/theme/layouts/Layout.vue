@@ -32,9 +32,15 @@
       @click="toggleSidebar"
     />
 
-    <TheMain class="flex flex-grow main-wrapper container-layout-pr md:w-4/7 lg:flex-grow-0 lg:w-5/7">
+    <TheMain
+      ref="theMain"
+      class="flex flex-grow main-wrapper container-layout-pr md:w-4/7 lg:flex-grow-0 lg:w-5/7"
+    >
+      <span id="page-top" />
       <Page />
     </TheMain>
+
+    <BackToTop :root-element="$refs.theMain && $refs.theMain.$el" />
   </div>
 </template>
 
@@ -53,7 +59,8 @@ export default {
     TheMain,
     FocusLoop,
     TheHeading,
-    TheSidebar
+    TheSidebar,
+    BackToTop: () => import('@/theme/components/BackToTop')
   },
 
   setup (_, { emit, refs }) {

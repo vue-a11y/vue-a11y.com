@@ -55,9 +55,6 @@ export default {
 <style lang="scss">
 .page-content {
   @apply w-full;
-  @screen md {
-    @apply w-auto;
-  }
   @screen xl {
     @apply pr-16;
     width: calc(100% - var(--toc-w-size));
