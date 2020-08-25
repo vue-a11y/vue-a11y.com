@@ -12,12 +12,18 @@
         :key="header.slug"
         class="w-full leading-4 toc-list-item"
       >
-        <a
-          class="relative inline-block py-3 pl-10 pr-3"
-          :href="header.path"
+        <router-link
+          v-slot="{ href, route, isExactActive }"
+          :to="{ path: $route.path, hash: header.slug }"
         >
-          {{ header.title }}
-        </a>
+          <a
+            :href="href"
+            class="relative inline-block py-3 pl-10 pr-3 anchor-link"
+            :class="{ active: isExactActive }"
+          >
+            {{ header.title }}
+          </a>
+        </router-link>
       </li>
     </ul>
   </nav>
@@ -42,10 +48,6 @@ export default {
       type: Array,
       default: () => ([])
     }
-  },
-
-  setup ({ headers }) {
-    console.log(headers)
   }
 }
 </script>

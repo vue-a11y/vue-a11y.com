@@ -25,15 +25,7 @@ export default {
   },
 
   setup (_, { root }) {
-    const headers = computed(() => {
-      if (!root.$page.headers) return []
-      return root.$page.headers.map(header => {
-        return {
-          title: header.title,
-          path: `${root.$page.regularPath}#${header.slug}`
-        }
-      })
-    })
+    const headers = computed(() => (root.$page.headers || []))
 
     return {
       headers
