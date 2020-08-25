@@ -15,7 +15,6 @@ module.exports = {
   themeConfig: require('./config/themeConfig'),
   markdown: {
     anchor: {
-      level: 2,
       permalinkAttrs: () => ({ 'aria-hidden': 'true' })
     }
   },
