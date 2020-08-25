@@ -16,6 +16,10 @@ module.exports = {
   markdown: {
     anchor: {
       permalinkAttrs: () => ({ 'aria-hidden': 'true' })
+    },
+    extendMarkdown: md => {
+      md.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n'
+      md.renderer.rules.table_close = () => '</table>\n</div>'
     }
   },
   configureWebpack () {

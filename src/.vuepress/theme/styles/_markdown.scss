@@ -127,12 +127,14 @@
     margin-left: -2em;
   }
 
+  .table-wrapper {
+    @apply w-full overflow-auto whitespace-no-wrap;
+  }
+
   table {
-    width: 100%;
     border: 1px solid var(--bg-sidebar);
     border-collapse: collapse;
     border-spacing: 0;
-    word-break: break-word;
 
     thead {
       tr {
