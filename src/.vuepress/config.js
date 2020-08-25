@@ -13,6 +13,12 @@ module.exports = {
   postcss: require('./config/postcss'),
   locales: require('./config/translations/localeConfig'),
   themeConfig: require('./config/themeConfig'),
+  markdown: {
+    anchor: {
+      level: 2,
+      permalinkAttrs: () => ({ 'aria-hidden': 'true' })
+    }
+  },
   configureWebpack () {
     return {
       plugins: [
