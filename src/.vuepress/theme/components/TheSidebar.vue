@@ -45,10 +45,18 @@
 
             <router-link
               v-else
+              v-slot="{ href, route, navigate, isActive }"
               :to="item.path"
-              class="block px-4 py-2 router-link"
             >
-              {{ item.title }}
+              <a
+                :href="href"
+                :aria-current="isActive && $route.path === item.path ? 'page' : null"
+                class="block px-4 py-2"
+                :class="{ active: isActive && $route.path === item.path }"
+                @click="navigate"
+              >
+                {{ item.title }}
+              </a>
             </router-link>
 
             <ul
@@ -95,7 +103,7 @@ export default {
   &-list {
     &-item {
       margin-top: 1px;
-      > a:focus, > a:hover, > a.router-link-exact-active {
+      > a:focus, > a:hover, > a.active {
         position: relative;
         background-color: var(--bg-hover-sidebar);
 
