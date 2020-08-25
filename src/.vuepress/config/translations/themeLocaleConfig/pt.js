@@ -7,6 +7,9 @@ module.exports = {
     description: 'Digite seu email abaixo e receba artigos, vídeos, atualizações e eventos da comunidade Vue.js e acessibilidade.',
     textButton: 'Cadastrar'
   },
+  toc: {
+    title: 'Nesta página'
+  },
   nav: [
     {
       text: 'Projeto',

@@ -15,6 +15,8 @@
 }
 
 [tabindex]:not([tabindex="-1"]), a, button, input, select, textarea {
+  position: relative;
+  z-index: 2;
   outline: 2px solid transparent;
   outline-offset: 6px;
   transition: outline-offset .1s ease;

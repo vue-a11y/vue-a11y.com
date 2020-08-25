@@ -4,6 +4,7 @@
   --color: theme('colors.gray.800');
   --bg-sidebar: theme('colors.light.200');
   --bg-hover-sidebar: theme('colors.light.400');
+  --border-color-code-inline: theme('colors.light.400');
 
   --bg-code-block: theme('colors.dark.700');
   --bg-left: linear-gradient(90deg, var(--bg-sidebar) calc(100% - 13px), transparent 13px);
@@ -14,6 +15,7 @@ html.dark-mode {
   --accent: theme('colors.accent');
   --color: theme('colors.gray.200');
   --bg-sidebar: theme('colors.dark.500');
+  --border-color-code-inline: theme('colors.light.200'); // change
 }
 
 
@@ -22,4 +24,5 @@ html.sepia-mode {
   --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
   --bg-sidebar: theme('colors.sepia.400');
+  --border-color-code-inline: theme('colors.light.200'); // change
 }

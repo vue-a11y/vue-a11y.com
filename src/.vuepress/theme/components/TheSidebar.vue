@@ -50,6 +50,24 @@
             >
               {{ item.title }}
             </router-link>
+
+            <ul
+              v-if="$route.path === item.path && $frontmatter.sidebarDepth !== 0"
+              class="xl:hidden"
+            >
+              <li
+                v-for="(subHeader, subIndex) in $page.headers"
+                :key="`sidebar-subHeader-${subIndex}`"
+                class="pl-4"
+              >
+                <a
+                  class="block px-3 py-1 text-sm hover:underline"
+                  :href="`${$page.regularPath}#${subHeader.slug}`"
+                >
+                  {{ subHeader.title }}
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </template>
@@ -76,7 +94,8 @@ export default {
 .sidebar {
   &-list {
     &-item {
-      a:focus, a:hover, a.router-link-exact-active {
+      margin-top: 1px;
+      > a:focus, > a:hover, > a.router-link-exact-active {
         position: relative;
         background-color: var(--bg-hover-sidebar);
 
@@ -85,6 +104,10 @@ export default {
           content: '';
           width: 6px;
         }
+      }
+
+      > a:hover {
+        z-index: 1 !important;
       }
     }
   }

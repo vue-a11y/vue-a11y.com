@@ -1,15 +1,44 @@
 <template>
-  <article class="flex w-full px-4 pt-6 md:mt-4 md:pr-6 lg:px-10 xl:pr-0">
+  <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
     <Content class="h-full" />
-    <div class="hidden h-full page-float-toc xl:block bg-light-200">
-      ON THIS PAGE
+    <div class="flex hidden h-full page-float-toc xl:block">
+      <TableOfContents
+        v-if="headers.length && $frontmatter.sidebarDepth !== 0"
+        :title="$themeLocaleConfig.toc.title"
+        title-tag="span"
+        :headers="headers"
+        class="fixed"
+        style="top: 100px;"
+      />
     </div>
   </article>
 </template>
 
 <script>
+import { computed } from '@vue/composition-api'
+
 export default {
-  name: 'Page'
+  name: 'Page',
+
+  components: {
+    TableOfContents: () => import('@/theme/components/TableOfContents')
+  },
+
+  setup (_, { root }) {
+    const headers = computed(() => {
+      if (!root.$page.headers) return []
+      return root.$page.headers.map(header => {
+        return {
+          title: header.title,
+          path: `${root.$page.regularPath}#${header.slug}`
+        }
+      })
+    })
+
+    return {
+      headers
+    }
+  }
 }
 </script>
 
@@ -27,7 +56,8 @@ div.content__default {
 
 .page-float-toc {
   @screen xl {
-    width: 250px;
+    width: 260px;
   }
 }
+
 </style>

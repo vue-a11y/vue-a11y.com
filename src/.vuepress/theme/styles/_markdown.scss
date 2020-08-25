@@ -1,18 +1,12 @@
 .content__default {
-  @apply text-xl;
+  @apply text-lg;
   display: block;
   min-height: 150px;
+  max-width: 66ch;
 
   p {
     word-wrap: break-word;
     margin: 40px 0;
-    max-width: 65ch;
-
-    code {
-      @apply bg-light-200 font-bold;
-      border-radius: 4px;
-      padding: 2px 5px;
-    }
 
     abbr {
       cursor: help;
@@ -80,13 +74,22 @@
     }
   }
 
+  p, h2, h3 {
+    code {
+      @apply font-bold border border-solid;
+      background-color: var(--bg-sidebar);
+      border-color: var(--border-color-code-inline);
+      padding: 2px 5px;
+    }
+  }
+
   a:not(.header-anchor) {
-    @apply border-b-2 border-dotted border-accent;
+    @apply border-b-2 border-solid border-accent;
     position: relative;
     text-decoration: none;
 
     &:hover {
-      @apply border-solid;
+      border-color: var(--color);
     }
 
     .icon.outbound {
@@ -126,26 +129,27 @@
 
   table {
     width: 100%;
-    border: 1px solid #dedede;
+    border: 1px solid var(--bg-sidebar);
     border-collapse: collapse;
     border-spacing: 0;
+    word-break: break-word;
 
     thead {
       tr {
-        background: #f8f8f8;
+        background-color: var(--bg-hover-sidebar);
       }
     }
 
     tbody {
       tr {
         &:hover {
-          background: #efefef;
+          background-color: var(--bg-sidebar);
         }
       }
     }
 
     td, th {
-      border: 1px solid #dedede;
+      border: 1px solid var(--bg-sidebar);
       padding: .375em .75em;
     }
   }
@@ -172,6 +176,7 @@
 
   code[class*=language-], pre[class*=language-] {
     width: 100%;
+    @apply text-base;
     background: none;
     text-align: left;
     white-space: pre;
