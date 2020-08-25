@@ -69,7 +69,6 @@ export default {
 
   &-list-item {
     a {
-      font-size: 15px;
       &:hover, &:focus, &.active {
         background-color: var(--bg-sidebar);
 
