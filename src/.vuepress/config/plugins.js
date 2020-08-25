@@ -35,5 +35,7 @@ module.exports = [
         }
       ]
     }
-  ]
+  ],
+  // https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html
+  ['@vuepress/last-updated']
 ]
