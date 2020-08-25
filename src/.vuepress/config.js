@@ -18,7 +18,7 @@ module.exports = {
       permalinkAttrs: () => ({ 'aria-hidden': 'true' })
     },
     extendMarkdown: md => {
-      md.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n'
+      md.renderer.rules.table_open = () => '<div class="table-wrapper" tabindex="0">\n<table>\n'
       md.renderer.rules.table_close = () => '</table>\n</div>'
     }
   },
