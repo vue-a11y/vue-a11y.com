@@ -20,7 +20,7 @@
     @apply leading-8;
   }
 
-  h1, h4, h5, h6 {
+  h4, h5, h6 {
     .header-anchor {
       @apply hidden;
     }
@@ -49,7 +49,7 @@
     font-weight: bold;
   }
 
-  h2, h3 {
+  h1, h2, h3 {
     position: relative;
     .header-anchor {
       @apply text-accent;

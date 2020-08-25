@@ -15,7 +15,9 @@
 </template>
 
 <script>
-import { computed } from '@vue/composition-api'
+import { computed, watch } from '@vue/composition-api'
+
+import { useIntersectionObserver } from '@/theme/composable'
 
 export default {
   name: 'Page',
@@ -25,7 +27,19 @@ export default {
   },
 
   setup (_, { root }) {
-    const headers = computed(() => (root.$page.headers || []))
+    const headers = computed(() => {
+      if (!root.$page.headers) return []
+      return root.$page.headers.map(header => {
+        return { title: header.title, hash: header.slug }
+      })
+    })
+
+    const { targetIntercepted } = useIntersectionObserver('.header-anchor')
+
+    watch(targetIntercepted, val => {
+      if (root.$route.hash && root.$route.hash === val.hash) return
+      root.$router.push({ path: root.$route.path, hash: val.hash })
+    })
 
     return {
       headers
