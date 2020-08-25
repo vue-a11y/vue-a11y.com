@@ -35,6 +35,8 @@
     <TheMain class="flex flex-grow main-wrapper container-layout-pr md:w-4/7 lg:flex-grow-0 lg:w-5/7">
       <Page />
     </TheMain>
+
+    <!-- Add footer (Contentinfo landmark) -->
   </div>
 </template>
 
@@ -99,5 +101,11 @@ export default {
 
 .sidebar-overlay {
   background-color: var(--bg);
+}
+
+.main-wrapper {
+  @media (max-width: theme('screens.sm')) {
+    @apply block;
+  }
 }
 </style>

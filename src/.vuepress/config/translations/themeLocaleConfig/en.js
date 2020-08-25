@@ -2,6 +2,8 @@ const { generateSidebar } = require('./utils')
 
 module.exports = {
   label: 'English',
+  editLinkText: 'Edit this page on GitHub',
+  lastUpdatedText: 'Last update',
   newsletter: {
     title: 'Subscribe to the newsletter',
     description: 'Enter your email address below and receive articles, videos, updates and events from the Vue.js community and accessibility.',

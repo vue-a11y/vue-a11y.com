@@ -13,3 +13,14 @@ export function debounce (func, wait, immediate) {
     if (callNow) func.apply(context, args)
   }
 }
+
+export function getLastUpdateString (lastUpdate, lang) {
+  if (!lastUpdate) return ''
+  const date = new Date(lastUpdate)
+  return date.toLocaleDateString(lang, {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}

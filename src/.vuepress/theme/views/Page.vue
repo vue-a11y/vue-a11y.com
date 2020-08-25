@@ -1,17 +1,18 @@
 <template>
-  <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
-    <Content class="h-full" />
-    <div class="flex hidden h-full page-float-toc xl:block">
-      <TableOfContents
-        v-if="headers.length && $frontmatter.sidebarDepth !== 0"
-        :title="$themeLocaleConfig.toc.title"
-        title-tag="span"
-        :headers="headers"
-        class="fixed"
-        style="top: 100px;"
-      />
-    </div>
-  </article>
+  <div>
+    <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
+      <Content class="h-full" />
+      <div class="sticky top-0 flex hidden h-full page-float-toc xl:block">
+        <TableOfContents
+          v-if="headers.length && $frontmatter.sidebarDepth !== 0"
+          :title="$themeLocaleConfig.toc.title"
+          title-tag="span"
+          :headers="headers"
+        />
+      </div>
+    </article>
+    <PageEdit class="flex flex-wrap justify-between w-full p-6 pb-32 md:mt-4 lg:px-10" />
+  </div>
 </template>
 
 <script>
@@ -23,6 +24,7 @@ export default {
   name: 'Page',
 
   components: {
+    PageEdit: () => import('@/theme/components/PageEdit'),
     TableOfContents: () => import('@/theme/components/TableOfContents')
   },
 
@@ -34,7 +36,7 @@ export default {
       })
     })
 
-    const { targetIntercepted } = useIntersectionObserver('.header-anchor')
+    const { targetIntercepted } = useIntersectionObserver('.header-anchor') // use { rootMargin: '0px 0px -70%' } to active by header viewport top
 
     watch(targetIntercepted, val => {
       if (root.$route.hash && root.$route.hash === val.hash) return
@@ -56,13 +58,13 @@ div.content__default {
   }
   @screen xl {
     @apply pr-16;
-    width: calc(100% - 250px);
+    width: calc(100% - var(--toc-w-size));
   }
 }
 
 .page-float-toc {
   @screen xl {
-    width: 260px;
+    width: var(--toc-w-size);
   }
 }
 
