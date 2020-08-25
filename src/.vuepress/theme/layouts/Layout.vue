@@ -44,7 +44,7 @@ import { FocusLoop } from '@vue-a11y/focus-loop'
 import TheHeading from '@/theme/components/TheHeading'
 import TheMain from '@/theme/components/TheMain'
 import TheSidebar from '@/theme/components/TheSidebar'
-import useSidebar from '@/theme/composable/useSidebar'
+import { useSidebar } from '@/theme/composable'
 
 export default {
   name: 'Layout',
