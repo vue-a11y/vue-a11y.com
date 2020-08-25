@@ -59,15 +59,14 @@
       padding-right: 4px;
       opacity: 0;
       text-decoration: none;
-      transition: opacity .5s;
       z-index: 1;
 
-      &:hover {
+      &:hover, &:focus {
         opacity: 1 !important;
       }
     }
 
-    &:hover {
+    &:hover, &:focus-within {
       .header-anchor {
         opacity: .2;
       }
