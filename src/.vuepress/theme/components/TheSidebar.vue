@@ -15,7 +15,7 @@
     </button>
     <nav
       :aria-label="$themeLocaleConfig.a11y.landmarks.nav.secondary"
-      class="mt-12"
+      class="mt-12 mb-10"
     >
       <template v-for="(nav, index) in items">
         <span
@@ -68,12 +68,19 @@
                 :key="`sidebar-subHeader-${subIndex}`"
                 class="pl-4"
               >
-                <a
-                  class="block px-3 py-1 text-sm hover:underline"
-                  :href="`${$page.regularPath}#${subHeader.slug}`"
+                <router-link
+                  v-slot="{ href, route, navigate, isActive }"
+                  :to="`${$page.regularPath}#${subHeader.slug}`"
                 >
-                  {{ subHeader.title }}
-                </a>
+                  <a
+                    :href="href"
+                    :aria-current="isActive && $route.path === item.path ? 'page' : null"
+                    class="block px-3 py-1 text-sm hover:underline"
+                    :class="{ 'active underline font-bold': isActive && $route.path === item.path }"
+                  >
+                    {{ subHeader.title }}
+                  </a>
+                </router-link>
               </li>
             </ul>
           </li>
