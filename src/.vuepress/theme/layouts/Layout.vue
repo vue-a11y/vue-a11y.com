@@ -40,7 +40,7 @@
       <Page />
     </TheMain>
 
-    <BackToTop :root-element="$refs.theMain && $refs.theMain.$el" />
+    <BackToTop root-selector="#main" />
   </div>
 </template>
 
