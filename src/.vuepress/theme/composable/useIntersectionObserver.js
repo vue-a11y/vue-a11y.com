@@ -16,27 +16,30 @@ export default function useIntersectionObserver (selector, options) {
   let observer
   onMounted(() => {
     if ('IntersectionObserver' in window) {
-      targets.value = document.querySelectorAll(selector)
-      if (!targets.value) return
-      observer = new IntersectionObserver(([entry]) => {
-        intersectionRatio.value = entry.intersectionRatio
-        if (entry.intersectionRatio > 0) {
-          targetIntercepted.value = entry.target
-          isIntersecting.value = true
-          isFullyInView.value = entry.intersectionRatio >= 1
-          return
-        }
+      window.requestAnimationFrame(() => {
+        targets.value = document.querySelectorAll(selector)
+        if (!targets.value) return
+        observer = new IntersectionObserver(([entry]) => {
+          intersectionRatio.value = entry.intersectionRatio
+          if (entry.intersectionRatio > 0) {
+            targetIntercepted.value = entry.target
+            isIntersecting.value = true
+            isFullyInView.value = entry.intersectionRatio >= 1
+            return
+          }
 
-        isIntersecting.value = false
-      }, { ...defaultOptions, ...options })
+          isIntersecting.value = false
+        }, { ...defaultOptions, ...options })
 
-      observe()
+        observe()
+      })
     }
   })
 
   function unobserve () {
     if (!observer) return
     targets.value.forEach(el => observer.unobserve(el))
+    targets.value = null
   }
 
   onUnmounted(unobserve)
