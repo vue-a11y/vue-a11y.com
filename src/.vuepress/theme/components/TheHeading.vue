@@ -75,7 +75,7 @@ export default {
     const labels = root.$themeLocaleConfig.a11y.labels
     const menuButtonAriaLabel = labels.menuButton ? computed(() => props.isSidebarOpen ? labels.menuButton.close : labels.menuButton.open) : 'Menu sidebar button'
 
-    watch(() => root.$route.path, () => emit('toggle-sidebar'))
+    watch(() => root.$route.fullPath, () => props.isSidebarOpen && emit('toggle-sidebar'))
 
     return {
       menuButtonAriaLabel
