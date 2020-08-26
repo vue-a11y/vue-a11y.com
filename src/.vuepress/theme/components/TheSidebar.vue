@@ -32,7 +32,7 @@
             class="pr-2 sidebar-list-item"
           >
             <a
-              v-if="item.external"
+              v-if="item.type === 'external'"
               :href="item.path"
               target="_blank"
               rel="noopener noreferrer"
