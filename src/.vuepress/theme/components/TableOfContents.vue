@@ -18,7 +18,7 @@
         >
           <a
             :href="href"
-            class="relative inline-block py-3 pl-10 pr-3 anchor-link"
+            class="relative inline-block py-2 pl-10 pr-3 anchor-link"
             :class="{ 'active font-bold': isExactActive }"
           >
             {{ header.title }}

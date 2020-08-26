@@ -36,7 +36,7 @@
               :href="item.path"
               target="_blank"
               rel="noopener noreferrer"
-              class="block px-4 py-2"
+              class="block px-4 py-1"
             >
               {{ item.title }}
               <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
@@ -51,7 +51,7 @@
               <a
                 :href="href"
                 :aria-current="isActive && $route.path === item.path ? 'page' : null"
-                class="block px-4 py-2"
+                class="block px-4 py-1"
                 :class="{ 'active font-bold': isActive && $route.path === item.path }"
                 @click="navigate"
               >
