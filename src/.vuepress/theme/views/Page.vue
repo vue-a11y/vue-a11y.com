@@ -13,6 +13,7 @@
           title-tag="span"
           :headers="headers"
         />
+        <PageNewsletter class="pl-4 mt-16" />
       </div>
     </article>
   </div>
@@ -26,6 +27,7 @@ export default {
 
   components: {
     PageEdit: () => import('@/theme/components/PageEdit'),
+    PageNewsletter: () => import('@/theme/components/PageNewsletter'),
     TableOfContents: () => import('@/theme/components/TableOfContents')
   },
 

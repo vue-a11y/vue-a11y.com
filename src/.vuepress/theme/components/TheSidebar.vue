@@ -15,7 +15,7 @@
     </button>
     <nav
       :aria-label="$themeLocaleConfig.a11y.landmarks.nav.secondary"
-      class="pb-32 mt-12"
+      class="mt-12"
     >
       <template v-for="(nav, index) in items">
         <span
@@ -80,8 +80,6 @@
         </ul>
       </template>
     </nav>
-
-    <SidebarNeswletter class="absolute bottom-0 z-10 py-8 ml-4 mr-3 bg-light-200" />
   </div>
 </template>
 
@@ -90,10 +88,6 @@ import { resolveSidebarItems } from '@/theme/utils/sidebar'
 
 export default {
   name: 'TheSidebar',
-
-  components: {
-    SidebarNeswletter: () => import('@/theme/components/SidebarNewsletter')
-  },
 
   setup (_, { root }) {
     const items = resolveSidebarItems(root.$page.regularPath, root.$site, root.$themeLocaleConfig)

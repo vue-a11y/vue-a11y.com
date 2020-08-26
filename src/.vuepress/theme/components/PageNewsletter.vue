@@ -13,13 +13,14 @@
         id="sidebar-email-newsletter"
         type="email"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
-        class="w-full p-3 bg-white border-b-4 border-solid border-light-400"
+        class="w-full p-3 border-b-4 border-solid bg-light-200 border-light-400"
       >
     </label>
     <button
       type="submit"
-      class="flex items-center justify-center w-12 px-1 ml-2 mr-2"
+      class="flex items-center justify-center w-12 px-1"
     >
+      <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
       <vp-icon
         name="send"
         size="30"
@@ -30,6 +31,6 @@
 
 <script>
 export default {
-  name: 'SidebarNewsletter'
+  name: 'PageNewsletter'
 }
 </script>
