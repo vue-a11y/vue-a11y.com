@@ -8,6 +8,7 @@
       <div class="sticky top-0 flex hidden h-full page-float-toc xl:block">
         <TableOfContents
           v-if="headers.length && $frontmatter.sidebarDepth !== 0"
+          :key="$route.path"
           :title="$themeLocaleConfig.toc.title"
           title-tag="span"
           :headers="headers"
@@ -18,9 +19,7 @@
 </template>
 
 <script>
-import { computed, watch } from '@vue/composition-api'
-
-import { useIntersectionObserver } from '@/theme/composable'
+import { computed } from '@vue/composition-api'
 
 export default {
   name: 'Page',
@@ -36,13 +35,6 @@ export default {
       return root.$page.headers.map(header => {
         return { title: header.title, hash: header.slug }
       })
-    })
-
-    const { targetIntercepted } = useIntersectionObserver('.header-anchor') // use { rootMargin: '0px 0px -70%' } to active by header viewport top
-
-    watch(targetIntercepted, val => {
-      if (root.$route.hash && root.$route.hash === val.hash) return
-      root.$router.push({ path: root.$route.path, hash: val.hash })
     })
 
     return {

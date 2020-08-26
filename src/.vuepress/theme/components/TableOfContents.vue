@@ -19,7 +19,7 @@
           <a
             :href="href"
             class="relative inline-block py-3 pl-10 pr-3 anchor-link"
-            :class="{ active: isExactActive }"
+            :class="{ 'active font-bold': isExactActive }"
           >
             {{ header.title }}
           </a>
@@ -30,6 +30,10 @@
 </template>
 
 <script>
+import { watch } from '@vue/composition-api'
+
+import { useIntersectionObserver } from '@/theme/composable'
+
 export default {
   name: 'TableOfContents',
 
@@ -48,6 +52,15 @@ export default {
       type: Array,
       default: () => ([])
     }
+  },
+
+  setup (_, { root }) {
+    const { targetIntercepted } = useIntersectionObserver('.header-anchor') // use { rootMargin: '0px 0px -70%' } to active by header viewport top
+
+    watch(targetIntercepted, val => {
+      if (root.$route.hash && root.$route.hash === val.hash) return
+      root.$router.push({ path: root.$route.path, hash: val.hash })
+    })
   }
 }
 </script>
