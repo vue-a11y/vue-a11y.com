@@ -4,13 +4,22 @@
       <li
         v-for="item in $themeLocaleConfig.nav"
         :key="item.text"
+        class="mr-1 last:mr-0"
       >
-        <a
-          :href="item.link"
-          class="px-3 py-3 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
+        <router-link
+          v-slot="{ href, route, navigate, isActive }"
+          :to="item.link"
         >
-          {{ item.text }}
-        </a>
+          <a
+            :href="href"
+            :aria-current="isActive && $route.path === item.link ? 'page' : null"
+            class="px-3 py-3 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
+            :class="{ 'active border-accent': isActive && $route.path === item.link }"
+            @click="navigate"
+          >
+            {{ item.text }}
+          </a>
+        </router-link>
       </li>
       <li>
         <a
