@@ -3,17 +3,12 @@
     class="page-edit"
     aria-label="page"
   >
-    <a
+    <ExternalLink
       v-if="$themeConfig.editLinks"
       :href="editLink"
-      target="_blank"
-      rel="noopener"
+      :label="$themeLocaleConfig.editLinkText"
       class="mb-4 border-b-2 border-accent"
-    >
-      {{ $themeLocaleConfig.editLinkText }}
-      <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
-      <OutboundLink />
-    </a>
+    />
     <div
       v-if="$themeConfig.lastUpdated"
       class="last-update"

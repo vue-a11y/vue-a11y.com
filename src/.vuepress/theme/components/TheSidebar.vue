@@ -31,17 +31,12 @@
             :key="`nav-list-${index}-item-${itemIndex}`"
             class="pr-2 sidebar-list-item"
           >
-            <a
+            <ExternalLink
               v-if="item.type === 'external'"
               :href="item.path"
-              target="_blank"
-              rel="noopener noreferrer"
+              :label="item.title"
               class="block px-4 py-1"
-            >
-              {{ item.title }}
-              <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
-              <OutboundLink />
-            </a>
+            />
 
             <router-link
               v-else

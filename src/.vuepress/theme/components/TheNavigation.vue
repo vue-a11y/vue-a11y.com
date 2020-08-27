@@ -4,7 +4,7 @@
       <li
         v-for="item in $themeLocaleConfig.nav"
         :key="item.text"
-        class="mr-1 last:mr-0"
+        class="mr-1"
       >
         <router-link
           v-slot="{ href, route, navigate, isActive }"
@@ -22,16 +22,11 @@
         </router-link>
       </li>
       <li>
-        <a
+        <ExternalLink
+          class="px-3 py-3 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
           :href="`https://github.com/${$themeConfig.repo}`"
-          target="_blank"
-          rel="noopener"
-          class="px-3 py-3 ml-1 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
-        >
-          Github
-          <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
-          <OutboundLink />
-        </a>
+          label="Github"
+        />
       </li>
     </ul>
   </nav>

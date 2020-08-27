@@ -17,15 +17,11 @@
               {{ $frontmatter.actionText }}
             </router-link>
 
-            <a
-              href="https://github.com/vue-a11y"
+            <ExternalLink
               class="ml-4 btn btn-light"
-              rel="noopener"
-              target="_blank"
-            >
-              Github
-              <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
-            </a>
+              :href="`https://github.com/${$themeConfig.repo}`"
+              label="Github"
+            />
           </div>
         </div>
         <div class="self-end hidden lg:block lg:mr-6">
