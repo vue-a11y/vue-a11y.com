@@ -5,6 +5,7 @@ module.exports = {
   editLinkText: 'Editar página no GitHub',
   lastUpdatedText: 'Última atualização em',
   backToTopText: 'voltar ao topo da página',
+  backToPostsText: 'voltar para os posts',
   newsletter: {
     title: 'Inscreva-se na newsletter',
     description: 'Digite seu email abaixo e receba artigos, vídeos, atualizações e eventos da comunidade Vue.js e acessibilidade.',
@@ -34,6 +35,7 @@ module.exports = {
   sidebar: {
     '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade']),
     '/pt/blog/': generateSidebar('blog', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/category/': generateSidebar('blog', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
     '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
   },
   a11y: {
