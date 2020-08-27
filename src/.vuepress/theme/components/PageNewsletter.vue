@@ -13,7 +13,7 @@
         id="sidebar-email-newsletter"
         type="email"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
-        class="w-full p-3 border-b-4 border-solid bg-light-200 border-light-400"
+        class="w-full p-3 border border-b-4 border-solid outline-none bg-light-200 border-light-400 hover:border-accent focus:border-accent"
       >
     </label>
     <button
