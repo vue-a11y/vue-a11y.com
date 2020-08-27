@@ -6,6 +6,7 @@ module.exports = {
   lastUpdatedText: 'Last update',
   backToTopText: 'back to page top',
   backToPostsText: 'back to posts',
+  shareLinksText: 'Share on',
   newsletter: {
     title: 'Subscribe to the newsletter',
     description: 'Enter your email address below and receive articles, videos, updates and events from the Vue.js community and accessibility.',
@@ -52,6 +53,10 @@ module.exports = {
       nav: {
         main: 'Main',
         secondary: 'Secondary'
+      },
+      post: {
+        summary: 'Summary',
+        content: 'Content post'
       }
     }
   }

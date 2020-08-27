@@ -1,6 +1,8 @@
 <template>
   <div class="page-page-share toc">
-    <span class="toc-title">Share</span>
+    <span class="toc-title">
+      {{ $themeLocaleConfig.shareLinksText }}
+    </span>
     <ul class="toc-list">
       <li
         v-for="(item, index) in shareLinks"
