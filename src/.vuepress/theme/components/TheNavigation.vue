@@ -12,9 +12,9 @@
         >
           <a
             :href="href"
-            :aria-current="isActive && $route.path === item.link ? 'page' : null"
+            :aria-current="isActive && $route.path.indexOf(item.link) === 0 ? 'page' : null"
             class="px-3 py-3 border-b-4 border-transparent border-solid hover:border-accent lg:py-4"
-            :class="{ 'active border-accent': isActive && $route.path === item.link }"
+            :class="{ 'active border-accent': isActive && $route.path.indexOf(item.link) === 0 }"
             @click="navigate"
           >
             {{ item.text }}
