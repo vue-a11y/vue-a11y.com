@@ -50,7 +50,7 @@ body {
 
 .btn {
   @apply py-3 px-4 font-bold text-xl;
-  max-height: 62px;
+  max-height: 63px;
   border-bottom: 6px solid transparent;
 
   &-light {
@@ -61,5 +61,20 @@ body {
   &-accent {
     @apply bg-accent;
     border-bottom-color: theme('colors.accentDark');
+  }
+}
+
+.card {
+  @apply relative flex flex-col justify-between w-full p-5 border border-solid;
+  background-color: var(--bg-sidebar);
+  border-bottom-width: 6px;
+  border-color: var(--bg-hover-sidebar);
+
+  &-title {
+    @apply text-3xl font-bold leading-9;
+  }
+
+  &-info {
+    @apply flex items-end justify-between mt-12;
   }
 }

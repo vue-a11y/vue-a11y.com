@@ -1,11 +1,11 @@
 <template>
   <article
-    class="relative flex flex-col justify-between w-full p-5 border border-solid card-post"
+    class="card card-post"
     @mousedown="onMouseEvent"
     @mouseup="onMouseEvent"
   >
     <h2
-      class="text-3xl font-bold leading-9 card-post-title"
+      class="card-title card-post-title"
     >
       <router-link
         ref="cardLink"
@@ -15,7 +15,7 @@
       </router-link>
     </h2>
 
-    <div class="flex items-end justify-between mt-12">
+    <div class="card-info">
       <time :datetime="post.date.datetime">
         {{ post.date.short }}
       </time>
@@ -28,8 +28,8 @@
       >
         <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
           <img
-            src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNjE5MzY5M15BMl5BanBnXkFtZTgwMDI5ODMxODE@._V1_UY256_CR98,0,172,256_AL_.jpg"
-            alt="Avatar Pom Klementieff"
+            :src="post.author.avatar"
+            :alt="`Avatar ${post.author.name}`"
             class="object-cover object-top w-full h-fl"
           >
         </div>
@@ -86,10 +86,6 @@ export default {
 
 <style lang="scss">
 .card-post {
-  background-color: var(--bg-sidebar);
-  border-bottom-width: 6px;
-  border-color: var(--bg-hover-sidebar);
-
   &:hover, &:focus-within {
     @apply border-accent;
 
