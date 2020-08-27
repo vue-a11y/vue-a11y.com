@@ -36,11 +36,12 @@
       ref="theMain"
       class="flex flex-grow main-wrapper container-layout-pr md:w-4/7 lg:flex-grow-0 lg:w-5/7"
     >
-      <span id="page-top" />
-      <Page />
+      <slot>
+        <component :is="$frontmatter.view || 'Page'" />
+      </slot>
     </TheMain>
 
-    <BackToTop root-selector="#main" />
+    <BackToTop root-container="#main" />
   </div>
 </template>
 
@@ -63,7 +64,7 @@ export default {
     BackToTop: () => import('@/theme/components/BackToTop')
   },
 
-  setup (_, { emit, refs }) {
+  setup (_, { refs }) {
     const { isSidebarOpen, sidebarFixed, toggleSidebar } = useSidebar(refs)
 
     return {
@@ -89,15 +90,6 @@ export default {
   left: -100%;
   background-image: var(--bg-left);
   transition: visibility .3s, opacity .3s, left .3s;
-
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--bg-hover-sidebar);
-    border-radius: 10px;
-  }
 
   &-show {
     @apply visible opacity-100 left-0;
