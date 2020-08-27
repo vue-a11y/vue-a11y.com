@@ -1,8 +1,9 @@
 <template>
-  <article
+  <component
+    :is="wrapperTag"
     class="relative flex flex-col justify-between w-full p-5 border border-solid card-post"
-    @mousedown="onMouseDown"
-    @mouseup="onMouseUp"
+    @mousedown="onMouseEvent"
+    @mouseup="onMouseEvent"
   >
     <h2 class="text-3xl font-bold leading-9">
       <router-link
@@ -19,6 +20,7 @@
       </time>
       <router-link
         v-if="post.author"
+        ref="authors"
         :to="{ path: '/authors/', hash: post.author.username }"
         class="relative flex"
         style="top: 6px;"
@@ -36,7 +38,7 @@
         </span>
       </router-link>
     </div>
-  </article>
+  </component>
 </template>
 
 <script>
@@ -46,6 +48,11 @@ export default {
   name: 'CardPost',
 
   props: {
+    wrapperTag: {
+      type: String,
+      default: 'article'
+    },
+
     post: {
       type: Object,
       required: true
@@ -56,18 +63,26 @@ export default {
     const up = ref(null)
     const down = ref(null)
 
-    function onMouseUp (e) {
+    function isRightClick (buttons) {
+      return buttons === 2
+    }
+
+    function onMouseEvent ({ type, buttons, target }) {
+      if (isRightClick(buttons) || (refs.authors && refs.authors.$el.contains(target))) return
+      type === 'mousedown' ? onMouseDown() : onMouseUp()
+    }
+
+    function onMouseUp () {
       up.value = +new Date()
       if ((up.value - down.value) < 200) refs.cardLink.$el.click()
     }
 
-    function onMouseDown (e) {
+    function onMouseDown () {
       down.value = +new Date()
     }
 
     return {
-      onMouseUp,
-      onMouseDown
+      onMouseEvent
     }
   }
 }
