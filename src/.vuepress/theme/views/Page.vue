@@ -2,16 +2,16 @@
   <div class="w-full">
     <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
       <div class="page-content">
-        <Content />
+        <Content class="max-char" />
         <PageEdit class="flex flex-wrap justify-between w-full py-6 pb-24 border-t border-light-400 md:mt-4" />
       </div>
       <div class="sticky top-0 flex hidden h-full page-float-toc xl:block">
         <TableOfContents
-          v-if="headers.length && $frontmatter.sidebarDepth !== 0"
+          v-if="$frontmatter.toc !== 0"
           :key="$route.path"
           :title="$themeLocaleConfig.toc.title"
           title-tag="span"
-          :headers="headers"
+          class="pt-20"
         />
         <PageNewsletter class="pl-4 mt-16" />
       </div>
@@ -20,8 +20,6 @@
 </template>
 
 <script>
-import { computed } from '@vue/composition-api'
-
 export default {
   name: 'Page',
 
@@ -29,19 +27,6 @@ export default {
     PageEdit: () => import('@/theme/components/PageEdit'),
     PageNewsletter: () => import('@/theme/components/PageNewsletter'),
     TableOfContents: () => import('@/theme/components/TableOfContents')
-  },
-
-  setup (_, { root }) {
-    const headers = computed(() => {
-      if (!root.$page.headers) return []
-      return root.$page.headers.map(header => {
-        return { title: header.title, hash: header.slug }
-      })
-    })
-
-    return {
-      headers
-    }
   }
 }
 </script>
