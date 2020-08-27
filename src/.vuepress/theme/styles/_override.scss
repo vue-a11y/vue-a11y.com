@@ -33,3 +33,27 @@ div.search-box {
     }
   }
 }
+
+ul.pagination {
+  .page-item {
+    &.active > a {
+      @apply font-bold;
+      background-color: var(--accent);
+    }    
+  }
+
+  li:not(.disabled) {
+    > a {
+      color: var(--color) !important;
+    }
+  }
+  
+  li > a {
+    @apply px-5 py-2 text-xl;
+
+    &:hover {
+      background-color: var(--bg-sidebar);
+      border-color: var(--bg-hover-sidebar);
+    }
+  }
+}
