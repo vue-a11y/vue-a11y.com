@@ -25,7 +25,7 @@ export default {
   },
 
   setup (_, { root }) {
-    const view = computed(() => root.$frontmatter.view)
+    const view = computed(() => root.$page.id || root.$frontmatter.view)
     if (!view.value) root.$router.push('/')
     return {
       view
