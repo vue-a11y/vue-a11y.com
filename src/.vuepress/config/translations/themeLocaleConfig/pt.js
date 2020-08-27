@@ -20,8 +20,8 @@ module.exports = {
       link: '/pt/project/'
     },
     {
-      text: 'Blog',
-      link: '/pt/blog/'
+      text: 'Posts',
+      link: '/pt/posts/'
     },
     {
       text: 'Receitas',
@@ -34,8 +34,8 @@ module.exports = {
   ],
   sidebar: {
     '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade']),
-    '/pt/blog/': generateSidebar('blog', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
-    '/pt/category/': generateSidebar('blog', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/posts/': generateSidebar('posts', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/category/': generateSidebar('posts', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
     '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
   },
   a11y: {

@@ -17,13 +17,13 @@ module.exports = [
       },
       directories: [
         {
-          id: 'blog',
+          id: 'Post',
           title: 'All posts - Vue A11y',
           layout: 'Posts',
           itemLayout: 'Full',
-          dirname: 'blog',
-          path: '/blog/',
-          itemPermalink: '/blog/:slug',
+          dirname: 'posts',
+          path: '/posts/',
+          itemPermalink: '/posts/:slug',
           pagination: {
             layout: 'Posts',
             prevText: '<<',

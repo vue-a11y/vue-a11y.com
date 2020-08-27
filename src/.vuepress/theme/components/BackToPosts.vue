@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`${$localeConfig.path === '/' ? '' : $localeConfig.path}/blog/`">
+  <router-link :to="`${$localeConfig.path === '/' ? '' : $localeConfig.path}/posts/`">
     <vp-icon
       name="corner-up-left"
       size="8px"

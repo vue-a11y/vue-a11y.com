@@ -20,8 +20,8 @@ module.exports = {
       link: '/project/'
     },
     {
-      text: 'Blog',
-      link: '/blog/'
+      text: 'Posts',
+      link: '/posts/'
     },
     {
       text: 'Recipes',
@@ -34,8 +34,8 @@ module.exports = {
   ],
   sidebar: {
     '/project/': generateSidebar('project'),
-    '/blog/': generateSidebar('blog'),
-    '/category/': generateSidebar('blog'),
+    '/posts/': generateSidebar('posts'),
+    '/category/': generateSidebar('posts'),
     '/recipes/': generateSidebar('recipes')
   },
   a11y: {

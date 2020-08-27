@@ -28,7 +28,7 @@ module.exports = {
     }
   ],
 
-  blog: [
+  posts: [
     {
       title: 'Categories',
       type: 'manual',
