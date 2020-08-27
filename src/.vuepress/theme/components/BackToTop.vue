@@ -1,6 +1,6 @@
 <template>
   <a
-    href="#page-top"
+    :href="anchor"
     class="fixed bottom-0 right-0 z-10 p-6 mb-10 mr-16"
     :class="{ 'block': show, 'hidden': !show }"
   >
@@ -21,6 +21,11 @@ export default {
   name: 'BackToTop',
 
   props: {
+    anchor: {
+      type: String,
+      default: '#main'
+    },
+
     marginTop: {
       type: Number,
       default: 100
@@ -31,13 +36,13 @@ export default {
       default: 500
     },
 
-    rootSelector: {
-      type: String,
+    rootContainer: {
+      type: [String, HTMLElement],
       default: '#main'
     }
   },
 
-  setup ({ marginTop, threshold, rootSelector }, { root }) {
+  setup ({ marginTop, threshold, rootContainer }, { root }) {
     const show = ref(false)
     const rootElement = ref(null)
 
@@ -49,7 +54,10 @@ export default {
     }, threshold)
 
     onMounted(() => {
-      rootElement.value = document.querySelector(rootSelector)
+      rootElement.value = typeof rootContainer === 'string'
+        ? document.querySelector(rootContainer)
+        : rootContainer
+
       setPanel()
       rootElement.value.addEventListener('scroll', setPanel, { passive: true })
     })
