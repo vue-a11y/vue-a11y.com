@@ -1,18 +1,18 @@
 <template>
   <Layout>
     <div
-      class="w-full px-4 xl:pr-4"
-      :class="{ 'mt-6 md:mt-12': !isCategory }"
+      class="w-full px-4 posts xl:pr-4"
+      :class="{ 'mt-8 md:mt-12': !isCategory }"
     >
       <BackToPosts
         v-show="isCategory"
         class="inline-flex px-4 my-4 ml-2"
       />
-      <ul class="flex flex-wrap justify-between">
+      <ul class="flex flex-wrap justify-between w-full px-3 lg:pr-6 lg:pl-0 lg:ml-6 xl:pr-0">
         <li
           v-for="post in posts"
           :key="post.id"
-          class="flex w-full mb-6 lg:pl-6 lg:w-1/2"
+          class="flex w-full mb-6 posts-item lg:w-1/2"
         >
           <CardPost :post="post" />
         </li>
@@ -66,4 +66,16 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+.posts-item {
+  @screen lg {
+    &:nth-child(odd) {
+      @apply pr-3;
+    }
+    &:nth-child(even) {
+      @apply pl-3;
+    }
+  }
+}
+</style>
