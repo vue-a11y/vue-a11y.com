@@ -78,3 +78,45 @@ body {
     @apply flex items-end justify-between mt-12;
   }
 }
+
+.toc {
+  &-title {
+    @apply block pl-3 mb-4 text-xl font-bold;
+  }
+
+  &-list {
+    @apply relative;
+
+    &:before {
+      @apply absolute z-20 border-l border-dashed border-gray-400;
+      content: '';
+      width: 2px;
+      left: 28px;
+      top: -5%;
+      height: 110%;
+    }
+  }
+
+  &-list-item {
+    @apply w-full leading-4;
+
+    a {
+      @apply relative inline-block py-3 pl-10 pr-3;
+
+      &:hover, &:focus, &.active {
+        background-color: var(--bg-sidebar);
+
+        &:before {
+          @apply absolute rounded-full z-10;
+          content: '';
+          background-color: var(--accent);
+          width: 6px;
+          height: 6px;
+          left: 10px;
+          top: 50%;
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+}
