@@ -1,8 +1,6 @@
 <template>
   <div class="mt-24 home">
-    <div
-      class="container relative z-10 px-4 mx-auto"
-    >
+    <div class="container relative z-10 px-4 mx-auto">
       <div class="flex items-center justify-center h-fulllg:justify-between hero">
         <div class="max-w-sm lg:-mt-48">
           <h1 class="text-4xl font-bold">

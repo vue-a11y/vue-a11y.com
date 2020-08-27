@@ -23,7 +23,7 @@ export default {
   props: {
     anchor: {
       type: String,
-      default: '#main'
+      default: '#page-top'
     },
 
     marginTop: {

@@ -1,5 +1,6 @@
 <template>
   <main id="main">
+    <span id="page-top" />
     <slot />
   </main>
 </template>
