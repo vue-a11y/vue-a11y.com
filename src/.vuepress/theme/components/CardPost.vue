@@ -1,11 +1,12 @@
 <template>
-  <component
-    :is="wrapperTag"
+  <article
     class="relative flex flex-col justify-between w-full p-5 border border-solid card-post"
     @mousedown="onMouseEvent"
     @mouseup="onMouseEvent"
   >
-    <h2 class="text-3xl font-bold leading-9">
+    <h2
+      class="text-3xl font-bold leading-9 card-post-title"
+    >
       <router-link
         ref="cardLink"
         :to="post.to"
@@ -22,7 +23,7 @@
         v-if="post.author"
         ref="authors"
         :to="{ path: '/authors/', hash: post.author.username }"
-        class="relative flex"
+        class="relative flex hover:underline"
         style="top: 6px;"
       >
         <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
@@ -38,7 +39,7 @@
         </span>
       </router-link>
     </div>
-  </component>
+  </article>
 </template>
 
 <script>
@@ -48,11 +49,6 @@ export default {
   name: 'CardPost',
 
   props: {
-    wrapperTag: {
-      type: String,
-      default: 'article'
-    },
-
     post: {
       type: Object,
       required: true
@@ -96,19 +92,21 @@ export default {
 
   &:hover, &:focus-within {
     @apply border-accent;
+
+    .card-post-title > a {
+      text-decoration-color: var(--color);
+    }
   }
 
   &:hover {
     @apply cursor-pointer;
   }
 
-  h2 > a {
-    position: initial;
-    text-decoration-line: underline;
-    text-decoration-color: var(--accent);
-
-    &:hover, &:focus {
-      text-decoration-color: var(--color);
+  &-title {
+    > a {
+      position: initial;
+      text-decoration-line: underline;
+      text-decoration-color: var(--accent);
       transition: text-decoration .2s;
       outline: none;
     }
