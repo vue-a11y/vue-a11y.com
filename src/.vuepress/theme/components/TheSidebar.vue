@@ -91,13 +91,15 @@
 </template>
 
 <script>
+import { computed } from '@vue/composition-api'
+
 import { resolveSidebarItems } from '@/theme/utils/sidebar'
 
 export default {
   name: 'TheSidebar',
 
   setup (_, { root }) {
-    const items = resolveSidebarItems(root.$page.regularPath, root.$site, root.$themeLocaleConfig)
+    const items = computed(() => resolveSidebarItems(root.$page.regularPath, root.$site, root.$themeLocaleConfig))
     return {
       items
     }
