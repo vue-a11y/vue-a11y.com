@@ -30,6 +30,13 @@ function resolveItem (item, pages, base) {
       })
     }
 
+    if (childIsArray && item.type === 'manual') {
+      return result.children.push({
+        title: child[0],
+        path: child[1]
+      })
+    }
+
     const page = pages.find(page => {
       if (isBasePath) return page.regularPath === base
       return page.regularPath.indexOf(base + (childIsArray ? child[1] : child)) === 0

@@ -31,23 +31,23 @@ module.exports = {
   blog: [
     {
       title: 'Categories',
+      type: 'manual',
       children: [
-        '',
-        'html',
-        'wai-aria',
-        'wcag',
-        'forms',
-        'vue-packages',
-        'news',
-        'tools',
-        'mobile-accessibility',
-        'assistive-technologies'
+        ['HTML', '/category/html/'],
+        ['ARIA', '/category/aria/'],
+        ['WCAG', '/category/wcag/'],
+        ['Vue packages', '/category/vue-packages/'],
+        ['News', '/category/news/'],
+        ['Tools', '/category/tools/'],
+        ['Mobile A11y', '/category/mobile-accessibility/'],
+        ['AT', '/category/assistive-technology/']
       ]
     },
     {
       title: 'Archives',
+      type: 'manual',
       children: [
-        '2020'
+        ['2020', '/category/2020/']
       ]
     },
     {
@@ -63,7 +63,7 @@ module.exports = {
         ['Kevin Deisz', 'https://twitter.com/kddeisz'],
         ['Marcus Herrmann', 'https://twitter.com/_marcusherrmann'],
         ['Callum Macrae', 'https://twitter.com/callumacrae'],
-        ['Victoria Bergquist', 'https://twitter.com/MariaLamardo']
+        ['Victoria Bergquist', 'https://twitter.com/vicbergquist']
       ]
     }
   ],
