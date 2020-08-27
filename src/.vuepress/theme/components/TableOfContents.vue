@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { watch } from '@vue/composition-api'
+import { watch, computed } from '@vue/composition-api'
 
 import { useIntersectionObserver } from '@/theme/composable'
 
@@ -46,21 +46,30 @@ export default {
     titleTag: {
       type: String,
       default: 'h2'
-    },
-
-    headers: {
-      type: Array,
-      default: () => ([])
     }
   },
 
   setup (_, { root }) {
     const { targetIntercepted } = useIntersectionObserver('.header-anchor') // use { rootMargin: '0px 0px -70%' } to active by header viewport top
 
+    const headers = computed(() => {
+      if (!root.$page.headers) return []
+      return root.$page.headers.map(header => {
+        return { title: header.title, hash: header.slug }
+      })
+    })
+
     watch(targetIntercepted, val => {
       if (root.$route.hash && root.$route.hash === val.hash) return
-      root.$router.push({ path: root.$route.path, hash: val.hash })
+      root.$vuepress.$set('disableScrollBehavior', true)
+      root.$router.replace({ path: root.$route.path, hash: val.hash }, () => {
+        root.$nextTick(() => root.$vuepress.$set('disableScrollBehavior', false))
+      })
     })
+
+    return {
+      headers
+    }
   }
 }
 </script>
