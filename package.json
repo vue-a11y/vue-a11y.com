@@ -34,6 +34,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@goy/vuepress-plugin-svg-icons": "^4.2.1",
     "@vue/eslint-config-standard": "^5.1.2",
+    "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-last-updated": "^1.5.4",
     "@vuepress/plugin-pwa": "^1.5.3",
     "@vuepress/plugin-search": "^1.5.3",
