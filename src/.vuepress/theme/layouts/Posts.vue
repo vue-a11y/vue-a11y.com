@@ -4,18 +4,10 @@
       class="w-full px-4 xl:pr-4"
       :class="{ 'mt-6 md:mt-12': !isCategory }"
     >
-      <router-link
+      <BackToPosts
         v-show="isCategory"
-        :to="`${$localeConfig.path === '/' ? '' : $localeConfig.path}/blog/`"
         class="inline-flex px-4 my-4 ml-2"
-      >
-        <vp-icon
-          name="corner-up-left"
-          size="8px"
-          class="mt-2 mr-2"
-        />
-        <span>{{ $themeLocaleConfig.backToPostsText }}</span>
-      </router-link>
+      />
       <ul class="flex flex-wrap justify-between">
         <li
           v-for="post in posts"
@@ -46,7 +38,8 @@ export default {
 
   components: {
     CardPost,
-    Pagination
+    Pagination,
+    BackToPosts: () => import('@/theme/components/BackToPosts')
   },
 
   setup (_, { root }) {
