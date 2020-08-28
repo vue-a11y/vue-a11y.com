@@ -5,7 +5,7 @@ export default function useIntersectionObserver (selector, options) {
   const isIntersecting = ref(false)
   const isFullyInView = ref(false)
   const targetIntercepted = ref(null)
-  const targets = ref(null)
+  const targets = ref([])
 
   const defaultOptions = { root: null, rootMargin: '0px' }
 
@@ -37,7 +37,7 @@ export default function useIntersectionObserver (selector, options) {
   })
 
   function unobserve () {
-    if (!observer) return
+    if (!observer || !targets.value) return
     targets.value.forEach(el => observer.unobserve(el))
     targets.value = null
   }
