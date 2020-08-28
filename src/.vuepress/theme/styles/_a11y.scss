@@ -34,3 +34,7 @@
 .max-char {
   max-width: 66ch;
 }
+
+::placeholder {
+  color: var(--color) !important;
+}
