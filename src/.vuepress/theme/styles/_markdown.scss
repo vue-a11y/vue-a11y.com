@@ -1,5 +1,5 @@
 .content__default {
-  @apply text-lg;
+  @apply text-xl;
   display: block;
   min-height: 150px;
 
@@ -16,7 +16,7 @@
   }
 
   p, ol, ul {    
-    @apply leading-8;
+    @apply leading-9;
   }
 
   h4, h5, h6 {
@@ -26,11 +26,11 @@
   }
 
   h1 {
-    @apply font-bold text-3xl;
+    @apply font-bold text-4xl;
   }
 
   h2 {
-    @apply font-bold text-2xl;
+    @apply font-bold text-3xl;
     margin-top: 60px;
     z-index: 2;
     line-height: 1.04em;
