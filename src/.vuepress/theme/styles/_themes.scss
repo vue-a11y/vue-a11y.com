@@ -9,6 +9,12 @@
   --bg-code-block: theme('colors.dark.700');
   --toc-w-size: 290px;
   --bg-left: linear-gradient(90deg, var(--bg-sidebar) calc(100% - 13px), transparent 13px);
+
+  --bg-tip: var(--bg-sidebar);
+  --border-color-tip: var(--bg-hover-sidebar);
+
+  --bg-warning: #F8F0E3;
+  --border-color-warning: #EFE1C9;
 }
 
 html.dark-mode {

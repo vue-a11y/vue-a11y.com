@@ -1,0 +1,67 @@
+.custom-block {
+  @apply relative w-full p-6 border-b border-solid;
+  border-bottom-width: 6px;
+
+  &-title {
+    @apply absolute py-1 px-4 font-bold;
+    background-color: var(--accent);
+    top: -18px;
+    left: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.custom-block.fig {
+  @apply p-10;
+  background-color: var(--bg-sidebar);
+  border-bottom-width: 6px;
+  border-color: var(--bg-hover-sidebar);
+
+  &:before {
+    @apply absolute text-accent border-none;
+    content: '“';
+    top: -70px;
+    left: -20px;
+    font-size: 150px;
+    font-family: "Helvetica";
+  }
+
+  blockquote {
+    @apply mb-6;
+  }
+
+  blockquote + figcaption {
+    &:before {
+      @apply relative bg-accent inline-block mr-2;
+      content: '';
+      width: 30px;
+      height: 1px;
+      top: -5px;
+    }
+  }
+}
+
+.custom-block.tip {
+  background-color: var(--bg-tip);
+  border-color: var(--border-color-tip);
+
+  .custom-block-title {
+    background-color: var(--border-color-tip);
+  }
+}
+
+.custom-block.warning {
+  background-color: var(--bg-warning);
+  border-color: var(--border-color-warning);
+
+  .custom-block-title {
+    background-color: var(--border-color-warning);
+  }
+}
+
+.custom-block.tip, .custom-block.warning {
+  @apply pt-10;
+}

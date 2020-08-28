@@ -3,6 +3,7 @@
 @import './typography';
 @import './a11y';
 @import './override';
+@import './custom-blocks';
 
 body {
   @apply antialiased;
