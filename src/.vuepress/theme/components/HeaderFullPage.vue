@@ -1,0 +1,37 @@
+<template>
+  <header class="relative w-full mt-6 header-full-page lg:pb-32">
+    <div class="absolute top-0 right-0 hidden w-full h-64 lg:block md:max-w-5xl" />
+    <div class="card">
+      <h1 class="max-w-2xl card-title">
+        <slot name="cardTitle" />
+      </h1>
+      <slot />
+
+      <div class="card-info">
+        <slot name="cardFooter" />
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'HeaderFullPage'
+}
+</script>
+
+<style lang="scss">
+.header-full-page {
+  .card {
+    @screen lg {
+      top: 120px;
+      max-width: 57rem;
+    }
+  }
+
+  > div:first-child {
+    background: radial-gradient(circle at center, var(--accent) 10%, transparent 12%), transparent;
+    background-size: 40px 40px;
+  }
+}
+</style>
