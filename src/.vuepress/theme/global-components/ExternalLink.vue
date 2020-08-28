@@ -5,7 +5,7 @@
     rel="noopener noreferrer"
   >
     {{ label }}
-    <span class="sr-only">({{ $localeConfig.externalLinkText }})</span>
+    <span class="sr-only">({{ $themeLocaleConfig.externalLinkText }})</span>
     <OutboundLink />
   </a>
 </template>

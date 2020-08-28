@@ -7,6 +7,7 @@ module.exports = {
   backToTopText: 'back to page top',
   backToPostsText: 'back to posts',
   shareLinksText: 'Share on',
+  externalLinkText: 'Opens in a new window/tab',
   newsletter: {
     title: 'Subscribe to the newsletter',
     description: 'Enter your email address below and receive articles, videos, updates and events from the Vue.js community and accessibility.',
