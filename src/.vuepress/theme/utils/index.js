@@ -24,3 +24,33 @@ export function getLastUpdateString (lastUpdate, lang) {
     day: 'numeric'
   })
 }
+
+export function prepareSocialShareLinks (path, title, summary) {
+  const currentURL = process.env.URL_BASE + path
+  return [
+    {
+      label: 'Facebook',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`
+    },
+    {
+      label: 'Twitter',
+      href: `https://twitter.com/share?url=${currentURL}&text=${encodeURIComponent(title)}&via=htmlmoderno`
+    },
+    {
+      label: 'Linkedin',
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${currentURL}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(summary)}&source=website`
+    },
+    {
+      label: 'Whatsapp',
+      href: `https://wa.me/?text=${encodeURIComponent(title + ' - ' + currentURL)}`
+    },
+    {
+      label: 'Telegram',
+      href: `https://telegram.me/share/url?url=${currentURL}&text=${encodeURIComponent(title)}`
+    },
+    {
+      label: 'Email',
+      href: `mailto:info@example.com?&subject=${encodeURIComponent(title)}&body=${currentURL}`
+    }
+  ]
+}
