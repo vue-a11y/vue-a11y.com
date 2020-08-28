@@ -6,6 +6,9 @@ module.exports = [
     // https://github.com/vuepressjs/vuepress-plugin-blog
     '@vuepress/blog',
     {
+      comment: {
+        service: 'disqus'
+      },
       sitemap: {
         hostname: process.env.URL_BASE
       },
