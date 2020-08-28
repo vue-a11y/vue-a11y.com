@@ -7,21 +7,9 @@ import useEventListener from './useEventListener'
 export default function useSidebar (refs) {
   const isSidebarOpen = ref(false)
   const sidebarFixed = ref(false)
+  const isSidebarFixed = debounce(setSidebarFixed, 200)
 
-  const isSidebarFixed = debounce(function () {
-    if (refs.sidebar) {
-      sidebarFixed.value = window.getComputedStyle(refs.sidebar).position === 'fixed'
-    }
-  }, 200)
-
-  useEventListener(
-    'resize',
-    isSidebarFixed,
-    {
-      capture: false,
-      passive: true
-    }
-  )
+  useEventListener('resize', isSidebarFixed)
 
   onMounted(() => {
     isSidebarFixed()
@@ -31,6 +19,12 @@ export default function useSidebar (refs) {
     if (val) return window.addEventListener('keydown', toggleSidebarByKeyEscape)
     window.removeEventListener('keydown', toggleSidebarByKeyEscape)
   })
+
+  function setSidebarFixed () {
+    if (refs.sidebar) {
+      sidebarFixed.value = window.getComputedStyle(refs.sidebar).position === 'fixed'
+    }
+  }
 
   function toggleSidebarByKeyEscape (e) {
     if (e.key === 'Escape') toggleSidebar()
