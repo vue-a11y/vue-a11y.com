@@ -35,6 +35,12 @@ module.exports = [
   ['link', { rel: 'author', href: '/humans.txt' }],
   ['link', { rel: 'author', href: 'https://twitter.com/ktquez' }],
   ['link', { rel: 'publisher', href: 'https://twitter.com/vue_a11y' }],
+
+  // Webmention
+  ['link', { rel: 'webmention', href: 'https://webmention.io/htmlmoderno.com.br/webmention' }],
+  ['link', { rel: 'pingback', href: 'https://webmention.io/htmlmoderno.com.br/xmlrpc' }],
+
+  // Apple icons
   ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-icon-57x57.png' }],
   ['link', { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/apple-icon-60x60.png' }],
   ['link', { rel: 'apple-touch-icon', sizes: '72x72', href: '/favicon/apple-icon-72x72.png' }],
@@ -45,6 +51,7 @@ module.exports = [
   ['link', { rel: 'apple-touch-icon', sizes: '152x152', href: '/favicon/apple-icon-152x152.png' }],
   ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-icon-180x180.png' }],
 
+  // Android icons
   ['link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon/android-icon-192x192.png' }],
   ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' }],
   ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' }],
@@ -54,8 +61,9 @@ module.exports = [
   ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#ff5733' }],
   ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.svg' }],
 
-  ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
+  // Pre-browsing
+  // ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
+  // ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],

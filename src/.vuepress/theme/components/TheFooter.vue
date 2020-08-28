@@ -46,7 +46,7 @@
               href="https://twitter.com/vue_a11y"
               class="block p-5 border border-solid rounded-full border-light-400 btn-social"
               target="_blank"
-              rel="noopener"
+              rel="me noopener"
               :aria-label="`Vue accesibility Twitter (${$localeConfig.externalLinkText})`"
             >
               <vp-icon
@@ -60,7 +60,7 @@
               href="https://github.com/vue-a11y"
               class="block p-5 border border-solid rounded-full border-light-400 btn-social"
               target="_blank"
-              rel="noopener"
+              rel="me noopener"
               :aria-label="`Vue accesibility Github (${$localeConfig.externalLinkText})`"
             >
               <vp-icon
