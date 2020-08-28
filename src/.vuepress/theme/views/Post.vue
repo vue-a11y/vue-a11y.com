@@ -119,7 +119,7 @@ export default {
 
   setup (_, { root }) {
     if (root.$page && root.$page.id !== 'Post') return root.$router.push(`${root.$localePath === '/' ? '' : '/'}posts/`)
-    const { isIntersecting: isDisqusIntersecting, unobserve: unobserveDisqus } = useIntersectionObserver('.disqus-section')
+    const { isIntersecting: isDisqusIntersecting, unobserve: unobserveDisqus } = useIntersectionObserver('.disqus-section', { rootMargin: '350px' })
 
     watch(isDisqusIntersecting, val => val && unobserveDisqus())
 
