@@ -13,7 +13,19 @@
           title-tag="span"
           class="pt-20"
         />
-        <PageNewsletter class="pl-4 mt-16" />
+        <NewsletterForm class="pl-4 mt-16">
+          <button
+            slot="button"
+            type="submit"
+            class="flex items-center justify-center w-12 px-2 ml-2"
+          >
+            <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
+            <vp-icon
+              name="send"
+              size="30"
+            />
+          </button>
+        </NewsletterForm>
       </div>
     </article>
   </div>
@@ -25,7 +37,7 @@ export default {
 
   components: {
     PageEdit: () => import('@/theme/components/PageEdit'),
-    PageNewsletter: () => import('@/theme/components/PageNewsletter'),
+    NewsletterForm: () => import('@/theme/components/NewsletterForm'),
     TableOfContents: () => import('@/theme/components/TableOfContents')
   }
 }

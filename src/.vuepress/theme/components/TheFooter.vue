@@ -15,30 +15,8 @@
         >
           {{ $themeLocaleConfig.newsletter.description }}
         </p>
-        <form
-          action="#"
-          class="flex mt-6"
-        >
-          <label
-            for="email-newsletter"
-            class="w-full"
-          >
-            <span class="sr-only">{{ $themeLocaleConfig.a11y.newsletter.placeholder }}</span>
-            <input
-              id="email-newsletter"
-              type="email"
-              class="w-full p-4 border border-solid outline-none border-light-400 hover:border-accent focus:border-accent"
-              :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
-              style="border-bottom-width: 6px"
-            >
-          </label>
-          <button
-            type="submit"
-            class="ml-2 text-black btn btn-accent"
-          >
-            {{ $themeLocaleConfig.newsletter.textButton }}
-          </button>
-        </form>
+
+        <NewsletterForm class="mt-6" />
 
         <ul class="flex justify-center mt-16">
           <li>
@@ -83,7 +61,8 @@ export default {
   name: 'TheFooter',
 
   components: {
-    Copyright: () => import('@/theme/components/Copyright')
+    Copyright: () => import('@/theme/components/Copyright'),
+    NewsletterForm: () => import('@/theme/components/NewsletterForm')
   }
 }
 </script>
