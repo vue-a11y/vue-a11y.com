@@ -44,7 +44,7 @@ export default {
 <style lang="scss">
 .the-nav {
   &-link {
-    padding-top: 1.2rem;
+    padding-top: 1rem;
     padding-bottom: 1.2rem;
   }
 }

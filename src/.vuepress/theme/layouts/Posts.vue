@@ -4,10 +4,13 @@
       class="w-full px-4 posts xl:pr-4"
       :class="{ 'mt-8 md:mt-12': !isCategory }"
     >
-      <BackToPosts
+      <BackTo
         v-show="isCategory"
+        :text="$themeLocaleConfig.backToPostsText"
+        :to="`${$localePath === '/' ? '' : $localePath}/posts/`"
         class="inline-flex px-4 my-4 ml-2"
       />
+
       <ul class="flex flex-wrap justify-between w-full px-3 lg:pr-6 lg:pl-0 lg:ml-6 xl:pr-0">
         <li
           v-for="post in posts"
@@ -17,6 +20,7 @@
           <CardPost :post="post" />
         </li>
       </ul>
+
       <div
         v-show="$pagination.hasPrev || $pagination.hasNext"
         class="flex justify-center w-full my-16"
@@ -39,7 +43,7 @@ export default {
   components: {
     CardPost,
     Pagination,
-    BackToPosts: () => import('@/theme/components/BackToPosts')
+    BackTo: () => import('@/theme/components/BackTo')
   },
 
   setup (_, { root }) {

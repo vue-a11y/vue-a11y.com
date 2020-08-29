@@ -1,7 +1,11 @@
 <template>
   <div class="z-10 post-page container-layout container-layout-px">
     <article class="px-6 pb-24 mt-6 mb-24 xl:px-4">
-      <BackToPosts class="inline-flex px-4 my-4 -ml-4" />
+      <BackTo
+        class="inline-flex px-4 my-4 -ml-4"
+        :text="$themeLocaleConfig.backToPostsText"
+        :to="`${$localePath === '/' ? '' : $localePath}/posts/`"
+      />
       <HeaderFullPage>
         <template v-slot:cardTitle>
           {{ $page.title }}
@@ -111,7 +115,7 @@ export default {
     Comment,
     HeaderFullPage,
     ShareLinks: () => import('@/theme/components/ShareLinks'),
-    BackToPosts: () => import('@/theme/components/BackToPosts'),
+    BackTo: () => import('@/theme/components/BackTo'),
     PageNewsletter: () => import('@/theme/components/PageNewsletter'),
     TableOfContents: () => import('@/theme/components/TableOfContents'),
     WebMentions: () => import('@/theme/components/WebMentions')
