@@ -1,6 +1,6 @@
 <template>
   <article
-    class="card card-post"
+    class="card card-post box-default"
     @mousedown="onMouseEvent"
     @mouseup="onMouseEvent"
   >

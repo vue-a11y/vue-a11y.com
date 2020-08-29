@@ -1,11 +1,17 @@
 <template>
   <header class="relative w-full mt-6 header-full-page lg:pb-32">
     <div class="absolute top-0 right-0 hidden w-full h-64 lg:block md:max-w-5xl" />
-    <div class="card">
-      <h1 class="max-w-2xl card-title">
+    <div class="card box-default">
+      <h1
+        id="card-title"
+        class="max-w-2xl card-title"
+      >
         <slot name="cardTitle" />
       </h1>
-      <slot />
+
+      <p>
+        <slot />
+      </p>
 
       <div class="card-info">
         <slot name="cardFooter" />
