@@ -50,7 +50,7 @@ body {
 }
 
 .btn {
-  @apply py-3 px-4 font-bold text-xl;
+  @apply py-3 px-4 font-bold text-xl rounded-md;
   max-height: 63px;
   border-bottom: 6px solid transparent;
 
@@ -65,11 +65,15 @@ body {
   }
 }
 
-.card {
-  @apply relative flex flex-col justify-between w-full p-5 border border-solid;
+.box-default {
+  @apply border border-solid rounded-md;
   background-color: var(--bg-sidebar);
   border-bottom-width: 6px;
   border-color: var(--bg-hover-sidebar);
+}
+
+.card {
+  @apply relative flex flex-col justify-between w-full p-5;
 
   &-title {
     @apply text-4xl font-bold leading-10;

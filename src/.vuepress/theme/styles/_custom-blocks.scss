@@ -1,5 +1,5 @@
 .custom-block {
-  @apply relative w-full p-6 border-b border-solid;
+  @apply relative w-full p-6 border-b border-solid rounded-md;
   border-bottom-width: 6px;
 
   &-title {
@@ -15,7 +15,7 @@
 }
 
 .custom-block.fig {
-  @apply p-10;
+  @apply p-10 border-light-600;
   background-color: var(--bg-sidebar);
   border-bottom-width: 6px;
   border-color: var(--bg-hover-sidebar);
