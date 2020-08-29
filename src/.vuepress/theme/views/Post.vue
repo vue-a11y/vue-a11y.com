@@ -36,7 +36,7 @@
       <section
         v-show="post.summary"
         :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
-        class="px-5 my-10 text-xl leading-9 max-char"
+        class="my-10 text-xl leading-9 sm:px-5 max-char"
       >
         <b>{{ $themeLocaleConfig.a11y.landmarks.post.summary }}:</b>
         {{ post.summary }}
@@ -57,7 +57,7 @@
         aria-label="Content post"
       >
         <div>
-          <Content class="flex-1 px-5 max-char" />
+          <Content class="flex-1 sm:px-5 max-char" />
 
           <hr class="mt-16">
 
