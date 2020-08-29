@@ -33,14 +33,13 @@ module.exports = {
       title: 'Categories',
       type: 'manual',
       children: [
+        ['News', '/category/news/'],
         ['HTML', '/category/html/'],
         ['ARIA', '/category/aria/'],
         ['WCAG', '/category/wcag/'],
-        ['Vue packages', '/category/vue-packages/'],
-        ['News', '/category/news/'],
         ['Tools', '/category/tools/'],
-        ['Mobile A11y', '/category/mobile-accessibility/'],
-        ['AT', '/category/assistive-technology/']
+        ['Vue packages', '/category/vue-packages/'],
+        ['Single Page App', '/category/assistive-technology/']
       ]
     },
     {
