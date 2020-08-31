@@ -15,6 +15,9 @@
       v-bind="colorModeConfig"
     />
     <component :is="layout" />
+    <ClientOnly>
+      <VueAnnouncer />
+    </ClientOnly>
   </div>
 </template>
 

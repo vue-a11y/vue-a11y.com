@@ -56,6 +56,7 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
+    "@vue-a11y/announcer": "^2.0.2",
     "@vue-a11y/dark-mode": "^1.1.1",
     "@vue-a11y/focus-loop": "^0.1.2",
     "@vue-a11y/skip-to": "^2.0.1",
