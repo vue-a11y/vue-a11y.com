@@ -1,5 +1,8 @@
 <template>
-  <nav class="toc">
+  <nav
+    v-show="headers.length"
+    class="toc"
+  >
     <component
       :is="titleTag"
       class="toc-title"
