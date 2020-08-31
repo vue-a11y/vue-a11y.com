@@ -79,36 +79,14 @@
             <WebMentions />
           </div>
         </div>
-        <div class="sticky top-0 flex hidden h-full ml-16 page-page-toc lg:block">
-          <TableOfContents
-            v-if="$frontmatter.toc !== 0"
-            :key="$route.path"
-            :title="$themeLocaleConfig.toc.title"
-            title-tag="span"
-            class="pt-12"
-          />
-
+        <RightNavigation class="ml-16 lg:block page-page-toc">
           <ShareLinks
             class="mt-16"
             :path="post.path"
             :title="post.title"
             :summary="post.summary"
           />
-
-          <NewsletterForm class="pl-4 mt-16">
-            <button
-              slot="button"
-              type="submit"
-              class="flex items-center justify-center w-12 px-2 ml-2"
-            >
-              <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
-              <vp-icon
-                name="send"
-                size="30"
-              />
-            </button>
-          </NewsletterForm>
-        </div>
+        </RightNavigation>
       </section>
     </article>
   </div>
@@ -129,9 +107,9 @@ export default {
     HeaderFullPage,
     ShareLinks: () => import('@/theme/components/ShareLinks'),
     BackTo: () => import('@/theme/components/BackTo'),
-    NewsletterForm: () => import('@/theme/components/NewsletterForm'),
+    WebMentions: () => import('@/theme/components/WebMentions'),
     TableOfContents: () => import('@/theme/components/TableOfContents'),
-    WebMentions: () => import('@/theme/components/WebMentions')
+    RightNavigation: () => import('@/theme/components/RightNavigation')
   },
 
   setup (_, { root }) {

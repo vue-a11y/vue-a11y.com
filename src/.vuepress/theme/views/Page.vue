@@ -5,28 +5,7 @@
         <Content class="max-char" />
         <PageEdit class="flex flex-wrap justify-between w-full py-6 pb-24 border-t c-border-color md:mt-4" />
       </div>
-      <div class="sticky top-0 flex hidden h-full page-float-toc xl:block">
-        <TableOfContents
-          v-if="$frontmatter.toc !== 0"
-          :key="$route.path"
-          :title="$themeLocaleConfig.toc.title"
-          title-tag="span"
-          class="pt-20"
-        />
-        <NewsletterForm class="pl-4 mt-16">
-          <button
-            slot="button"
-            type="submit"
-            class="flex items-center justify-center w-12 px-2 ml-2"
-          >
-            <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
-            <vp-icon
-              name="send"
-              size="30"
-            />
-          </button>
-        </NewsletterForm>
-      </div>
+      <RightNavigation class="page-float-toc xl:block" />
     </article>
   </div>
 </template>
@@ -37,8 +16,7 @@ export default {
 
   components: {
     PageEdit: () => import('@/theme/components/PageEdit'),
-    NewsletterForm: () => import('@/theme/components/NewsletterForm'),
-    TableOfContents: () => import('@/theme/components/TableOfContents')
+    RightNavigation: () => import('@/theme/components/RightNavigation')
   }
 }
 </script>
