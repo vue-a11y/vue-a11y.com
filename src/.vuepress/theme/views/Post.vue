@@ -18,6 +18,7 @@
           <router-link
             v-if="post.author"
             ref="authors"
+            rel="author"
             :to="{ path: '/authors/', hash: post.author.username }"
             class="relative flex hover:underline"
             style="top: 6px;"
