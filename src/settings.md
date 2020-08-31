@@ -1,4 +1,0 @@
----
-layout: Full
-view: Preferences
----
