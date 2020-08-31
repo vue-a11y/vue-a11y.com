@@ -2,19 +2,22 @@
   // Layout
   --toc-w-size: 290px;
 
-  // Colors
+  // Background and Colors
   --bg: white;
   --bg-secondary: theme('colors.light.200');
-  --bg-input: theme('colors.light.400');
-  --accent: theme('colors.accent');
-  --accent-text-button: theme('colors.gray.800');
+  --bg-hover-sidebar: theme('colors.light.400');
   --color: theme('colors.gray.800');
-  --border-color: theme('colors.light.400');
-  --border-color-code-inline: theme('colors.light.400');
-  --border-outline: var(--color);
-
+  --accent: theme('colors.accent');
+  --accent-text-button: theme('colors.dark.700');
   --bg-code-block: theme('colors.dark.700');
   --bg-left: linear-gradient(90deg, var(--bg-secondary) calc(100% - 13px), transparent 13px);
+  --bg-input: var(--bg-secondary);
+  --bg-btn-light: var(--bg-secondary);
+
+  // Border
+  --border-color: theme('colors.light.400');
+  --border-color-code-inline: var(--border-color);
+  --border-outline: var(--color);
 
   // Custom blocks
   --bg-tip: var(--bg-secondary);
@@ -29,28 +32,45 @@
   --rf-open-dyslexic: OpenDyslexic, sans-serif;
   --rf-monospace: Consolas, monospace, Courier;
   --rf-serif: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+
+  body.set-color-constrast {
+    --border-color: theme('colors.dark.700');
+    --bg-input: white;
+  }
 }
 
 html.mode-dark {
   --bg: theme('colors.dark.900');
   --bg-secondary: theme('colors.dark.700');
-  --bg-input: theme('colors.dark.500');
+  --bg-hover-sidebar: theme('colors.dark.500');
   --accent: theme('colors.accent');
   --color: theme('colors.gray.300');
+
+  // Border
   --border-color: theme('colors.dark.500');
-  --border-color-code-inline: theme('colors.dark.500');
 
   // icons
   --color-social-icons: var(--accent);
+
+  body.set-color-constrast {
+    --border-color: theme('colors.gray.700');
+    --bg-input: theme('colors.dark.900');
+  }
 }
 
 
 html.mode-sepia {
   --bg: theme('colors.sepia.200');
   --bg-secondary: theme('colors.sepia.400');
-  --bg-input: theme('colors.sepia.600');
+  --bg-hover-sidebar: theme('colors.sepia.600');
   --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
+
+  // Border
   --border-color: theme('colors.sepia.600');
-  --border-color-code-inline: theme('colors.sepia.600');
+
+  body.set-color-constrast {
+    --border-color: theme('colors.sepia.800');
+    --bg-input: theme('colors.sepia.200');
+  }
 }

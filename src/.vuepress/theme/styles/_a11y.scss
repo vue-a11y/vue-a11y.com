@@ -38,3 +38,13 @@
 ::placeholder {
   color: var(--color) !important;
 }
+
+body.set-reduce-motion {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
