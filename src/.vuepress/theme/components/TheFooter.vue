@@ -30,6 +30,7 @@
               <vp-icon
                 name="twitter"
                 size="1.5rem"
+                style="color: var(--color-social-icons)"
               />
             </a>
           </li>
@@ -44,6 +45,7 @@
               <vp-icon
                 name="github"
                 size="1.5rem"
+                style="color: var(--color-social-icons)"
               />
             </a>
           </li>

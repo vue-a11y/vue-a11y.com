@@ -43,7 +43,6 @@ export default function useSettings (key = null) {
   }
 
   function setStorage (key, val) {
-    console.log(key, val)
     settings.value[key] = val
   }
 

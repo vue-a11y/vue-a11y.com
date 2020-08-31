@@ -22,6 +22,9 @@
   --bg-warning: #F8F0E3;
   --border-color-warning: #EFE1C9;
 
+  // icons
+  --color-social-icons: theme('colors.gray.800');
+
   // Font
   --rf-open-dyslexic: OpenDyslexic, sans-serif;
   --rf-monospace: Consolas, monospace, Courier;
@@ -35,11 +38,10 @@ html.mode-dark {
   --accent: theme('colors.accent');
   --color: theme('colors.gray.300');
   --border-color: theme('colors.dark.500');
-  --border-color-code-inline: theme('colors.dark.500'); // change
+  --border-color-code-inline: theme('colors.dark.500');
 
-  .vp-icon-twitter, .vp-icon-github {
-    color: var(--accent);
-  }
+  // icons
+  --color-social-icons: var(--accent);
 }
 
 
@@ -50,5 +52,5 @@ html.mode-sepia {
   --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
   --border-color: theme('colors.sepia.600');
-  --border-color-code-inline: theme('colors.sepia.600'); // change
+  --border-color-code-inline: theme('colors.sepia.600');
 }

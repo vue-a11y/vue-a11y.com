@@ -113,8 +113,9 @@ body.set-serif {
     @apply relative;
 
     &:before {
-      @apply absolute z-20 border-l border-dashed border-gray-400;
+      @apply absolute z-20 border-l border-dashed ;
       content: '';
+      border-color: var(--border-color);
       width: 2px;
       left: 28px;
       top: -5%;
