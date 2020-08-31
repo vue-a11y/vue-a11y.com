@@ -34,7 +34,6 @@ module.exports = {
       type: 'manual',
       children: [
         ['News', '/category/news/'],
-        ['HTML', '/category/html/'],
         ['ARIA', '/category/aria/'],
         ['WCAG', '/category/wcag/'],
         ['Tools', '/category/tools/'],
@@ -43,25 +42,23 @@ module.exports = {
       ]
     },
     {
-      title: 'Archives',
+      title: '24 Vue A11y',
       type: 'manual',
       children: [
-        ['2020', '/category/2020/']
+        ['2020', '/category/24-vue-a11y-2020/']
       ]
     },
     {
       title: 'Follow on Twitter',
       children: [
-        ['Vue.js', 'https://twitter.com/vuejs'],
-        ['Evan You', 'https://twitter.com/youyuxi'],
         ['Sarah Drasner', 'https://twitter.com/sarah_edo'],
-        ['Thorsten Lünborg', 'https://twitter.com/Linus_Borg'],
         ['Maria Lamardo', 'https://twitter.com/MariaLamardo'],
         ['Alan Ktquez', 'https://twitter.com/ktquez'],
         ['Jinjiang', 'https://twitter.com/zhaojinjiang'],
-        ['Kevin Deisz', 'https://twitter.com/kddeisz'],
         ['Marcus Herrmann', 'https://twitter.com/_marcusherrmann'],
+        ['Austin Gil', 'https://twitter.com/Stegosource'],
         ['Callum Macrae', 'https://twitter.com/callumacrae'],
+        ['Kevin Deisz', 'https://twitter.com/kddeisz'],
         ['Victoria Bergquist', 'https://twitter.com/vicbergquist']
       ]
     }
