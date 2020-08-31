@@ -2,6 +2,7 @@
   <nav
     v-show="headers.length"
     class="toc"
+    :aria-label="title"
   >
     <component
       :is="titleTag"
