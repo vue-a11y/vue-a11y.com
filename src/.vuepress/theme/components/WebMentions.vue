@@ -1,8 +1,9 @@
 <template>
   <section
     v-show="webmentions.length"
-    aria-label="Webmention"
     class="webmentions"
+    role="region"
+    aria-label="Webmention"
   >
     <h2 class="text-2xl font-bold">
       ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>

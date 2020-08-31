@@ -1,8 +1,9 @@
 <template>
   <div class="z-10 post-page container-layout container-layout-px">
     <section
-      aria-labelledby="card-title"
       class="px-6 mt-6 xl:px-4"
+      role="region"
+      aria-labelledby="card-title"
     >
       <BackTo
         class="inline-flex px-4 my-4 -ml-4"

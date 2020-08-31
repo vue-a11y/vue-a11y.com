@@ -40,8 +40,9 @@
 
       <section
         v-show="post.summary"
-        :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
         class="my-10 text-xl leading-9 post-page-summary sm:px-5 max-char"
+        role="region"
+        :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
       >
         <b>{{ $themeLocaleConfig.a11y.landmarks.post.summary }}:</b>
         {{ post.summary }}
@@ -59,6 +60,7 @@
 
       <section
         class="flex justify-between mt-12"
+        role="region"
         aria-label="Content post"
       >
         <div>

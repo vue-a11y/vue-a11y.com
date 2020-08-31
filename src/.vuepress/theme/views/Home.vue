@@ -38,6 +38,7 @@
 
       <section
         class="flex flex-wrap items-center pt-20 mt-20 border-t border-solid c-border-color lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
+        role="region"
         aria-label="Features"
       >
         <div
@@ -57,6 +58,7 @@
       <section
         v-if="false"
         class="flex flex-wrap mt-20 lg:mt-32"
+        role="region"
         aria-label="Sponsors"
       >
         <span class="w-full mb-8 text-2xl font-bold sm:w-48">Sponsors:</span>
@@ -78,6 +80,7 @@
 
       <section
         class="flex flex-wrap pt-20 my-20 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
+        role="region"
         aria-label="Supporters"
       >
         <span class="w-full mb-8 text-2xl font-bold sm:w-48">Supporters:</span>

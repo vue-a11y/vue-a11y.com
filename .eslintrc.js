@@ -18,6 +18,7 @@ module.exports = {
   ],
   rules: {
     'vuejs-accessibility/anchor-has-content': 'off',
+    'vuejs-accessibility/no-redundant-roles': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
