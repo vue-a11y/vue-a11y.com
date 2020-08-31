@@ -9,6 +9,15 @@ module.exports = {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
   },
+  colorMode: {
+    defaultMode: 'light',
+    className: 'mode-%cm',
+    favicon: '#favicon',
+    metaThemeColor: {
+      light: '#FBFCFC',
+      dark: '#12181E'
+    }
+  },
   authors: require('./authors'),
   locales: require('./translations/themeLocaleConfig')
 }
