@@ -1,11 +1,12 @@
 const { generateSidebar } = require('./utils')
 
 module.exports = {
+  enabled: true,
   label: 'Português',
   editLinkText: 'Editar página no GitHub',
   lastUpdatedText: 'Última atualização em',
   backToTopText: 'voltar ao topo da página',
-  backToPostsText: 'voltar para os posts',
+  backToText: 'voltar para',
   shareLinksText: 'Compartilhe no',
   externalLinkText: 'Abre em uma nova janela/guia',
   skipTo: {
@@ -52,6 +53,11 @@ module.exports = {
       menuButton: {
         open: 'Abrir navegação da sidebar',
         close: 'Fechar navegação da sidebar'
+      }
+    },
+    settings: {
+      theme: {
+        altText: 'Ilustração do browser com o tema %cm'
       }
     },
     landmarks: {
