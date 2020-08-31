@@ -40,6 +40,7 @@ ul.pagination {
   .page-item {
     &.active > a {
       @apply font-bold;
+      color: #000 !important;
       background-color: var(--accent);
     }    
   }
@@ -52,10 +53,21 @@ ul.pagination {
   
   li > a {
     @apply px-5 py-2 text-xl;
+    background-color: var(--bg);
+    border-color: var(--border-color);
 
     &:hover {
       background-color: var(--bg-secondary);
       border-color: var(--border-color);
+    }
+  }
+
+  li.disabled {
+    > a {
+      opacity: .5;
+      color: var(--color) !important;
+      background-color: var(--bg-secondary);
+      border-color: var(--bg-secondary);
     }
   }
 }
