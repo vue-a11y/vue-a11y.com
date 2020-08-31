@@ -4,7 +4,9 @@
 
 div.search-box {
   input {
-    @apply w-full bg-light-200 py-5 pl-10 border-light-400 rounded-md;
+    @apply w-full py-5 pl-10 rounded-md;
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
     left: 0;
     background-image: url('~@/theme/assets/sprite/svg/search.svg');
     background-position: 16px center;
@@ -52,8 +54,8 @@ ul.pagination {
     @apply px-5 py-2 text-xl;
 
     &:hover {
-      background-color: var(--bg-sidebar);
-      border-color: var(--bg-hover-sidebar);
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
     }
   }
 }

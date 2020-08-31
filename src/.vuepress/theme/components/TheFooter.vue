@@ -1,6 +1,6 @@
 <template>
   <footer class="relative z-10 footer">
-    <div class="flex justify-center w-full px-4 py-24 lg:py-32 bg-light-200">
+    <div class="flex justify-center w-full px-4 py-24 lg:py-32 c-bg-secondary">
       <div class="max-w-md">
         <div class="flex justify-center">
           <vp-icon
@@ -22,7 +22,7 @@
           <li>
             <a
               href="https://twitter.com/vue_a11y"
-              class="block p-5 border border-solid rounded-full border-light-400 btn-social"
+              class="block p-5 border border-solid rounded-full c-border-color btn-social"
               target="_blank"
               rel="me noopener"
               :aria-label="`Vue accesibility Twitter (${$localeConfig.externalLinkText})`"
@@ -36,7 +36,7 @@
           <li class="ml-4">
             <a
               href="https://github.com/vue-a11y"
-              class="block p-5 border border-solid rounded-full border-light-400 btn-social"
+              class="block p-5 border border-solid rounded-full c-border-color btn-social"
               target="_blank"
               rel="me noopener"
               :aria-label="`Vue accesibility Github (${$localeConfig.externalLinkText})`"

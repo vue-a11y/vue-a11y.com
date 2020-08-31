@@ -75,7 +75,7 @@ export default {
   }
 
   &:focus-within {
-    outline: 2px solid #573E48;
+    outline: 2px solid var(--border-outline);
     outline-offset: 3px;
   }
 

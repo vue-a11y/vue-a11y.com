@@ -3,21 +3,18 @@ $font-family: 'DM Sans', 'Helvetica Neue', Roboto, 'Segoe UI', Arial, Geneva;
 /* Open Dyslexic */
 @font-face {
   font-family: 'OpenDyslexic';
-  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@20160623-Stable/woff/OpenDyslexic-Regular.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: local('OpenDyslexic'), local('DMSans-Regular'),
-       url('../../public/fonts/opendyslexic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../../public/fonts/opendyslexic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 @font-face {
   font-family: 'OpenDyslexic';
-  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@20160623-Stable/woff/OpenDyslexic-Bold.woff') format('woff');
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
-  src: local('OpenDyslexic'), local('DMSans-Bold'),
-       url('../../public/fonts/opendyslexic-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../../public/fonts/opendyslexic-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Hack */

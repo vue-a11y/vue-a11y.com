@@ -4,12 +4,31 @@
 @import './a11y';
 @import './override';
 @import './custom-blocks';
+@import './utility';
 
 body {
   @apply antialiased;
   font-family: $font-family;
   color: var(--color);
   background-color: var(--bg);
+}
+
+body.set-open-dyslexic {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-open-dyslexic);
+	}
+}
+
+body.set-monospace {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-monospace);
+	}
+}
+
+body.set-serif {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-serif);
+	}
 }
 
 .container {
@@ -55,21 +74,22 @@ body {
   border-bottom: 6px solid transparent;
 
   &-light {
-    @apply bg-light-200;
-    border-bottom-color: theme('colors.light.400');
+    background-color: var(--bg-secondary);
+    border-bottom-color: var(--border-color);
   }
 
   &-accent {
     @apply bg-accent;
+    color: var(--accent-text-button);
     border-bottom-color: theme('colors.accentDark');
   }
 }
 
 .box-default {
   @apply border border-solid rounded-md;
-  background-color: var(--bg-sidebar);
+  background-color: var(--bg-secondary);
   border-bottom-width: 6px;
-  border-color: var(--bg-hover-sidebar);
+  border-color: var(--border-color);
 }
 
 .card {
@@ -109,7 +129,7 @@ body {
       @apply relative inline-block py-3 pl-10 pr-3;
 
       &:hover, &:focus, &.active {
-        background-color: var(--bg-sidebar);
+        background-color: var(--bg-secondary);
 
         &:before {
           @apply absolute rounded-full z-10;

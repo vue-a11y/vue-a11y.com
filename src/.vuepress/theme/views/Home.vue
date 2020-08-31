@@ -33,7 +33,7 @@
       </div>
 
       <section
-        class="flex flex-wrap items-center pt-20 mt-20 border-t border-solid border-light-400 lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
+        class="flex flex-wrap items-center pt-20 mt-20 border-t border-solid c-border-color lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
         aria-label="Features"
       >
         <div
@@ -73,7 +73,7 @@
       </section>
 
       <section
-        class="flex flex-wrap pt-20 my-20 border-t border-solid border-light-400 lg:pt-0 lg:border-transparent lg:my-32 "
+        class="flex flex-wrap pt-20 my-20 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
         aria-label="Supporters"
       >
         <span class="w-full mb-8 text-2xl font-bold sm:w-48">Supporters:</span>

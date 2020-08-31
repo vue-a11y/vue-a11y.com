@@ -23,7 +23,7 @@
 }
 
 *:focus {
-  outline-color: #573E48;
+  outline-color: var(--border-outline);
   outline-offset: 3px;
 }
 

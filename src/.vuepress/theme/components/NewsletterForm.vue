@@ -11,7 +11,7 @@
       <input
         id="email-newsletter"
         type="email"
-        class="w-full p-4 border border-solid rounded-md outline-none border-light-600 hover:border-accent focus:border-accent"
+        class="w-full p-4 border border-solid rounded-md outline-none c-bg-secondary c-border-color hover:border-accent focus:border-accent"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
         style="border-bottom-width: 6px"
       >
