@@ -24,8 +24,12 @@
             />
           </div>
         </div>
-        <div class="self-end hidden lg:block lg:mr-6">
+        <div class="relative self-end hidden lg:block lg:mr-6">
+          <div
+            class="absolute z-10 rounded-full home-hero-ball"
+          />
           <img
+            class="relative z-20"
             :src="$frontmatter.heroImage"
             :alt="$frontmatter.heroImageAlternativeText"
           >
@@ -101,3 +105,13 @@ export default {
   name: 'Home'
 }
 </script>
+
+<style lang="scss">
+.home-hero-ball {
+  bottom: -16%;
+  left: -2%;
+  width: 54%;
+  height: 66%;
+  background-color: var(--bg-secondary);
+}
+</style>
