@@ -3,7 +3,7 @@
     <article class="px-6 pb-24 mt-6 mb-24 xl:px-4">
       <BackTo
         class="inline-flex px-4 my-4 -ml-4"
-        :text="$themeLocaleConfig.backToPostsText"
+        :text="`${$themeLocaleConfig.backToText} posts`"
         :to="`${$localePath === '/' ? '' : $localePath}/posts/`"
       />
       <HeaderFullPage>
@@ -40,7 +40,7 @@
       <section
         v-show="post.summary"
         :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
-        class="my-10 text-xl leading-9 sm:px-5 max-char"
+        class="my-10 text-xl leading-9 post-page-summary sm:px-5 max-char"
       >
         <b>{{ $themeLocaleConfig.a11y.landmarks.post.summary }}:</b>
         {{ post.summary }}
@@ -94,7 +94,19 @@
             :summary="post.summary"
           />
 
-          <PageNewsletter class="pl-3 mt-16" />
+          <NewsletterForm class="pl-4 mt-16">
+            <button
+              slot="button"
+              type="submit"
+              class="flex items-center justify-center w-12 px-2 ml-2"
+            >
+              <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
+              <vp-icon
+                name="send"
+                size="30"
+              />
+            </button>
+          </NewsletterForm>
         </div>
       </section>
     </article>
@@ -116,7 +128,7 @@ export default {
     HeaderFullPage,
     ShareLinks: () => import('@/theme/components/ShareLinks'),
     BackTo: () => import('@/theme/components/BackTo'),
-    PageNewsletter: () => import('@/theme/components/PageNewsletter'),
+    NewsletterForm: () => import('@/theme/components/NewsletterForm'),
     TableOfContents: () => import('@/theme/components/TableOfContents'),
     WebMentions: () => import('@/theme/components/WebMentions')
   },
