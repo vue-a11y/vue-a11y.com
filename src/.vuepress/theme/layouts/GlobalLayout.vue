@@ -10,17 +10,30 @@
       :list-label="$themeLocaleConfig.skipTo.label"
       class="z-20"
     /> <!-- when update the @vue-a11y/skip-to, add ariaLabelNav attribute -->
+    <DarkMode
+      class="hidden"
+      v-bind="colorModeConfig"
+    />
     <component :is="layout" />
   </div>
 </template>
 
 <script>
-import { computed, watch } from '@vue/composition-api'
+import { DarkMode } from '@vue-a11y/dark-mode'
+import { computed, watch, onBeforeMount, ref } from '@vue/composition-api'
+
+import { useSettings } from '@/theme/composable'
 
 export default {
   name: 'GlobalLayout',
 
+  components: {
+    DarkMode
+  },
+
   setup (_, { root, refs }) {
+    const colorModeConfig = ref(root.$themeConfig.colorMode)
+
     const layout = computed(() => {
       if (!root.$page.path) return 'NotFound'
       if (root.$frontmatter.layout) return root.$frontmatter.layout
@@ -35,8 +48,19 @@ export default {
       })
     })
 
+    watch(() => colorModeConfig, newConfig => {
+      colorModeConfig.value = { ...newConfig }
+    })
+
+    onBeforeMount(() => {
+      const { init, setLanguage } = useSettings()
+      setLanguage(root)
+      init()
+    })
+
     return {
-      layout
+      layout,
+      colorModeConfig
     }
   }
 }
