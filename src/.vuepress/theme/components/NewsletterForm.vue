@@ -1,7 +1,7 @@
 <template>
   <form
     action="#"
-    class="flex"
+    class="flex newsletter-form"
   >
     <label
       for="email-newsletter"
@@ -19,7 +19,7 @@
     <slot name="button">
       <button
         type="submit"
-        class="ml-2 text-black btn btn-accent"
+        class="-ml-2 text-black btn btn-accent newsletter-form-btn"
       >
         {{ $themeLocaleConfig.newsletter.textButton }}
       </button>
@@ -34,5 +34,10 @@ export default {
 </script>
 
 <style lang="scss">
-
+.newsletter-form {
+  &-btn {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
 </style>
