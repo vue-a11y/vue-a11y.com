@@ -36,6 +36,10 @@ html.mode-dark {
   --color: theme('colors.gray.300');
   --border-color: theme('colors.dark.500');
   --border-color-code-inline: theme('colors.dark.500'); // change
+
+  .vp-icon-twitter, .vp-icon-github {
+    color: var(--accent);
+  }
 }
 
 
