@@ -2,7 +2,22 @@
   <div
     class="global-layout"
     dir="ltr"
+    itemscope
+    itemtype="https://schema.org/WebPage"
   >
+    <meta
+      itemprop="name"
+      :content="$siteTitle"
+    >
+    <meta
+      itemprop="alternateName"
+      :content="$siteTitle"
+    >
+    <meta
+      itemprop="url"
+      :content="$themeConfig.url"
+    >
+
     <VueSkipTo
       v-if="$themeLocaleConfig.skipTo"
       ref="skipTo"

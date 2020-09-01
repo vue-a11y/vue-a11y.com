@@ -1,5 +1,19 @@
 <template>
-  <header class="relative z-10 flex flex-wrap w-full border-b header c-border-color container-layout">
+  <header
+    class="relative z-10 flex flex-wrap w-full border-b header c-border-color container-layout"
+    itemscope
+    itemtype="https://schema.org/Organization"
+  >
+    <meta
+      itemprop="name"
+      :content="$siteTitle"
+    >
+    <meta
+      v-for="social in $themeConfig.social"
+      :key="`meta-rich-${social.name}`"
+      itemprop="sameAs"
+      :content="social.link"
+    >
     <div
       class="flex items-center justify-end w-1/5 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
       :class="bgSidebar ? 'header-logo--bg' : null"

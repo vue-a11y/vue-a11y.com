@@ -1,6 +1,19 @@
 <template>
-  <div class="z-10 post-page container-layout container-layout-px">
-    <article class="px-6 pb-24 mt-6 mb-24 xl:px-4">
+  <div
+    class="z-10 post-page container-layout container-layout-px"
+    itemscope
+    itemtype="https://schema.org/Blog"
+  >
+    <article
+      itemscope
+      itemprop="blogPost"
+      itemtype="https://schema.org/BlogPosting"
+      class="px-6 pb-24 mt-6 mb-24 xl:px-4"
+    >
+      <meta
+        itemprop="mainEntityOfPage"
+        :content="$themeConfig.url + post.path"
+      >
       <BackTo
         class="inline-flex px-4 my-4 -ml-4"
         :text="`${$themeLocaleConfig.backToText} posts`"
@@ -12,31 +25,45 @@
         </template>
 
         <template v-slot:cardFooter>
-          <time :datetime="post.date.datetime">
+          <time
+            :datetime="post.date.datetime"
+            itemprop="datePublished"
+          >
             {{ post.date.short }}
           </time>
-          <router-link
-            v-if="post.author"
-            ref="authors"
-            rel="author"
-            :to="{ path: '/authors/', hash: post.author.username }"
-            class="relative flex hover:underline"
-            style="top: 6px;"
+          <span
+            itemprop="author"
+            itemscope
+            itemtype="https://schema.org/Person"
           >
-            <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
-              <img
-                :src="post.author.avatar"
-                :alt="`Avatar ${post.author.name}`"
-                class="object-cover object-top w-full h-fl"
-              >
-            </div>
-            <span class="mt-1">
-              <span class="sr-only">Post by </span>
-              {{ post.author.name }}
-            </span>
-          </router-link>
+            <router-link
+              v-if="post.author"
+              ref="authors"
+              rel="author"
+              itemprop="url"
+              :to="{ path: '/authors/', hash: post.author.username }"
+              class="relative flex hover:underline"
+              style="top: 6px;"
+            >
+              <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
+                <img
+                  :src="post.author.avatar"
+                  :alt="`Avatar ${post.author.name}`"
+                  class="object-cover object-top w-full h-fl"
+                >
+              </div>
+              <span class="mt-1">
+                <span class="sr-only">Post by </span>
+                <span itemprop="name">{{ post.author.name }}</span>
+              </span>
+            </router-link>
+          </span>
         </template>
       </HeaderFullPage>
+      <meta
+        itemprop="dateModified"
+        content="post.updated_at"
+      >
 
       <section
         v-show="post.summary"
@@ -45,7 +72,9 @@
         :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
       >
         <b>{{ $themeLocaleConfig.a11y.landmarks.post.summary }}:</b>
-        {{ post.summary }}
+        <p itemprop="description">
+          {{ post.summary }}
+        </p>
       </section>
 
       <TableOfContents
@@ -64,7 +93,10 @@
         aria-label="Content post"
       >
         <div>
-          <Content class="flex-1 sm:px-5 max-char" />
+          <Content
+            itemprop="articleBody"
+            class="flex-1 sm:px-5 max-char"
+          />
 
           <hr class="mt-16">
 
@@ -126,6 +158,7 @@ export default {
       path: root.$page.path,
       summary: root.$page.frontmatter.summary || '',
       author: root.$themeConfig.authors.find(author => author.username === root.$page.frontmatter.author),
+      updated_at: root.$page.lastUpdated,
       date: {
         datetime: root.$page.frontmatter.date,
         short: new Intl.DateTimeFormat('default', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(root.$page.frontmatter.date))

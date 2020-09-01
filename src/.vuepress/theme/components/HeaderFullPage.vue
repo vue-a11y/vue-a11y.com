@@ -5,6 +5,7 @@
       <h1
         id="card-title"
         class="max-w-2xl card-title"
+        itemprop="name headline"
       >
         <slot name="cardTitle" />
       </h1>
