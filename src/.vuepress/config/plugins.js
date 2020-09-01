@@ -36,7 +36,7 @@ module.exports = [
       directories: [
         {
           id: 'Post',
-          title: 'All posts - Vue A11y',
+          title: 'All posts',
           layout: 'Posts',
           itemLayout: 'Full',
           dirname: 'posts',
@@ -47,7 +47,7 @@ module.exports = [
             prevText: '<<',
             nextText: '>>',
             getPaginationPageTitle (pageNumber) {
-              return `All posts - Vue A11y - page ${pageNumber}`
+              return `All posts - page ${pageNumber}`
             }
           }
         }
@@ -56,13 +56,13 @@ module.exports = [
         {
           id: 'categories',
           keys: ['category', 'categories'],
-          title: 'category - Vue A11y',
+          title: 'category',
           scopeLayout: 'Posts',
           path: '/category/',
           pagination: {
             layout: 'Posts',
             getPaginationPageTitle (pageNumber, key) {
-              return `Category: ${key} - Vue A11y - page ${pageNumber}`
+              return `Category: ${key} - page ${pageNumber}`
             }
           }
         }

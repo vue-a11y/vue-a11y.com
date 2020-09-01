@@ -70,7 +70,7 @@ function resolveMatchingConfig (regularPath, config) {
     if (normalizeRegularPath.indexOf(encodeURI(base)) === 0) {
       return {
         base,
-        config: config[base]
+        config: typeof config[base] === 'string' ? config[config[base]] : config[base]
       }
     }
   }

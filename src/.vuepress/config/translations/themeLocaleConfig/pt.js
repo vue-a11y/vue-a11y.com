@@ -42,7 +42,7 @@ module.exports = {
   sidebar: {
     '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade']),
     '/pt/posts/': generateSidebar('posts', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
-    '/pt/category/': generateSidebar('posts', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/category/': '/pt/posts/',
     '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
   },
   a11y: {
