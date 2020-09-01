@@ -43,6 +43,8 @@
 import { ref, computed } from '@vue/composition-api'
 import { useClipboard } from '@vueuse/core'
 
+import { programmaticFocus } from '@/theme/utils'
+
 export default {
   name: 'HeaderCodeSnippet',
 
@@ -59,11 +61,7 @@ export default {
 
     function skipCodeSnippet () {
       const parent = refs.headerCodeSnippet.parentElement
-      if (parent) {
-        parent.nextSibling.setAttribute('tabindex', '-1')
-        parent.nextSibling.focus()
-        parent.nextSibling.removeAttribute('tabindex')
-      }
+      if (parent) programmaticFocus(parent.nextSibling)
     }
 
     function copyCondeSnippet () {

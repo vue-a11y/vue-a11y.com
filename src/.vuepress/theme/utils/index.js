@@ -25,6 +25,12 @@ export function getLastUpdateString (lastUpdate, lang) {
   })
 }
 
+export function programmaticFocus (el) {
+  el.setAttribute('tabindex', '-1')
+  el.focus()
+  el.removeAttribute('tabindex')
+}
+
 export function prepareSocialShareLinks (path, title, summary) {
   const currentURL = process.env.URL_BASE + path
   return [

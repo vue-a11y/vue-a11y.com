@@ -26,6 +26,7 @@ import { DarkMode } from '@vue-a11y/dark-mode'
 import { computed, watch, onBeforeMount, ref } from '@vue/composition-api'
 
 import { useSettings } from '@/theme/composable'
+import { programmaticFocus } from '@/theme/utils'
 
 export default {
   name: 'GlobalLayout',
@@ -44,11 +45,7 @@ export default {
     })
 
     watch(() => root.$route.path, () => {
-      root.$nextTick(() => {
-        refs.skipTo.$el.setAttribute('tabindex', '-1')
-        refs.skipTo.$el.focus()
-        refs.skipTo.$el.removeAttribute('tabindex')
-      })
+      root.$nextTick(() => programmaticFocus(refs.skipTo.$el))
     })
 
     watch(() => colorModeConfig, newConfig => {
