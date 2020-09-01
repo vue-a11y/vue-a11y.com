@@ -26,7 +26,12 @@
       class="flex items-center flex-grow-0 w-3/5 h-16 md:pr-0 md:w-auto md:flex-grow"
       :class="{ 'w-4/5': !hasSidebar }"
     >
-      <SearchBox class="w-full lg:pl-10" />
+      <form class="w-full lg:pl-10">
+        <SearchBox
+          role="search"
+          class="w-full"
+        />
+      </form>
     </div>
     <div
       v-show="hasSidebar"
