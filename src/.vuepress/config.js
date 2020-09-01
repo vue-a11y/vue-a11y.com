@@ -15,7 +15,7 @@ module.exports = {
   themeConfig: require('./config/themeConfig'),
   markdown: {
     anchor: {
-      permalinkAttrs: () => ({ 'aria-hidden': 'true' })
+      permalinkAttrs: () => ({ 'aria-hidden': 'true', tabindex: '-1' })
     },
     extendMarkdown: md => {
       md.renderer.rules.table_open = () => '<div class="table-wrapper" tabindex="0">\n<table>\n'
