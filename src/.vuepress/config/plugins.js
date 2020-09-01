@@ -1,6 +1,21 @@
 const path = require('path')
 const resolve = pathName => path.join(__dirname, pathName)
 
+const customBlockTags = {
+  fig: [
+    '<figure class="custom-block figure" data-type="%">',
+    '</figure>'
+  ],
+  figcap: [
+    '<figcaption>',
+    '</figcaption>'
+  ],
+  bq: [
+    '<blockquote class="custom-block blockquote">',
+    '</blockquote>'
+  ]
+}
+
 module.exports = [
   [
     // https://github.com/vuepressjs/vuepress-plugin-blog
@@ -93,5 +108,47 @@ module.exports = [
     }
   ],
   // https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html
-  ['@vuepress/last-updated']
+  ['@vuepress/last-updated'],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'bq',
+      before: customBlockTags.bq[0],
+      after: customBlockTags.bq[1]
+    }
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'fig',
+      before: info => {
+        const fig = customBlockTags.fig[0].replace('%', info)
+        const custom = customBlockTags[info]
+        if (!custom) return fig
+        return fig + custom[0]
+      },
+      after: info => {
+        const fig = customBlockTags.fig[1]
+        const custom = customBlockTags[info]
+        if (!custom) return fig
+        return custom[1] + fig
+      }
+    }
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'headerCode',
+      before: info => `<headerCodeSnippet info="${info}">`,
+      after: '</headerCodeSnippet>'
+    }
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'figcap',
+      before: customBlockTags.figcap[0],
+      after: customBlockTags.figcap[1]
+    }
+  ]
 ]

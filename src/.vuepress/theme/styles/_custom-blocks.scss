@@ -1,67 +1,34 @@
-.custom-block {
-  @apply relative w-full p-6 border-b border-solid rounded-md;
-  border-bottom-width: 6px;
+.custom-block.figure {
+  @apply relative w-full;
+  
+  &[data-type="bq"] {
+    @apply p-10 border-b border-solid rounded-md;
+    background-color: var(--bg-secondary);
+    border-bottom-width: 6px;
+    border-color: var(--border-color);
 
-  &-title {
-    @apply absolute py-1 px-4 font-bold;
-    background-color: var(--accent);
-    top: -18px;
-    left: 1rem;
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-.custom-block.fig {
-  @apply p-10 border-light-600;
-  background-color: var(--bg-secondary);
-  border-bottom-width: 6px;
-  border-color: var(--border-color);
-
-  &:before {
-    @apply absolute text-accent border-none;
-    content: '“';
-    top: -70px;
-    left: -20px;
-    font-size: 150px;
-    font-family: "Helvetica";
-  }
-
-  blockquote {
-    @apply mb-6;
-  }
-
-  blockquote + figcaption {
     &:before {
-      @apply relative bg-accent inline-block mr-2;
-      content: '';
-      width: 30px;
-      height: 1px;
-      top: -5px;
+      @apply absolute text-accent border-none;
+      content: '“';
+      top: -70px;
+      left: -20px;
+      font-size: 150px;
+      font-family: "Helvetica";
+    }
+
+    p {
+      @apply m-0;
+    }
+
+    > blockquote {
+      @apply mb-6;
+    }
+
+    > figcaption {
+      @apply text-left;
     }
   }
-}
-
-.custom-block.tip {
-  background-color: var(--bg-tip);
-  border-color: var(--border-color-tip);
-
-  .custom-block-title {
-    background-color: var(--border-color-tip);
+  > figcaption {
+    @apply w-full text-center text-base;
   }
-}
-
-.custom-block.warning {
-  background-color: var(--bg-warning);
-  border-color: var(--border-color-warning);
-
-  .custom-block-title {
-    background-color: var(--border-color-warning);
-  }
-}
-
-.custom-block.tip, .custom-block.warning {
-  @apply pt-10;
 }
