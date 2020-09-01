@@ -4,7 +4,7 @@
   "description": "The website of Vue-a11y project, powered by Vuepress",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev src",
+    "dev": "vuepress dev src --no-cache",
     "build": "npm run svgo && vuepress build src --no-cache && echo vue-a11y.com >> src/.vuepress/dist/CNAME",
     "svgo": "svgo --disable=convertColors -f ./src/.vuepress/theme/assets/sprite/svg",
     "deploy": "npm run build && gh-pages -d src/.vuepress/dist",
@@ -56,12 +56,12 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
-    "@vue-a11y/announcer": "^2.0.2",
+    "@vue-a11y/announcer": "^2.1.0",
     "@vue-a11y/dark-mode": "^1.1.1",
     "@vue-a11y/focus-loop": "^0.1.2",
     "@vue-a11y/skip-to": "^2.0.1",
     "@vue/composition-api": "^1.0.0-beta.11",
     "@vueuse/core": "^4.0.0-beta.9",
-    "tailwindcss": "^1.7.0"
+    "tailwindcss": "^1.7.6"
   }
 }
