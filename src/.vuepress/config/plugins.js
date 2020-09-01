@@ -156,5 +156,13 @@ module.exports = [
       before: customBlockTags.figcap[0],
       after: customBlockTags.figcap[1]
     }
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'alert',
+      before: info => `<div class="custom-block alert" data-alert="${info}"><span class="custom-block-title">${info}</span>`,
+      after: '</div>'
+    }
   ]
 ]

@@ -17,14 +17,16 @@
 
   // Border
   --border-color: theme('colors.light.400');
-  --border-color-code-inline: var(--border-color);
   --border-outline: var(--color);
 
   // Custom blocks
-  --bg-tip: var(--bg-secondary);
-  --border-color-tip: var(--border-color);
-  --bg-warning: #F8F0E3;
-  --border-color-warning: #EFE1C9;
+  --color-text-custom-block: theme('colors.gray.800');
+  --bg-custom-block-tip: var(--bg-secondary);
+  --border-color-custom-block-tip: var(--accent);
+  --bg-custom-block-warning: #f8f0e3;
+  --border-color-custom-block-warning: #f8e1bb;
+  --bg-custom-block-danger: #ffece9;
+  --border-color-custom-block-danger: #ffc4bb;
 
   // icons
   --color-social-icons: theme('colors.gray.800');
@@ -48,6 +50,14 @@ html.mode-dark {
   --accent: theme('colors.accent');
   --color: theme('colors.gray.300');
 
+  // Custom blocks
+  --bg-custom-block-tip: var(--bg-secondary);
+  --border-color-custom-block-tip: var(--accent);
+  --bg-custom-block-warning: var(--bg-secondary);
+  --border-color-custom-block-warning: #f8e1bb;
+  --bg-custom-block-danger: var(--bg-secondary);
+  --border-color-custom-block-danger: #ffc4bb;
+
   // Border
   --border-color: theme('colors.dark.500');
 
@@ -67,6 +77,12 @@ html.mode-sepia {
   --bg-hover-sidebar: theme('colors.sepia.600');
   --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
+
+  // Custom blocks
+  --bg-custom-block-tip: theme('colors.light.200');
+  --border-color-custom-block-tip: var(--accent);
+  --bg-custom-block-warning: #f8e1bb;
+  --border-color-custom-block-warning: theme('colors.yellow.600');
 
   // Border
   --border-color: theme('colors.sepia.600');

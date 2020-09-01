@@ -72,9 +72,9 @@
         :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
       >
         <b>{{ $themeLocaleConfig.a11y.landmarks.post.summary }}:</b>
-        <p itemprop="description">
+        <span itemprop="description">
           {{ post.summary }}
-        </p>
+        </span>
       </section>
 
       <TableOfContents
