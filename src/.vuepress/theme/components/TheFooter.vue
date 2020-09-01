@@ -19,31 +19,20 @@
         <NewsletterForm class="mt-6" />
 
         <ul class="flex justify-center mt-16">
-          <li>
+          <li
+            v-for="social in $themeConfig.social"
+            :key="`footer-sn-${social.icon}`"
+            class="last:ml-4"
+          >
             <a
-              href="https://twitter.com/vue_a11y"
+              :href="social.link"
               class="block p-5 border border-solid rounded-full c-border-color btn-social"
               target="_blank"
               rel="me noopener"
-              :aria-label="`Vue accesibility Twitter (${$localeConfig.externalLinkText})`"
+              :aria-label="`Vue A11y ${social.name} (${$themeLocaleConfig.externalLinkText})`"
             >
               <vp-icon
-                name="twitter"
-                size="1.5rem"
-                style="color: var(--color-social-icons)"
-              />
-            </a>
-          </li>
-          <li class="ml-4">
-            <a
-              href="https://github.com/vue-a11y"
-              class="block p-5 border border-solid rounded-full c-border-color btn-social"
-              target="_blank"
-              rel="me noopener"
-              :aria-label="`Vue accesibility Github (${$localeConfig.externalLinkText})`"
-            >
-              <vp-icon
-                name="github"
+                :name="social.icon"
                 size="1.5rem"
                 style="color: var(--color-social-icons)"
               />
