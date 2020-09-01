@@ -49,6 +49,17 @@ module.exports = {
     newsletter: {
       placeholder: 'Email para inscrição'
     },
+    codeSnippet: {
+      copy: {
+        text: 'Copiar',
+        ariaLabel: 'Copiar trecho de código para o clipboard',
+        textCopied: 'Código copiado!'
+      },
+      skip: {
+        text: 'Pular',
+        ariaLabel: 'Pular trecho de código'
+      }
+    },
     labels: {
       menuButton: {
         open: 'Abrir navegação da sidebar',

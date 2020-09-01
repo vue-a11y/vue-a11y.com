@@ -10,6 +10,7 @@
   --accent: theme('colors.accent');
   --accent-text-button: theme('colors.dark.700');
   --bg-code-block: theme('colors.dark.700');
+  --bg-header-code: theme('colors.dark.900');
   --bg-left: linear-gradient(90deg, var(--bg-secondary) calc(100% - 13px), transparent 13px);
   --bg-input: var(--bg-secondary);
   --bg-btn-light: var(--bg-secondary);
@@ -43,6 +44,7 @@ html.mode-dark {
   --bg: theme('colors.dark.900');
   --bg-secondary: theme('colors.dark.700');
   --bg-hover-sidebar: theme('colors.dark.500');
+  --bg-header-code: theme('colors.dark.500');
   --accent: theme('colors.accent');
   --color: theme('colors.gray.300');
 
