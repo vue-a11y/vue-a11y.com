@@ -69,6 +69,12 @@ module.exports = [
       ]
     }
   ],
+  [
+    '@vuepress/google-analytics',
+    {
+      ga: 'UA-70393520-5'
+    }
+  ],
   // https://github.com/billyyyyy3320/vuepress-plugin-mailchimp
   [
     'mailchimp', {
