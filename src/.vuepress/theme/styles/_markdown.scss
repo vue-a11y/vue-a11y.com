@@ -74,10 +74,9 @@
 
   p, h2, h3 {
     code {
-      @apply font-bold border border-solid;
-      background-color: var(--bg-secondary);
+      @apply font-bold border border-solid p-1 text-lg;
+      background-color: var(--bg-hover-sidebar);
       border-color: var(--border-color);
-      padding: 2px 5px;
     }
   }
 
@@ -96,19 +95,16 @@
   }
 
   strong {
-    font-weight: 700;
+    @apply font-bold;
     margin: 0 0.2em;
   }
 
   code, kbd {
-    display: inline;
-    padding: .125em .25em;
-    box-shadow: none;
+    @apply inline rounded;
   }
 
   kbd {
-    @apply rounded border border-solid;;
-    border-color: var(--accent);
+    @apply text-xl border border-solid border-accent p-1;
     background-color: var(--bg-secondary);
     box-shadow: 2.5px 2.5px 0 var(--accent);
   }
@@ -133,7 +129,10 @@
   }
 
   .table-wrapper {
-    @apply w-full overflow-auto whitespace-no-wrap;
+    @apply w-full overflow-x-auto whitespace-no-wrap;
+    @screen lg {
+      @apply whitespace-normal;
+    }
   }
 
   table {
@@ -182,22 +181,16 @@
   }
 
   code[class*=language-], pre[class*=language-] {
-    width: 100%;
-    @apply text-base;
-    background: none;
-    text-align: left;
-    white-space: pre;
+    @apply text-base w-full bg-none whitespace-pre leading-6 m-0 break-normal;
     word-spacing: normal;
-    word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
     tab-size: 4;
     hyphens: none;
     font-weight: 400;
     color: #C0A5D9;
 
     @screen sm {
-      white-space: pre-wrap;
+      @apply whitespace-pre-wrap;
     }
   }
 

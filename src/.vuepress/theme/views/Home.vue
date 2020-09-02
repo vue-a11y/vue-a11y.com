@@ -1,7 +1,7 @@
 <template>
   <div class="pt-24 home">
     <div class="container relative z-10 px-4 mx-auto">
-      <div class="flex items-center justify-center h-fulllg:justify-between hero">
+      <div class="flex items-center justify-center h-fulllg:justify-between home-hero">
         <div class="max-w-sm lg:-mt-48">
           <h1 class="text-4xl font-bold">
             {{ $title }}
@@ -110,11 +110,15 @@ export default {
 </script>
 
 <style lang="scss">
-.home-hero-ball {
-  bottom: -16%;
-  left: -2%;
-  width: 54%;
-  height: 66%;
-  background-color: var(--bg-secondary);
+.home {
+  &-hero {
+    &-ball {
+      bottom: -16%;
+      left: -2%;
+      width: 54%;
+      height: 66%;
+      background-color: var(--bg-secondary);
+    }
+  }
 }
 </style>

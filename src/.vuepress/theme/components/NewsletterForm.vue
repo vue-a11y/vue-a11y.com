@@ -16,9 +16,8 @@
         :name="emailLabel"
         type="email"
         required
-        class="w-full p-4 border border-solid rounded-md outline-none c-border-color hover:border-accent focus:border-accent"
+        class="w-full p-4 border border-solid rounded-md outline-none newsletter-form-input c-border-color hover:border-accent focus:border-accent"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
-        style="border-bottom-width: 6px; background-color: var(--bg-input)"
       >
     </label>
     <slot name="button">
@@ -84,6 +83,11 @@ export default {
 
 <style lang="scss">
 .newsletter-form {
+  &-input {
+    border-bottom-width: 6px;
+    background-color: var(--bg-input);
+  }
+
   &-btn {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;

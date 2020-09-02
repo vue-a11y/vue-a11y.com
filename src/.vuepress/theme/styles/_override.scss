@@ -20,7 +20,7 @@ div.search-box {
     }
 
     &::placeholder {
-      @apply text-gray-700;
+      color: var(--color) !important;
     }
   }
 

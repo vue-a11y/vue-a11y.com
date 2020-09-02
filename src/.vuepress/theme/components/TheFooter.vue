@@ -58,6 +58,11 @@ export default {
 </script>
 
 <style lang="scss">
+.footer {
+  .newsletter-form-input {
+    background-color: var(--bg-input-news-footer) ;
+  }
+}
 .btn-social {
   background-color: var(--bg);
 }

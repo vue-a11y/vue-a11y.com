@@ -12,15 +12,23 @@ if (process.env.NODE_ENV !== 'development') {
       whitelist: [
         'html',
         'body',
+        'figure',
+        'code',
+        'kbd',
         'app',
         'mode-dark',
+        'mode-sepia',
         'icon',
         'outbound'
       ],
-      whitelistPatterns: [],
+      whitelistPatterns: [
+        /set-/
+      ],
       whitelistPatternsChildren: [
         /content__default$/,
-        /nprogress$/
+        /nprogress$/,
+        /search-box$/,
+        /custom-block$/
       ],
       content: ['./src/.vuepress/**/*.vue'],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []

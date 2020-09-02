@@ -92,10 +92,10 @@
         role="region"
         aria-label="Content post"
       >
-        <div>
+        <div class="w-full lg:w-auto">
           <Content
             itemprop="articleBody"
-            class="flex-1 sm:px-5 max-char"
+            class="sm:px-5 max-char"
           />
 
           <hr class="mt-16">
@@ -113,7 +113,7 @@
             <WebMentions />
           </div>
         </div>
-        <RightNavigation class="ml-16 lg:block page-page-toc">
+        <RightNavigation class="ml-16 lg:block post-page-toc">
           <ShareLinks
             class="mt-16"
             :path="post.path"
@@ -178,9 +178,9 @@ export default {
   max-width: 57rem
 }
 
-.page-page-toc {
+.post-page-toc {
   @screen xl {
-    width: var(--toc-w-size);
+    min-width: var(--toc-w-size);
   }
 }
 </style>
