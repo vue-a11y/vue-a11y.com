@@ -13,5 +13,8 @@ export default ({ Vue, router, isServer }) => {
 
   Vue.use(VueCompositionApi)
   Vue.use(VueSkipTo)
-  Vue.use(VueAnnouncer, {}, router)
+
+  if (!isServer) {
+    Vue.use(VueAnnouncer, {}, router)
+  }
 }

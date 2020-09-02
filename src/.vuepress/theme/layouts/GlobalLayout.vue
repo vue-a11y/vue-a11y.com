@@ -17,20 +17,21 @@
       itemprop="url"
       :content="$themeConfig.url"
     >
-
-    <VueSkipTo
-      v-if="$themeLocaleConfig.skipTo"
-      ref="skipTo"
-      :to="$themeLocaleConfig.skipTo.to"
-      :list-label="$themeLocaleConfig.skipTo.label"
-      class="z-20"
-    /> <!-- when update the @vue-a11y/skip-to, add ariaLabelNav attribute -->
-    <DarkMode
-      class="hidden"
-      v-bind="colorModeConfig"
-    />
+    <ClientOnly>
+      <VueSkipTo
+        v-if="$themeLocaleConfig.skipTo"
+        ref="skipTo"
+        :to="$themeLocaleConfig.skipTo.to"
+        :list-label="$themeLocaleConfig.skipTo.label"
+        class="z-20"
+      /> <!-- when update the @vue-a11y/skip-to, add ariaLabelNav attribute -->
+    </ClientOnly>
     <component :is="layout" />
     <ClientOnly>
+      <DarkMode
+        class="hidden"
+        v-bind="colorModeConfig"
+      />
       <VueAnnouncer />
     </ClientOnly>
   </div>
