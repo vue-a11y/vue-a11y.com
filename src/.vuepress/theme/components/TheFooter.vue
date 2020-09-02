@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="w-full py-6 text-center">
-      <Copyright />
+      <span class="text-sm">MIT Licensed | Copyright &copy; 2020</span>
     </div>
   </footer>
 </template>
@@ -52,7 +52,6 @@ export default {
   name: 'TheFooter',
 
   components: {
-    Copyright: () => import('@/theme/components/Copyright'),
     NewsletterForm: () => import('@/theme/components/NewsletterForm')
   }
 }
