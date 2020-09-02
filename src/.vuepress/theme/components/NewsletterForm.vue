@@ -16,6 +16,7 @@
         :name="emailLabel"
         type="email"
         required
+        autocomplete="email"
         class="w-full p-4 border border-solid rounded-md outline-none newsletter-form-input c-border-color hover:border-accent focus:border-accent"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
       >
@@ -94,12 +95,15 @@ export default {
   }
 
   &-msg {
-    &-error {
-      @apply bg-green-200 text-green-900;
+    @apply border py-3 invisible;
+    border-bottom-width: 4px;
+
+    &-success {
+      @apply visible bg-green-200 text-green-900 border-accentDark;
     }
 
     &-error {
-      @apply bg-red-200 text-red-900;
+      @apply visible bg-red-200 text-red-900 border-red-900;
     }
 
     a {
