@@ -69,19 +69,19 @@ body.set-serif {
 }
 
 .btn {
-  @apply py-3 px-4 font-bold text-xl rounded-md;
+  @apply py-3 px-4 font-bold text-xl rounded-md border border-solid border-transparent;
   max-height: 63px;
-  border-bottom: 6px solid transparent;
+  border-bottom-width: 6px;
 
   &-light {
     background-color: var(--bg-secondary);
-    border-bottom-color: var(--border-color);
+    border-color: var(--border-color);
   }
 
   &-accent {
     @apply bg-accent;
     color: var(--accent-text-button);
-    border-bottom-color: theme('colors.accentDark');
+    border-color: theme('colors.accentDark');
   }
 }
 
