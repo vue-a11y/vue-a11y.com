@@ -1,13 +1,15 @@
-import { onMounted, onUnmounted } from '@vue/composition-api'
+import { onMounted, onUnmounted, ref } from '@vue/composition-api'
 
-export default function useEventListener (type, listener, options = {}, target = window) {
+export default function useEventListener (type, listener, options = {}, target) {
   const eventOptions = { capture: false, ...options }
+  const el = ref(null)
 
   onMounted(() => {
-    target && target.addEventListener(type, listener, eventOptions)
+    el.value = typeof target === 'string' ? document.querySelector(target) : window
+    el.value.addEventListener(type, listener, eventOptions)
   })
 
   onUnmounted(() => {
-    target && target.removeEventListener(type, listener, eventOptions)
+    el.value.removeEventListener(type, listener, eventOptions)
   })
 }
