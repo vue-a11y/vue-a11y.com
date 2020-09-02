@@ -14,9 +14,16 @@ module.exports = {
     defaultMode: 'light',
     className: 'mode-%cm',
     favicon: '#favicon',
+    modes: [
+      'light',
+      'dark',
+      'system',
+      'sepia'
+    ],
     metaThemeColor: {
-      light: '#FBFCFC',
-      dark: '#12181E'
+      light: '#eef5f5',
+      dark: '#212529',
+      sepia: '#ebddbf'
     }
   },
   social: [
