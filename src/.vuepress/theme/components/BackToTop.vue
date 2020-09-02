@@ -13,8 +13,9 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from '@vue/composition-api'
+import { ref, onMounted } from '@vue/composition-api'
 
+import { useEventListener } from '@/theme/composable'
 import { debounce } from '@/theme/utils'
 
 export default {
@@ -36,13 +37,13 @@ export default {
       default: 500
     },
 
-    rootContainer: {
-      type: [String, HTMLElement],
+    selector: {
+      type: String,
       default: '#main'
     }
   },
 
-  setup ({ marginTop, threshold, rootContainer }, { root }) {
+  setup ({ marginTop, threshold, selector }, { root }) {
     const show = ref(false)
     const rootElement = ref(null)
 
@@ -53,17 +54,11 @@ export default {
       }
     }, threshold)
 
+    useEventListener('scroll', setPanel, {}, selector)
+
     onMounted(() => {
-      rootElement.value = typeof rootContainer === 'string'
-        ? document.querySelector(rootContainer)
-        : rootContainer
-
+      rootElement.value = document.querySelector(selector)
       setPanel()
-      rootElement.value.addEventListener('scroll', setPanel, { passive: true })
-    })
-
-    onUnmounted(() => {
-      rootElement.value.removeEventListener('scroll', setPanel, { passive: true })
     })
 
     return {
