@@ -38,6 +38,8 @@ module.exports = {
       link: 'https://github.com/vue-a11y'
     }
   ],
+  sponsors: require('./sponsors'),
+  supporters: require('./supporters'),
   authors: require('./authors'),
   locales: require('./translations/themeLocaleConfig')
 }

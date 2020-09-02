@@ -8,6 +8,9 @@ actionLink: /pt/project/
 heroImage: /hero-accessibility.svg
 heroImageAlternativeText: Ilustração de um homem defciente visual e uma mulher na cadeira de rodas
 
+sponsorsText: Patrocinadores
+supportersText: Apoiadores
+
 features:
 - title: Exemplos
   details: Diversos exemplos de como aplicar ARIA, técnicas da WCAG e as melhores práticas para seus componentes Vue.js

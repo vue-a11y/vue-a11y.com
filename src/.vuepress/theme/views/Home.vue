@@ -56,21 +56,26 @@
       </section>
 
       <section
-        v-if="false"
+        v-show="$themeConfig.sponsors.length"
         class="flex flex-wrap mt-20 lg:mt-32"
         role="region"
-        aria-label="Sponsors"
+        :aria-label="$frontmatter.sponsorsText"
       >
-        <span class="w-full mb-8 text-2xl font-bold sm:w-48">Sponsors:</span>
+        <span class="w-full mb-8 text-2xl font-bold sm:w-48">{{ $frontmatter.sponsorsText }}:</span>
         <ul class="flex flex-wrap flex-grow">
-          <li class="w-48">
+          <li
+            v-for="(sponsors, index) in $themeConfig.sponsors"
+            :key="`sponsor-${index}`"
+            class="w-48"
+          >
             <a
-              href="#"
+              :href="sponsors.link"
               class="block"
+              :aria-label="`${sponsors.name}`"
             >
               <img
-                src="/img/sponsors/vuemastery.png"
-                alt="Vue Mastery logo"
+                :src="`/img/sponsors/${sponsors.image}`"
+                :alt="`${sponsors.name} logo`"
                 class="w-full"
               >
             </a>
@@ -79,20 +84,26 @@
       </section>
 
       <section
+        v-show="$themeConfig.supporters.length"
         class="flex flex-wrap pt-20 my-20 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
         role="region"
-        aria-label="Supporters"
+        :aria-label="$frontmatter.supportersText"
       >
-        <span class="w-full mb-8 text-2xl font-bold sm:w-48">Supporters:</span>
+        <span class="w-full mb-8 text-2xl font-bold sm:w-48">{{ $frontmatter.supportersText }}:</span>
         <ul class="flex flex-wrap justify-between flex-grow">
-          <li class="w-48">
+          <li
+            v-for="(supporter, index) in $themeConfig.supporters"
+            :key="`supporter-${index}`"
+            class="w-48"
+          >
             <a
-              href="https://github.com/ktquez"
+              :href="supporter.link"
+              :aria-label="`${supporter.name}`"
               class="block w-12 h-12 overflow-hidden rounded-full"
             >
               <img
-                src="https://avatars0.githubusercontent.com/u/8084606?s=460&u=20b6499a416cf7129a18e5c168cf387e159edb1a&v=4"
-                alt="Alan Ktquez"
+                :src="`/img/supporters/${supporter.image}`"
+                :alt="`Avatar ${supporter.name}`"
                 class="w-full"
               >
             </a>
