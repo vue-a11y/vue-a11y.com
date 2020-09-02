@@ -8,7 +8,7 @@ module.exports = {
   backToTopText: 'back to page top',
   backToText: 'back to',
   shareLinksText: 'Share on',
-  externalLinkText: 'Opens in a new window/tab',
+  externalLinkText: 'Opens in a new tab',
   skipTo: {
     label: 'Skip to main content',
     to: '#main'
