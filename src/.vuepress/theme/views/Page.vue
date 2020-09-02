@@ -36,4 +36,10 @@ export default {
   }
 }
 
+@media (min-width: 1280px) and (max-width: 1600px){
+  .container-layout-pr {
+    padding-right: 2%!important;
+  }
+}
+
 </style>
