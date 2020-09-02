@@ -1,6 +1,5 @@
 .content__default {
-  @apply text-xl;
-  display: block;
+  @apply text-xl block;
   min-height: 150px;
 
   p {
@@ -30,11 +29,10 @@
   }
 
   h2 {
-    @apply font-bold text-3xl;
+    @apply font-bold text-3xl mb-0;
     margin-top: 60px;
     z-index: 2;
     line-height: 1.04em;
-    margin-bottom: 0;
     
 
     + p {
@@ -43,21 +41,18 @@
   }
 
   h3 {
-    @apply text-xl;
+    @apply text-xl font-bold;
     line-height: 1.10em;
-    font-weight: bold;
   }
 
   h1, h2, h3 {
-    position: relative;
+    @apply relative;
+
     .header-anchor {
-      @apply text-accent;
+      @apply text-accent absolute top-0 opacity-0 no-underline;
       position: absolute;
-      top: 0px;
       left: -30px;
       padding-right: 4px;
-      opacity: 0;
-      text-decoration: none;
       z-index: 1;
 
       &:hover, &:focus {
@@ -67,7 +62,7 @@
 
     &:hover, &:focus-within {
       .header-anchor {
-        opacity: .2;
+        @apply opacity-25;
       }
     }
   }
@@ -81,9 +76,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply border-b-2 border-solid border-accent;
-    position: relative;
-    text-decoration: none;
+    @apply relative no-underline border-b-2 border-solid border-accent;
 
     &:hover {
       border-color: var(--color);
@@ -120,10 +113,8 @@
   }
 
   ul li:before {
-    @apply text-accent;
+    @apply text-accent font-bold inline-block;
     content: "•";
-    font-weight: bold;
-    display: inline-block; 
     width: 1em;
     margin-left: -2em;
   }
@@ -165,19 +156,17 @@
   }
 
   video, audio {
-    max-width: 100%;
+    @apply max-w-full;
   }
 
   img {
-    @apply w-full shadow-lg rounded-lg;
-    max-width: 100%;
-    margin: 0 auto;
+    @apply w-full max-w-full shadow-lg rounded-lg mx-auto;
     margin-top: 30px;
     margin-bottom: 30px;
   }
 
   .observer {
-    text-align: center;
+    @apply text-center;
   }
 
   code[class*=language-], pre[class*=language-] {

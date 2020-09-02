@@ -30,6 +30,10 @@
   }
   > figcaption {
     @apply w-full text-center text-base;
+
+    code {
+      @apply text-base;
+    }
   }
 }
 
