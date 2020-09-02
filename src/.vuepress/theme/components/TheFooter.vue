@@ -29,8 +29,8 @@
               class="block p-5 border border-solid rounded-full c-border-color btn-social"
               target="_blank"
               rel="me noopener"
-              :aria-label="`Vue A11y ${social.name} (${$themeLocaleConfig.externalLinkText})`"
             >
+              <span class="sr-only">{{ social.name }} Vue A11y {{ ($themeLocaleConfig.externalLinkText) }}</span>
               <vp-icon
                 :name="social.icon"
                 size="1.5rem"
