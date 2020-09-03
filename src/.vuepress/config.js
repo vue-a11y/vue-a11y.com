@@ -6,7 +6,6 @@ const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = {
   base: '/',
-  evergreen: true,
   serviceWorker: true,
   head: require('./config/head'),
   plugins: require('./config/plugins'),
