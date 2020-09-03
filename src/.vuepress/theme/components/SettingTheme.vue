@@ -79,7 +79,7 @@ export default {
       if (!old) return
       const { setStorage } = useSettings()
       setStorage('theme', val)
-      Object.assign(root.$themeConfig.colorMode, { defaultMode: val })
+      root.$set(root.$themeConfig.colorMode, 'defaultMode', val)
     }
 
     return {
