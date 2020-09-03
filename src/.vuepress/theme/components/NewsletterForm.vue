@@ -1,7 +1,10 @@
 <template>
   <form
+    ref="newsletterForm"
     class="flex flex-wrap newsletter-form"
     novalidate
+    method="POST"
+    :action="$themeConfig.mailchimp"
     @submit.prevent="submitNewsletter"
   >
     <label
@@ -13,7 +16,7 @@
         :id="emailLabel"
         ref="emailField"
         v-model="email"
-        :name="emailLabel"
+        name="EMAIL"
         type="email"
         required
         autocomplete="email"
@@ -35,7 +38,7 @@
     >
       <span
         v-show="message.result"
-        v-html="message.msg"
+        v-text="message.msg"
       />
     </span>
   </form>
@@ -43,7 +46,6 @@
 
 <script>
 import { ref, watch } from '@vue/composition-api'
-import subscribeToMailchimp from 'vuepress-plugin-mailchimp/src/mailchimpSubscribe'
 
 export default {
   name: 'NewsletterForm',
@@ -63,12 +65,10 @@ export default {
     async function submitNewsletter () {
       try {
         if (!refs.emailField.validity.valid) throw new Error(refs.emailField.validationMessage)
-        const res = await subscribeToMailchimp(email.value)
-        message.value = res
+        refs.newsletterForm.submit()
       } catch (e) {
-        message.value = { result: 'error', msg: e.message }
-      } finally {
         root.$announcer.assertive(message.value.msg)
+        message.value = { result: 'error', msg: e.message }
       }
     }
 

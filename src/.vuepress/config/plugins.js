@@ -75,12 +75,6 @@ module.exports = [
       ga: 'UA-70393520-5'
     }
   ],
-  // https://github.com/billyyyyy3320/vuepress-plugin-mailchimp
-  [
-    'mailchimp', {
-      endpoint: process.env.MAILCHIMP_ENDPOINT
-    }
-  ],
   // https://vuepress.vuejs.org/plugin/official/plugin-pwa.html
   [
     '@vuepress/pwa',

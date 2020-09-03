@@ -6,6 +6,7 @@ module.exports = {
   lastUpdated: true,
   searchPlaceholder: 'Search (Press "s" to focus)',
   url: process.env.URL_BASE,
+  mailchimp: process.env.MAILCHIMP_ENDPOINT,
   webmentions: {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
