@@ -1,8 +1,8 @@
 <template>
   <div class="pt-24 home">
     <div class="container relative z-10 px-4 mx-auto">
-      <div class="flex items-center justify-center h-fulllg:justify-between home-hero">
-        <div class="max-w-sm lg:-mt-48">
+      <div class="flex items-center justify-center h-full lg:justify-between home-hero">
+        <div class="max-w-sm">
           <h1 class="text-4xl font-bold">
             {{ $title }}
           </h1>
@@ -37,18 +37,24 @@
       </div>
 
       <section
-        class="flex flex-wrap items-center pt-20 mt-20 border-t border-solid c-border-color lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
+        class="flex flex-wrap items-center pt-20 mt-24 border-t border-solid c-border-color lg:mt-48 lg:pt-0 lg:border-transparent lg:justify-between"
         role="region"
-        aria-label="Features"
+        aria-labelledby="a-features"
       >
+        <h2
+          id="a-features"
+          class="sr-only"
+        >
+          Features
+        </h2>
         <div
           v-for="(feature, index) in $frontmatter.features"
           :key="`feature-${index}`"
           class="w-full mb-12 last:mb-0 xl:mb-0 lg:max-w-sm"
         >
-          <h2 class="text-2xl font-bold">
+          <h3 class="text-2xl font-bold">
             {{ feature.title }}
-          </h2>
+          </h3>
           <p class="mt-4 text-lg">
             {{ feature.details }}
           </p>
@@ -57,11 +63,16 @@
 
       <section
         v-show="$themeConfig.sponsors.length"
-        class="flex flex-wrap mt-20 lg:mt-32"
+        class="flex flex-wrap mt-24 lg:mt-32"
         role="region"
-        :aria-label="$frontmatter.sponsorsText"
+        aria-labelledby="a-sponsors"
       >
-        <span class="w-full mb-8 text-2xl font-bold sm:w-48">{{ $frontmatter.sponsorsText }}:</span>
+        <h2
+          id="a-sponsors"
+          class="w-full mb-8 text-2xl font-bold sm:w-48"
+        >
+          {{ $frontmatter.sponsorsText }}:
+        </h2>
         <ul class="flex flex-wrap flex-grow">
           <li
             v-for="(sponsors, index) in $themeConfig.sponsors"
@@ -85,11 +96,16 @@
 
       <section
         v-show="$themeConfig.supporters.length"
-        class="flex flex-wrap pt-20 my-20 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
+        class="flex flex-wrap pt-20 my-24 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
         role="region"
-        :aria-label="$frontmatter.supportersText"
+        aria-labelledby="a-supporters"
       >
-        <span class="w-full mb-8 text-2xl font-bold sm:w-48">{{ $frontmatter.supportersText }}:</span>
+        <h2
+          id="a-supporters"
+          class="w-full mb-8 text-2xl font-bold sm:w-48"
+        >
+          {{ $frontmatter.supportersText }}:
+        </h2>
         <ul class="flex flex-wrap justify-between flex-grow">
           <li
             v-for="(supporter, index) in $themeConfig.supporters"
