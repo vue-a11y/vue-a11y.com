@@ -48,6 +48,7 @@
 <script>
 import { FocusLoop } from '@vue-a11y/focus-loop'
 
+import BackToTop from '@/theme/components/BackToTop'
 import TheHeading from '@/theme/components/TheHeading'
 import TheMain from '@/theme/components/TheMain'
 import TheSidebar from '@/theme/components/TheSidebar'
@@ -61,7 +62,7 @@ export default {
     FocusLoop,
     TheHeading,
     TheSidebar,
-    BackToTop: () => import('@/theme/components/BackToTop')
+    BackToTop
   },
 
   setup (_, { refs }) {

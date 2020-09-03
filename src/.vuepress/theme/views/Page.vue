@@ -11,12 +11,15 @@
 </template>
 
 <script>
+import PageEdit from '@/theme/components/PageEdit'
+import RightNavigation from '@/theme/components/RightNavigation'
+
 export default {
   name: 'Page',
 
   components: {
-    PageEdit: () => import('@/theme/components/PageEdit'),
-    RightNavigation: () => import('@/theme/components/RightNavigation')
+    PageEdit,
+    RightNavigation
   }
 }
 </script>

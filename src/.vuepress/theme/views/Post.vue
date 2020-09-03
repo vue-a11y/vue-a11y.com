@@ -130,7 +130,12 @@
 import { computed, watch } from '@vue/composition-api'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
+import BackTo from '@/theme/components/BackTo'
 import HeaderFullPage from '@/theme/components/HeaderFullPage'
+import RightNavigation from '@/theme/components/RightNavigation'
+import ShareLinks from '@/theme/components/ShareLinks'
+import TableOfContents from '@/theme/components/TableOfContents'
+import WebMentions from '@/theme/components/WebMentions'
 import { useIntersectionObserver } from '@/theme/composable'
 
 export default {
@@ -139,11 +144,11 @@ export default {
   components: {
     Comment,
     HeaderFullPage,
-    ShareLinks: () => import('@/theme/components/ShareLinks'),
-    BackTo: () => import('@/theme/components/BackTo'),
-    WebMentions: () => import('@/theme/components/WebMentions'),
-    TableOfContents: () => import('@/theme/components/TableOfContents'),
-    RightNavigation: () => import('@/theme/components/RightNavigation')
+    ShareLinks,
+    BackTo,
+    WebMentions,
+    TableOfContents,
+    RightNavigation
   },
 
   setup (_, { root }) {

@@ -35,6 +35,7 @@
 import { computed } from '@vue/composition-api'
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 
+import BackTo from '@/theme/components/BackTo'
 import CardPost from '@/theme/components/CardPost'
 
 export default {
@@ -43,7 +44,7 @@ export default {
   components: {
     CardPost,
     Pagination,
-    BackTo: () => import('@/theme/components/BackTo')
+    BackTo
   },
 
   setup (_, { root }) {

@@ -31,12 +31,16 @@
 </template>
 
 <script>
+
+import NewsletterForm from '@/theme/components/NewsletterForm'
+import TableOfContents from '@/theme/components/TableOfContents'
+
 export default {
   name: 'RightNavigation',
 
   components: {
-    NewsletterForm: () => import('@/theme/components/NewsletterForm'),
-    TableOfContents: () => import('@/theme/components/TableOfContents')
+    NewsletterForm,
+    TableOfContents
   }
 }
 </script>

@@ -48,11 +48,13 @@
 </template>
 
 <script>
+import NewsletterForm from '@/theme/components/NewsletterForm'
+
 export default {
   name: 'TheFooter',
 
   components: {
-    NewsletterForm: () => import('@/theme/components/NewsletterForm')
+    NewsletterForm
   }
 }
 </script>

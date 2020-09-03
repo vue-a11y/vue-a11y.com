@@ -32,19 +32,25 @@
 </template>
 
 <script>
+import BackTo from '@/theme/components/BackTo'
 import HeaderFullPage from '@/theme/components/HeaderFullPage'
+import SettingLanguage from '@/theme/components/SettingLanguage'
+import SettingMotion from '@/theme/components/SettingMotion'
+import SettingReadingFont from '@/theme/components/SettingReadingFont'
+import SettingTheme from '@/theme/components/SettingTheme'
+import SettingVision from '@/theme/components/SettingVision'
 
 export default {
   name: 'Settings',
 
   components: {
     HeaderFullPage,
-    BackTo: () => import('@/theme/components/BackTo'),
-    SettingTheme: () => import('@/theme/components/SettingTheme'),
-    SettingVision: () => import('@/theme/components/SettingVision'),
-    SettingMotion: () => import('@/theme/components/SettingMotion'),
-    SettingLanguage: () => import('@/theme/components/SettingLanguage'),
-    SettingReadingFont: () => import('@/theme/components/SettingReadingFont')
+    BackTo,
+    SettingTheme,
+    SettingVision,
+    SettingMotion,
+    SettingLanguage,
+    SettingReadingFont
   },
 
   setup (_, { root }) {}
