@@ -1,4 +1,4 @@
-const { generateSidebar } = require('./utils')
+const { generateSidebar } = require('../../utils')
 
 module.exports = {
   enabled: true,

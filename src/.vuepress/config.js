@@ -10,7 +10,10 @@ module.exports = {
   head: require('./config/head'),
   plugins: require('./config/plugins'),
   postcss: require('./config/postcss'),
-  locales: require('./config/translations/localeConfig'),
+  locales: {
+    '/': require('./config/languages/en/localeConfig'),
+    '/pt': require('./config/languages/pt/localeConfig')
+  },
   themeConfig: require('./config/themeConfig'),
   markdown: {
     anchor: {

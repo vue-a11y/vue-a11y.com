@@ -42,5 +42,8 @@ module.exports = {
   sponsors: require('./sponsors'),
   supporters: require('./supporters'),
   authors: require('./authors'),
-  locales: require('./translations/themeLocaleConfig')
+  locales: {
+    '/': require('./languages/en/themeLocaleConfig'),
+    '/pt': require('./languages/pt/themeLocaleConfig')
+  }
 }
