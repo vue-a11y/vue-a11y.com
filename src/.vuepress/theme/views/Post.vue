@@ -151,7 +151,7 @@ export default {
   },
 
   setup (_, { root }) {
-    const { isIntersecting: isDisqusIntersecting, unobserve: unobserveDisqus } = useIntersectionObserver('.disqus-section', { rootMargin: '350px' })
+    const { isIntersecting: isDisqusIntersecting, unobserve: unobserveDisqus } = useIntersectionObserver('.disqus-section', { rootMargin: '600px' })
 
     watch(isDisqusIntersecting, val => val && unobserveDisqus())
 
