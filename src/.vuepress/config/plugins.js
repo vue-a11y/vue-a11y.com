@@ -35,7 +35,7 @@ module.exports = [
       },
       directories: [
         {
-          id: 'Post',
+          id: 'post',
           title: 'All posts',
           layout: 'Posts',
           itemLayout: 'Full',
@@ -48,6 +48,23 @@ module.exports = [
             nextText: '>>',
             getPaginationPageTitle (pageNumber) {
               return `All posts - page ${pageNumber}`
+            }
+          }
+        },
+        {
+          id: 'postPt',
+          title: 'Todos os posts',
+          layout: 'Posts',
+          itemLayout: 'Full',
+          dirname: 'pt/posts',
+          path: '/pt/posts/',
+          itemPermalink: '/pt/posts/:slug',
+          pagination: {
+            layout: 'Posts',
+            prevText: '<<',
+            nextText: '>>',
+            getPaginationPageTitle (pageNumber) {
+              return `Todos os posts - página ${pageNumber}`
             }
           }
         }
@@ -63,6 +80,19 @@ module.exports = [
             layout: 'Posts',
             getPaginationPageTitle (pageNumber, key) {
               return `Category: ${key} - page ${pageNumber}`
+            }
+          }
+        },
+        {
+          id: 'categoriesPt',
+          keys: ['categoria', 'categorias'],
+          title: 'categoria',
+          scopeLayout: 'Posts',
+          path: '/pt/category/',
+          pagination: {
+            layout: 'Posts',
+            getPaginationPageTitle (pageNumber, key) {
+              return `Categoria: ${key} - página ${pageNumber}`
             }
           }
         }

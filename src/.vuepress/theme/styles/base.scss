@@ -36,6 +36,8 @@ body.set-serif {
 }
 
 .container-layout {
+  @apply px-1;
+
   @screen xl {
     @apply px-0;
     &-px {

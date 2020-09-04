@@ -61,7 +61,7 @@ export default {
         }
       }))
     })
-    const isCategory = computed(() => root.$currentCategories && root.$currentCategories.scope === 'categories')
+    const isCategory = computed(() => root.$route.path.includes('/category/'))
 
     return {
       posts,
