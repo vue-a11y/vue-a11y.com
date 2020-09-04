@@ -8,6 +8,7 @@ note: 'OBS: Usamos localStorage para armazenar suas preferências.'
 
 language:
   title: Idioma de exibição
+  locale: /pt
 
 theme:
   title: Tema de cores

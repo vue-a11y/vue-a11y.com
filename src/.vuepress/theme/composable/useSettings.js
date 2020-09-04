@@ -6,7 +6,6 @@ export default function useSettings (key = null) {
 
   if (!settings || !settings.value) {
     settings = useStorage('settings', {
-      language: 'en',
       reading: 'set-sans-serif',
       theme: 'light',
       vision: {
@@ -46,23 +45,12 @@ export default function useSettings (key = null) {
     settings.value[key] = val
   }
 
-  function setLanguage (root) {
-    const isEnglish = settings.value.language === 'en'
-    const currentLocalePath = isEnglish ? '/' : `/${settings.value.language}`
-    if (!settings.value || root.$localePath === currentLocalePath) return
-    root.$vuepress.$set('disableScrollBehavior', true)
-    root.$router.replace(root.$route.path.replace(root.$localePath, `${isEnglish ? '' : (currentLocalePath + '/')}`), () => {
-      root.$nextTick(() => root.$vuepress.$set('disableScrollBehavior', false))
-    })
-  }
-
   return {
     init,
     value,
     settings,
     setStorage,
     toggleClass,
-    setLanguage,
     toggleClassByObject
   }
 }

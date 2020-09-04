@@ -2,7 +2,7 @@ const posts = {
   id: 'post',
   title: 'All posts',
   layout: 'Posts',
-  itemLayout: 'Full',
+  itemLayout: 'Post',
   dirname: 'posts',
   path: '/posts/',
   itemPermalink: '/posts/:slug',

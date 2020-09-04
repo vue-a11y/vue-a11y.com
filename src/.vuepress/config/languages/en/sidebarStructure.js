@@ -91,9 +91,8 @@ module.exports = {
     },
     {
       title: 'Tips',
-      type: 'manual',
       children: [
-        'tips/aria-attributes'
+        ['ARIA Attributes in Vue', 'tips/aria-attributes-in-vue']
       ]
     }
   ]

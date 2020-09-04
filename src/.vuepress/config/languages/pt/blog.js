@@ -1,8 +1,8 @@
 const posts = {
-  id: 'postPt',
-  title: 'Todos os posts',
+  id: 'postagens',
+  title: 'Todas as postagens',
   layout: 'Posts',
-  itemLayout: 'Full',
+  itemLayout: 'Post',
   dirname: 'pt/posts',
   path: '/pt/posts/',
   itemPermalink: '/pt/posts/:slug',
@@ -11,17 +11,17 @@ const posts = {
     prevText: '<<',
     nextText: '>>',
     getPaginationPageTitle (pageNumber) {
-      return `Todos os posts - página ${pageNumber}`
+      return `Todas as postagens - página ${pageNumber}`
     }
   }
 }
 
 const categories = {
-  id: 'categoriesPt',
+  id: 'categoria',
   keys: ['categoria', 'categorias'],
   title: 'categoria',
   scopeLayout: 'Posts',
-  path: '/pt/category/',
+  path: '/pt/categoria/',
   pagination: {
     layout: 'Posts',
     getPaginationPageTitle (pageNumber, key) {

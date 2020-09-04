@@ -1,4 +1,4 @@
-const { generateSidebar } = require('../../utils')
+const sidebar = require('./sidebarStructure')
 
 module.exports = {
   enabled: true,
@@ -40,10 +40,10 @@ module.exports = {
     }
   ],
   sidebar: {
-    '/project/': generateSidebar('project'),
-    '/posts/': generateSidebar('posts'),
+    '/project/': sidebar.project,
+    '/posts/': sidebar.posts,
     '/category/': '/posts/',
-    '/recipes/': generateSidebar('recipes')
+    '/recipes/': sidebar.recipes
   },
   a11y: {
     newsletter: {

@@ -1,4 +1,4 @@
-const { generateSidebar } = require('../../utils')
+const sidebar = require('./sidebarStructure')
 
 module.exports = {
   enabled: true,
@@ -24,7 +24,7 @@ module.exports = {
   nav: [
     {
       text: 'Projeto',
-      link: '/pt/project/'
+      link: '/pt/projeto/'
     },
     {
       text: 'Posts',
@@ -32,18 +32,18 @@ module.exports = {
     },
     {
       text: 'Receitas',
-      link: '/pt/recipes/'
+      link: '/pt/receitas/'
     },
     {
       text: 'Configurações',
-      link: '/pt/settings/'
+      link: '/pt/configuracoes/'
     }
   ],
   sidebar: {
-    '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade'], '/pt/'),
-    '/pt/posts/': generateSidebar('posts', ['Categorias', 'Seguir no Twitter'], '/pt/'),
-    '/pt/category/': '/pt/posts/',
-    '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
+    '/pt/projeto/': sidebar.projeto,
+    '/pt/posts/': sidebar.posts,
+    '/pt/categoria/': '/pt/posts/',
+    '/pt/receitas/': sidebar.receitas
   },
   a11y: {
     newsletter: {

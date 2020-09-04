@@ -3,7 +3,7 @@ title: Primeiro post com markdown teste
 description: Descrição do post de teste
 summary: Summary test page
 
-categorias: [news, aria, wcag, tools, packages, spa, html]
+categorias: [novidades, aria, wcag, tools, packages, spa, html]
 author: ktquez
 
 date: 2020-09-01 16:00:00

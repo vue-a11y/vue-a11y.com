@@ -63,8 +63,7 @@ export default {
     })
 
     onBeforeMount(() => {
-      const { init, setLanguage } = useSettings()
-      setLanguage(root)
+      const { init } = useSettings()
       init()
     })
 

@@ -61,7 +61,7 @@ export default {
         }
       }))
     })
-    const isCategory = computed(() => root.$route.path.includes('/category/'))
+    const isCategory = computed(() => !root.$route.path.includes('/posts/'))
 
     return {
       posts,

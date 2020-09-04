@@ -1,5 +1,6 @@
 <template>
   <SettingWrapper
+    v-show="languages.length"
     id="a-language-title"
     :title="$frontmatter.language.title"
     role="group"
@@ -46,37 +47,46 @@ export default {
   setup (_, { root }) {
     const language = ref(null)
 
-    const languages = Object.keys(root.$themeConfig.locales)
-      .map(locale => {
+    const languages = ref([])
+
+    const settingPages = root.$site.pages.filter(page => page.frontmatter.view === 'Settings')
+    if (settingPages.every(page => page.frontmatter.language && page.frontmatter.language.locale)) {
+      languages.value = settingPages.map(item => {
+        const locale = item.frontmatter.language.locale
         const data = root.$themeConfig.locales[locale]
-        if (!data.enabled) return false
         const shortLang = getShortLang(locale)
+
+        if (!data || !data.enabled) return false
 
         return {
           id: `language-field-${shortLang}`,
           name: 'display-language',
+          path: item.regularPath,
           text: data.label,
           type: 'radio',
           val: shortLang
         }
-      }).filter(Boolean)
+      })
+        .filter(Boolean)
+        .reverse()
+    }
 
-    watch(language, setLanguage)
+    watch(language, changeLanguage)
 
     onMounted(() => {
-      const { value } = useSettings('language')
-      language.value = value.value
+      language.value = getShortLang(root.$localePath)
     })
 
     function getShortLang (locale) {
       return locale === '/' ? 'en' : locale.replace(/\//g, '')
     }
 
-    function setLanguage (val, old) {
-      if (!old) return
-      const { setStorage, setLanguage: setLanguageByStorage } = useSettings()
-      setStorage('language', val)
-      setLanguageByStorage(root)
+    function changeLanguage (val) {
+      const chosenLanguage = languages.value.find(language => language.val === val)
+      root.$vuepress.$set('disableScrollBehavior', true)
+      root.$router.replace(chosenLanguage.path, () => {
+        root.$nextTick(() => root.$vuepress.$set('disableScrollBehavior', false))
+      })
     }
 
     return {

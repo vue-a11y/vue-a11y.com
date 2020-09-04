@@ -8,6 +8,7 @@ note: 'NOTE: We use localStorage to store your preferences.'
 
 language:
   title: Display Language
+  locale: /
 
 theme:
   title: Themes
