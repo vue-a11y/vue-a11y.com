@@ -62,10 +62,18 @@ module.exports = [
   ['link', { id: 'favicon', rel: 'icon', href: '/favicon/favicon.svg' }],
 
   // Pre-browsing
-  // ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
-  // ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],
-  ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }]
+  ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }],
+
+  ['script', {}, `
+    (function () {
+      const colorMode = localStorage.getItem('colorMode');
+      const colorModePrefer = localStorage.getItem('colorModePrefer');
+      document.documentElement.classList.add('mode-' + (colorMode === 'system' ? colorModePrefer : colorMode))
+    })()
+  `]
 ]
