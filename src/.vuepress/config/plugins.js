@@ -26,9 +26,6 @@ module.exports = [
     // https://github.com/vuepressjs/vuepress-plugin-blog
     '@vuepress/blog',
     {
-      comment: {
-        service: 'disqus'
-      },
       sitemap: {
         hostname: process.env.URL_BASE
       },
@@ -84,6 +81,10 @@ module.exports = [
         {
           name: 'Full',
           path: resolve('../theme/layouts/Full')
+        },
+        {
+          name: 'Post',
+          path: resolve('../theme/layouts/Post')
         },
         {
           name: 'Posts',

@@ -63,6 +63,7 @@
     "@vue-a11y/skip-to": "^2.1.1",
     "@vue/composition-api": "^1.0.0-beta.11",
     "@vueuse/core": "^4.0.0-beta.9",
-    "tailwindcss": "^1.7.6"
+    "tailwindcss": "^1.7.6",
+    "vue-disqus": "^4.0.1"
   }
 }

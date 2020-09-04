@@ -101,10 +101,7 @@
             <hr class="mt-16">
 
             <div class="py-20 disqus-section">
-              <Comment
-                v-if="isDisqusIntersecting"
-                shortname="vue-a11y-test"
-              />
+              <Disqus shortname="vue-a11y-test" />
             </div>
 
             <hr>
@@ -128,8 +125,9 @@
 </template>
 
 <script>
-import { computed, watch } from '@vue/composition-api'
+import { computed } from '@vue/composition-api'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+import { Disqus } from 'vue-disqus'
 
 import BackTo from '@/theme/components/BackTo'
 import HeaderFullPage from '@/theme/components/HeaderFullPage'
@@ -137,26 +135,22 @@ import RightNavigation from '@/theme/components/RightNavigation'
 import ShareLinks from '@/theme/components/ShareLinks'
 import TableOfContents from '@/theme/components/TableOfContents'
 import WebMentions from '@/theme/components/WebMentions'
-import { useIntersectionObserver } from '@/theme/composable'
 
 export default {
   name: 'Post',
 
   components: {
+    BackTo,
+    Disqus,
     Comment,
     HeaderFullPage,
     ShareLinks,
-    BackTo,
     WebMentions,
     TableOfContents,
     RightNavigation
   },
 
   setup (_, { root }) {
-    const { isIntersecting: isDisqusIntersecting, unobserve: unobserveDisqus } = useIntersectionObserver('.disqus-section', { rootMargin: '600px' })
-
-    watch(isDisqusIntersecting, val => val && unobserveDisqus())
-
     const post = computed(() => ({
       id: root.$page.key,
       title: root.$page.title,
@@ -171,8 +165,7 @@ export default {
     }))
 
     return {
-      post,
-      isDisqusIntersecting
+      post
     }
   }
 }
