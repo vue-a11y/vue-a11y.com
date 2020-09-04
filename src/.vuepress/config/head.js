@@ -66,6 +66,9 @@ module.exports = [
   ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
+  ['link', { rel: 'preconnect', href: 'http://vue-a11y-test.disqus.com' }],
+  ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/next/' }],
+  ['link', { rel: 'preconnect', href: 'https://links.services.disqus.com/api/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],
   ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }],
 
