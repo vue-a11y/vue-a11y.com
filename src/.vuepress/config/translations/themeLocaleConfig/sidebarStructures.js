@@ -77,16 +77,16 @@ module.exports = {
     {
       title: 'Widgets',
       children: [
-        'accordion',
-        'alert',
-        'breadcrumbs',
-        'card',
-        'carousel',
-        'dialog',
-        'mobile-navigation',
-        'skip-links',
-        'tabs',
-        'toast'
+        'widgets/accordion',
+        'widgets/alert',
+        'widgets/breadcrumbs',
+        'widgets/card',
+        'widgets/carousel',
+        'widgets/dialog',
+        'widgets/mobile-navigation',
+        'widgets/skip-links',
+        'widgets/tabs',
+        'widgets/toast'
       ]
     },
     {
