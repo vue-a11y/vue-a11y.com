@@ -60,7 +60,7 @@
     "@vue-a11y/announcer": "^2.1.0",
     "@vue-a11y/dark-mode": "^1.1.1",
     "@vue-a11y/focus-loop": "^0.1.2",
-    "@vue-a11y/skip-to": "^2.0.1",
+    "@vue-a11y/skip-to": "^2.1.1",
     "@vue/composition-api": "^1.0.0-beta.11",
     "@vueuse/core": "^4.0.0-beta.9",
     "tailwindcss": "^1.7.6"

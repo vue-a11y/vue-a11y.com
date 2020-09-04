@@ -20,11 +20,10 @@
     <ClientOnly>
       <VueSkipTo
         v-if="$themeLocaleConfig.skipTo"
-        ref="skipTo"
         :to="$themeLocaleConfig.skipTo.to"
         :list-label="$themeLocaleConfig.skipTo.label"
         class="z-20"
-      /> <!-- when update the @vue-a11y/skip-to, add ariaLabelNav attribute -->
+      />
     </ClientOnly>
     <component :is="layout" />
     <ClientOnly>
@@ -42,7 +41,6 @@ import { DarkMode } from '@vue-a11y/dark-mode'
 import { computed, watch, onBeforeMount, ref } from '@vue/composition-api'
 
 import { useSettings } from '@/theme/composable'
-import { programmaticFocus } from '@/theme/utils'
 
 export default {
   name: 'GlobalLayout',
@@ -58,10 +56,6 @@ export default {
       if (!root.$page.path) return 'NotFound'
       if (root.$frontmatter.layout) return root.$frontmatter.layout
       return 'Layout'
-    })
-
-    watch(() => root.$route.path, () => {
-      root.$nextTick(() => programmaticFocus(refs.skipTo.$el))
     })
 
     watch(() => colorModeConfig, newConfig => {
@@ -84,12 +78,3 @@ export default {
 
 <style lang="scss" src="@/theme/styles/base.scss"></style>
 <style src="@/theme/styles/tailwind.css"></style>
-
-<style>
-div.vue-skip-to:focus {
-  width: 1px;
-  height: 1px;
-  clip: rect(0,0,0,0);
-  border-width: 0;
-}
-</style>
