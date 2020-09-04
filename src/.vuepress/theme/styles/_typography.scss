@@ -33,16 +33,14 @@ $font-family: 'DM Sans', 'Helvetica Neue', Roboto, 'Segoe UI', Arial, Geneva;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('DM Sans Regular'), local('DMSans-Regular'),
-       url('../../public/fonts/dm-sans-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../../public/fonts/dm-sans-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('DM Sans Regular'), local('DMSans-Regular'), url(https://fonts.gstatic.com/s/dmsans/v5/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('DM Sans Bold'), local('DMSans-Bold'),
-       url('../../public/fonts/dm-sans-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../../public/fonts/dm-sans-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('DM Sans Bold'), local('DMSans-Bold'), url(https://fonts.gstatic.com/s/dmsans/v5/rP2Cp2ywxg089UriASitCBimCw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
