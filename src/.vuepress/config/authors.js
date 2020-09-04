@@ -9,7 +9,7 @@ module.exports = [
         username: 'ktquez'
       }
     ],
-    avatar: 'https://avatars0.githubusercontent.com/u/8084606?s=460&u=20b6499a416cf7129a18e5c168cf387e159edb1a&v=4',
+    avatar: '/img/authors/ktquez.png',
     bio: 'Front-end developer • Vue.js • HTML & A11y enthusiast. Created of @vue-a11y and @htmlmoderno.'
   }
 ]
