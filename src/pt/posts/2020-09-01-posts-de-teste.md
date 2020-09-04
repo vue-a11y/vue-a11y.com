@@ -1,5 +1,5 @@
 ---
-title: Primeiro post com markdown teste
+title: 'Post exemplo: Primeira postagem com markdown teste'
 description: Descrição do post de teste
 summary: Summary test page
 

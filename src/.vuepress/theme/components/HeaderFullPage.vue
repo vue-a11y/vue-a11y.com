@@ -30,6 +30,7 @@ export default {
 <style lang="scss">
 .header-full-page {
   .card {
+    min-height: 220px;
     @screen lg {
       top: 120px;
       max-width: 57rem;
