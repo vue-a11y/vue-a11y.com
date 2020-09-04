@@ -1,6 +1,11 @@
 const path = require('path')
 const resolve = pathName => path.join(__dirname, pathName)
 
+const blogConfig = {
+  en: require('./languages/en/blog'),
+  pt: require('./languages/pt/blog')
+}
+
 const customBlockTags = {
   fig: [
     '<figure class="custom-block figure" data-type="%">',
@@ -34,68 +39,12 @@ module.exports = [
         lengthPerPage: process.env.PAGINATION_PER_PAGE
       },
       directories: [
-        {
-          id: 'post',
-          title: 'All posts',
-          layout: 'Posts',
-          itemLayout: 'Full',
-          dirname: 'posts',
-          path: '/posts/',
-          itemPermalink: '/posts/:slug',
-          pagination: {
-            layout: 'Posts',
-            prevText: '<<',
-            nextText: '>>',
-            getPaginationPageTitle (pageNumber) {
-              return `All posts - page ${pageNumber}`
-            }
-          }
-        },
-        {
-          id: 'postPt',
-          title: 'Todos os posts',
-          layout: 'Posts',
-          itemLayout: 'Full',
-          dirname: 'pt/posts',
-          path: '/pt/posts/',
-          itemPermalink: '/pt/posts/:slug',
-          pagination: {
-            layout: 'Posts',
-            prevText: '<<',
-            nextText: '>>',
-            getPaginationPageTitle (pageNumber) {
-              return `Todos os posts - página ${pageNumber}`
-            }
-          }
-        }
+        blogConfig.en.posts,
+        blogConfig.pt.posts
       ],
       frontmatters: [
-        {
-          id: 'categories',
-          keys: ['category', 'categories'],
-          title: 'category',
-          scopeLayout: 'Posts',
-          path: '/category/',
-          pagination: {
-            layout: 'Posts',
-            getPaginationPageTitle (pageNumber, key) {
-              return `Category: ${key} - page ${pageNumber}`
-            }
-          }
-        },
-        {
-          id: 'categoriesPt',
-          keys: ['categoria', 'categorias'],
-          title: 'categoria',
-          scopeLayout: 'Posts',
-          path: '/pt/category/',
-          pagination: {
-            layout: 'Posts',
-            getPaginationPageTitle (pageNumber, key) {
-              return `Categoria: ${key} - página ${pageNumber}`
-            }
-          }
-        }
+        blogConfig.en.categories,
+        blogConfig.pt.categories
       ]
     }
   ],
