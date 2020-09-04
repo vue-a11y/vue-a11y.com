@@ -7,7 +7,7 @@
       <BackTo
         v-show="isCategory"
         :text="`${$themeLocaleConfig.backToText} posts`"
-        :to="`${$localePath === '/' ? '' : $localePath}/posts/`"
+        :to="`${$localePath}posts/`"
         class="inline-flex px-4 my-4 ml-2"
       />
 

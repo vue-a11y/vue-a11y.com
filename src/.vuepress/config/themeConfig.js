@@ -44,6 +44,6 @@ module.exports = {
   authors: require('./authors'),
   locales: {
     '/': require('./languages/en/themeLocaleConfig'),
-    '/pt': require('./languages/pt/themeLocaleConfig')
+    '/pt/': require('./languages/pt/themeLocaleConfig')
   }
 }

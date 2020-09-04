@@ -18,7 +18,7 @@
         <BackTo
           class="inline-flex px-4 my-4 -ml-4"
           :text="`${$themeLocaleConfig.backToText} posts`"
-          :to="`${$localePath === '/' ? '' : $localePath}/posts/`"
+          :to="`${$localePath}posts/`"
         />
         <HeaderFullPage>
           <template v-slot:cardTitle>

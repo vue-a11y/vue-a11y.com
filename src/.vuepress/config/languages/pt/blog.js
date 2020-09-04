@@ -5,7 +5,7 @@ const posts = {
   itemLayout: 'Post',
   dirname: 'pt/posts',
   path: '/pt/posts/',
-  itemPermalink: '/pt/posts/:slug',
+  itemPermalink: '/posts/:slug',
   pagination: {
     layout: 'Posts',
     prevText: '<<',

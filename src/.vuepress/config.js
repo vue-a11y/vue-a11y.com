@@ -12,7 +12,7 @@ module.exports = {
   postcss: require('./config/postcss'),
   locales: {
     '/': require('./config/languages/en/localeConfig'),
-    '/pt': require('./config/languages/pt/localeConfig')
+    '/pt/': require('./config/languages/pt/localeConfig')
   },
   themeConfig: require('./config/themeConfig'),
   markdown: {
