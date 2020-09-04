@@ -37,7 +37,7 @@ module.exports = {
         ['HTML', '/pt/categoria/html/'],
         ['ARIA', '/pt/categoria/aria/'],
         ['WCAG', '/pt/categoria/wcag/'],
-        ['tools', '/pt/categoria/tools/'],
+        ['Tools', '/pt/categoria/tools/'],
         ['Packages', '/pt/categoria/packages/'],
         ['Single Page App', '/pt/categoria/spa/']
       ]
