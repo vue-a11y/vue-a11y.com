@@ -1,0 +1,150 @@
+@import './themes';
+@import './markdown';
+@import './typography';
+@import './a11y';
+@import './override';
+@import './custom-blocks';
+@import './utility';
+
+body {
+  @apply antialiased;
+  font-family: $font-family;
+  color: var(--color);
+  background-color: var(--bg);
+}
+
+body.set-open-dyslexic {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-open-dyslexic);
+	}
+}
+
+body.set-monospace {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-monospace);
+	}
+}
+
+body.set-serif {
+	.content__default, .post-page-summary {
+		font-family: var(--rf-serif);
+	}
+}
+
+.container {
+  transition: max-width .5s;
+}
+
+.container-layout {
+  @apply px-1;
+
+  @screen xl {
+    @apply px-0;
+    &-px {
+      padding-left: 10% !important;
+      padding-right: 10% !important;
+    }
+
+    &-pl {
+      padding-left: 10% !important;
+    }
+
+    &-pr {
+      padding-right: 10% !important;
+    }
+  }
+
+  @media (min-width: 1921px) {
+    &-px {
+      padding-left: 15% !important;
+      padding-right: 15% !important;
+    }
+
+    &-pl {
+      padding-left: 15% !important;
+    }
+
+    &-pr {
+      padding-right: 15% !important;
+    }
+  }
+}
+
+.btn {
+  @apply py-3 px-4 font-bold text-xl rounded-md border border-solid border-transparent;
+  max-height: 63px;
+  border-bottom-width: 6px;
+
+  &-light {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+  }
+
+  &-accent {
+    @apply bg-accent;
+    color: var(--accent-text-button);
+    border-color: theme('colors.accentDark');
+  }
+}
+
+.box-default {
+  @apply border border-solid rounded-md;
+  background-color: var(--bg-secondary);
+  border-bottom-width: 6px;
+  border-color: var(--border-color);
+}
+
+.card {
+  @apply relative flex flex-col justify-between w-full p-5;
+
+  &-title {
+    @apply text-4xl font-bold leading-10;
+  }
+
+  &-info {
+    @apply flex items-end justify-between mt-12;
+  }
+}
+
+.toc {
+  &-title {
+    @apply block pl-3 mb-4 text-xl font-bold;
+  }
+
+  &-list {
+    @apply relative;
+
+    &:before {
+      @apply absolute z-20 border-l border-dashed ;
+      content: '';
+      border-color: var(--border-color);
+      width: 2px;
+      left: 28px;
+      top: -5%;
+      height: 110%;
+    }
+  }
+
+  &-list-item {
+    @apply w-full leading-4;
+
+    a {
+      @apply relative inline-block py-3 pl-10 pr-3;
+
+      &:hover, &:focus, &.active {
+        background-color: var(--bg-secondary);
+
+        &:before {
+          @apply absolute rounded-full z-10;
+          content: '';
+          background-color: var(--accent);
+          width: 6px;
+          height: 6px;
+          left: 10px;
+          top: 50%;
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.icon.outbound {
+  color: var(--color) !important;
+}
+
+div.search-box {
+  input {
+    @apply w-full py-5 pl-10 rounded-md;
+    background-color: var(--bg-input);
+    border-color: var(--border-color);
+    left: 0;
+    background-image: url('~@/theme/assets/sprite/svg/search.svg');
+    background-position: 16px center;
+
+    &:focus {
+      outline: auto;
+    }
+
+    &.focused {
+      @apply w-full left-0 #{!important};
+    }
+
+    &::placeholder {
+      color: var(--color) !important;
+    }
+  }
+
+  > ul {
+    @apply left-0 mt-4 z-50;
+    @screen lg {
+      @apply ml-8;
+    }
+    @screen xl {
+      @apply ml-16 #{!important};
+      width: 80% !important;
+    }
+  }
+}
+
+ul.pagination {
+  .page-item {
+    &.active > a {
+      @apply font-bold;
+      color: #000 !important;
+      background-color: var(--accent);
+    }    
+  }
+
+  li:not(.disabled) {
+    > a {
+      color: var(--color) !important;
+    }
+  }
+  
+  li > a {
+    @apply px-5 py-2 text-xl;
+    background-color: var(--bg);
+    border-color: var(--border-color);
+
+    &:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
+    }
+  }
+
+  li.disabled {
+    > a {
+      opacity: .5;
+      color: var(--color) !important;
+      background-color: var(--bg-secondary);
+      border-color: var(--bg-secondary);
+    }
+  }
+}

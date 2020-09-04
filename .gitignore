@@ -1,3 +1,6 @@
 CNAME
 node_modules
-src/.vuepress/dist
+*.log
+.env
+dist
+.temp
