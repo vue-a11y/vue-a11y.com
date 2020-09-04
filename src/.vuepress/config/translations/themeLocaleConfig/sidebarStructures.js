@@ -93,7 +93,7 @@ module.exports = {
       title: 'Tips',
       type: 'manual',
       children: [
-        ['ARIA attributes', '/tips/aria-attributes/']
+        'tips/aria-attributes'
       ]
     }
   ]
