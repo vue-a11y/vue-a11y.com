@@ -34,20 +34,22 @@ module.exports = {
       type: 'manual',
       children: [
         ['News', '/category/news/'],
+        ['HTML', '/category/html/'],
         ['ARIA', '/category/aria/'],
         ['WCAG', '/category/wcag/'],
         ['Tools', '/category/tools/'],
-        ['Vue packages', '/category/vue-packages/'],
-        ['Single Page App', '/category/assistive-technology/']
+        ['Packages', '/category/packages/'],
+        ['Single Page App', '/category/spa/']
       ]
     },
-    {
-      title: '24 Vue A11y',
-      type: 'manual',
-      children: [
-        ['2020', '/category/24-vue-a11y-2020/']
-      ]
-    },
+    // SOON
+    // {
+    //   title: '24 Vue A11y',
+    //   type: 'manual',
+    //   children: [
+    //     ['2020', '/category/24-vue-a11y-2020/']
+    //   ]
+    // },
     {
       title: 'Follow on Twitter',
       children: [
@@ -69,28 +71,29 @@ module.exports = {
       title: 'Recipes',
       children: [
         '',
-        'guide',
         'contribute'
       ]
     },
     {
       title: 'Widgets',
       children: [
+        'accordion',
         'alert',
-        'bradcrumbs',
-        'button',
+        'breadcrumbs',
         'card',
         'carousel',
         'dialog',
+        'mobile-navigation',
+        'skip-links',
+        'tabs',
         'toast'
       ]
     },
     {
       title: 'Tips',
+      type: 'manual',
       children: [
-        'ARIA attributes',
-        'Handling keyboard',
-        'Handling focus'
+        ['ARIA attributes', '/tips/aria-attributes/']
       ]
     }
   ]

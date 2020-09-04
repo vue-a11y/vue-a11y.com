@@ -40,10 +40,10 @@ module.exports = {
     }
   ],
   sidebar: {
-    '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade']),
-    '/pt/posts/': generateSidebar('posts', ['Categorias', 'Arquivo', 'Seguir no Twitter']),
+    '/pt/project/': generateSidebar('project', ['O Projeto', 'Acessibilidade', 'Comunidade'], '/pt/'),
+    '/pt/posts/': generateSidebar('posts', ['Categorias', 'Seguir no Twitter'], '/pt/'),
     '/pt/category/': '/pt/posts/',
-    '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'])
+    '/pt/recipes/': generateSidebar('recipes', ['Receitas', 'Widgets', 'Dicas'], '/pt/')
   },
   a11y: {
     newsletter: {
