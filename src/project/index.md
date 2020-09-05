@@ -1,6 +1,46 @@
 # Introduction
 
-## fig, headerCode and figcap
+## Code block
+
+<br>
+
+```md
+Use `console.log`
+```
+
+Use `console.log`
+
+---
+
+## Code block with highlight
+
+<br>
+
+<pre>
+```js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
+```
+</pre>
+
+<br>
+
+```js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
+```
+
+## Code block with figure (fig), headerCode e figcaption (figcap)
 
 <br>
 
@@ -38,48 +78,6 @@ Using Using &lt;small&gt; around a [Creative Commons license](http://creativecom
 :::
 ::::
 
----
-
-## Code
-
-<br>
-
-```md
-Use `console.log`
-```
-
-Use `console.log`
-
----
-
-## Simple code block with highlight
-
-<br>
-
-<pre>
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-</pre>
-
-<br>
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-
 ## Link
 
 <br>
@@ -88,6 +86,34 @@ export default {
 [Internal Link](/guide)
 ```
 [Internal Link](/guide)
+
+---
+
+## Figure and blockquote
+
+<br />
+
+```markdown
+:::: fig
+::: bq
+VuePress is composed of two parts: a minimalistic static site generator with a Vue-powered theming system and Plugin API, and a default theme optimized for writing technical documentation.
+:::
+::: figcap
+[W3C, HTML draft documentation 2020](https://google.com)
+:::
+::::
+```
+
+<br />
+
+:::: fig bq
+::: bq
+VuePress is composed of two parts: a minimalistic static site generator with a Vue-powered theming system and Plugin API, and a default theme optimized for writing technical documentation.
+:::
+::: figcap
+[W3C, HTML draft documentation 2020](https://google.com)
+:::
+::::
 
 ---
 
