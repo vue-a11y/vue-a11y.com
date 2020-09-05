@@ -1,46 +1,35 @@
 <template>
   <SettingWrapper
     v-show="languages.length"
-    id="a-language-title"
     :title="$frontmatter.language.title"
   >
-    <SettingWrapperList>
-      <SettingWrapperItem
-        v-for="item in languages"
+    <template v-for="item in languages">
+      <SettingOption
+        :id="item.id"
         :key="`language-item-${item.val}`"
-      >
-        <SettingOption
-          :id="item.id"
-          v-model="language"
-          :text="item.text"
-          :val="item.val"
-          name="setting-language"
-          type="radio"
-          :checked="language === item.val"
-        />
-      </SettingWrapperItem>
-    </SettingWrapperList>
+        v-model="language"
+        :text="item.text"
+        :val="item.val"
+        name="setting-language"
+        type="radio"
+        :checked="language === item.val"
+      />
+    </template>
   </SettingWrapper>
 </template>
 
 <script>
 import { ref, watch, onMounted } from '@vue/composition-api'
 
-import { useSettings } from '@/theme/composable'
-
 import SettingOption from './SettingOption'
 import SettingWrapper from './SettingWrapper'
-import SettingWrapperItem from './SettingWrapperItem'
-import SettingWrapperList from './SettingWrapperList'
 
 export default {
   name: 'SettingLanguage',
 
   components: {
     SettingOption,
-    SettingWrapper,
-    SettingWrapperItem,
-    SettingWrapperList
+    SettingWrapper
   },
 
   setup (_, { root }) {

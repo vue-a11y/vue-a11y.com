@@ -1,34 +1,30 @@
 <template>
   <SettingWrapper
     v-show="themes.length"
-    id="a-theme-title"
     :title="$frontmatter.theme.title"
     class="mb-24 setting-theme"
   >
-    <SettingWrapperList class="justify-between">
-      <SettingWrapperItem
-        v-for="item in themes"
+    <!-- Add class="justify-between" -->
+    <template v-for="item in themes">
+      <SettingOption
+        :id="item.id"
         :key="`theme-item-${item.val}`"
+        v-model="theme"
+        no-style
+        :text="item.text"
+        :val="item.val"
+        type="radio"
+        name="setting-theme"
+        :checked="theme === item.val"
       >
-        <SettingOption
-          :id="item.id"
-          v-model="theme"
-          no-style
-          :text="item.text"
-          :val="item.val"
-          type="radio"
-          name="setting-theme"
-          :checked="theme === item.val"
-        >
-          <span class="w-full mb-3">
-            <img
-              :src="`/img/${item.val}.png`"
-              :alt="`${$themeLocaleConfig.a11y.settings.theme.altText}`"
-            >
-          </span>
-        </SettingOption>
-      </SettingWrapperItem>
-    </SettingWrapperList>
+        <span class="w-full mb-3">
+          <img
+            :src="`/img/${item.val}.png`"
+            :alt="`${$themeLocaleConfig.a11y.settings.theme.altText}`"
+          >
+        </span>
+      </SettingOption>
+    </template>
   </SettingWrapper>
 </template>
 
@@ -39,17 +35,13 @@ import { useSettings } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
 import SettingWrapper from './SettingWrapper'
-import SettingWrapperItem from './SettingWrapperItem'
-import SettingWrapperList from './SettingWrapperList'
 
 export default {
   name: 'SettingTheme',
 
   components: {
     SettingOption,
-    SettingWrapper,
-    SettingWrapperList,
-    SettingWrapperItem
+    SettingWrapper
   },
 
   setup (_, { root }) {
@@ -101,6 +93,10 @@ export default {
   .setting-option-label {
     @apply flex-wrap justify-center;
     max-width: 257px;
+  }
+
+  > div {
+    @apply justify-between;
   }
 }
 </style>

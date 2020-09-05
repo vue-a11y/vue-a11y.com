@@ -1,26 +1,20 @@
 <template>
   <SettingWrapper
     v-show="motionOptions.length"
-    id="a-motion-title"
     :title="$frontmatter.motion.title"
-    class="motion"
   >
-    <SettingWrapperList>
-      <SettingWrapperItem
-        v-for="item in motionOptions"
+    <template v-for="item in motionOptions">
+      <SettingOption
+        :id="item.id"
         :key="`motion-item-${item.val}`"
-      >
-        <SettingOption
-          :id="item.id"
-          v-model="motion[item.val]"
-          :text="item.text"
-          type="checkbox"
-          :val="item.val"
-          :name="`setting-${item.val}`"
-          :checked="motion[item.val]"
-        />
-      </SettingWrapperItem>
-    </SettingWrapperList>
+        v-model="motion[item.val]"
+        :text="item.text"
+        type="checkbox"
+        :val="item.val"
+        :name="`setting-${item.val}`"
+        :checked="motion[item.val]"
+      />
+    </template>
   </SettingWrapper>
 </template>
 
@@ -31,17 +25,13 @@ import { useSettings } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
 import SettingWrapper from './SettingWrapper'
-import SettingWrapperItem from './SettingWrapperItem'
-import SettingWrapperList from './SettingWrapperList'
 
 export default {
   name: 'SettingMotion',
 
   components: {
     SettingOption,
-    SettingWrapper,
-    SettingWrapperItem,
-    SettingWrapperList
+    SettingWrapper
   },
 
   setup (_, { root }) {

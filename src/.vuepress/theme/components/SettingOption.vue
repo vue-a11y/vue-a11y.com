@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative block setting-option"
+    class="relative block w-full mb-4 setting-item lg:mb-0 md:mr-4 md:w-auto setting-option"
     :class="{ active: checked, 'px-5 pt-3 pb-4 box-default': !noStyle }"
   >
     <label

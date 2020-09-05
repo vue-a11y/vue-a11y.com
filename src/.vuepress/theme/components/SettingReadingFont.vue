@@ -1,26 +1,21 @@
 <template>
   <SettingWrapper
     v-show="fonts.length"
-    id="a-reading-font-title"
     :title="$frontmatter.reading.title"
     class="reading-font"
   >
-    <SettingWrapperList>
-      <SettingWrapperItem
-        v-for="item in fonts"
+    <template v-for="item in fonts">
+      <SettingOption
+        :id="item.id"
         :key="`reading-font-item-${item.val}`"
-      >
-        <SettingOption
-          :id="item.id"
-          v-model="font"
-          :text="item.text"
-          :val="item.val"
-          type="radio"
-          name="setting-reading-font"
-          :checked="font === item.val"
-        />
-      </SettingWrapperItem>
-    </SettingWrapperList>
+        v-model="font"
+        :text="item.text"
+        :val="item.val"
+        type="radio"
+        name="setting-reading-font"
+        :checked="font === item.val"
+      />
+    </template>
   </SettingWrapper>
 </template>
 
@@ -31,17 +26,13 @@ import { useSettings } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
 import SettingWrapper from './SettingWrapper'
-import SettingWrapperItem from './SettingWrapperItem'
-import SettingWrapperList from './SettingWrapperList'
 
 export default {
   name: 'SettingReadingFont',
 
   components: {
     SettingOption,
-    SettingWrapper,
-    SettingWrapperItem,
-    SettingWrapperList
+    SettingWrapper
   },
 
   setup (_, { root }) {

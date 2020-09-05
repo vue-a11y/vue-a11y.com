@@ -1,25 +1,19 @@
 <template>
   <SettingWrapper
     v-show="visionOptions.length"
-    id="a-vision-title"
     :title="$frontmatter.vision.title"
-    class="vision"
   >
-    <SettingWrapperList>
-      <SettingWrapperItem
-        v-for="item in visionOptions"
+    <template v-for="item in visionOptions">
+      <SettingOption
+        :id="item.id"
         :key="`vision-item-${item.val}`"
-      >
-        <SettingOption
-          :id="item.id"
-          v-model="vision[item.val]"
-          :text="item.text"
-          type="checkbox"
-          :name="`setting-${item.val}`"
-          :checked="vision[item.val]"
-        />
-      </SettingWrapperItem>
-    </SettingWrapperList>
+        v-model="vision[item.val]"
+        :text="item.text"
+        type="checkbox"
+        :name="`setting-${item.val}`"
+        :checked="vision[item.val]"
+      />
+    </template>
   </SettingWrapper>
 </template>
 
@@ -30,17 +24,13 @@ import { useSettings } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
 import SettingWrapper from './SettingWrapper'
-import SettingWrapperItem from './SettingWrapperItem'
-import SettingWrapperList from './SettingWrapperList'
 
 export default {
   name: 'SettingVision',
 
   components: {
     SettingOption,
-    SettingWrapper,
-    SettingWrapperItem,
-    SettingWrapperList
+    SettingWrapper
   },
 
   setup (_, { root }) {
