@@ -12,7 +12,7 @@
   --bg-code-block: theme('colors.dark.700');
   --bg-header-code: theme('colors.dark.900');
   --bg-left: linear-gradient(90deg, var(--bg-secondary) calc(100% - 13px), transparent 13px);
-  --bg-input: var(--bg-secondary);
+  --bg-input: theme('colors.light.400');
   --bg-btn-light: var(--bg-secondary);
   --bg-input-news-footer: var(--bg);
 
@@ -50,6 +50,7 @@ html.mode-dark {
   --bg-header-code: theme('colors.dark.500');
   --accent: theme('colors.accent');
   --color: theme('colors.gray.300');
+  --bg-input: theme('colors.dark.700');
 
   // Custom blocks
   --bg-custom-block-tip: var(--bg-secondary);
@@ -78,6 +79,7 @@ html.mode-sepia {
   --bg-hover-sidebar: theme('colors.sepia.600');
   --accent: theme('colors.accent');
   --color: theme('colors.sepia.text');
+  --bg-input: theme('colors.sepia.400');
 
   // Custom blocks
   --bg-custom-block-tip: theme('colors.light.200');
