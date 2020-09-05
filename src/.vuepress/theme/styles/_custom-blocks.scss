@@ -43,6 +43,7 @@
   &[data-alert] {
     @apply border border-solid rounded-md;
     border-bottom-width: 6px;
+    border-color: var(--bg-hover-sidebar);
     > .custom-block-title {
       @apply uppercase font-bold text-base block mb-2;
     }
