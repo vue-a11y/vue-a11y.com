@@ -1,9 +1,9 @@
 <template>
   <SettingWrapper
+    v-show="visionOptions.length"
     id="a-vision-title"
     :title="$frontmatter.vision.title"
     class="vision"
-    role="group"
   >
     <SettingWrapperList>
       <SettingWrapperItem

@@ -1,20 +1,10 @@
 <template>
-  <div
-    class="flex flex-wrap"
-    :aria-labelledby="id"
-  >
-    <div class="w-full mb-8">
-      <h2
-        :id="id"
-        class="text-2xl font-bold"
-      >
-        {{ title }}
-      </h2>
-    </div>
-    <div class="w-full">
-      <slot />
-    </div>
-  </div>
+  <fieldset class="flex flex-wrap">
+    <legend class="w-full mb-8 text-2xl font-bold">
+      {{ title }}
+    </legend>
+    <slot />
+  </fieldset>
 </template>
 
 <script>

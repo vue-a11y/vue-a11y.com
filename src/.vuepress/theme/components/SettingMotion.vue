@@ -1,9 +1,9 @@
 <template>
   <SettingWrapper
+    v-show="motionOptions.length"
     id="a-motion-title"
     :title="$frontmatter.motion.title"
     class="motion"
-    role="group"
   >
     <SettingWrapperList>
       <SettingWrapperItem

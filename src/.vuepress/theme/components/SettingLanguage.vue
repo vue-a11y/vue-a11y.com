@@ -3,7 +3,6 @@
     v-show="languages.length"
     id="a-language-title"
     :title="$frontmatter.language.title"
-    role="group"
   >
     <SettingWrapperList>
       <SettingWrapperItem

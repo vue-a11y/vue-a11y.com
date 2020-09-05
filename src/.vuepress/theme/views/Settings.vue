@@ -1,10 +1,6 @@
 <template>
   <div class="z-10 post-page container-layout container-layout-px">
-    <section
-      class="px-6 mt-6 xl:px-4"
-      role="region"
-      aria-labelledby="card-title"
-    >
+    <div class="px-6 mt-6 xl:px-4">
       <BackTo
         class="inline-flex px-4 my-4 -ml-4"
         :to="$localePath"
@@ -27,7 +23,7 @@
         <SettingVision class="mb-12 lg:mb-24" />
         <SettingMotion class="mb-12 lg:mb-24" />
       </div>
-    </section>
+    </div>
   </div>
 </template>
 

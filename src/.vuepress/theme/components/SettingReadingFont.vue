@@ -1,9 +1,9 @@
 <template>
   <SettingWrapper
+    v-show="fonts.length"
     id="a-reading-font-title"
     :title="$frontmatter.reading.title"
     class="reading-font"
-    role="group"
   >
     <SettingWrapperList>
       <SettingWrapperItem

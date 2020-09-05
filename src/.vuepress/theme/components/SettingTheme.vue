@@ -1,9 +1,9 @@
 <template>
   <SettingWrapper
+    v-show="themes.length"
     id="a-theme-title"
     :title="$frontmatter.theme.title"
     class="mb-24 setting-theme"
-    role="group"
   >
     <SettingWrapperList class="justify-between">
       <SettingWrapperItem
