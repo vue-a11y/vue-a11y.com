@@ -29,11 +29,12 @@
 </template>
 
 <script>
+import { computed } from '@vue/composition-api'
 export default {
   name: 'PageEdit',
 
   setup (_, { root }) {
-    const editLink = `https://github.com/${root.$themeConfig.repo}/edit/${root.$themeConfig.docsBranch || 'master'}/${root.$themeConfig.docsDir || 'docs'}/${root.$page.relativePath}`
+    const editLink = computed(() => `https://github.com/${root.$themeConfig.repo}/edit/${root.$themeConfig.docsBranch || 'master'}/${root.$themeConfig.docsDir || 'docs'}/${root.$page.relativePath}`)
 
     return {
       editLink
