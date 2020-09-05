@@ -86,7 +86,7 @@ export default {
 .newsletter-form {
   &-input {
     border-bottom-width: 6px;
-    background-color: var(--bg-input);
+    background-color: var(--bg-input-news);
   }
 
   &-btn {
