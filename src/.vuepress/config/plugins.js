@@ -6,7 +6,7 @@ const blogConfig = {
   pt: require('./languages/pt/blog')
 }
 
-const customBlockTags = {
+const customBlock = {
   fig: [
     '<figure class="custom-block figure" data-type="%">',
     '</figure>'
@@ -18,6 +18,14 @@ const customBlockTags = {
   bq: [
     '<blockquote class="custom-block blockquote">',
     '</blockquote>'
+  ],
+  alert: [
+    '<div class="custom-block alert" data-alert="%"><span class="custom-block-title">%</span>',
+    '</div>'
+  ],
+  headerCode: [
+    '<headerCodeSnippet info="%">',
+    '</headerCodeSnippet>'
   ]
 }
 
@@ -99,50 +107,40 @@ module.exports = [
     'vuepress-plugin-container',
     {
       type: 'bq',
-      before: customBlockTags.bq[0],
-      after: customBlockTags.bq[1]
+      before: customBlock.bq[0],
+      after: customBlock.bq[1]
     }
   ],
   [
     'vuepress-plugin-container',
     {
       type: 'fig',
-      before: info => {
-        const fig = customBlockTags.fig[0].replace('%', info)
-        const custom = customBlockTags[info]
-        if (!custom) return fig
-        return fig + custom[0]
-      },
-      after: info => {
-        const fig = customBlockTags.fig[1]
-        const custom = customBlockTags[info]
-        if (!custom) return fig
-        return custom[1] + fig
-      }
+      before: info => customBlock.fig[0].replace('%', info),
+      after: customBlock.fig[1]
     }
   ],
   [
     'vuepress-plugin-container',
     {
       type: 'headerCode',
-      before: info => `<headerCodeSnippet info="${info}">`,
-      after: '</headerCodeSnippet>'
+      before: info => customBlock.headerCode[0].replace('%', info),
+      after: customBlock.headerCode[1]
     }
   ],
   [
     'vuepress-plugin-container',
     {
       type: 'figcap',
-      before: customBlockTags.figcap[0],
-      after: customBlockTags.figcap[1]
+      before: customBlock.figcap[0],
+      after: customBlock.figcap[1]
     }
   ],
   [
     'vuepress-plugin-container',
     {
       type: 'alert',
-      before: info => `<div class="custom-block alert" data-alert="${info}"><span class="custom-block-title">${info}</span>`,
-      after: '</div>'
+      before: info => customBlock.alert[0].replace(/(%)/g, info),
+      after: info => customBlock.alert[1]
     }
   ]
 ]

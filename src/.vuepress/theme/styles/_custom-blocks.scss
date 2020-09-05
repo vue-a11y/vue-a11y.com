@@ -21,11 +21,12 @@
     }
 
     > blockquote {
-      @apply mb-6;
+      @apply mb-2;
     }
 
     > figcaption {
-      @apply text-left;
+      @apply mt-3 text-left;
+      font-size: inherit;
     }
   }
   > figcaption {
