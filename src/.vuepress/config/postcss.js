@@ -14,6 +14,7 @@ if (process.env.NODE_ENV !== 'development') {
         'body',
         'figure',
         'code',
+        'small',
         'kbd',
         'app',
         'mode-dark',
