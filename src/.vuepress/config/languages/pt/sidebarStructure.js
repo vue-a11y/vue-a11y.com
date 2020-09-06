@@ -4,7 +4,7 @@ module.exports = {
       title: 'O projeto',
       children: [
         '',
-        'roadmap',
+        ['roadmap', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
         'apoiando',
         'contribuidores'
       ]
@@ -20,10 +20,9 @@ module.exports = {
     {
       title: 'Comunidade',
       children: [
-        'a11y-vue-packages',
-        'projetos-ui',
-        'cases',
-        'awesome-a11y-vue'
+        ['Plugins', 'https://github.com/vue-a11y/awesome-a11y-vue#components-and-plugins'],
+        ['Projetos UI', 'https://github.com/vue-a11y/awesome-a11y-vue#accessible-libraries'],
+        ['Awesome', 'https://github.com/vue-a11y/awesome-a11y-vue']
       ]
     }
   ],
