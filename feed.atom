@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://vue-a11y.com</id>
+    <title></title>
+    <updated>2020-09-06T00:21:04.381Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="https://vue-a11y.com"/>
+    <link rel="self" href="https://vue-a11y.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Example post: The first post with markdown test]]></title>
+        <id>https://vue-a11y.com/posts/post-test/</id>
+        <link href="https://vue-a11y.com/posts/post-test/">
+        </link>
+        <updated>2020-09-01T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Description test page]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Post exemplo: Primeira postagem com markdown teste]]></title>
+        <id>https://vue-a11y.com/pt/posts/posts-de-teste/</id>
+        <link href="https://vue-a11y.com/pt/posts/posts-de-teste/">
+        </link>
+        <updated>2020-09-01T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Descrição do post de teste]]></summary>
+    </entry>
+</feed>
