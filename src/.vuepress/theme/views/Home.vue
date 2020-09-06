@@ -24,7 +24,7 @@
             />
           </div>
         </div>
-        <div class="relative self-end hidden lg:block lg:mr-6">
+        <div class="relative self-end hidden lg:block xl:mr-6">
           <div
             class="absolute z-10 rounded-full home-hero-ball"
           />
