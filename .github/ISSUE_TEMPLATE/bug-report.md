@@ -1,6 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve the Vue A11y project website
+labels: bug
 ---
 
 <!-- Please ask questions via following several ways. -->
@@ -14,8 +15,9 @@ about: Create a report to help us improve the Vue A11y project website
 
 ## Summary
 
-## What is expected?
+## Expected behavior?
 
 ## What is actually happening?
 
 ## Additional Information
+Add any other context about the problem here.

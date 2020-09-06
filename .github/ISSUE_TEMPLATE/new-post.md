@@ -2,7 +2,7 @@
 name: New post/article
 about: Have an idea for a post/article? Do you want to contribute by writing a post/article?
 title: "Post/Article: [Your title]"
-
+labels: Post
 ---
 
 ## About the post
