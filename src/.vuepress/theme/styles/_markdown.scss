@@ -76,7 +76,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative no-underline border-b-2 border-solid border-accent;
+    @apply relative no-underline border-b-2 border-solid border-accent inline-block;
 
     &:hover {
       border-color: var(--color);
