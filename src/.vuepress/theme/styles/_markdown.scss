@@ -152,7 +152,8 @@
   }
 
   hr {
-    @apply border border-light-200;
+    @apply border;
+    border-color: var(--border-color);
   }
 
   video, audio {
@@ -223,10 +224,6 @@
     .highlighted {
       background-color: rgba(0, 0, 0, .5);
     }
-  }
-
-  *:first-child {
-    margin-top: 0;
   }
 
   iframe {
