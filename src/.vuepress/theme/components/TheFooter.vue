@@ -1,6 +1,6 @@
 <template>
   <footer class="relative z-10 footer">
-    <div class="flex justify-center w-full px-4 py-24 lg:py-32 c-bg-secondary">
+    <div class="flex justify-center w-full px-4 py-24 border border-solid lg:py-32 c-bg-secondary c-border-color">
       <div class="max-w-md">
         <div class="flex justify-center">
           <vp-icon
