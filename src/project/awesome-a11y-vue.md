@@ -1,9 +1,7 @@
 # Awesome a11y Vue
 
-<p>
+<br>
 
 ::: alert Work in progress.  
 Coming soon
 :::
-
-</p>

@@ -13,7 +13,7 @@
     <slot />
 
     <div class="pl-4 mt-16">
-      <span class="text-lg font-bold">Newsletter</span>
+      <span class="block mb-2 text-lg font-bold">Newsletter</span>
       <NewsletterForm>
         <button
           slot="button"

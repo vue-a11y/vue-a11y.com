@@ -1,9 +1,7 @@
 # Apoiando
 
-<p>
+<br>
 
 ::: alert Trabalho em progresso.  
 Em breve
 :::
-
-</p>
