@@ -40,7 +40,7 @@ export function prepareSocialShareLinks (path, title, summary) {
     },
     {
       label: 'Twitter',
-      href: `https://twitter.com/share?url=${currentURL}&text=${encodeURIComponent(title)}&via=htmlmoderno`
+      href: `https://twitter.com/share?url=${currentURL}&text=${encodeURIComponent(title)}&via=vue_a11y`
     },
     {
       label: 'Linkedin',
