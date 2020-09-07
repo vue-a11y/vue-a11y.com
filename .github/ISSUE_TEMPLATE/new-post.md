@@ -23,4 +23,4 @@ labels: Post
 > None of the above categories? Describe a category that the subject of "post / article" makes the most sense.
 
 ## Brief description
-> Describe a little about the proposed subject.
+> A brief description of the proposed subject.
