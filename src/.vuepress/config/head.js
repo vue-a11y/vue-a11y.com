@@ -37,8 +37,8 @@ module.exports = [
   ['link', { rel: 'publisher', href: 'https://twitter.com/vue_a11y' }],
 
   // Webmention
-  ['link', { rel: 'webmention', href: 'https://webmention.io/htmlmoderno.com.br/webmention' }],
-  ['link', { rel: 'pingback', href: 'https://webmention.io/htmlmoderno.com.br/xmlrpc' }],
+  ['link', { rel: 'webmention', href: 'https://webmention.io/vue-a11y.com/webmention' }],
+  ['link', { rel: 'pingback', href: 'https://webmention.io/vue-a11y.com/xmlrpc' }],
 
   // Apple icons
   ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/apple-icon-57x57.png' }],
