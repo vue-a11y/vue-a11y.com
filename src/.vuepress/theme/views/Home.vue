@@ -10,12 +10,12 @@
             <span class="text-xl">{{ $description }}</span>
           </p>
           <div class="flex mt-10">
-            <router-link
+            <RouterLink
               :to="$frontmatter.actionLink"
               class="btn btn-accent"
             >
               {{ $frontmatter.actionText }}
-            </router-link>
+            </RouterLink>
 
             <ExternalLink
               class="ml-4 btn btn-light"

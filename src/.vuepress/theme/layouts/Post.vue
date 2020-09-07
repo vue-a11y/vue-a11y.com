@@ -37,7 +37,7 @@
               itemscope
               itemtype="https://schema.org/Person"
             >
-              <router-link
+              <RouterLink
                 v-if="post.author"
                 ref="authors"
                 rel="author"
@@ -57,7 +57,7 @@
                   <span class="sr-only">Post by </span>
                   <span itemprop="name">{{ post.author.name }}</span>
                 </span>
-              </router-link>
+              </RouterLink>
             </span>
           </template>
         </HeaderFullPage>

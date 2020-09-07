@@ -38,7 +38,7 @@
               class="block px-4 py-1"
             />
 
-            <router-link
+            <RouterLink
               v-else
               v-slot="{ href, route, navigate, isActive }"
               :to="item.path"
@@ -52,7 +52,7 @@
               >
                 {{ item.title }}
               </a>
-            </router-link>
+            </RouterLink>
 
             <ul
               v-if="$route.path === item.path && $frontmatter.sidebarDepth !== 0"
@@ -63,7 +63,7 @@
                 :key="`sidebar-subHeader-${subIndex}`"
                 class="pl-4"
               >
-                <router-link
+                <RouterLink
                   v-slot="{ href, route, navigate, isActive }"
                   :to="`${$page.regularPath}#${subHeader.slug}`"
                 >
@@ -75,7 +75,7 @@
                   >
                     {{ subHeader.title }}
                   </a>
-                </router-link>
+                </RouterLink>
               </li>
             </ul>
           </li>

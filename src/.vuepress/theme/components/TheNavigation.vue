@@ -9,7 +9,7 @@
         :key="item.text"
         class="mr-1"
       >
-        <router-link
+        <RouterLink
           v-slot="{ href, route, navigate, isActive }"
           :to="item.link"
         >
@@ -22,7 +22,7 @@
           >
             {{ item.text }}
           </a>
-        </router-link>
+        </RouterLink>
       </li>
       <li>
         <ExternalLink

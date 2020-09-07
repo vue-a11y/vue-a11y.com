@@ -7,19 +7,19 @@
     <h2
       class="card-title card-post-title"
     >
-      <router-link
+      <RouterLink
         ref="cardLink"
         :to="post.to"
       >
         {{ post.title }}
-      </router-link>
+      </RouterLink>
     </h2>
 
     <div class="card-info">
       <time :datetime="post.date.datetime">
         {{ post.date.short }}
       </time>
-      <router-link
+      <RouterLink
         v-if="post.author"
         ref="authors"
         rel="author"
@@ -38,7 +38,7 @@
           <span class="sr-only">Post by </span>
           {{ post.author.name }}
         </span>
-      </router-link>
+      </RouterLink>
     </div>
   </article>
 </template>

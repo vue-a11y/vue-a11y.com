@@ -1,5 +1,5 @@
 <template>
-  <router-link
+  <RouterLink
     class="inline-flex"
     :to="to"
   >
@@ -9,7 +9,7 @@
       class="mt-2 mr-2"
     />
     <span>{{ text }}</span>
-  </router-link>
+  </RouterLink>
 </template>
 
 <script>

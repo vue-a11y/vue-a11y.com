@@ -15,7 +15,7 @@
         :key="header.slug"
         class="toc-list-item"
       >
-        <router-link
+        <RouterLink
           v-slot="{ href, route, isExactActive }"
           :to="{ path: $route.path, hash: header.hash }"
         >
@@ -25,7 +25,7 @@
           >
             {{ header.title }}
           </a>
-        </router-link>
+        </RouterLink>
       </li>
     </ul>
   </nav>
