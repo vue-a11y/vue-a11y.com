@@ -21,7 +21,7 @@
         >
           <a
             :href="href"
-            :class="{ 'active font-bold': isExactActive }"
+            :class="{ 'active': isExactActive }"
           >
             {{ header.title }}
           </a>

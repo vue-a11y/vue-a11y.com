@@ -1,0 +1,75 @@
+.toc {
+  &-title {
+    @apply block pl-3 mb-4 text-xl font-bold;
+  }
+
+  &-list {
+    @apply relative;
+
+    &:before {
+      @apply absolute z-20 border-l border-dashed;
+      content: '';
+      border-color: var(--border-color);
+      width: 2px;
+      left: 28px;
+      top: -5%;
+      height: 110%;
+    }
+  }
+
+  &-list-item {
+    @apply w-full leading-4;
+
+    a {
+      @apply relative z-30 inline-block py-3 pl-10 pr-3 rounded-md border border-solid border-transparent;
+
+      &:before {
+        @apply absolute rounded-full z-10;
+        content: '';
+        background-color: var(--bg-small-ball-toc);
+        width: 6px;
+        height: 6px;
+        left: 10px;
+        top: 50%;
+        margin-top: -3px;
+      }
+
+      &:hover, &:focus, &.active {
+        background-color: var(--bg-secondary);
+
+        &:before {
+          background-color: var(--accent);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  @apply py-3 px-4 font-bold text-xl rounded-md border border-solid border-transparent;
+  max-height: 63px;
+  border-bottom-width: 6px;
+
+  &-light {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+  }
+
+  &-accent {
+    @apply bg-accent;
+    color: var(--accent-text-button);
+    border-color: theme('colors.accentDark');
+  }
+}
+
+.card {
+  @apply relative flex flex-col justify-between w-full p-5;
+
+  &-title {
+    @apply text-4xl font-bold leading-10;
+  }
+
+  &-info {
+    @apply flex items-end justify-between mt-12;
+  }
+}
