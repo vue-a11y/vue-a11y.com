@@ -54,6 +54,12 @@ module.exports = [
     }
   ],
   [
+    // https://github.com/IOriens/vuepress-plugin-canonical
+    'vuepress-plugin-canonical', {
+      baseURL: process.env.URL_BASE
+    }
+  ],
+  [
     '@vuepress/google-analytics',
     {
       ga: 'UA-70393520-5'
