@@ -4,7 +4,7 @@
         <title></title>
         <link>https://vue-a11y.com</link>
         <description></description>
-        <lastBuildDate>Mon, 07 Sep 2020 05:47:15 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Sep 2020 05:50:06 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://vue-a11y.com/feed.atom" rel="self" type="application/rss+xml"/>
