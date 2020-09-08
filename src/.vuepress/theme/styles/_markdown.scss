@@ -76,10 +76,14 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative no-underline border-b-2 border-solid border-accent inline-block;
+    @apply relative inline-block;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    background-color: var(--bg-secondary);
 
     &:hover {
       border-color: var(--color);
+      background-color: var(--bg-hover-sidebar);
     }
 
     .icon.outbound {
