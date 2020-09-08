@@ -13,6 +13,8 @@ if (process.env.NODE_ENV !== 'development') {
         'html',
         'body',
         'figure',
+        'figcaption',
+        'blockquote',
         'code',
         'small',
         'kbd',
