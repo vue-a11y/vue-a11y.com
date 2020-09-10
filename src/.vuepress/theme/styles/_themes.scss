@@ -38,7 +38,7 @@
   --rf-monospace: Consolas, monospace, Courier;
   --rf-serif: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
 
-  body.set-color-constrast {
+  body.set-color-contrast {
     --border-color: theme('colors.gray.500');
     --bg-input: white;
   }
@@ -67,7 +67,7 @@ html.mode-dark {
   // icons
   --color-social-icons: var(--accent);
 
-  body.set-color-constrast {
+  body.set-color-contrast {
     --border-color: theme('colors.gray.700');
     --bg-input: theme('colors.dark.900');
   }
@@ -91,7 +91,7 @@ html.mode-sepia {
   // Border
   --border-color: theme('colors.sepia.600');
 
-  body.set-color-constrast {
+  body.set-color-contrast {
     --border-color: theme('colors.sepia.800');
     --bg-input: theme('colors.sepia.200');
   }

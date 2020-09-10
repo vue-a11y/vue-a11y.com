@@ -9,7 +9,7 @@ export default function useSettings (key = null) {
       reading: 'set-sans-serif',
       theme: 'light',
       vision: {
-        'set-color-constrast': false
+        'set-color-contrast': false
       },
       motion: {
         'set-reduce-motion': false
