@@ -73,3 +73,22 @@
     @apply flex items-end justify-between mt-12;
   }
 }
+
+.form {
+  &-msg {
+    @apply border invisible rounded-md px-3 py-2;
+    border-bottom-width: 4px;
+
+    &-success {
+      @apply visible bg-green-200 text-green-900 border-accentDark;
+    }
+
+    &-error {
+      @apply visible bg-red-200 text-red-900 border-red-900;
+    }
+
+    a {
+      @apply underline;
+    }
+  }
+}

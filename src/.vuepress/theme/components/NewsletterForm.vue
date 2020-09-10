@@ -33,8 +33,8 @@
       </button>
     </slot>
     <span
-      class="inline-block w-full px-4 py-2 mt-4 text-sm rounded-md newsletter-form-msg"
-      :class="{ 'newsletter-form-msg-success': message.result === 'success', 'newsletter-form-msg-error': message.result === 'error' }"
+      class="inline-block w-full mt-4 text-sm form-msg"
+      :class="{ 'form-msg-success': message.result === 'success', 'form-msg-error': message.result === 'error' }"
     >
       <span
         v-show="message.result"
@@ -92,23 +92,6 @@ export default {
   &-btn {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-  }
-
-  &-msg {
-    @apply border py-3 invisible;
-    border-bottom-width: 4px;
-
-    &-success {
-      @apply visible bg-green-200 text-green-900 border-accentDark;
-    }
-
-    &-error {
-      @apply visible bg-red-200 text-red-900 border-red-900;
-    }
-
-    a {
-      @apply underline;
-    }
   }
 }
 </style>
