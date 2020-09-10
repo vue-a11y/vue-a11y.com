@@ -9,13 +9,14 @@
       <SettingOption
         :id="item.id"
         :key="`theme-item-${item.val}`"
-        v-model="theme"
+        v-model="state"
         no-style
         :text="item.text"
         :val="item.val"
         type="radio"
         name="setting-theme"
-        :checked="theme === item.val"
+        :checked="state === item.val"
+        @change="toggleSaveButton(true)"
       >
         <span class="w-full mb-3">
           <img
@@ -25,15 +26,28 @@
         </span>
       </SettingOption>
     </template>
+
+    <div class="w-full">
+      <SettingSaveButton
+        v-show="showSaveButton"
+        @save="save"
+      />
+      <SettingSuccessText
+        v-show="showSucessText"
+        :text="$frontmatter.theme.successText"
+      />
+    </div>
   </SettingWrapper>
 </template>
 
 <script>
-import { ref, watch, onMounted, computed } from '@vue/composition-api'
+import { computed } from '@vue/composition-api'
 
-import { useSettings } from '@/theme/composable'
+import { useSettingSection } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
+import SettingSaveButton from './SettingSaveButton'
+import SettingSuccessText from './SettingSuccessText'
 import SettingWrapper from './SettingWrapper'
 
 export default {
@@ -41,12 +55,12 @@ export default {
 
   components: {
     SettingOption,
-    SettingWrapper
+    SettingWrapper,
+    SettingSaveButton,
+    SettingSuccessText
   },
 
   setup (_, { root }) {
-    const theme = ref(null)
-
     const themes = computed(() => {
       if (!root.$frontmatter.theme || (root.$frontmatter.theme && !Array.isArray(root.$frontmatter.theme.items))) return []
       return root.$frontmatter.theme.items.map(item => {
@@ -60,23 +74,27 @@ export default {
       })
     })
 
-    watch(theme, setTheme)
-
-    onMounted(() => {
-      const { value } = useSettings('theme')
-      theme.value = value.value
-    })
-
-    function setTheme (val, old) {
-      if (!old) return
-      const { setStorage } = useSettings()
-      setStorage('theme', val)
-      root.$set(root.$themeConfig.colorMode, 'defaultMode', val)
+    const setTheme = (state, { setStorage }) => {
+      setStorage('theme', state)
+      root.$set(root.$themeConfig.colorMode, 'defaultMode', state.value)
+      root.$announcer.assertive(root.$frontmatter.theme.successText)
     }
 
+    const {
+      save,
+      state,
+      showSaveButton,
+      showSucessText,
+      toggleSaveButton
+    } = useSettingSection('', 'theme', setTheme)
+
     return {
-      theme,
-      themes
+      save,
+      state,
+      themes,
+      showSucessText,
+      showSaveButton,
+      toggleSaveButton
     }
   }
 }

@@ -12,6 +12,7 @@ language:
 
 theme:
   title: Themes
+  successText: '"Theme" modified successfully!'
   items:
     - label: Light
       value: light
@@ -19,7 +20,7 @@ theme:
     - label: Dark
       value: dark
 
-    - label: Config. System
+    - label: System config.
       value: system
 
     - label: Sepia
@@ -27,6 +28,7 @@ theme:
 
 reading:
   title: Reading font
+  successText: '"Reading font" modified successfully!'
   items:
     - label: Sans Serif (DM Sans)
       value: set-sans-serif
@@ -42,12 +44,14 @@ reading:
 
 vision:
   title: Vision
+  successText: '"Vision" option modified successfully!'
   items:
     - label: Increase color contrast
-      value: set-color-constrast
+      value: set-color-contrast
 
 motion: 
   title: Motion
+  successText: '"Motion" modified successfully!'
   items:
     - label: Reduce Motion
       value: set-reduce-motion

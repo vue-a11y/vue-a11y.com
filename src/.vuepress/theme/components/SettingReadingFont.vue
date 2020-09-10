@@ -8,23 +8,36 @@
       <SettingOption
         :id="item.id"
         :key="`reading-font-item-${item.val}`"
-        v-model="font"
+        v-model="state"
         :text="item.text"
         :val="item.val"
         type="radio"
         name="setting-reading-font"
-        :checked="font === item.val"
+        :checked="state === item.val"
+        @change="toggleSaveButton(true)"
       />
     </template>
+
+    <SettingSaveButton
+      v-show="showSaveButton"
+      @save="save"
+    />
+
+    <SettingSuccessText
+      v-show="showSucessText"
+      :text="$frontmatter.reading.successText"
+    />
   </SettingWrapper>
 </template>
 
 <script>
-import { ref, watch, onMounted } from '@vue/composition-api'
+import { ref, watch } from '@vue/composition-api'
 
-import { useSettings } from '@/theme/composable'
+import { useSettingSection } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
+import SettingSaveButton from './SettingSaveButton'
+import SettingSuccessText from './SettingSuccessText'
 import SettingWrapper from './SettingWrapper'
 
 export default {
@@ -32,11 +45,13 @@ export default {
 
   components: {
     SettingOption,
-    SettingWrapper
+    SettingWrapper,
+    SettingSaveButton,
+    SettingSuccessText
   },
 
   setup (_, { root }) {
-    const font = ref(null)
+    const oldFont = ref(null)
 
     const fonts = root.$frontmatter.reading && root.$frontmatter.reading.items.map(item => {
       return {
@@ -48,22 +63,32 @@ export default {
       }
     })
 
-    watch(font, setReadingFont)
-
-    onMounted(() => {
-      const { value } = useSettings('reading')
-      font.value = value.value
-    })
-
-    function setReadingFont (val, old) {
-      const { toggleClass, setStorage } = useSettings()
-      setStorage('reading', val)
-      toggleClass(val, old)
+    const setReadingFont = (state, { setStorage, toggleClass }) => {
+      setStorage('reading', state.value)
+      toggleClass(state.value, oldFont.value)
+      root.$announcer.assertive(root.$frontmatter.reading.successText)
     }
 
+    const {
+      save,
+      state,
+      showSaveButton,
+      showSucessText,
+      toggleSaveButton
+    } = useSettingSection('', 'reading', setReadingFont)
+
+    watch(state, (val, old) => {
+      if (!old) return
+      oldFont.value = old
+    })
+
     return {
-      font,
-      fonts
+      save,
+      state,
+      fonts,
+      showSaveButton,
+      showSucessText,
+      toggleSaveButton
     }
   }
 }

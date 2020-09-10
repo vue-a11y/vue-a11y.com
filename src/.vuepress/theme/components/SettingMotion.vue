@@ -7,23 +7,36 @@
       <SettingOption
         :id="item.id"
         :key="`motion-item-${item.val}`"
-        v-model="motion[item.val]"
+        v-model="state[item.val]"
         :text="item.text"
         type="checkbox"
         :val="item.val"
         :name="`setting-${item.val}`"
-        :checked="motion[item.val]"
+        :checked="state[item.val]"
+        @change="toggleSaveButton(true)"
       />
     </template>
+
+    <SettingSaveButton
+      v-show="showSaveButton"
+      @save="save"
+    />
+
+    <SettingSuccessText
+      v-show="showSucessText"
+      :text="$frontmatter.motion.successText"
+    />
   </SettingWrapper>
 </template>
 
 <script>
-import { ref, watch, onMounted, computed } from '@vue/composition-api'
+import { computed } from '@vue/composition-api'
 
-import { useSettings } from '@/theme/composable'
+import { useSettingSection } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
+import SettingSaveButton from './SettingSaveButton'
+import SettingSuccessText from './SettingSuccessText'
 import SettingWrapper from './SettingWrapper'
 
 export default {
@@ -31,14 +44,12 @@ export default {
 
   components: {
     SettingOption,
-    SettingWrapper
+    SettingWrapper,
+    SettingSaveButton,
+    SettingSuccessText
   },
 
   setup (_, { root }) {
-    const motion = ref({
-      'set-reduce-motion': false
-    })
-
     const motionOptions = computed(() => {
       if (!root.$frontmatter.motion || (root.$frontmatter.motion && !Array.isArray(root.$frontmatter.motion.items))) return []
       return root.$frontmatter.motion.items.map((item, index) => {
@@ -52,22 +63,27 @@ export default {
       })
     })
 
-    watch(motion, setMotion, { deep: true })
-
-    onMounted(() => {
-      const { value } = useSettings('motion')
-      motion.value = value.value
-    })
-
-    function setMotion (val, old) {
-      const { setStorage, toggleClassByObject } = useSettings()
-      setStorage('motion', { ...val })
-      toggleClassByObject({ ...val })
+    const setMotion = (state, { setStorage, toggleClassByObject }) => {
+      setStorage('motion', { ...state.value })
+      toggleClassByObject({ ...state.value })
+      root.$announcer.assertive(root.$frontmatter.motion.successText)
     }
 
+    const {
+      save,
+      state,
+      showSaveButton,
+      showSucessText,
+      toggleSaveButton
+    } = useSettingSection({ 'set-reduce-motion': false }, 'motion', setMotion)
+
     return {
-      motion,
-      motionOptions
+      save,
+      state,
+      motionOptions,
+      showSucessText,
+      showSaveButton,
+      toggleSaveButton
     }
   }
 }

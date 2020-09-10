@@ -12,6 +12,7 @@ language:
 
 theme:
   title: Tema de cores
+  successText: '"Modo de cores" modificado com sucesso!'
   items:
     - label: Claro
       value: light
@@ -27,6 +28,7 @@ theme:
 
 reading:
   title: Fonte de leitura
+  successText: '"Fonte de leitura" modificada com sucesso!'
   items:
     - label: Sans Serif (DM Sans)
       value: set-sans-serif
@@ -42,12 +44,14 @@ reading:
 
 vision:
   title: Visão
+  successText: 'Opçoes de "Visão" modificada com sucesso!'
   items:
     - label: Aumentar o contraste da cor
-      value: set-color-constrast
+      value: set-color-contrast
 
 motion: 
   title: Movimento
+  successText: 'Opções de "Movimento" modificada com sucesso!'
   items:
     - label: Reduzir movimento
       value: set-reduce-motion

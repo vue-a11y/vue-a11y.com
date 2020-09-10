@@ -15,13 +15,19 @@
         :checked="language === item.val"
       />
     </template>
+
+    <SettingSaveButton
+      v-show="showSave"
+      @save="save"
+    />
   </SettingWrapper>
 </template>
 
 <script>
-import { ref, watch, onMounted } from '@vue/composition-api'
+import { ref, onMounted, watch } from '@vue/composition-api'
 
 import SettingOption from './SettingOption'
+import SettingSaveButton from './SettingSaveButton'
 import SettingWrapper from './SettingWrapper'
 
 export default {
@@ -29,12 +35,13 @@ export default {
 
   components: {
     SettingOption,
-    SettingWrapper
+    SettingWrapper,
+    SettingSaveButton
   },
 
   setup (_, { root }) {
     const language = ref(null)
-
+    const showSave = ref(false)
     const languages = ref([])
 
     const settingPages = root.$site.pages.filter(page => page.frontmatter.view === 'Settings')
@@ -59,7 +66,10 @@ export default {
         .reverse()
     }
 
-    watch(language, changeLanguage)
+    watch(language, (val, old) => {
+      if (!old) return
+      showSave.value = val !== old
+    })
 
     onMounted(() => {
       language.value = getShortLang(root.$localePath)
@@ -69,15 +79,18 @@ export default {
       return locale === '/' ? 'en' : locale.replace(/\//g, '')
     }
 
-    function changeLanguage (val) {
-      const chosenLanguage = languages.value.find(language => language.val === val)
+    function save () {
+      const chosenLanguage = languages.value.find(lang => lang.val === language.value)
       root.$vuepress.$set('disableScrollBehavior', true)
       root.$router.replace(chosenLanguage.path, () => {
         root.$nextTick(() => root.$vuepress.$set('disableScrollBehavior', false))
       })
+      showSave.value = false
     }
 
     return {
+      save,
+      showSave,
       language,
       languages
     }

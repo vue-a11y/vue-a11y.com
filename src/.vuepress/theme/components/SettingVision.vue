@@ -7,22 +7,35 @@
       <SettingOption
         :id="item.id"
         :key="`vision-item-${item.val}`"
-        v-model="vision[item.val]"
+        v-model="state[item.val]"
         :text="item.text"
         type="checkbox"
         :name="`setting-${item.val}`"
-        :checked="vision[item.val]"
+        :checked="state[item.val]"
+        @change="toggleSaveButton(true)"
       />
     </template>
+
+    <SettingSaveButton
+      v-show="showSaveButton"
+      @save="save"
+    />
+
+    <SettingSuccessText
+      v-show="showSucessText"
+      :text="$frontmatter.vision.successText"
+    />
   </SettingWrapper>
 </template>
 
 <script>
-import { ref, watch, onMounted, computed } from '@vue/composition-api'
+import { computed } from '@vue/composition-api'
 
-import { useSettings } from '@/theme/composable'
+import { useSettingSection } from '@/theme/composable'
 
 import SettingOption from './SettingOption'
+import SettingSaveButton from './SettingSaveButton'
+import SettingSuccessText from './SettingSuccessText'
 import SettingWrapper from './SettingWrapper'
 
 export default {
@@ -30,14 +43,12 @@ export default {
 
   components: {
     SettingOption,
-    SettingWrapper
+    SettingWrapper,
+    SettingSaveButton,
+    SettingSuccessText
   },
 
   setup (_, { root }) {
-    const vision = ref({
-      'set-color-contrast': false
-    })
-
     const visionOptions = computed(() => {
       if (!root.$frontmatter.vision || (root.$frontmatter.vision && !Array.isArray(root.$frontmatter.vision.items))) return []
       return root.$frontmatter.vision.items.map((item, index) => {
@@ -51,22 +62,27 @@ export default {
       })
     })
 
-    watch(vision, setVision, { deep: true })
-
-    onMounted(() => {
-      const { value } = useSettings('vision')
-      vision.value = value.value
-    })
-
-    function setVision (val, old) {
-      const { setStorage, toggleClassByObject } = useSettings()
-      setStorage('vision', { ...val })
-      toggleClassByObject({ ...val })
+    const setVision = (state, { setStorage, toggleClassByObject }) => {
+      setStorage('vision', { ...state.value })
+      toggleClassByObject({ ...state.value })
+      root.$announcer.assertive(root.$frontmatter.vision.successText)
     }
 
+    const {
+      save,
+      state,
+      showSaveButton,
+      showSucessText,
+      toggleSaveButton
+    } = useSettingSection({ 'set-color-contrast': false }, 'vision', setVision)
+
     return {
-      vision,
-      visionOptions
+      save,
+      state,
+      visionOptions,
+      showSucessText,
+      showSaveButton,
+      toggleSaveButton
     }
   }
 }
