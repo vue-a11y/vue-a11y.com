@@ -41,7 +41,7 @@
       </slot>
     </TheMain>
 
-    <BackToTop root-container="#main" />
+    <BackToTop />
   </div>
 </template>
 
