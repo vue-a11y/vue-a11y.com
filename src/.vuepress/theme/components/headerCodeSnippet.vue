@@ -92,6 +92,10 @@ export default {
   color: theme('colors.gray.300');
   background-color: var(--bg-header-code);
 
+  button {
+    background-color: var(--bg-header-code);
+  }
+
   p {
     margin: 0;
   }
