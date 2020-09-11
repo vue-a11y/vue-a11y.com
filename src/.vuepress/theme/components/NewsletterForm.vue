@@ -67,7 +67,8 @@ export default {
         if (!refs.emailField.validity.valid) throw new Error(refs.emailField.validationMessage)
         refs.newsletterForm.submit()
       } catch (e) {
-        root.$announcer.assertive(message.value.msg)
+        refs.emailField.focus()
+        root.$announcer.assertive(e.message)
         message.value = { result: 'error', msg: e.message }
       }
     }
