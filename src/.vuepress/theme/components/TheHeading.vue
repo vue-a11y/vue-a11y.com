@@ -39,7 +39,7 @@
     >
       <button
         type="button"
-        class="flex px-4 py-2 mr-1 md:hidden"
+        class="flex px-4 py-3 mr-1 md:hidden"
         aria-controls="s-sidebar-wrapper"
         :aria-label="menuButtonAriaLabel"
         :aria-expanded="isSidebarOpen.toString()"
