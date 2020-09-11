@@ -35,6 +35,7 @@
 import { watch, computed, onMounted } from '@vue/composition-api'
 
 import { useIntersectionObserver } from '@/theme/composable'
+import { programmaticFocus } from '@/theme/utils'
 
 export default {
   name: 'TableOfContents',
@@ -64,7 +65,7 @@ export default {
     onMounted(() => {
       if (root.$route.hash) {
         const heading = document.getElementById(root.$route.hash.substring(1))
-        heading && scrollTo({ top: heading.offsetTop })
+        heading && programmaticFocus(heading)
       }
     })
 
