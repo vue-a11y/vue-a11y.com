@@ -2,7 +2,7 @@
   <div class="w-full">
     <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
       <div class="page-content">
-        <Content class="max-char" />
+        <Content />
         <PageEdit class="flex flex-wrap justify-between w-full py-6 pb-24 border-t c-border-color md:mt-4" />
       </div>
       <RightNavigation class="page-float-toc xl:block" />

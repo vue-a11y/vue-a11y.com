@@ -1,7 +1,7 @@
 <template>
   <Full>
     <div
-      class="z-10 post-page container-layout container-layout-px"
+      class="container z-10 mx-auto post-page"
       itemscope
       itemtype="https://schema.org/Blog"
     >
@@ -68,7 +68,7 @@
 
         <section
           v-show="post.summary"
-          class="my-10 text-xl leading-9 post-page-summary sm:px-5 max-char"
+          class="my-10 text-xl leading-9 post-page-summary sm:px-5 md:mx-auto lg:mx-0"
           role="region"
           :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
         >
@@ -88,14 +88,14 @@
         <hr v-show="post.summary">
 
         <section
-          class="flex justify-between mt-12"
+          class="flex justify-between"
           role="region"
           aria-label="Content post"
         >
           <div class="w-full lg:w-auto">
             <Content
               itemprop="articleBody"
-              class="sm:px-5 max-char"
+              class="sm:px-5 md:mx-auto lg:mx-0"
             />
 
             <hr class="mt-16">
@@ -110,7 +110,7 @@
               <WebMentions />
             </div>
           </div>
-          <RightNavigation class="ml-16 lg:block post-page-toc">
+          <RightNavigation class="mt-16 ml-16 lg:block post-page-toc">
             <ShareLinks
               class="mt-16"
               :path="post.path"
