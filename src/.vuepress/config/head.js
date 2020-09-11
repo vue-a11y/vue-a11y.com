@@ -28,9 +28,6 @@ module.exports = [
   ['meta', { property: 'og:image:width', content: '1200' }],
   ['meta', { property: 'og:image:height', content: '360' }],
 
-  // Schema and google+
-  ['meta', { itemprop: 'image', content: '/img/social-share.png' }],
-
   // Link
   ['link', { rel: 'author', href: '/humans.txt' }],
   ['link', { rel: 'author', href: 'https://twitter.com/ktquez' }],
