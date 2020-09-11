@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { watch, computed } from '@vue/composition-api'
+import { watch, computed, onMounted } from '@vue/composition-api'
 
 import { useIntersectionObserver } from '@/theme/composable'
 
@@ -59,6 +59,13 @@ export default {
       return root.$page.headers.map(header => {
         return { title: header.title, hash: header.slug }
       })
+    })
+
+    onMounted(() => {
+      if (root.$route.hash) {
+        const heading = document.getElementById(root.$route.hash.substring(1))
+        heading && scrollTo({ top: heading.offsetTop })
+      }
     })
 
     watch(targetIntercepted, val => {
