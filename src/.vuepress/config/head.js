@@ -18,7 +18,7 @@ module.exports = [
   // Twitter
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@vue_a11y' }],
-  ['meta', { vmid: 'twitter-image', name: 'twitter:image', content: '/img/social-share.png' }],
+  ['meta', { name: 'twitter:image', content: '/img/social-share.png' }],
 
   // Facebook
   ['meta', { property: 'og:site_name', content: 'Vue A11y' }],
