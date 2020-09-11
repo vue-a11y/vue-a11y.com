@@ -18,7 +18,7 @@
       </span>
       <p class="inline-block uc-first">
         <time
-          :datetime="$page.lastUpdated"
+          :datetime="datetime"
           class="uc-first"
         >
           {{ $page.lastUpdated }}
@@ -35,8 +35,10 @@ export default {
 
   setup (_, { root }) {
     const editLink = computed(() => `https://github.com/${root.$themeConfig.repo}/edit/${root.$themeConfig.docsBranch || 'master'}/${root.$themeConfig.docsDir || 'docs'}/${root.$page.relativePath}`)
+    const datetime = new Date(root.$page.lastUpdated).toISOString()
 
     return {
+      datetime,
       editLink
     }
   }
