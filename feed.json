@@ -7,14 +7,14 @@
         {
             "id": "https://vue-a11y.com/posts/post-test/",
             "url": "https://vue-a11y.com/posts/post-test/",
-            "title": "Example post: The first post with markdown test",
+            "title": "Example post: The first post",
             "summary": "Description test page",
             "date_modified": "2020-09-01T16:00:00.000Z"
         },
         {
             "id": "https://vue-a11y.com/pt/posts/posts-de-teste/",
             "url": "https://vue-a11y.com/pt/posts/posts-de-teste/",
-            "title": "Post exemplo: Primeira postagem com markdown teste",
+            "title": "Post exemplo: Primeira postagem",
             "summary": "Descrição do post de teste",
             "date_modified": "2020-09-01T16:00:00.000Z"
         }
