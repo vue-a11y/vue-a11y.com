@@ -62,7 +62,7 @@
       </section>
 
       <section
-        v-show="$themeConfig.sponsors.length"
+        v-if="$themeConfig.sponsors.length"
         class="flex flex-wrap mt-24 lg:mt-32"
         role="region"
         aria-labelledby="a-sponsors"
@@ -95,7 +95,7 @@
       </section>
 
       <section
-        v-show="$themeConfig.supporters.length"
+        v-if="$themeConfig.supporters.length"
         class="flex flex-wrap pt-20 my-24 border-t border-solid c-border-color lg:pt-0 lg:border-transparent lg:my-32 "
         role="region"
         aria-labelledby="a-supporters"
