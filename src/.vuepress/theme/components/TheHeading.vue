@@ -34,7 +34,7 @@
       </form>
     </div>
     <div
-      v-show="hasSidebar"
+      v-if="hasSidebar"
       class="flex items-center justify-end w-1/5 md:hidden"
     >
       <button
