@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <article class="flex justify-between w-full px-6 pt-6 md:mt-4 lg:px-10 xl:pr-0">
-      <div class="page-content">
+      <div class="max-w-3xl page-content">
         <Content />
         <PageEdit class="flex flex-wrap justify-between w-full py-6 pb-24 border-t c-border-color md:mt-4" />
       </div>

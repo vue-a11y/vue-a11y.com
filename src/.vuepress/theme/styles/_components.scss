@@ -43,6 +43,19 @@
       }
     }
   }
+
+  &-list.horizontal {
+    @apply flex flex-wrap justify-between;
+
+    &:before {
+      display: none;
+    }
+
+    .toc-list-item {
+      @apply w-48 flex items-center mb-4;
+    }
+
+  }
 }
 
 .btn {

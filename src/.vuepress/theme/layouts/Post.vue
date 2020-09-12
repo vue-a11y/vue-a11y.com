@@ -68,7 +68,7 @@
 
         <section
           v-show="post.summary"
-          class="my-10 text-xl leading-9 post-page-summary sm:px-5 md:mx-auto lg:mx-0"
+          class="my-10 text-lg leading-9 post-page-summary sm:px-5 md:mx-auto lg:mx-0 max-char"
           role="region"
           :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
         >
@@ -92,21 +92,31 @@
           role="region"
           aria-label="Content post"
         >
-          <div class="w-full lg:w-auto">
+          <div class="w-full max-w-3xl lg:w-auto">
             <Content
               itemprop="articleBody"
               class="sm:px-5 md:mx-auto lg:mx-0"
             />
 
-            <hr class="mt-16">
+            <hr class="my-16">
 
-            <div class="py-20 disqus-section">
+            <ShareLinks
+              :path="post.path"
+              :title="post.title"
+              :summary="post.summary"
+              horizontal
+              class="lg:hidden"
+            />
+
+            <hr class="my-16 lg:hidden">
+
+            <div class="disqus-section">
               <Disqus shortname="vue-a11y-test" />
             </div>
 
-            <hr>
+            <hr class="my-16">
 
-            <div class="py-20 webmentions-section">
+            <div class="webmentions-section">
               <WebMentions />
             </div>
           </div>

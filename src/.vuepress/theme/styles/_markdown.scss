@@ -1,11 +1,11 @@
 .content__default {
-  @apply text-xl block;
+  @apply text-lg block;
   min-height: 150px;
 
   p {
     word-wrap: break-word;
-    margin: 30px 0;
-    max-width: 74ex;
+    margin: 40px 0;
+    max-width: 68ex;
 
     abbr {
       cursor: help;
@@ -16,7 +16,7 @@
   }
 
   p, ol, ul {    
-    @apply leading-10;
+    @apply leading-8;
   }
 
   h4, h5, h6 {
