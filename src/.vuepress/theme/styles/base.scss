@@ -47,28 +47,17 @@ hr {
 .container-layout {
   @apply px-1;
 
-  @screen xl {
-    @apply px-0;
-    &-px {
-      padding-left: 10% !important;
-      padding-right: 10% !important;
-    }
-
+  @media (min-width: 1366px) {
     &-pl {
-      padding-left: 10% !important;
+      padding-left: 8% !important;
     }
 
     &-pr {
-      padding-right: 10% !important;
+      padding-right: 8% !important;
     }
   }
 
-  @media (min-width: 1921px) {
-    &-px {
-      padding-left: 15% !important;
-      padding-right: 15% !important;
-    }
-
+  @media (min-width: 1920px) {
     &-pl {
       padding-left: 15% !important;
     }

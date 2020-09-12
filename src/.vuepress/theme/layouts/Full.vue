@@ -1,6 +1,6 @@
 <template>
   <div class="full-layout">
-    <TheHeading />
+    <TheHeader />
     <TheMain>
       <slot>
         <component :is="$frontmatter.view || 'Home'" />
@@ -12,7 +12,7 @@
 
 <script>
 import TheFooter from '@/theme/components/TheFooter'
-import TheHeading from '@/theme/components/TheHeading'
+import TheHeader from '@/theme/components/TheHeader'
 import TheMain from '@/theme/components/TheMain'
 
 export default {
@@ -20,7 +20,7 @@ export default {
 
   components: {
     TheFooter,
-    TheHeading,
+    TheHeader,
     TheMain
   }
 }

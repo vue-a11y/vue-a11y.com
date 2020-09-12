@@ -1,6 +1,6 @@
 <template>
   <header
-    class="relative z-10 flex flex-wrap w-full border-b header c-border-color container-layout"
+    class="relative z-10 w-full border-b header c-border-color"
     itemscope
     itemtype="https://schema.org/Organization"
   >
@@ -15,44 +15,52 @@
       :content="social.link"
     >
     <div
-      class="flex items-center justify-end w-1/5 h-16 md:pl-0 container-layout-pl md:w-1/7 lg:w-2/7"
-      :class="bgSidebar ? 'header-logo--bg' : null"
+      class="flex flex-wrap w-full px-0"
+      :class="{ 'px-4': !hasSidebar }"
     >
-      <div class="w-full">
-        <Logo />
-      </div>
-    </div>
-    <div
-      class="flex items-center flex-grow-0 w-3/5 h-16 md:pr-0 md:w-auto md:flex-grow"
-      :class="{ 'w-4/5': !hasSidebar }"
-    >
-      <form class="w-full lg:pl-10">
-        <SearchBox
-          role="search"
-          class="w-full"
-        />
-      </form>
-    </div>
-    <div
-      v-if="hasSidebar"
-      class="flex items-center justify-end w-1/5 md:hidden"
-    >
-      <button
-        type="button"
-        class="flex px-4 py-3 mr-1 md:hidden"
-        aria-controls="s-sidebar-wrapper"
-        :aria-label="menuButtonAriaLabel"
-        :aria-expanded="isSidebarOpen.toString()"
-        @click="$emit('toggle-sidebar')"
+      <div
+        class="flex items-center justify-end w-1/5 h-16 md:pl-0 md:w-1/12 lg:w-3/12"
+        :class="{'header-logo--bg': bgSidebar, 'container-layout-pl lg:w-2/7': hasSidebar }"
       >
-        <vp-icon
-          :name="isSidebarOpen ? 'close' : 'menu'"
-          size="23"
-        />
-      </button>
-    </div>
-    <div class="flex items-center h-16 header-nav md:justify-end container-layout-pr md:flex-grow">
-      <TheNavigation />
+        <div class="w-full">
+          <Logo />
+        </div>
+      </div>
+      <div
+        class="flex items-center flex-grow-0 w-3/5 h-16 md:pl-4 lg:pl-0 md:pr-0 md:w-auto md:flex-grow"
+        :class="{ 'w-4/5': !hasSidebar }"
+      >
+        <form class="w-full lg:pl-10">
+          <SearchBox
+            role="search"
+            class="w-full"
+          />
+        </form>
+      </div>
+      <div
+        v-if="hasSidebar"
+        class="flex items-center justify-end w-1/5 md:hidden"
+      >
+        <button
+          type="button"
+          class="flex px-4 py-3 mr-1 md:hidden"
+          aria-controls="s-sidebar-wrapper"
+          :aria-label="menuButtonAriaLabel"
+          :aria-expanded="isSidebarOpen.toString()"
+          @click="$emit('toggle-sidebar')"
+        >
+          <vp-icon
+            :name="isSidebarOpen ? 'close' : 'menu'"
+            size="23"
+          />
+        </button>
+      </div>
+      <div
+        class="flex items-center h-16 header-nav md:justify-end md:flex-grow"
+        :class="{ 'container-layout-pr': hasSidebar }"
+      >
+        <TheNavigation />
+      </div>
     </div>
   </header>
 </template>

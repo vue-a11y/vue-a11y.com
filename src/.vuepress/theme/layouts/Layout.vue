@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap main-layout">
-    <TheHeading
+    <TheHeader
       has-sidebar
       bg-sidebar
       :is-sidebar-open="isSidebarOpen"
@@ -49,7 +49,7 @@
 import { FocusLoop } from '@vue-a11y/focus-loop'
 
 import BackToTop from '@/theme/components/BackToTop'
-import TheHeading from '@/theme/components/TheHeading'
+import TheHeader from '@/theme/components/TheHeader'
 import TheMain from '@/theme/components/TheMain'
 import TheSidebar from '@/theme/components/TheSidebar'
 import { useSidebar } from '@/theme/composable'
@@ -60,7 +60,7 @@ export default {
   components: {
     TheMain,
     FocusLoop,
-    TheHeading,
+    TheHeader,
     TheSidebar,
     BackToTop
   },
