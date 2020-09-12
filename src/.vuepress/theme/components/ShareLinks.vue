@@ -3,7 +3,10 @@
     <span class="toc-title">
       {{ $themeLocaleConfig.shareLinksText }}
     </span>
-    <ul class="toc-list">
+    <ul
+      class="toc-list"
+      :class="{ 'horizontal': horizontal }"
+    >
       <li
         v-for="(item, index) in shareLinks"
         :key="`share-item-${index}`"
@@ -40,6 +43,10 @@ export default {
     summary: {
       type: String,
       default: ''
+    },
+
+    horizontal: {
+      type: Boolean
     }
   },
 
