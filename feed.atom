@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://vue-a11y.com</id>
     <title></title>
-    <updated>2020-09-13T14:53:03.787Z</updated>
+    <updated>2020-09-13T19:40:36.326Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://vue-a11y.com"/>
     <link rel="self" href="https://vue-a11y.com/feed.atom"/>
