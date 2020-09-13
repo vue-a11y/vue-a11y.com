@@ -6,7 +6,7 @@ O projeto é aberto, ou seja, quem desejar participar é extremamente bem vindo.
 
 A acessibilidade é algo super importante, acreditamos que se unirmos esforços para centralizar conteúdo de fácil entendimento, através das receitas, dicas e posts do blog, podemos ajudar os desenvolvedores e criadores de bibliotecas Vue.js, a terem um código consistente e mais inclusivo.
 
-Sinta-se convidado a **[contribuir](/pt/projeto/contribuidores.html)** no desenvolvimento, na criação de posts e dicas ou incentivar o projeto **[patrocinando](/pt/projeto/apoiando.html)**.
+Sinta-se convidado a **[contribuir](/pt/projeto/contribuidores.html)** no desenvolvimento, na criação de posts, recipes e dicas, ou dando um incentivo **[apoiando](/pt/projeto/contribuidores.html#apoiando)** o projeto.
 
 ---
 

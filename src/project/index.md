@@ -6,7 +6,7 @@ The project is open, so anyone who wants to participate is very welcome.
 
 Accessibility is super important! We believe that if we join efforts to centralize content that is easy to understand, through recipes, tips, and blog posts, we can help developers and creators of Vue.js libraries to have consistent and more inclusive code.
 
-Feel invited to **[contribute](/project/contributors.html)** to the development, the creation of posts and tips, or to encourage the project by **[sponsoring](/project/supporting.html)**.
+Feel invited to **[contribute](/project/how-to-contribute.html)** in the development, in the creation of posts, recipes and tips, or by giving an incentive **[supporting](/project/how-to-contribute.html#supporting)** the project.
 
 ---
 

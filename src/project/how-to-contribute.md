@@ -1,4 +1,4 @@
-# Contributors
+# How to contribute
 
 <br>
 

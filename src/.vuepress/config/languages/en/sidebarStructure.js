@@ -4,9 +4,9 @@ module.exports = {
       title: 'The Project',
       children: [
         '',
-        ['roadmap', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
-        'supporting',
-        'contributors'
+        ['Roadmap', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
+        ['People', 'people'],
+        'how-to-contribute'
       ]
     },
     {
