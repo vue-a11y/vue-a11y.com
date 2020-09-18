@@ -15,7 +15,7 @@ module.exports = {
   },
   newsletter: {
     title: 'Subscribe to the newsletter',
-    description: 'Enter your email address below and receive articles, videos, updates and events from the Vue.js community and accessibility.',
+    description: 'Enter your email address and receive articles, videos, updates and events from the Vue.js community and accessibility.',
     textButton: 'Subscribe'
   },
   toc: {
