@@ -63,7 +63,7 @@
         </HeaderFullPage>
         <meta
           itemprop="dateModified"
-          content="post.updated_at"
+          :content="post.updated_at"
         >
 
         <section
