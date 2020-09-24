@@ -8,7 +8,7 @@
         v-show="isCategory"
         :text="`${$themeLocaleConfig.backToText} posts`"
         :to="`${$localePath}posts/`"
-        class="inline-flex px-4 my-4 ml-2"
+        class="ml-2"
       />
 
       <ul class="flex flex-wrap justify-between w-full px-3 lg:pr-6 lg:pl-0 lg:ml-6 xl:pr-0">

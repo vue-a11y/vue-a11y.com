@@ -20,7 +20,7 @@
       <template v-for="(nav, index) in items">
         <span
           :key="`nav-heading-${index}`"
-          class="mt-12 ml-4 text-xl font-bold"
+          class="mt-12 ml-4 text-xl font-bold bg-primary"
         >{{ nav.title }}</span>
         <ul
           :key="`nav-list-${index}`"

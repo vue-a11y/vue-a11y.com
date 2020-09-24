@@ -2,7 +2,7 @@
   <div class="container z-10 mx-auto post-page">
     <div class="px-6 mt-6 xl:px-4">
       <BackTo
-        class="inline-flex px-4 my-4 -ml-4"
+        class="py-2 -ml-4"
         :to="$localePath"
         :text="`${$themeLocaleConfig.backToText} home`"
       />

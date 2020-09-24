@@ -1,6 +1,6 @@
 <template>
   <RouterLink
-    class="inline-flex"
+    class="inline-flex px-4 my-4 text-color bg-main"
     :to="to"
   >
     <vp-icon

@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     :to="$localePath"
-    class="inline-flex p-3 pt-2"
+    class="inline-flex p-3 pt-2 logo bg-main"
   >
     <img
       src="/vue-a11y-logo.svg"

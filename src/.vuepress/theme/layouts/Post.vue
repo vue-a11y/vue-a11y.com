@@ -16,7 +16,7 @@
           :content="$themeConfig.url + post.path"
         >
         <BackTo
-          class="inline-flex px-4 my-4 -ml-4"
+          class="py-2 -ml-4"
           :text="`${$themeLocaleConfig.backToText} posts`"
           :to="`${$localePath}posts/`"
         />

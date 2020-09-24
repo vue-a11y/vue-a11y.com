@@ -16,7 +16,7 @@
           <a
             :href="href"
             :aria-current="isActive && $route.path.indexOf(item.link) === 0 ? 'page' : null"
-            class="px-3 py-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
+            class="relative z-0 px-3 py-3 border-b-4 border-transparent border-solid the-nav-link bg-main hover:border-accent-primary"
             :class="{ 'active border-accent-primary': isActive && $route.path.indexOf(item.link) === 0 }"
             @click="navigate"
           >
@@ -26,7 +26,7 @@
       </li>
       <li>
         <ExternalLink
-          class="px-3 py-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
+          class="relative z-0 px-3 py-3 border-b-4 border-transparent border-solid the-nav-link bg-main hover:border-accent-primary"
           :href="`https://github.com/${$themeConfig.repo}`"
           label="Github"
         />
