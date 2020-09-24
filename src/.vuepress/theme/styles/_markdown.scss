@@ -47,7 +47,7 @@
   }
 
   h1, h2, h3 {
-    @apply relative;
+    @apply relative bg-main text-color;
 
     .header-anchor {
       @apply text-accent-primary absolute top-0 opacity-0 no-underline;
