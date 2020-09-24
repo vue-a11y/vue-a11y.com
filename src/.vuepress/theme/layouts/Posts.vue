@@ -12,8 +12,8 @@
       />
 
       <h1
-        class="pl-3 mt-2 mb-8 font-bold leading-10 lg:pl-6"
-        style="font-size: 2.5rem;"
+        class="pl-3 mt-2 mb-10 font-bold leading-10 lg:pl-6"
+        style="font-size: 2.6rem;"
       >
         Latest posts <span class="capitalize">{{ isCategory && $currentCategories ? `(${$currentCategories.key})` : '' }}</span>
       </h1>
