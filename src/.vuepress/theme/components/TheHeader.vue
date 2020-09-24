@@ -30,7 +30,11 @@
         class="flex items-center flex-grow-0 w-3/5 h-16 md:pl-4 lg:pl-0 md:pr-0 md:w-auto md:flex-grow"
         :class="{ 'w-4/5': !hasSidebar }"
       >
-        <form class="w-full lg:pl-10">
+        <form class="relative w-full lg:pl-10">
+          <vp-icon
+            name="search"
+            class="absolute z-20 ml-3 pin-c-y"
+          />
           <SearchBox
             role="search"
             class="w-full"

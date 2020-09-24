@@ -5,11 +5,13 @@
 div.search-box {
   input {
     @apply w-full py-5 pl-10 rounded-md;
+    background: none;
     background-color: var(--bg-input);
     border-color: var(--border-color);
+    color: var(--color);
+    font-size: 16px;
     left: 0;
-    background-image: url('~@/theme/assets/sprite/svg/search.svg');
-    background-position: 16px center;
+    z-index: 10;
 
     &:focus {
       outline: auto;
