@@ -47,5 +47,25 @@ module.exports = {
   variants: {
     margin: ['responsive', 'last']
   },
-  plugins: []
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.pin-c-x': {
+          left: '50%',
+          transform: 'translateX(-50%)'
+        },
+        '.pin-c-y': {
+          top: '50%',
+          transform: 'translateY(-50%)'
+        },
+        '.pin-c': {
+          top: '50%',
+          left: '50%',
+          transform: 'translate3d(-50%, -50%, 0)'
+        }
+      }
+
+      addUtilities(newUtilities)
+    }
+  ]
 }
