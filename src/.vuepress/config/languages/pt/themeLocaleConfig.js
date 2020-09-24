@@ -15,6 +15,7 @@ module.exports = {
   },
   newsletter: {
     title: 'Inscreva-se na newsletter',
+    label: 'Endereço de email',
     description: 'Digite seu email e receba artigos, vídeos, atualizações e eventos da comunidade Vue.js e acessibilidade.',
     textButton: 'Cadastrar'
   },
@@ -46,9 +47,6 @@ module.exports = {
     '/pt/receitas/': sidebar.receitas
   },
   a11y: {
-    newsletter: {
-      placeholder: 'Email para inscrição'
-    },
     codeSnippet: {
       copy: {
         text: 'Copiar',

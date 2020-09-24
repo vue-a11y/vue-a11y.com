@@ -11,8 +11,11 @@
         class="ml-2"
       />
 
-      <h1 class="pl-3 mt-2 mb-12 text-5xl font-bold leading-10 lg:pl-6">
-        Latest posts <span class="capitalize">{{ isCategory ? `(${$currentCategories.key})` : '' }}</span>
+      <h1
+        class="pl-3 mt-2 mb-8 font-bold leading-10 lg:pl-6"
+        style="font-size: 2.5rem;"
+      >
+        Latest posts <span class="capitalize">{{ isCategory && $currentCategories ? `(${$currentCategories.key})` : '' }}</span>
       </h1>
 
       <ul class="flex flex-wrap justify-between w-full px-3 lg:pr-6 lg:pl-0 lg:ml-6 xl:pr-0">

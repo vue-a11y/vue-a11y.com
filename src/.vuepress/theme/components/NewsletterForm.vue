@@ -9,9 +9,9 @@
   >
     <label
       :for="emailLabel"
-      class="flex flex-1"
+      class="flex flex-wrap flex-1"
     >
-      <span class="sr-only">{{ $themeLocaleConfig.a11y.newsletter.placeholder }}</span>
+      <span class="block w-full pb-2 text-base font-bold">{{ $themeLocaleConfig.newsletter.label }}</span>
       <input
         :id="emailLabel"
         ref="emailField"
@@ -21,13 +21,12 @@
         required
         autocomplete="email"
         class="w-full p-4 border border-solid rounded-md outline-none bg-main newsletter-form-input c-border-color hover:border-accent-primary focus:border-accent-primary"
-        :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
       >
     </label>
     <slot name="button">
       <button
         type="submit"
-        class="-ml-2 text-black btn btn-accent newsletter-form-btn"
+        class="self-end -ml-2 text-black btn btn-accent newsletter-form-btn"
       >
         {{ $themeLocaleConfig.newsletter.textButton }}
       </button>

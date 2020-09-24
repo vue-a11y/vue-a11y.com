@@ -15,6 +15,7 @@ module.exports = {
   },
   newsletter: {
     title: 'Subscribe to the newsletter',
+    label: 'Email address',
     description: 'Enter your email address and receive articles, videos, updates and events from the Vue.js community and accessibility.',
     textButton: 'Subscribe'
   },
@@ -46,9 +47,6 @@ module.exports = {
     '/recipes/': sidebar.recipes
   },
   a11y: {
-    newsletter: {
-      placeholder: 'Email for subscription'
-    },
     codeSnippet: {
       copy: {
         text: 'Copy to clipboard',
