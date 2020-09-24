@@ -50,7 +50,7 @@
     @apply relative;
 
     .header-anchor {
-      @apply text-accent absolute top-0 opacity-0 no-underline;
+      @apply text-accent-primary absolute top-0 opacity-0 no-underline;
       position: absolute;
       left: -30px;
       padding-right: 4px;
@@ -70,21 +70,17 @@
 
   p, h2, h3 {
     code {
-      @apply font-bold border border-solid p-1 text-lg;
-      background-color: var(--bg-hover-sidebar);
-      border-color: var(--border-color);
+      @apply font-bold border border-solid p-1 text-lg bg-secondary c-border-color;
     }
   }
 
   a:not(.header-anchor) {
-    @apply relative inline-block;
+    @apply relative inline-block bg-primary;
     text-decoration: underline;
     text-decoration-color: var(--accent);
-    background-color: var(--bg-secondary);
 
     &:hover {
-      border-color: var(--color);
-      background-color: var(--bg-hover-sidebar);
+      @apply border-color bg-secondary;
     }
 
     .icon.outbound {
@@ -101,8 +97,7 @@
   }
 
   kbd {
-    @apply text-xl border border-solid border-accent p-1;
-    background-color: var(--bg-secondary);
+    @apply text-xl border border-solid border-accent-primary p-1 bg-primary;
     box-shadow: 2.5px 2.5px 0 var(--accent);
   }
 
@@ -117,7 +112,7 @@
   }
 
   ul li:before {
-    @apply text-accent font-bold inline-block;
+    @apply text-accent-primary font-bold inline-block;
     content: "•";
     width: 1em;
     margin-left: -2em;
@@ -131,33 +126,32 @@
   }
 
   table {
-    border: 1px solid var(--bg-secondary);
+    border: 1px solid var(--primary);
     border-collapse: collapse;
     border-spacing: 0;
 
     thead {
       tr {
-        background-color: var(--border-color);
+        @apply c-border-color;
       }
     }
 
     tbody {
       tr {
         &:hover {
-          background-color: var(--bg-secondary);
+          @apply bg-primary;
         }
       }
     }
 
     td, th {
-      border: 1px solid var(--bg-secondary);
+      border: 1px solid var(--primary);
       padding: .375em .75em;
     }
   }
 
   hr {
-    @apply border;
-    border-color: var(--border-color);
+    @apply border c-border-color;
   }
 
   video, audio {

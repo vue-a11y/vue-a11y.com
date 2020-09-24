@@ -129,7 +129,7 @@ export default {
 
   &-logo--bg {
     @media (min-width: theme('screens.lg')) {
-      background-image: var(--bg-left);
+      @apply bg-page-gradient-left;
     }
   }
 

@@ -4,14 +4,8 @@
 
 div.search-box {
   input {
-    @apply w-full py-5 pl-10 rounded-md;
     background: none;
-    background-color: var(--bg-input);
-    border-color: var(--border-color);
-    color: var(--color);
-    font-size: 16px;
-    left: 0;
-    z-index: 10;
+    @apply w-full py-5 pl-10 rounded-md bg-secondary c-border-color text-color text-base left-0 z-10;
 
     &:focus {
       outline: auto;
@@ -54,13 +48,10 @@ ul.pagination {
   }
   
   li > a {
-    @apply px-5 py-2 text-xl;
-    background-color: var(--bg);
-    border-color: var(--border-color);
+    @apply px-5 py-2 text-xl bg-main c-border-color;
 
     &:hover {
-      background-color: var(--bg-secondary);
-      border-color: var(--border-color);
+      @apply bg-primary c-border-color;
     }
   }
 
@@ -68,8 +59,8 @@ ul.pagination {
     > a {
       opacity: .5;
       color: var(--color) !important;
-      background-color: var(--bg-secondary);
-      border-color: var(--bg-secondary);
+      background-color: var(--primary);
+      border-color: var(--primary);
     }
   }
 }

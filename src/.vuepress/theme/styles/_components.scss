@@ -7,9 +7,8 @@
     @apply relative;
 
     &:before {
-      @apply absolute z-20 border-l border-dashed;
+      @apply absolute z-20 border-l border-dashed c-border-color;
       content: '';
-      border-color: var(--border-color);
       width: 2px;
       left: 28px;
       top: -5%;
@@ -24,9 +23,8 @@
       @apply relative z-30 inline-block py-3 pl-10 pr-3 rounded-md border border-solid border-transparent;
 
       &:before {
-        @apply absolute rounded-full z-10;
+        @apply absolute rounded-full z-10 bg-secondary;
         content: '';
-        background-color: var(--bg-small-ball-toc);
         width: 6px;
         height: 6px;
         left: 10px;
@@ -35,10 +33,10 @@
       }
 
       &:hover, &:focus, &.active {
-        background-color: var(--bg-secondary);
+        @apply bg-primary;
 
         &:before {
-          background-color: var(--accent);
+          @apply bg-accent-primary;
         }
       }
     }
@@ -64,14 +62,11 @@
   border-bottom-width: 6px;
 
   &-light {
-    background-color: var(--bg-secondary);
-    border-color: var(--border-color);
+    @apply bg-primary c-border-color;
   }
 
   &-accent {
-    @apply bg-accent;
-    color: var(--accent-text-button);
-    border-color: theme('colors.accentDark');
+    @apply bg-accent-primary border-accent-secondary text-gray-900;
   }
 }
 
@@ -93,7 +88,7 @@
     border-bottom-width: 4px;
 
     &-success {
-      @apply visible bg-green-200 text-green-900 border-accentDark;
+      @apply visible bg-green-200 text-green-900 border-accent-secondary;
     }
 
     &-error {

@@ -4,40 +4,33 @@
 
   // Background and Colors
   --bg: white;
-  --bg-secondary: theme('colors.light.200');
-  --bg-hover-sidebar: theme('colors.light.400');
   --color: theme('colors.gray.800');
-  --accent: theme('colors.accent');
-  --accent-text-button: #171717;
-  --bg-code-block: theme('colors.dark.700');
-  --bg-header-code: theme('colors.dark.900');
-  --bg-left: linear-gradient(90deg, var(--bg-secondary) calc(100% - 13px), transparent 13px);
-  --bg-input: theme('colors.light.400');
-  --bg-btn-light: var(--bg-secondary);
-  --bg-input-news: var(--bg);
-  --bg-small-ball-toc: var(--bg-hover-sidebar);
+  --accent: #41B883;
+  --accent-secondary:#45A278;
+  --primary: #FBFCFC;
+  --secondary: #eef5f5;
+  --sidebar: linear-gradient(90deg, var(--primary) calc(100% - 13px), transparent 13px);
+  --bg-code-block: #212529;
+  --bg-header-code:#12181E;
+  --color-social-icons: var(--color);
 
-  // Border
-  --border-color: theme('colors.light.400');
-  --border-outline: var(--color);
-
-  // Custom blocks
-  --color-text-custom-block: theme('colors.gray.800');
-  --bg-custom-block-tip: var(--bg-secondary);
+  --bg-custom-block-tip: var(--primary);
   --border-color-custom-block-tip: var(--accent);
   --bg-custom-block-warning: #f8f0e3;
   --border-color-custom-block-warning: #f8e1bb;
   --bg-custom-block-danger: #ffece9;
   --border-color-custom-block-danger: #ffc4bb;
 
-  // icons
-  --color-social-icons: theme('colors.gray.800');
+  // Ver como resolver isso para as configurações
+  --border-color: var(--secondary);
+  --bg-input: var(--bg);
 
   // Font
   --rf-open-dyslexic: OpenDyslexic, sans-serif;
   --rf-monospace: Consolas, monospace, Courier;
   --rf-serif: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
-
+  
+  // Color contrast
   body.set-color-contrast {
     --border-color: theme('colors.gray.500');
     --bg-input: white;
@@ -45,54 +38,45 @@
 }
 
 html.mode-dark {
-  --bg: theme('colors.dark.900');
-  --bg-secondary: theme('colors.dark.700');
-  --bg-hover-sidebar: theme('colors.dark.500');
-  --bg-header-code: theme('colors.dark.500');
-  --accent: theme('colors.accent');
+  // Background and Colors
+  --bg: #12181E;
   --color: theme('colors.gray.300');
-  --bg-input: theme('colors.dark.700');
+  --accent: #41B883;
+  --primary:#212529;
+  --secondary: #2E3134;
+  --color-social-icons: var(--accent-secondary);
 
   // Custom blocks
-  --bg-custom-block-tip: var(--bg-secondary);
+  --bg-custom-block-tip: var(--primary);
   --border-color-custom-block-tip: var(--accent);
-  --bg-custom-block-warning: var(--bg-secondary);
+  --bg-custom-block-warning: var(--primary);
   --border-color-custom-block-warning: #f8e1bb;
-  --bg-custom-block-danger: var(--bg-secondary);
+  --bg-custom-block-danger: var(--primary);
   --border-color-custom-block-danger: #ffc4bb;
 
-  // Border
-  --border-color: theme('colors.dark.500');
-
-  // icons
-  --color-social-icons: var(--accent);
-
+  // Color contrast
   body.set-color-contrast {
     --border-color: theme('colors.gray.700');
-    --bg-input: theme('colors.dark.900');
   }
 }
 
 
 html.mode-sepia {
-  --bg: theme('colors.sepia.200');
-  --bg-secondary: theme('colors.sepia.400');
-  --bg-hover-sidebar: theme('colors.sepia.600');
-  --accent: theme('colors.accent');
-  --color: theme('colors.sepia.text');
-  --bg-input: theme('colors.sepia.400');
+  --bg:  #F1E7D0;
+  --color: #473742;
+  --accent: #41B883;
+  --primary: #EBDDBF;
+  --secondary: #E3D2AC;
+  --bg-input: var(--primary);
 
   // Custom blocks
-  --bg-custom-block-tip: theme('colors.light.200');
+  --bg-custom-block-tip: #F1E7D0;
   --border-color-custom-block-tip: var(--accent);
   --bg-custom-block-warning: #f8e1bb;
   --border-color-custom-block-warning: theme('colors.yellow.600');
 
-  // Border
-  --border-color: theme('colors.sepia.600');
-
+  // Color contrast
   body.set-color-contrast {
-    --border-color: theme('colors.sepia.800');
-    --bg-input: theme('colors.sepia.200');
+    --border-color: #BEAA7F;
   }
 }

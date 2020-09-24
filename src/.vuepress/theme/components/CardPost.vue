@@ -88,7 +88,7 @@ export default {
 <style lang="scss">
 .card-post {
   &:hover, &:focus-within {
-    @apply border-accent;
+    @apply border-accent-primary;
 
     .card-post-title > a {
       text-decoration-color: var(--color);

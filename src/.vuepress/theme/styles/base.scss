@@ -5,7 +5,6 @@
 @import './components';
 @import './override';
 @import './custom-blocks';
-@import './utility';
 
 body {
   @apply antialiased;
@@ -69,8 +68,7 @@ hr {
 }
 
 .box-default {
-  @apply border border-solid rounded-md;
-  background-color: var(--bg-secondary);
+  @apply border border-solid rounded-md bg-primary;
   border-bottom-width: 6px;
   border-color: var(--border-color);
 }

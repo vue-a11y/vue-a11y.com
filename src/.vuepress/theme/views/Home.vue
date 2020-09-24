@@ -144,7 +144,7 @@ export default {
       left: -2%;
       width: 54%;
       height: 66%;
-      background-color: var(--bg-secondary);
+      background-color: var(--primary);
     }
   }
 }

@@ -6,26 +6,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#41B883',
-        accentDark: '#45A278',
-        light: {
-          200: '#FBFCFC',
-          400: '#EEF5F5',
-          600: '#E6EEEE'
+        color: 'var(--color)',
+        main: 'var(--bg)',
+        accent: {
+          primary: 'var(--accent)',
+          secondary: 'var(--accent-secondary)'
         },
-        sepia: {
-          text: '#473742',
-          200: '#F1E7D0',
-          400: '#EBDDBF',
-          600: '#E3D2AC',
-          800: '#BEAA7F'
-        },
-        dark: {
-          500: '#2E3134',
-          700: '#212529',
-          900: '#12181E'
-        }
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)'
       },
+      backgroundImage: () => ({
+        'page-gradient-left': 'var(--sidebar)'
+      }),
       fontSize: {
         22: '1.375rem'
       },
@@ -62,6 +54,15 @@ module.exports = {
           top: '50%',
           left: '50%',
           transform: 'translate3d(-50%, -50%, 0)'
+        },
+        '.c-border-color': {
+          borderColor: 'var(--border-color)'
+        },
+        '.c-bg-input': {
+          backgroundColor: 'var(--bg-input)'
+        },
+        '.c-bg-secondary': {
+          backgroundColor: 'var(--bg-secondary)'
         }
       }
 

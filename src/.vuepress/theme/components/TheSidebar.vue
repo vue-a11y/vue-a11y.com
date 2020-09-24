@@ -109,10 +109,10 @@ export default {
       margin-top: 1px;
       > a:focus, > a:hover, > a.active {
         position: relative;
-        background-color: var(--bg-hover-sidebar);
+        background-color: var(--secondary);
 
         &:before {
-          @apply absolute top-0 right-0 h-full bg-accent;
+          @apply absolute top-0 right-0 h-full bg-accent-primary;
           content: '';
           width: 6px;
         }

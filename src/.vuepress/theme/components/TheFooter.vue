@@ -1,6 +1,6 @@
 <template>
   <footer class="relative z-10 footer">
-    <div class="flex justify-center w-full px-4 py-24 border border-solid lg:py-32 c-bg-secondary c-border-color">
+    <div class="flex justify-center w-full px-4 py-24 border border-solid lg:py-32 bg-primary c-border-color">
       <div class="max-w-md">
         <div class="flex justify-center">
           <vp-icon
@@ -26,7 +26,7 @@
           >
             <a
               :href="social.link"
-              class="block p-5 border border-solid rounded-full c-border-color btn-social"
+              class="block p-5 border border-solid rounded-full c-border-color bg-main hover:border-accent-primary"
               target="_blank"
               rel="me noopener"
             >
@@ -58,9 +58,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.btn-social {
-  background-color: var(--bg);
-}
-</style>

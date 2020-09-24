@@ -6,7 +6,7 @@
     aria-label="Webmention"
   >
     <h2 class="text-2xl font-bold">
-      ({{ webmentions.length }}) Webmentions<span class="text-accent">.</span>
+      ({{ webmentions.length }}) Webmentions<span class="text-accent-primary">.</span>
     </h2>
 
     <div class="my-12 webmentions-interact">
@@ -20,7 +20,7 @@
         >
           <vp-icon
             name="like"
-            class="mr-1 text-accent"
+            class="mr-1 text-accent-primary"
           />
           <span class="ml-2 uppercase">Likes</span>
         </div>
@@ -64,7 +64,7 @@
         >
           <vp-icon
             name="share"
-            class="mr-1 text-accent"
+            class="mr-1 text-accent-primary"
           />
           <span class="ml-2 uppercase">Reposts</span>
         </div>
@@ -104,7 +104,7 @@
 
     <div class="mt-24 webmentions-comments">
       <h3 class="mb-12 text-xl">
-        <span class="text-2xl font-bold">Comments <span class="text-accent">.</span></span>
+        <span class="text-2xl font-bold">Comments <span class="text-accent-primary">.</span></span>
       </h3>
       <ul
         v-if="mentions.length"
@@ -281,7 +281,7 @@ export default {
       }
 
       a {
-        @apply text-accent;
+        @apply text-accent-primary;
       }
     }
   }

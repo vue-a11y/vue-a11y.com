@@ -87,9 +87,8 @@ export default {
 }
 
 .sidebar-wrapper {
-  @apply fixed invisible opacity-0 bottom-0;
+  @apply fixed invisible opacity-0 bottom-0 bg-page-gradient-left;
   left: -100%;
-  background-image: var(--bg-left);
   transition: visibility .3s, opacity .3s, left .3s;
 
   &-show {

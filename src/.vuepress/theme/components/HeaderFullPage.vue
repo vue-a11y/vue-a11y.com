@@ -38,7 +38,7 @@ export default {
   }
 
   > div:first-child {
-    background: var(--bg-secondary);
+    @apply bg-primary;
     background: radial-gradient(circle at center, var(--accent) 10%, transparent 12%), transparent;
     background-size: 40px 40px;
   }

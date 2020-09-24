@@ -7,7 +7,7 @@
       v-if="$themeConfig.editLinks"
       :href="editLink"
       :label="$themeLocaleConfig.editLinkText"
-      class="mb-4 border-b-2 border-accent"
+      class="mb-4 border-b-2 border-accent-primary"
     />
     <div
       v-if="$themeConfig.lastUpdated"

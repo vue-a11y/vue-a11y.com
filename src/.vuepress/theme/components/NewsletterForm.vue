@@ -20,7 +20,7 @@
         type="email"
         required
         autocomplete="email"
-        class="w-full p-4 border border-solid rounded-md outline-none newsletter-form-input c-border-color hover:border-accent focus:border-accent"
+        class="w-full p-4 border border-solid rounded-md outline-none bg-main newsletter-form-input c-border-color hover:border-accent-primary focus:border-accent-primary"
         :placeholder="$themeLocaleConfig.a11y.newsletter.placeholder"
       >
     </label>
@@ -87,7 +87,6 @@ export default {
 .newsletter-form {
   &-input {
     border-bottom-width: 6px;
-    background-color: var(--bg-input-news);
   }
 
   &-btn {

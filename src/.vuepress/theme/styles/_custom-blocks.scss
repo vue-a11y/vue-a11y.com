@@ -2,13 +2,11 @@
   @apply relative w-full;
   
   &[data-type="bq"] {
-    @apply p-10 border-b border-solid rounded-md;
-    background-color: var(--bg-secondary);
+    @apply p-10 border-b border-solid rounded-md c-border-color bg-primary;
     border-bottom-width: 6px;
-    border-color: var(--border-color);
 
     &:before {
-      @apply absolute text-accent border-none;
+      @apply absolute text-accent-primary border-none;
       content: '“';
       top: -70px;
       left: -20px;
@@ -46,10 +44,8 @@
 .custom-block.alert {
   @apply px-6 pt-5 pb-4;
   &[data-alert] {
-    @apply border border-solid rounded-md;
+    @apply border border-solid rounded-md c-border-color bg-primary;
     border-bottom-width: 6px;
-    background-color: var(--bg-secondary);
-    border-color: var(--border-color);
     > .custom-block-title {
       @apply uppercase font-bold text-base block mb-2;
     }
