@@ -6,8 +6,8 @@
           <h1 class="text-4xl font-bold">
             {{ $title }}
           </h1>
-          <p>
-            <span class="text-xl">{{ $description }}</span>
+          <p class="text-xl">
+            {{ $description }}
           </p>
           <div class="flex mt-10">
             <RouterLink

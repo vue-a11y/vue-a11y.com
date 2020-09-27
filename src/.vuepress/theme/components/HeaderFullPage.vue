@@ -10,9 +10,7 @@
         <slot name="cardTitle" />
       </h1>
 
-      <p>
-        <slot />
-      </p>
+      <slot />
 
       <div class="card-info">
         <slot name="cardFooter" />

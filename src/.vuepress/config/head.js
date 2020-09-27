@@ -1,6 +1,5 @@
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
-  ['meta', { charset: 'utf-8' }],
   ['meta', { name: 'application-name', content: 'Vue A11y' }],
   ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: 'Vue.js community effort to improve web accessibility.' }],

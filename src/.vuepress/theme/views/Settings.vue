@@ -10,10 +10,10 @@
         <template v-slot:cardTitle>
           {{ $frontmatter.title }}
         </template>
-        <div class="mt-3 text-xl">
+        <p class="mt-3 text-xl">
           {{ $frontmatter.description }} <br>
           {{ $frontmatter.note }}
-        </div>
+        </p>
       </HeaderFullPage>
 
       <div class="mt-20 mb-24 md:px-6">
