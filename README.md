@@ -6,7 +6,13 @@ Contributions are welcome!
 
 ```shell
 git clone https://github.com/vue-a11y/website.git vue-a11y
+
+cd vue-a11y
+
 npm install
+
+cp .env.example .env
+
 npm run dev
 ```
 
