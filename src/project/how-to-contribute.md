@@ -56,8 +56,7 @@ Your support is very important so that we can devote more time to creating conte
 We have separated some rewards for our Open Collective supporters.
 <br>
 <a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial; width: 300px;">
-  <span class="sr-only">Donate to our collective (opens in a new tab)</span>
-  <img aria-hidden="true" src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="" />
+  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="Donate to our collective (opens in a new tab)" />
 </a>
 </p>
 
