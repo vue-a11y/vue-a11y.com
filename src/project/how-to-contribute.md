@@ -13,7 +13,7 @@ If you are willing to develop, there is no mystery, just open a Pull Request fol
 This website uses Vuepress, TailwindCSS, and Composition API. 
 
 ::: alert tip
-Try to follow the official style guide for Vue.js as much as possible.
+Try to follow the [official style guide for Vue.js](https://vuejs.org/v2/style-guide/) as much as possible.
 :::
 
 ## Writing

@@ -13,7 +13,7 @@ Se você estiver disposto a desenvolver, não tem nenhum mistério, basta abrir 
 O site usa [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), e [Composition API](https://composition-api.vuejs.org/). 
 
 ::: alert tip
-Tente seguir ao máximo o guia de estilos oficial para Vue.
+Tente seguir ao máximo o [guia de estilos oficial para Vue](https://vuejs.org/v2/style-guide/).
 :::
 
 ## Escrevendo
