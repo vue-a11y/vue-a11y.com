@@ -10,7 +10,7 @@ Para contribuir no desenvolvimento do site, você pode inicialmente abrir uma is
 
 Se você estiver disposto a desenvolver, não tem nenhum mistério, basta abrir um Pull Request seguindo o template.
 
-O site usa [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), e [Composition API](https://composition-api.vuejs.org/). 
+O site usa [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), e [Vue composition API](https://composition-api.vuejs.org/). 
 
 ::: alert tip
 Tente seguir ao máximo o [guia de estilos oficial para Vue](https://vuejs.org/v2/style-guide/).

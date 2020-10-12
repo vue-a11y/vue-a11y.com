@@ -10,7 +10,7 @@ To contribute to the development of the site, you can initially open an issue on
 
 If you are willing to develop, there is no mystery, just open a Pull Request following the template.
 
-This website uses Vuepress, TailwindCSS, and Composition API. 
+This website uses [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), and [Vue composition API](https://composition-api.vuejs.org/). 
 
 ::: alert tip
 Try to follow the [official style guide for Vue.js](https://vuejs.org/v2/style-guide/) as much as possible.
