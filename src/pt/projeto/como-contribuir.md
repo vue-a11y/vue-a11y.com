@@ -23,8 +23,8 @@ Nós iremos adorar saber sua ideia de conteúdo, então o primeiro passo é abri
 Você pode abrir uma issue para:
 
 - [New Post/Article](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Post&template=new-post.md&title=Post%2FArticle%3A+%5BYour+title%5D)
-- [New Widget (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new/choose)
-- [New Tip (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new/choose)
+- [New Widget (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Widget&template=new-widget.md&title=Recipe%28widget%29%3A+%5BYour+title%5D)
+- [New Tip (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Tip&template=new-tip.md&title=Recipe%28Tip%29%3A+%5BYour+title%5D)
 
 Nós também temos uma [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) com diversas ideias de conteúdo, fique a vontade também para adicionar outros assuntos que você quer ver em forma de conteúdo no site.
 
