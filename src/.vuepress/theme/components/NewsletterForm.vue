@@ -20,7 +20,7 @@
         type="email"
         required
         autocomplete="email"
-        class="w-full p-4 border border-solid rounded-md outline-none bg-main newsletter-form-input c-border-color hover:border-accent-primary focus:border-accent-primary"
+        class="w-full p-3 text-xl border border-solid rounded-md outline-none bg-main newsletter-form-input c-border-color hover:border-accent-primary focus:border-accent-primary"
       >
     </label>
     <slot name="button">

@@ -18,9 +18,9 @@
         <button
           slot="button"
           type="submit"
-          class="flex items-center justify-center w-12 px-2 ml-2"
+          class="flex items-center self-end justify-center w-12 px-2 py-4 ml-2"
+          :aria-label="$themeLocaleConfig.newsletter.textButton"
         >
-          <span class="sr-only">{{ $themeLocaleConfig.newsletter.textButton }}</span>
           <vp-icon
             name="send"
             size="30"
