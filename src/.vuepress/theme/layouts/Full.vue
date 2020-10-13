@@ -1,6 +1,6 @@
 <template>
   <div class="full-layout">
-    <TheHeader />
+    <TheHeader class="md:px-4" />
     <TheMain>
       <slot>
         <component :is="$frontmatter.view || 'Home'" />

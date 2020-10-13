@@ -14,7 +14,7 @@
       itemprop="sameAs"
       :content="social.link"
     >
-    <div class="flex flex-wrap w-full px-0">
+    <div class="flex flex-wrap w-full">
       <div
         class="flex items-center justify-end w-1/5 h-16 md:pl-0 md:w-1/12 lg:w-3/12"
         :class="{'header-logo--bg': bgSidebar, 'container-layout-pl lg:w-2/7': hasSidebar }"
@@ -27,16 +27,15 @@
         class="flex items-center flex-grow-0 w-3/5 h-16 md:pl-4 lg:pl-0 md:pr-0 md:w-auto md:flex-grow"
         :class="{ 'w-4/5': !hasSidebar }"
       >
-        <form class="relative w-full lg:pl-10">
-          <vp-icon
-            name="search"
-            class="absolute z-20 ml-3 pin-c-y"
+        <div
+          class="w-full"
+          :class="{ 'md:ml-8': hasSidebar }"
+        >
+          <AlgoliaSearch
+            v-if="isAlgoliaSearch"
+            :options="$themeConfig.algolia"
           />
-          <SearchBox
-            role="search"
-            class="w-full"
-          />
-        </form>
+        </div>
       </div>
       <div
         v-if="hasSidebar"
@@ -71,14 +70,14 @@ import { watch, computed } from '@vue/composition-api'
 
 import Logo from '@/theme/components/Logo'
 import TheNavigation from '@/theme/components/TheNavigation'
-import SearchBox from '@SearchBox'
+// import SearchBox from '@SearchBox'
 
 export default {
   name: 'TheHeader',
 
   components: {
     Logo,
-    SearchBox,
+    // SearchBox,
     TheNavigation
   },
 
@@ -102,10 +101,12 @@ export default {
   setup (props, { root, emit }) {
     const labels = root.$themeLocaleConfig.a11y.labels
     const menuButtonAriaLabel = labels.menuButton ? computed(() => props.isSidebarOpen ? labels.menuButton.close : labels.menuButton.open) : 'Menu sidebar button'
+    const isAlgoliaSearch = computed(() => root.$themeConfig.algolia && root.$themeConfig.algolia.indexName && root.$themeConfig.algolia.apiKey)
 
     watch(() => root.$route.fullPath, () => props.isSidebarOpen && emit('toggle-sidebar'))
 
     return {
+      isAlgoliaSearch,
       menuButtonAriaLabel
     }
   }

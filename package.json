@@ -58,6 +58,8 @@
     "vuepress-plugin-canonical": "^1.0.0"
   },
   "dependencies": {
+    "@docsearch/css": "^1.0.0-alpha.28",
+    "@docsearch/js": "^1.0.0-alpha.28",
     "@vue-a11y/announcer": "^2.1.0",
     "@vue-a11y/dark-mode": "^1.1.1",
     "@vue-a11y/focus-loop": "^0.1.2",

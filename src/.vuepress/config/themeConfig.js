@@ -7,6 +7,10 @@ module.exports = {
   searchPlaceholder: 'Search (Press "s" to focus)',
   url: process.env.URL_BASE,
   mailchimp: process.env.MAILCHIMP_ENDPOINT,
+  algolia: {
+    indexName: 'vue-a11y',
+    apiKey: process.env.ALGOLIA_KEY
+  },
   webmentions: {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
