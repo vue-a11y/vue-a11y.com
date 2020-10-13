@@ -14,10 +14,7 @@
       itemprop="sameAs"
       :content="social.link"
     >
-    <div
-      class="flex flex-wrap w-full px-0"
-      :class="{ 'px-4': !hasSidebar }"
-    >
+    <div class="flex flex-wrap w-full px-0">
       <div
         class="flex items-center justify-end w-1/5 h-16 md:pl-0 md:w-1/12 lg:w-3/12"
         :class="{'header-logo--bg': bgSidebar, 'container-layout-pl lg:w-2/7': hasSidebar }"
