@@ -3,8 +3,8 @@
     :href="anchor"
     class="fixed bottom-0 right-0 z-10 p-6 mb-10 mr-16"
     :class="{ 'block': show, 'hidden': !show }"
+    :aria-label="$themeLocaleConfig.backToTopText"
   >
-    <span class="sr-only">{{ $themeLocaleConfig.backToTopText }}</span>
     <vp-icon
       name="back-to-top"
       size="24"
