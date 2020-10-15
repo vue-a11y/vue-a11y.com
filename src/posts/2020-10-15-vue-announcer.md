@@ -20,7 +20,7 @@ This is why WAI (W3C's Web Accessibility Initiative) established a concept calle
 - The first is dubbed "polite" and is exactly that. Just like a polite human being does not interrupt you mid-sentence in a dialogue only because they have something to say, a polite live region waits until the currently active announcements have finished. Remember: "currently active" has most of the time something to do with the position of the virtual cursor in the DOM.
 - The second one is more suitable for error messages and really important things. If your house is on fire, a polite person that waits for their turn in the dialogue, but to then yell "GET OUT! THERE'S A FIRE!" would be really inappropriate considering the emergency. This type of live region is called an "assertive" one, and it interrupts the screen reader right away.
 
-Vue Announcer offers a way to elegantly use these live region in your Vue application.
+[Vue Announcer offers a way to elegantly use these live region in your Vue application](https://github.com/vue-a11y/vue-announcer).
 
 You can install it with npm (`npm install -S @vue-a11y/announcer`) or yarn (`yarn add @vue-a11y/announcer`). To include it in your app, import it and register it as a Vue plugin:
 
