@@ -12,13 +12,13 @@
           <div class="flex mt-10">
             <RouterLink
               :to="$frontmatter.actionLink"
-              class="btn btn-accent"
+              class="text-lg md:text-xl btn btn-accent"
             >
               {{ $frontmatter.actionText }}
             </RouterLink>
 
             <ExternalLink
-              class="ml-4 btn btn-light"
+              class="ml-4 text-lg md:text-xl btn btn-light"
               :href="`https://github.com/${$themeConfig.repo}`"
               label="Github"
             />
