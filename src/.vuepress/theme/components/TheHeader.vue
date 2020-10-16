@@ -121,7 +121,7 @@ export default {
   }
 
   @media (max-width: theme('screens.lg')) {
-    @apply px-3;
+    @apply pl-1 pr-3;
   }
 
   &-logo--bg {
