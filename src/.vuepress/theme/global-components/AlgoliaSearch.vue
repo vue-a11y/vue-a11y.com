@@ -129,4 +129,8 @@ export default {
 .DocSearch-Button {
   @apply w-full p-5 m-0 rounded-md #{!important};
 }
+
+span.DocSearch-Button-Placeholder, span.DocSearch-Button-Key {
+  display: flex;
+}
 </style>
