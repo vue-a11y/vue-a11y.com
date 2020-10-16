@@ -3,7 +3,8 @@ title: 'Using Vue Announcer'
 description: Silence isn't always golden in web apps
 summary: Vue Announcer provides an easy way to really tell what’s going on in your application to people using screen readers.
 
-categories: [aria, liveregions, screenreader,< spa, html]
+categories: [aria, html, spa]
+tags: [live-regions, screen-reader]
 author: marcus-herrmann
 
 date: 2020-10-15 18:20:34
@@ -24,7 +25,7 @@ This is why WAI (W3C's Web Accessibility Initiative) established a concept calle
 
 You can install it with npm (`npm install -S @vue-a11y/announcer`) or yarn (`yarn add @vue-a11y/announcer`). To include it in your app, import it and register it as a Vue plugin:
 
-```
+```js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
 
@@ -34,7 +35,7 @@ Vue.use(VueAnnouncer)
 
 The first step of using it is to add `<VueAnnouncer />` into your `App.vue`, for example like this:
 
-```
+```vue
 <template>
   <div>
     <VueAnnouncer /> <!-- You can place it anywhere in your application -->
