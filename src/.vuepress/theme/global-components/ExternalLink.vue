@@ -4,7 +4,7 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    {{ label }}
+    <span class="mr-1">{{ label }}</span>
     <span class="sr-only">({{ $themeLocaleConfig.externalLinkText }})</span>
     <OutboundLink />
   </a>

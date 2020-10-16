@@ -4,7 +4,7 @@
       has-sidebar
       bg-sidebar
       :is-sidebar-open="isSidebarOpen"
-      class="relative z-10"
+      class="relative"
       @toggle-sidebar="toggleSidebar"
     />
 
@@ -96,7 +96,7 @@ export default {
   }
 
   @media (max-width: theme('screens.md')) {
-    height: calc(100vh - 129px);
+    height: calc(100vh - 118px);
   }
 
   @screen md {
