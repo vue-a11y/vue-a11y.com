@@ -22,10 +22,12 @@ if (process.env.NODE_ENV !== 'development') {
         'mode-dark',
         'mode-sepia',
         'icon',
-        'outbound'
+        'outbound',
+        'DocSearch'
       ],
       whitelistPatterns: [
-        /set-/
+        /set-/,
+        /DocSearch-/
       ],
       whitelistPatternsChildren: [
         /content__default$/,
