@@ -2,18 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://vue-a11y.com</id>
     <title></title>
-    <updated>2020-10-15T19:50:02.747Z</updated>
+    <updated>2020-10-16T04:49:43.843Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://vue-a11y.com"/>
     <link rel="self" href="https://vue-a11y.com/feed.atom"/>
-    <entry>
-        <title type="html"><![CDATA[Post exemplo: Primeira postagem]]></title>
-        <id>https://vue-a11y.com/pt/posts/posts-de-teste/</id>
-        <link href="https://vue-a11y.com/pt/posts/posts-de-teste/">
-        </link>
-        <updated>2020-09-01T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Descrição do post de teste]]></summary>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Example post: The first post]]></title>
         <id>https://vue-a11y.com/posts/post-test/</id>
@@ -21,5 +13,13 @@
         </link>
         <updated>2020-09-01T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[Description test page]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Post exemplo: Primeira postagem]]></title>
+        <id>https://vue-a11y.com/pt/posts/posts-de-teste/</id>
+        <link href="https://vue-a11y.com/pt/posts/posts-de-teste/">
+        </link>
+        <updated>2020-09-01T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Descrição do post de teste]]></summary>
     </entry>
 </feed>
