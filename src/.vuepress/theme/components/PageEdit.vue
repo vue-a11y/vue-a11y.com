@@ -10,7 +10,7 @@
       class="mb-4 border-b-2 border-accent-primary"
     />
     <div
-      v-if="$themeConfig.lastUpdated"
+      v-if="$themeConfig.lastUpdated && $page.lastUpdated"
       class="last-update"
     >
       <span class="font-bold">
@@ -35,7 +35,7 @@ export default {
 
   setup (_, { root }) {
     const editLink = computed(() => `https://github.com/${root.$themeConfig.repo}/edit/${root.$themeConfig.docsBranch || 'master'}/${root.$themeConfig.docsDir || 'docs'}/${root.$page.relativePath}`)
-    const datetime = new Date(root.$page.lastUpdated).toISOString()
+    const datetime = root.$page.lastUpdated && new Date(root.$page.lastUpdated).toISOString()
 
     return {
       datetime,
