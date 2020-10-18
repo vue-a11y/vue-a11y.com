@@ -3,7 +3,7 @@
     ref="headerCodeSnippet"
     class="flex items-center justify-between w-full header-code"
   >
-    <div class="pl-6 text-base">
+    <div class="pl-6 text-sm">
       <slot />
     </div>
     <div class="flex">
@@ -98,6 +98,10 @@ export default {
 
   p {
     margin: 0;
+  }
+
+  + div[class*=language-] {
+    @apply mt-0;
   }
 }
 </style>
