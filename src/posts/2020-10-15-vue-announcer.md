@@ -25,6 +25,9 @@ This is why WAI (W3C's Web Accessibility Initiative) established a concept calle
 
 You can install it with npm (`npm install -S @vue-a11y/announcer`) or yarn (`yarn add @vue-a11y/announcer`). To include it in your app, import it and register it as a Vue plugin:
 
+::: headerCode
+main.js
+:::
 ```js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
@@ -35,6 +38,9 @@ Vue.use(VueAnnouncer)
 
 The first step of using it is to add `<VueAnnouncer />` into your `App.vue`, for example like this:
 
+::: headerCode
+App.vue
+:::
 ```vue
 <template>
   <div>
