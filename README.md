@@ -5,7 +5,7 @@ Vue-a11y community website
 Contributions are welcome!
 
 ```shell
-git clone https://github.com/vue-a11y/website.git vue-a11y
+git clone git@github.com:vue-a11y/vue-a11y.com.git vue-a11y
 
 cd vue-a11y
 
