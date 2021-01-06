@@ -2,36 +2,6 @@
   color: var(--color) !important;
 }
 
-div.search-box {
-  input {
-    background: none;
-    @apply w-full py-5 pl-10 rounded-md bg-secondary c-border-color text-color text-base left-0 z-10;
-
-    &:focus {
-      outline: auto;
-    }
-
-    &.focused {
-      @apply w-full left-0 #{!important};
-    }
-
-    &::placeholder {
-      color: var(--color) !important;
-    }
-  }
-
-  > ul {
-    @apply left-0 mt-4 z-50;
-    @screen lg {
-      @apply ml-8;
-    }
-    @screen xl {
-      @apply ml-16 #{!important};
-      width: 80% !important;
-    }
-  }
-}
-
 ul.pagination {
   .page-item {
     &.active > a {

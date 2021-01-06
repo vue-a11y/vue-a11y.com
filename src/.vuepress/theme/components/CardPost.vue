@@ -105,7 +105,7 @@ export default {
       text-decoration-line: underline;
       text-decoration-color: var(--accent);
       transition: text-decoration .2s;
-      outline: none;
+      outline: none !important;
     }
   }
 }

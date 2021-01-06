@@ -4,31 +4,23 @@
   padding-left: 0;
 }
 
-@media(prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 [tabindex]:not([tabindex="-1"]), a, button, input, select, textarea {
   position: relative;
   z-index: 2;
-  outline: 2px solid transparent;
+  outline-width: 3px !important;
+  outline-style: dotted !important;
+  outline-color: transparent;
   outline-offset: 6px;
   transition: outline-offset .1s ease;
 }
 
 *:focus {
   outline-color: var(--color);
-  outline-offset: 3px;
+  outline-offset: 2px !important;
 }
 
 [tabindex="-1"] {
-	outline: 0
+	outline: 0 !important;
 }
 
 .max-char {
@@ -40,6 +32,16 @@ input::placeholder {
 }
 
 body.set-reduce-motion {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {

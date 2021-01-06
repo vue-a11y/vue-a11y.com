@@ -75,5 +75,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@/theme/styles/base.scss"></style>
-<style src="@/theme/styles/tailwind.css"></style>
+<style lang="scss" src="@/theme/styles/index.scss"></style>

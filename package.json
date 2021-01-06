@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/vue-a11y/website#readme",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.1.3",
     "@goy/vuepress-plugin-svg-icons": "^4.2.1",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vuepress/plugin-blog": "^1.9.2",
@@ -53,8 +53,10 @@
     "eslint-plugin-vuejs-accessibility": "^0.4.0",
     "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
+    "postcss": "^7.0.35",
     "sass-loader": "^9.0.3",
-    "vuepress": "^1.5.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "vuepress": "^1.8.0",
     "vuepress-plugin-canonical": "^1.0.0"
   },
   "dependencies": {
@@ -66,7 +68,6 @@
     "@vue-a11y/skip-to": "^2.1.2",
     "@vue/composition-api": "^1.0.0-beta.11",
     "@vueuse/core": "^4.0.0-beta.9",
-    "tailwindcss": "^1.7.6",
     "vue-disqus": "^4.0.1"
   }
 }

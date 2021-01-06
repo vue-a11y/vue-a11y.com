@@ -122,7 +122,7 @@
   }
 
   .table-wrapper {
-    @apply w-full overflow-x-auto whitespace-no-wrap;
+    @apply w-full overflow-x-auto whitespace-nowrap;
     @screen lg {
       @apply whitespace-normal;
     }

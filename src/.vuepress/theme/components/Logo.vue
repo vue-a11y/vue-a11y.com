@@ -7,7 +7,7 @@
       src="/vue-a11y-logo.svg"
       alt="Vue A11y logo"
     >
-    <span class="font-bold sr-only text-22 lg:ml-2 lg:not-sr-only ">Vue A11y</span>
+    <span class="hidden font-bold text-22 lg:ml-2 lg:block">Vue A11y</span>
   </RouterLink>
 </template>
 
