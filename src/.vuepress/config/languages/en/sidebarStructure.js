@@ -13,7 +13,6 @@ module.exports = {
       title: 'Accessibility',
       children: [
         'resources',
-        'tools-testing',
         'vue-a11y-checklist'
       ]
     },
