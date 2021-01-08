@@ -35,11 +35,8 @@ hr {
 }
 
 .container {
+  @apply px-4;
   transition: max-width .5s;
-
-  @media (min-width: 1366px) {
-    max-width: 1366px !important;
-  }
 }
 
 .container-layout {

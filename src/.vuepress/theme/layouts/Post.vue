@@ -1,7 +1,7 @@
 <template>
   <Full>
     <div
-      class="container z-10 mx-auto post-page"
+      class="z-10 post-page"
       itemscope
       itemtype="https://schema.org/Blog"
     >
@@ -9,94 +9,98 @@
         itemscope
         itemprop="blogPost"
         itemtype="https://schema.org/BlogPosting"
-        class="px-6 pb-24 mt-6 mb-24 xl:px-4"
+        class="pb-24 mb-24"
       >
         <meta
           itemprop="mainEntityOfPage"
           :content="$themeConfig.url + post.path"
         >
-        <BackTo
-          class="py-2 -ml-4"
-          :text="`${$themeLocaleConfig.backToText} posts`"
-          :to="`${$localePath}posts/`"
-        />
-        <HeaderFullPage>
-          <template v-slot:cardTitle>
-            {{ $page.title }}
-          </template>
-
-          <template v-slot:cardFooter>
-            <time
-              :datetime="post.date.datetime"
-              itemprop="datePublished"
-            >
-              {{ post.date.short }}
-            </time>
-            <span
-              itemprop="author"
-              itemscope
-              itemtype="https://schema.org/Person"
-            >
-              <RouterLink
-                v-if="post.author"
-                ref="authors"
-                rel="author"
-                itemprop="url"
-                :to="{ path: '/authors/', hash: post.author.username }"
-                class="relative flex hover:underline"
-                style="top: 6px;"
-              >
-                <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
-                  <img
-                    :src="post.author.avatar"
-                    :alt="`Avatar ${post.author.name}`"
-                    class="object-cover object-top w-full h-fl"
-                  >
-                </div>
-                <span class="mt-1">
-                  <span class="sr-only">Post by </span>
-                  <span itemprop="name">{{ post.author.name }}</span>
-                </span>
-              </RouterLink>
-            </span>
-          </template>
-        </HeaderFullPage>
         <meta
           itemprop="dateModified"
           :content="post.updated_at"
         >
-
-        <section
-          v-show="post.summary"
-          class="my-10 text-lg leading-9 post-page-summary sm:px-5 md:mx-auto lg:mx-0 max-char"
-          role="region"
-          :aria-label="$themeLocaleConfig.a11y.landmarks.post.summary"
+        <header
+          class="w-full py-20 border-b border-solid bg-primary border-secondary"
+          aria-labelledby="title-post"
         >
-          <span itemprop="description">
+          <div class="container max-w-2xl mx-auto">
+            <h1
+              id="title-post"
+              class="text-4xl font-bold"
+            >
+              {{ $page.title }}
+            </h1>
+            <aside
+              role="note"
+              class="flex items-center mt-4 text-sm"
+            >
+              <!-- <span class="uppercase">3 min</span> -->
+              <div
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+              >
+                <RouterLink
+                  v-if="post.author"
+                  ref="authors"
+                  rel="author"
+                  itemprop="url"
+                  :to="{ path: '/authors/', hash: post.author.username }"
+                  class="relative flex hover:underline"
+                  style="top: 2px;"
+                >
+                  <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
+                    <img
+                      :src="post.author.avatar"
+                      :alt="`Avatar ${post.author.name}`"
+                      class="object-cover object-top w-full h-fl"
+                    >
+                  </div>
+                  <span class="mt-1">
+                    <span class="sr-only">Post by </span>
+                    <span itemprop="name">{{ post.author.name }}</span>
+                  </span>
+                </RouterLink>
+              </div>
+              <div class="w-6 mx-4 border-b-2 border-solid rounded border-accent-primary" />
+              <time
+                :datetime="post.date.datetime"
+                class="uppercase"
+                itemprop="datePublished"
+              >
+                {{ post.date.short }}
+              </time>
+            </aside>
+          </div>
+        </header>
+
+        <div class="container max-w-2xl mx-auto">
+          <p
+            v-show="post.summary"
+            class="mt-10 text-lg leading-9 post-page-summary"
+            itemprop="description"
+          >
             {{ post.summary }}
-          </span>
-        </section>
+          </p>
 
-        <TableOfContents
-          v-if="$frontmatter.toc !== 0"
-          :key="$route.path"
-          :title="$themeLocaleConfig.toc.title"
-          title-tag="h2"
-          class="my-10 lg:hidden"
-        />
+          <hr
+            v-show="post.summary"
+            class="my-10"
+          >
 
-        <hr v-show="post.summary">
+          <TableOfContents
+            v-if="$frontmatter.toc !== 0"
+            :key="$route.path"
+            :title="$themeLocaleConfig.toc.title"
+            title-tag="h2"
+            class="my-10"
+          />
 
-        <section
-          class="flex justify-between"
-          role="region"
-          aria-label="Content post"
-        >
-          <div class="w-full max-w-3xl lg:w-auto">
-            <Content
-              itemprop="articleBody"
-              class="sm:px-5 md:mx-auto lg:mx-0"
-            />
+          <section
+            role="region"
+            aria-label="Content article"
+          >
+            <Content itemprop="articleBody" />
 
             <hr class="my-16">
 
@@ -105,13 +109,12 @@
               :title="post.title"
               :summary="post.summary"
               horizontal
-              class="lg:hidden"
             />
 
-            <hr class="my-16 lg:hidden">
+            <hr class="my-16">
 
             <div class="disqus-section">
-              <Disqus shortname="vue-a11y-test" />
+              <Disqus v-bind="disqus" />
             </div>
 
             <hr class="my-16">
@@ -119,16 +122,8 @@
             <div class="webmentions-section">
               <WebMentions />
             </div>
-          </div>
-          <RightNavigation class="mt-16 ml-16 lg:block post-page-toc">
-            <ShareLinks
-              class="mt-16"
-              :path="post.path"
-              :title="post.title"
-              :summary="post.summary"
-            />
-          </RightNavigation>
-        </section>
+          </section>
+        </div>
       </article>
     </div>
   </Full>
@@ -136,12 +131,8 @@
 
 <script>
 import { computed } from '@vue/composition-api'
-import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 import { Disqus } from 'vue-disqus'
 
-import BackTo from '@/theme/components/BackTo'
-import HeaderFullPage from '@/theme/components/HeaderFullPage'
-import RightNavigation from '@/theme/components/RightNavigation'
 import ShareLinks from '@/theme/components/ShareLinks'
 import TableOfContents from '@/theme/components/TableOfContents'
 import WebMentions from '@/theme/components/WebMentions'
@@ -150,14 +141,10 @@ export default {
   name: 'Post',
 
   components: {
-    BackTo,
     Disqus,
-    Comment,
-    HeaderFullPage,
     ShareLinks,
     WebMentions,
-    TableOfContents,
-    RightNavigation
+    TableOfContents
   },
 
   setup (_, { root }) {
@@ -174,21 +161,19 @@ export default {
       }
     }))
 
+    const disqus = {
+      shortname: 'vue-a11y-test',
+      lazyConfig: {
+        root: null,
+        rootMargin: '1000px',
+        threshold: 0.5
+      }
+    }
+
     return {
-      post
+      post,
+      disqus
     }
   }
 }
 </script>
-
-<style lang="scss">
-.post-page-content {
-  max-width: 57rem
-}
-
-.post-page-toc {
-  @screen xl {
-    min-width: var(--toc-w-size);
-  }
-}
-</style>
