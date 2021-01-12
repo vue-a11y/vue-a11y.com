@@ -1,25 +1,9 @@
 module.exports = {
-  purge: {
-    enable: process.env.NODE_ENV !== 'development',
-    content: './src/.vuepress/**/*.vue',
-    options: {
-      safelist: {
-        standard: [
-          'icon',
-          'outbound',
-          'DocSearch',
-          /^mode-/,
-          /^DocSearch-/,
-          /^set-/
-        ],
-        deep: [
-          /content__default$/,
-          /nprogress$/,
-          /custom-block$/
-        ]
-      }
-    }
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   },
+  purge: false,
   theme: {
     extend: {
       colors: {

@@ -121,13 +121,13 @@ export default {
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--accent);
 
   --docsearch-modal-background: var(--secondary);
-  --docsearch-searchbox-background: var(--secondary);
+  --docsearch-searchbox-background: var(--primary);
   --docsearch-searchbox-focus-background: var(--primary);
   --docsearch-muted-color: var(--color);
 }
 
 .DocSearch-Button {
-  @apply w-full p-5 m-0 rounded-md #{!important};
+  @apply w-full p-5 m-0 border border-solid border-secondary rounded-md #{!important};
 }
 
 span.DocSearch-Button-Placeholder, span.DocSearch-Button-Key {
