@@ -9,14 +9,14 @@
   z-index: 2;
   outline-width: 3px !important;
   outline-style: dotted !important;
-  outline-color: transparent;
+  outline-color: transparent !important;
   outline-offset: 6px;
   transition: outline-offset .1s ease;
 }
 
 *:focus {
-  outline-color: var(--color);
-  outline-offset: 2px !important;
+  outline-color: var(--color) !important;
+  outline-offset: 2px;
 }
 
 [tabindex="-1"] {

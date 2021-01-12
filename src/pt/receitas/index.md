@@ -1,3 +1,7 @@
+---
+description: Tutoriais com exemplos práticos, explicações, testes com leitores de tela, suporte, e mais, para tornar seus componentes Vue.js ainda mais acessíveis .
+---
+
 # Introdução
 
 <br>

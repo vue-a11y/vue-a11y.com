@@ -1,3 +1,7 @@
+---
+description: A checklist based on the WCAG principles (POUR) with explanations, links, tips and packages to help you not forget any accessible development techniques.
+---
+
 # Vue A11y Checklist
 
 <br>

@@ -1,3 +1,6 @@
+---
+description: Vue A11y é um projeto comunitário de código aberto, onde o objetivo principal é criar conteúdo focado em Vue.js e trazendo o máximo de acessibilidade.
+---
 # Introdução
 
 O **Vue A11y** é um projeto open source da comunidade, onde o principal objetivo é criar conteúdo focado em Vue.js e trazendo o máximo de acessibilidade.

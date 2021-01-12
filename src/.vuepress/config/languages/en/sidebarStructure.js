@@ -68,8 +68,7 @@ module.exports = {
     {
       title: 'Recipes',
       children: [
-        '',
-        'contribute'
+        ''
       ]
     },
     {

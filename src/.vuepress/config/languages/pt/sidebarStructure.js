@@ -68,8 +68,7 @@ module.exports = {
     {
       title: 'Receitas',
       children: [
-        '',
-        'contribua'
+        ''
       ]
     },
     {

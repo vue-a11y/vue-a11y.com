@@ -1,3 +1,8 @@
+---
+description: Find out how to contribute to Vue Accessibility project
+---
+
+
 # How to contribute
 
 First of all, happy that you are here on this page and thinking about contributing to the project.

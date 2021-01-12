@@ -1,3 +1,6 @@
+---
+description: Descubra como contribuir para o projeto de Vue-A11y
+---
 # Como contribuir
 
 Antes de tudo, feliz em você estar aqui nessa página e pensando em contribuir com o projeto.
