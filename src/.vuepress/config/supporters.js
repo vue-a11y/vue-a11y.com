@@ -8,5 +8,10 @@ module.exports = [
     name: 'Okuto Oyama',
     image: 'yamanoku.png',
     link: 'https://github.com/yamanoku'
+  },
+  {
+    name: 'Till Sanders',
+    image: 'till-sanders.png',
+    link: 'https://github.com/tillsanders'
   }
 ]
