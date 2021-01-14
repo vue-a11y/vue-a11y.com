@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="w-full py-6 text-center">
-      <span class="text-sm">MIT Licensed | Copyright &copy; 2020</span>
+      <span class="text-sm">MIT Licensed | Copyright &copy; 2020-{{ new Date().getFullYear() }}</span>
     </div>
   </footer>
 </template>
