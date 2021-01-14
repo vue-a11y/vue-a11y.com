@@ -7,8 +7,6 @@ description: Find out how to contribute to Vue Accessibility project
 
 First of all, happy that you are here on this page and thinking about contributing to the project.
 
-**The Vue.js community thanks you.**
-
 ## Development
 
 To contribute to the development of the site, you can initially open an issue on Github and report an error or propose a new feature.
@@ -34,6 +32,10 @@ You can open an issue:
 We also have an [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) with several content ideas, feel free to add other subjects that you want to see as content on the site.
 
 Our intention is to reward the creator for each content published on the site, we will soon achieve this feat.
+
+::: alert warning
+We created a guide with tips for creating posts, recipes, or tips. [Posts guide](/project/posts-guide.html#posts-guide)
+:::
 
 ## Answering questions
 

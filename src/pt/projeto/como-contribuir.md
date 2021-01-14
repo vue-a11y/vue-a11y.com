@@ -33,6 +33,10 @@ Nós também temos uma [issue](https://github.com/vue-a11y/vue-a11y.com/issues/1
 
 Nossa intenção é recompensar o criador por cada conteúdo publicado no site, em breve iremos conseguir esse feito.
 
+::: alert warning
+Criamos um guia com dicas para criar postagens, receitas ou dicas. [Guia de postagens](/pt/projeto/guia.html#posts-guide).
+:::
+
 ## Respondendo perguntas
 
 Em nosso [Rastreador de problemas do GitHub](https://github.com/vue-a11y/vue-a11y.com/issues) estamos abertos a responder perguntas de pessoas de todos os níveis de conhecimento.
