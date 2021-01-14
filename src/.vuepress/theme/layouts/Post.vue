@@ -162,7 +162,7 @@ export default {
     }))
 
     const disqus = {
-      shortname: 'vue-a11y-test',
+      shortname: 'vue-a11y',
       lazyConfig: {
         root: null,
         rootMargin: '1000px',
