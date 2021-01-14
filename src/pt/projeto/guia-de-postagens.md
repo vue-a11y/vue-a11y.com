@@ -1,35 +1,36 @@
 ---
-description: Guidelines for creating content for Vue.js A11y (posts, recipes and tips).
+description: Diretrizes para criação de conteúdo para o Vue.js A11y (posts, receitas e dicas).
 ---
-# Posts guide
 
-## How to begin
+# Guia de postagens
 
-First of all, do a brief search to see if your post idea does not yet exist on the site.
+## Como iniciar
 
-If you are looking for ideas, we have an [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) with several post ideas, feel free to reserve a subject.
+Em primeiro lugar, faça uma breve pesquisa para ver se a sua ideia de postagem ainda não existe no site.
 
-After checking, reserve your post by opening an issue using some of our templates:
+Se você está procurando por ideias, temos uma [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) com várias ideias de postagem, fique à vontade para reservar um assunto.
+
+Depois de verificar, reserve sua postagem abrindo uma issue usando alguns de nossos modelos:
 
 - [New Post/Article](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Post&template=new-post.md&title=Post%2FArticle%3A+%5BYour+title%5D)
 - [New Widget (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Widget&template=new-widget.md&title=Recipe%28widget%29%3A+%5BYour+title%5D)
 - [New Tip (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Tip&template=new-tip.md&title=Recipe%28Tip%29%3A+%5BYour+title%5D)
 
-After booking a subject, fork the repository, follow the steps in our [README](https://github.com/vue-a11y/vue-a11y.com/blob/master/README.md) for installation.
+Após reservar um assunto, fork o repositório, siga as etapas em nosso [README](https://github.com/vue-a11y/vue-a11y.com/blob/master/README.md) para instalação.
 
-Create a markdown file in the specific post type directory and in the language in which the post will be written.
+Crie um arquivo markdown no diretório de tipo de postagem específico e no idioma em que a postagem será escrita.
 
-For example in the English language:
+Por exemplo, conteúdo em português:
 
-- `src/posts`: For blog posts;
-- `src/recipes/widgets`: For posting widgets;
-- `src/recipes/tips`: For quick tip posts;
+- `src/pt/posts`: Para postagens do blog;
+- `src/pt/recipes/widgets`: Para postar widgets;
+- `src/pt/recipes/tips`: Para postar dicas rápidas;
 
 ::: alert warning
-Follow the structure `2020-05-12-my-post.md`
+Siga a estrutura `2020-05-12-meu-post.md`
 :::
 
-After completing, create a PR and request review from members for the latest adjustments and merge your post.
+Depois de concluir, crie um PR e solicite a revisão dos membros para os ajustes mais recentes e mescle sua postagem.
 
 ## Frontmatter
 
@@ -40,38 +41,38 @@ After completing, create a PR and request review from members for the latest adj
 :::
 ```yaml
 ---
-title: Post title # (Required) - between 50-65 characters
-description: Description of the post # (Required) - up to 155 characters
-summary: Summary of the post or tl;dr # (Optional)
-categories: Array of categories that match the post # (Required)
-tag: Array of tags that match the post # (Optional) 
-author: author's nickname # (Optional) 
-date: YYYY/MM/DD HH:ii:ss # (Required)
+title: Título do post # (Obrigatório) - entre 50-65 caracteres
+description: Descrição do post # (Obrigatório) - no máximo até 155 caracteres
+summary: Resumo do post ou tl;dr # (Opcional)
+categories: Array de categorias que combinam com a postagem # (Obrigatório)
+tag: Array de tags que correspondem à postagem # (Opcional) 
+author: Nickname do autor # (Opcional) 
+date: YYYY/MM/DD HH:ii:ss # (Obrigatório)
 ---
 ```
 
 ::: alert warning
-Available categories: `[news, aria, wcag, tools, packages, spa, html]`.
+Categorias disponíveis: `[news, aria, wcag, tools, packages, spa, html]`.
 :::
 
 ::: alert warning
-The tags have no limitations, you can create as many tags as you want `[screen-reader, form, ...]`.
+As tags não têm limitações, você pode criar quantas tags quiser `[screen-reader, form, ...]`.
 :::
 
 ::: alert tip
-Add your author information `src/config/authors.json`, soon we will have a page dedicated to the authors of the site.
+Adicione suas informações de autor `src/config/authors.json`, em breve teremos uma página dedicada aos autores do site.
 :::
 
-## Best pratices
+## Boas práticas
 
-- Use a correct hierarchy of headings;
-- Add the lang to the code blocks (highlight code);
-- Alternative text in images;
-- Write simply and understandably;
-- [Avoid wall of text](https://axesslab.com/accessibility-according-to-pwd/#wall-of-text);
-- Use lazy-load for iframes (IntersectObserver Component)
+- Use uma hierarquia correta de títulos;
+- Adicione a linguagem aos blocos de código (highlight code);
+- Texto alternativo em imagens;
+- Escreva de forma simples e compreensível;
+- [Evite parede de texto](https://axesslab.com/accessibility-according-to-pwd/#wall-of-text);
+- Use lazy-load para iframes (Componente IntersectObserver)
 
-## Using custom blocks
+## Usando custom-blocks
 
 ### Figure + Blockquote + Figcaption 
 
@@ -195,9 +196,9 @@ Vue.use(VueAnnouncer)
 
 ## Vue in markdown
 
-### IntersectionObserver component
+### Componente IntersectionObserver
 
-Use this component for lazy-load of iframes, images, among other media.
+Use este component para lazy load de iframes, images, dentre outras medias.
 
 ```vue
 <intersection-observer>
