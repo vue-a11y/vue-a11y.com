@@ -36,9 +36,7 @@ Depois de concluir, crie um PR e solicite a revisão dos membros para os ajustes
 
 ### Blog posts
 
-::: headerCode
-2020-05-12-my-post.md
-:::
+::: headerCode 2020-05-12-my-post.md
 ```yaml
 ---
 title: Título do post # (Obrigatório) - entre 50-65 caracteres
@@ -50,6 +48,7 @@ author: Nickname do autor # (Opcional)
 date: YYYY/MM/DD HH:ii:ss # (Obrigatório)
 ---
 ```
+:::
 
 ::: alert warning
 Categorias disponíveis: `[news, aria, wcag, tools, packages, spa, html]`.
@@ -76,8 +75,7 @@ Adicione suas informações de autor `src/config/authors.json`, em breve teremos
 
 ### Figure + Blockquote + Figcaption 
 
-::: headerCode
-:::
+::::: headerCode
 ```
 :::: fig bq
 ::: bq
@@ -88,6 +86,7 @@ VuePress is composed of two parts: a minimalistic static site generator with a V
 :::
 ::::
 ```
+:::::
 
 :::: fig bq
 ::: bq
@@ -100,8 +99,7 @@ VuePress is composed of two parts: a minimalistic static site generator with a V
 
 ### Tip, Note, Warning, Danger
 
-::: headerCode
-:::
+:::: headerCode
 ```
 ::: alert tip
 This is a tip
@@ -119,6 +117,7 @@ This is a warning
 This is a danger
 :::
 ```
+::::
 
 ::: alert tip
 This is a tip
@@ -138,33 +137,33 @@ This is a danger
 
 ### Figure + HeaderCode + Code block + Figcaption
 
+::::: headerCode
 ```
 :::: fig code
-::: headerCode
-main.js
-:::
+::: headerCode main.js
 ``js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
  
 Vue.use(VueAnnouncer)
 ``
+:::
 ::: figcap
 Basic usage of Vue announcer
 :::
 ::::
 ```
+:::::
 
 :::: fig code
-::: headerCode
-main.js
-:::
+::: headerCode main.js
 ```js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
  
 Vue.use(VueAnnouncer)
 ```
+:::
 ::: figcap
 Basic usage of Vue announcer
 :::
@@ -172,27 +171,27 @@ Basic usage of Vue announcer
 
 ### headerCode + Code block
 
+:::: headerCode
 ```
-::: headerCode
-main.js
-:::
+::: headerCode main.js
 ``js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
  
 Vue.use(VueAnnouncer)
 ``
-```
-
-::: headerCode
-main.js
 :::
+```
+::::
+
+::: headerCode main.js
 ```js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
  
 Vue.use(VueAnnouncer)
 ```
+:::
 
 ## Vue in markdown
 
@@ -200,6 +199,7 @@ Vue.use(VueAnnouncer)
 
 Use este component para lazy load de iframes, images, dentre outras medias.
 
+::: headerCode
 ```vue
 <intersection-observer>
   <template v-slot="data">
@@ -213,3 +213,4 @@ Use este component para lazy load de iframes, images, dentre outras medias.
   </template>
 </intersection-observer>
 ```
+:::

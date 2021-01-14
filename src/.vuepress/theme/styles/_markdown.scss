@@ -203,6 +203,10 @@
     }
   }
 
+  figure [class*=language-] {
+    margin-bottom: 0;
+  }
+
   .token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog { color:#999 }
   .token.punctuation { color:#ccc }
   .token.attr-name,.token.deleted,.token.namespace,.token.tag { color:#E58A85}

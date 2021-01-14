@@ -129,7 +129,7 @@ module.exports = [
     'vuepress-plugin-container',
     {
       type: 'headerCode',
-      before: info => customBlock.headerCode[0].replace('%', info),
+      before: info => customBlock.headerCode[0].replace('%', info === 'HEADERCODE' ? '' : info),
       after: customBlock.headerCode[1]
     }
   ],
