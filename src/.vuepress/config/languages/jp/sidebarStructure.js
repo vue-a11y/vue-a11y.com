@@ -3,7 +3,7 @@ module.exports = {
     {
       title: 'プロジェクト',
       children: [
-        ['はじめに', ''],
+        '',
         ['ロードマップ', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
         ['参加者', 'people'],
         ['コントリビュート', 'how-to-contribute'],
@@ -68,7 +68,7 @@ module.exports = {
     {
       title: 'レシピ',
       children: [
-        ['はじめに', '']
+        ''
       ]
     },
     {
