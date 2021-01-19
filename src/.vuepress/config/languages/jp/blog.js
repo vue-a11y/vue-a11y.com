@@ -1,5 +1,5 @@
 const posts = {
-  id: 'post',
+  id: 'jpPost',
   title: 'すべての投稿',
   layout: 'Posts',
   itemLayout: 'Post',
