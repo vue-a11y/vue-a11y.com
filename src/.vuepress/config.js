@@ -12,7 +12,8 @@ module.exports = {
   postcss: require('./config/postcss'),
   locales: {
     '/': require('./config/languages/en/localeConfig'),
-    '/pt/': require('./config/languages/pt/localeConfig')
+    '/pt/': require('./config/languages/pt/localeConfig'),
+    '/jp/': require('./config/languages/jp/localeConfig')
   },
   themeConfig: require('./config/themeConfig'),
   markdown: {
