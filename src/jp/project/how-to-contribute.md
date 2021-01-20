@@ -3,20 +3,20 @@ description: Find out how to contribute to Vue Accessibility project
 ---
 
 
-# How to contribute
+# 貢献する方法
 
-First of all, happy that you are here on this page and thinking about contributing to the project.
+まず、あなたがこのページに訪れ、このプロジェクトに対する貢献について考えてくださることに感謝します。
 
-## Development
+## 開発
 
-To contribute to the development of the site, you can initially open an issue on Github and report an error or propose a new feature.
+このサイトの開発に貢献するためには、 まず最初に  Github 上で issue を開き、エラー報告や新機能の提案をすることができます。
 
-If you are willing to develop, there is no mystery, just open a Pull Request following the template.
+もし、あなたが貢献しようと考えるなら、 特別なことは何も必要ありません、テンプレートに沿って Pull Request を開くだけです。 
 
-This website uses [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), and [Vue composition API](https://composition-api.vuejs.org/).
+このサイトは [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), と [Vue composition API](https://composition-api.vuejs.org/) を使用しています。
 
 ::: alert tip
-Try to follow the [official style guide for Vue.js](https://vuejs.org/v2/style-guide/) as much as possible.
+[Vue.js の公式スタイルガイド](https://jp.vuejs.org/v2/style-guide/) にできるだけ従って下さい。
 :::
 
 ## Writing
