@@ -9,7 +9,7 @@ Antes de tudo, feliz em você estar aqui nessa página e pensando em contribuir 
 
 ## Desenvolvimento
 
-Para contribuir no desenvolvimento do site, você pode inicialmente abrir uma issue no Github e relatar algum erro ou propor alguma feature nova.
+Para contribuir no desenvolvimento do site, você pode inicialmente abrir uma issue no GitHub e relatar algum erro ou propor alguma feature nova.
 
 Se você estiver disposto a desenvolver, não tem nenhum mistério, basta abrir um Pull Request seguindo o template.
 
@@ -72,5 +72,5 @@ Separamos algumas recompensas para nossos apoiadores do Open Collective.
 <br>
 
 ::: alert Trabalho em progresso  
-[Siga a issue dessa página no Github](https://github.com/vue-a11y/vue-a11y.com/issues/15)
+[Siga a issue dessa página no GitHub](https://github.com/vue-a11y/vue-a11y.com/issues/15)
 :::
