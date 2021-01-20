@@ -38,7 +38,7 @@ module.exports = {
       link: 'https://twitter.com/vue_a11y'
     },
     {
-      name: 'Github',
+      name: 'GitHub',
       icon: 'github',
       link: 'https://github.com/vue-a11y'
     }

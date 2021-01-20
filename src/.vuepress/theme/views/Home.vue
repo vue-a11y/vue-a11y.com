@@ -20,7 +20,7 @@
             <ExternalLink
               class="ml-4 text-lg md:text-xl btn btn-light"
               :href="`https://github.com/${$themeConfig.repo}`"
-              label="Github"
+              label="GitHub"
             />
           </div>
         </div>

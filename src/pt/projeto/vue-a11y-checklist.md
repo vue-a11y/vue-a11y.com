@@ -6,5 +6,5 @@ description: Uma checklist baseada nos princípios WCAG (POUR) com explicações
 <p>
 
 ::: alert trabalho em progresso
-[Siga a issue dessa página no Github](https://github.com/vue-a11y/vue-a11y.com/issues/6)
+[Siga a issue dessa página no GitHub](https://github.com/vue-a11y/vue-a11y.com/issues/6)
 :::
