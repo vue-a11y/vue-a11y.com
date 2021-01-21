@@ -28,7 +28,7 @@
         <ExternalLink
           class="flex items-center px-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
           :href="`https://github.com/vue-a11y`"
-          label="Github"
+          label="GitHub"
         />
       </li>
     </ul>
