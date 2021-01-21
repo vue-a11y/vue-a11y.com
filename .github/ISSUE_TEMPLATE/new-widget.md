@@ -12,3 +12,12 @@ labels: Recipe, Widget
 
 ## Brief description
 > A brief description of the proposed subject.
+
+## Checklist
+
+- [ ] Introduction and explanation;
+- [ ] Code snippets;
+- [ ] Demo or repository link;
+- [ ] Accessibility considerations;
+- [ ] AT/Browser combinations tested;
+- [ ] Resources;
