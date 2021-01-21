@@ -9,7 +9,7 @@ description: Find out how to contribute to Vue Accessibility project
 
 ## 開発
 
-このサイトの開発に貢献するためには、 まず最初に  Github 上で issue を開き、エラー報告や新機能の提案をすることができます。
+このサイトの開発に貢献するためには、まず最初に Github 上で issue を開き、エラー報告や新機能の提案をすることができます。
 
 もし、あなたが貢献しようと考えるなら、 特別なことは何も必要ありません、テンプレートに沿って Pull Request を開くだけです。 
 
@@ -19,45 +19,45 @@ description: Find out how to contribute to Vue Accessibility project
 [Vue.js の公式スタイルガイド](https://jp.vuejs.org/v2/style-guide/) にできるだけ従って下さい。
 :::
 
-## Writing
+## 執筆
 
-We will love to hear your content idea, so the first step is to open an issue using the specific template.
+あなたのコンテンツに関するアイデアを是非知りたいので、そのための第一段階として特定のテンプレートを用いて issue を開いてください。
 
-You can open an issue:
+以下の内容で issue を開くことができます:
 
 - [New Post/Article](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Post&template=new-post.md&title=Post%2FArticle%3A+%5BYour+title%5D)
 - [New Widget (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Widget&template=new-widget.md&title=Recipe%28widget%29%3A+%5BYour+title%5D)
 - [New Tip (Recipe)](https://github.com/vue-a11y/vue-a11y.com/issues/new?labels=Recipe,Tip&template=new-tip.md&title=Recipe%28Tip%29%3A+%5BYour+title%5D)
 
-We also have an [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) with several content ideas, feel free to add other subjects that you want to see as content on the site.
+また、いくつかのコンテンツのアイデアを [issue](https://github.com/vue-a11y/vue-a11y.com/issues/14) にまとめているので、サイト上でコンテンツとして見たいテーマを気軽に追加してください。
 
-Our intention is to reward the creator for each content published on the site, we will soon achieve this feat.
+私たちの意図はサイト上に公開されている各コンテンツの製作者に報いるためであり、間もなくこの偉業を成し遂げられます。
 
 ::: alert warning
-We created a guide with tips for creating posts, recipes, or tips. [Posts guide](/project/posts-guide.html#posts-guide)
+記事やレシピ、tips の作成に関するヒントをまとめたガイドを作成しました。 [投稿ガイド](/project/posts-guide.html#posts-guide)
 :::
 
-## Answering questions
+## 質問への回答
 
-In our [GitHub Problem Tracker](https://github.com/vue-a11y/vue-a11y.com/issues), we are open to answering questions from people of all levels of knowledge.
+[GitHub Problem Tracker](https://github.com/vue-a11y/vue-a11y.com/issues) では、私たちはあらゆるレベルの知識を持つ人々からの質問に回答しています。
 
-We will be grateful to receive your help by answering questions and also sharing your experience with us.
+質問に回答したり、経験を共有することで、あなたの手助けを頂ければ幸いです。
 
-We are also daily answering questions in the Vue.js community on Discord ([Vue Land](https://discord.gg/vue)), join us.
+また、 Discord での Vue.js コミュニティで日々質問に回答しています ([Vue Land](https://discord.gg/vue)), 是非、ご参加ください。
 
-## Sharing
+## 共有
 
-When you share, you are helping the web community to understand more about accessibility through content.
+共有することで、ウェブコミュニティがコンテンツを通じてアクセシビリティに関する理解をより深めるのを手助けすることができます。
 
-[Vue a11y](/) focuses specifically on helping the Vue.js community by creating content, plugins, and components that make it easier on a daily basis.
+[Vue a11y](/) は特に、コンテンツやプラグイン、そしてコンポーネントを作成することでVue.js コミュニティを支援しており、日ごろから Vue.js を簡単にすることに力を入れています。
 
-We count on your support and the support of the community to make it reach your friends and other developers.
+私たちは、あなたの友人や他の開発者に届けるために、あなたのサポートとコミュニティのサポートを頼りにしています。
 
-## Supporting
+## 支援
 
-The project is supported by people who love Vue.js and accessibility, and who know the importance of the web being more inclusive.
+このプロジェクトは、Vue.jsやアクセシビリティを愛し、 Web がより包括的になることの重要性を理解している人々によって支えられています。
 
-Your support is very important so that we can devote more time to creating content, keeping plugins and components up to date, in addition to funding content creators for their time dedicated to creating robust and well-tested posts.
+皆様からのご支援は非常に重要であり、コンテンツ作成にさらに時間を割くことができ、プラグインやコンポーネントを最新の状態に保てるようになります。また、良くテストされた投稿を作成するために時間を割いてくださったコンテンツ製作者へ資金の提供をします。
 
 <p>
 We have separated some rewards for our Open Collective supporters.
