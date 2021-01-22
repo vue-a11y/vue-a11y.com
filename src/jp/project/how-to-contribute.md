@@ -9,11 +9,11 @@ description: Find out how to contribute to Vue Accessibility project
 
 ## 開発
 
-このサイトの開発に貢献するためには、まず最初に Github 上で issue を開き、エラー報告や新機能の提案をすることができます。
+このサイトの開発に貢献するためには、まず最初に GitHub 上で issue を開き、エラー報告や新機能の提案をすることができます。
 
-もし、あなたが貢献しようと考えるなら、 特別なことは何も必要ありません、テンプレートに沿って Pull Request を開くだけです。 
+もし、あなたが貢献しようと考えるなら、特別なことは何も必要ありません、テンプレートに沿って Pull Request を開くだけです。
 
-このサイトは [Vuepress](https://vuepress.vuejs.org/), [TailwindCSS](https://tailwindcss.com/), と [Vue composition API](https://composition-api.vuejs.org/) を使用しています。
+このサイトは [Vuepress](https://vuepress.vuejs.org/)、[TailwindCSS](https://tailwindcss.com/)、と [Vue composition API](https://composition-api.vuejs.org/) を使用しています。
 
 ::: alert tip
 [Vue.js の公式スタイルガイド](https://jp.vuejs.org/v2/style-guide/) にできるだけ従って下さい。
@@ -21,7 +21,7 @@ description: Find out how to contribute to Vue Accessibility project
 
 ## 執筆
 
-あなたのコンテンツに関するアイデアを是非知りたいので、そのための第一段階として特定のテンプレートを用いて issue を開いてください。
+あなたのコンテンツに関するアイデアを是非知りたいので、その第一歩として特定のテンプレートを用いて issue を開いてください。
 
 以下の内容で issue を開くことができます:
 
@@ -34,7 +34,7 @@ description: Find out how to contribute to Vue Accessibility project
 私たちの意図はサイト上に公開されている各コンテンツの製作者に報いるためであり、間もなくこの偉業を成し遂げられます。
 
 ::: alert warning
-記事やレシピ、tips の作成に関するヒントをまとめたガイドを作成しました。 [投稿ガイド](/project/posts-guide.html#posts-guide)
+記事やレシピ、テクニックの作成に関するヒントをまとめたガイドを作成しました。 [投稿ガイド](/project/posts-guide.html#posts-guide)
 :::
 
 ## 質問への回答
@@ -43,27 +43,27 @@ description: Find out how to contribute to Vue Accessibility project
 
 質問に回答したり、経験を共有することで、あなたの手助けを頂ければ幸いです。
 
-また、 Discord での Vue.js コミュニティで日々質問に回答しています ([Vue Land](https://discord.gg/vue)), 是非、ご参加ください。
+また、Discord での Vue.js コミュニティで日々質問に回答しています ([Vue Land](https://discord.gg/vue))、 是非ご参加ください。
 
 ## 共有
 
-共有することで、ウェブコミュニティがコンテンツを通じてアクセシビリティに関する理解をより深めるのを手助けすることができます。
+共有することで、Web コミュニティがコンテンツを通じてアクセシビリティに関する理解を深める手助けをすることができます。
 
-[Vue a11y](/) は特に、コンテンツやプラグイン、そしてコンポーネントを作成することでVue.js コミュニティを支援しており、日ごろから Vue.js を簡単にすることに力を入れています。
+[Vue a11y](/) は、特に Vue.js コミュニティの支援に注力しており、日々の開発をより便利にするためのコンテンツ、プラグイン、コンポーネントを作成しています。
 
 私たちは、あなたの友人や他の開発者に届けるために、あなたのサポートとコミュニティのサポートを頼りにしています。
 
 ## 支援
 
-このプロジェクトは、Vue.jsやアクセシビリティを愛し、 Web がより包括的になることの重要性を理解している人々によって支えられています。
+このプロジェクトは、Vue.js やアクセシビリティを愛し、Web がより包括的になることの重要性を理解している人々によって支えられています。
 
-皆様からのご支援は非常に重要であり、コンテンツ作成にさらに時間を割くことができ、プラグインやコンポーネントを最新の状態に保てるようになります。また、良くテストされた投稿を作成するために時間を割いてくださったコンテンツ製作者へ資金の提供をします。
+皆様からのご支援は非常に重要であり、コンテンツ作成にさらに時間を割くことができ、プラグインやコンポーネントを最新の状態に保てるようになります。また、十分に検証された投稿を作成するために時間を割いてくれたコンテンツ製作者に資金を提供しています。
 
 <p>
-We have separated some rewards for our Open Collective supporters.
+Open Collective のサポーターの方への報酬をいくつかに分けています。
 <br>
 <a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial; width: 300px;">
-  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="Donate to our collective (opens in a new tab)" />
+  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="collective へ寄付をする (新しいタブで開く)" />
 </a>
 </p>
 
