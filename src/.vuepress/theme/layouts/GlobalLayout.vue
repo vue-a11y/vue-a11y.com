@@ -21,7 +21,7 @@
       <VueSkipTo
         v-if="$themeLocaleConfig.skipTo"
         :to="$themeLocaleConfig.skipTo.to"
-        :list-label="$themeLocaleConfig.skipTo.label"
+        :label="$themeLocaleConfig.skipTo.label"
         class="z-20"
       />
     </ClientOnly>
@@ -50,6 +50,7 @@ export default {
   },
 
   setup (_, { root, refs }) {
+    console.log(root.$themeLocaleConfig.skipTo)
     const colorModeConfig = ref(root.$themeConfig.colorMode)
 
     const layout = computed(() => {
