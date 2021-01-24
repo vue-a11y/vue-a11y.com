@@ -14,7 +14,7 @@
     }
   }
 
-  p, ol, ul {    
+  p, ol, ul {
     @apply leading-8;
   }
 
@@ -33,14 +33,14 @@
     margin-top: 60px;
     z-index: 2;
     line-height: 1.04em;
-    
+
     + h3 {
       @apply mt-8;
     }
 
     + p {
       margin-top: 30px;
-    }    
+    }
   }
 
   h3 {
@@ -77,7 +77,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative inline-block bg-primary;
+    @apply relative bg-primary;
     text-decoration: underline;
     text-decoration-color: var(--accent);
 
@@ -104,7 +104,7 @@
   }
 
   ol, ul {
-    padding-left: 2em;
+    padding-left: 1em;
     margin-top: 30px;
     margin-bottom: 40px;
 
@@ -115,9 +115,10 @@
 
   ul li:before {
     @apply text-accent-primary font-bold inline-block;
-    content: "•";
+    content: "\2022";
     width: 1em;
-    margin-left: -2em;
+    margin-left: -1em;
+    speak: none;
   }
 
   .table-wrapper {
@@ -193,8 +194,8 @@
       font-family: 'Hack', monospace;
     }
   }
-    
-  div[class*=language-] { 
+
+  div[class*=language-] {
     @apply relative w-full whitespace-normal my-8;
     background-color: var(--bg-code-block);
 
