@@ -20,7 +20,7 @@ features:
   details: Useful links, articles, videos, Web accessibility events, both in the context of Vue.js and in others.
 
 meta:
-  - name: 'og:image'
+  - property: 'og:image'
     content: 'https://vue-a11y.com/img/social-share-jp.png'
   - name: 'twitter:image'
     content: 'https://vue-a11y.com/img/social-share-jp.png'
