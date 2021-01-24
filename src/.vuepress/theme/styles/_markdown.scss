@@ -5,7 +5,6 @@
   p {
     word-wrap: break-word;
     margin: 40px 0;
-    max-width: 68ex;
 
     abbr {
       cursor: help;
@@ -15,7 +14,7 @@
     }
   }
 
-  p, ol, ul {
+  p, ol, ul {    
     @apply leading-8;
   }
 
@@ -34,15 +33,18 @@
     margin-top: 60px;
     z-index: 2;
     line-height: 1.04em;
-
+    
+    + h3 {
+      @apply mt-8;
+    }
 
     + p {
       margin-top: 30px;
-    }
+    }    
   }
 
   h3 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold mt-12 mb-8;
     line-height: 1.10em;
   }
 
@@ -68,14 +70,14 @@
     }
   }
 
-  p, h2, h3 {
+  p, li, h2, h3 {
     code {
       @apply font-bold border border-solid p-1 text-lg bg-secondary c-border-color;
     }
   }
 
   a:not(.header-anchor) {
-    @apply relative bg-primary;
+    @apply relative inline-block bg-primary;
     text-decoration: underline;
     text-decoration-color: var(--accent);
 
@@ -191,10 +193,18 @@
       font-family: 'Hack', monospace;
     }
   }
-
-  div[class*=language-] {
-    @apply relative w-full whitespace-normal;
+    
+  div[class*=language-] { 
+    @apply relative w-full whitespace-normal my-8;
     background-color: var(--bg-code-block);
+
+    + p {
+      @apply mt-0;
+    }
+  }
+
+  figure [class*=language-] {
+    margin-bottom: 0;
   }
 
   .token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog { color:#999 }

@@ -21,7 +21,10 @@
         <span
           :key="`nav-heading-${index}`"
           class="mt-12 ml-4 text-xl font-bold bg-primary"
-        >{{ nav.title }}</span>
+          :class="{ 'sidebar__title-list--active': sidebarTitleActive === nav.title }"
+        >
+          {{ nav.title }}
+        </span>
         <ul
           :key="`nav-list-${index}`"
           class="mt-3 mb-10 sidebar-list"
@@ -86,7 +89,7 @@
 </template>
 
 <script>
-import { computed } from '@vue/composition-api'
+import { computed, ref, watch } from '@vue/composition-api'
 
 import { resolveSidebarItems } from '@/theme/utils/sidebar'
 
@@ -95,8 +98,18 @@ export default {
 
   setup (_, { root }) {
     const items = computed(() => resolveSidebarItems(root.$page.regularPath, root.$site, root.$themeLocaleConfig))
+    const sidebarTitleActive = ref(null)
+
+    watch(() => root.$route.path, val => {
+      const item = items.value.find(item => item.children.some(child => child.path === val))
+      if (item) {
+        sidebarTitleActive.value = item.title
+      }
+    }, { immediate: true })
+
     return {
-      items
+      items,
+      sidebarTitleActive
     }
   }
 }

@@ -58,8 +58,8 @@ export default {
     const headers = computed(() => {
       if (!root.$page.headers) return []
       return root.$page.headers.map(header => {
-        return { title: header.title, hash: header.slug }
-      })
+        return header.level === 2 && { title: header.title, hash: header.slug }
+      }).filter(Boolean)
     })
 
     onMounted(() => {

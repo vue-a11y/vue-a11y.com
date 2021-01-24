@@ -1,14 +1,26 @@
 .custom-block.figure {
-  @apply relative w-full;
+  @apply relative w-full my-10;
+
+  + p {
+    @apply mt-0;
+  }
+
+  > div[class*=language-] {
+    @apply mb-0;
+  }
   
   &[data-type="bq"] {
-    @apply p-10 border-b border-solid rounded-md c-border-color bg-primary;
+    @apply p-10 border-b border-solid rounded-md c-border-color bg-primary my-10;
     border-bottom-width: 6px;
+
+    + p {
+      @apply mt-0;
+    }
 
     &:before {
       @apply absolute text-accent-primary border-none;
       content: '“';
-      top: -70px;
+      top: -67px;
       left: -20px;
       font-size: 150px;
       font-family: "Helvetica";
@@ -42,7 +54,12 @@
 }
 
 .custom-block.alert {
-  @apply px-6 pt-5 pb-4;
+  @apply px-6 pt-5 pb-4 my-6;
+
+  + p {
+    @apply mt-0;
+  }
+
   &[data-alert] {
     @apply border border-solid rounded-md c-border-color bg-primary;
     border-bottom-width: 6px;
@@ -53,16 +70,27 @@
       @apply m-0;
     }
   }
+
   &[data-alert="tip"] {
     background-color: var(--bg-custom-block-tip);
     border-color: var(--border-color-custom-block-tip);
   }
+
   &[data-alert="warning"] {
     background-color: var(--bg-custom-block-warning);
     border-color: var(--border-color-custom-block-warning);
+
+    code {
+      background-color: var(--border-color-custom-block-warning);
+    }
   }
+
   &[data-alert="danger"] {
     background-color: var(--bg-custom-block-danger);
     border-color: var(--border-color-custom-block-danger);
+
+    code {
+      background-color: var(--border-color-custom-block-danger);
+    }
   }
 }

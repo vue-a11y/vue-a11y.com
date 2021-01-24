@@ -6,6 +6,14 @@ const posts = {
   dirname: 'pt/posts',
   path: '/pt/posts/',
   itemPermalink: '/posts/:slug',
+  frontmatter: {
+    meta: [
+      {
+        name: 'description',
+        content: 'Posts da comunidade sobre acessibilidade com foco no desenvolvimento com Vue.js'
+      }
+    ]
+  },
   pagination: {
     layout: 'Posts',
     prevText: '<<',

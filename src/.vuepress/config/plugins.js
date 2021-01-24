@@ -3,7 +3,8 @@ const resolve = pathName => path.join(__dirname, pathName)
 
 const blogConfig = {
   en: require('./languages/en/blog'),
-  pt: require('./languages/pt/blog')
+  pt: require('./languages/pt/blog'),
+  jp: require('./languages/jp/blog'),
 }
 
 const customBlock = {
@@ -45,11 +46,13 @@ module.exports = [
       },
       directories: [
         blogConfig.en.posts,
-        blogConfig.pt.posts
+        blogConfig.pt.posts,
+        blogConfig.jp.posts
       ],
       frontmatters: [
         blogConfig.en.categories,
-        blogConfig.pt.categories
+        blogConfig.pt.categories,
+        blogConfig.jp.categories
       ]
     }
   ],
@@ -129,7 +132,7 @@ module.exports = [
     'vuepress-plugin-container',
     {
       type: 'headerCode',
-      before: info => customBlock.headerCode[0].replace('%', info),
+      before: info => customBlock.headerCode[0].replace('%', info === 'HEADERCODE' ? '' : info),
       after: customBlock.headerCode[1]
     }
   ],

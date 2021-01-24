@@ -17,12 +17,14 @@ module.exports = [
   // Twitter
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@vue_a11y' }],
-  ['meta', { name: 'twitter:image', content: '/img/social-share.png' }],
+  ['meta', { name: 'twitter:title', content: 'Vue A11y' }],
+  ['meta', { name: 'twitter:description', content: 'Vue.js community effort to improve web accessibility.' }],
+  ['meta', { name: 'twitter:image', content: 'https://vue-a11y.com/img/social-share.png' }],
 
   // Facebook
   ['meta', { property: 'og:site_name', content: 'Vue A11y' }],
   ['meta', { property: 'og:type', content: 'website' }],
-  ['meta', { property: 'og:image', content: '/img/social-share.png' }],
+  ['meta', { property: 'og:image', content: 'https://vue-a11y.com/img/social-share.png' }],
   ['meta', { property: 'og:image:type', content: 'image/png' }],
   ['meta', { property: 'og:image:width', content: '1200' }],
   ['meta', { property: 'og:image:height', content: '360' }],
@@ -62,7 +64,7 @@ module.exports = [
   ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com/' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/' }],
   ['link', { rel: 'preconnect', href: 'https://disqus.com/' }],
-  ['link', { rel: 'preconnect', href: 'http://vue-a11y-test.disqus.com' }],
+  ['link', { rel: 'preconnect', href: 'https://vue-a11y.disqus.com' }],
   ['link', { rel: 'preconnect', href: 'https://c.disquscdn.com/next/' }],
   ['link', { rel: 'preconnect', href: 'https://links.services.disqus.com/api/' }],
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],

@@ -7,6 +7,10 @@ module.exports = {
   searchPlaceholder: 'Search (Press "s" to focus)',
   url: process.env.URL_BASE,
   mailchimp: process.env.MAILCHIMP_ENDPOINT,
+  algolia: {
+    indexName: 'vue-a11y',
+    apiKey: process.env.ALGOLIA_KEY
+  },
   webmentions: {
     active: true,
     endpoint: 'https://webmention.io/api/mentions.jf2?target=#URLPOST#'
@@ -34,7 +38,7 @@ module.exports = {
       link: 'https://twitter.com/vue_a11y'
     },
     {
-      name: 'Github',
+      name: 'GitHub',
       icon: 'github',
       link: 'https://github.com/vue-a11y'
     }
@@ -44,6 +48,7 @@ module.exports = {
   authors: require('./authors'),
   locales: {
     '/': require('./languages/en/themeLocaleConfig'),
-    '/pt/': require('./languages/pt/themeLocaleConfig')
+    '/pt/': require('./languages/pt/themeLocaleConfig'),
+    '/jp/': require('./languages/jp/themeLocaleConfig'),
   }
 }

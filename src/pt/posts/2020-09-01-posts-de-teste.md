@@ -18,9 +18,7 @@ Suspendisse rhoncus mauris a sapien gravida, ut pulvinar urna ultrices. Aenean s
 Praesent vehicula pharetra tincidunt. Proin nec elit volutpat, lobortis dui eu, hendrerit sapien. Donec sapien quam, dictum sit amet neque eu, malesuada ultrices libero. Morbi blandit augue in turpis porttitor porta.
 
 :::: fig code
-::: headerCode
-index.html
-:::
+::: headerCode index.html
 ```html
 <small>
   <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
@@ -28,6 +26,7 @@ index.html
   </a>
 </small>
 ```
+:::
 ::: figcap
 Using &lt;small&gt; around a [Creative Commons license](http://creativecommons.org/choose/) link with `rel="license"`
 :::

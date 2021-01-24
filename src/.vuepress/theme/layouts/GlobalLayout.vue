@@ -21,7 +21,7 @@
       <VueSkipTo
         v-if="$themeLocaleConfig.skipTo"
         :to="$themeLocaleConfig.skipTo.to"
-        :list-label="$themeLocaleConfig.skipTo.label"
+        :label="$themeLocaleConfig.skipTo.label"
         class="z-20"
       />
     </ClientOnly>
@@ -75,5 +75,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@/theme/styles/base.scss"></style>
-<style src="@/theme/styles/tailwind.css"></style>
+<style lang="scss" src="@/theme/styles/index.scss"></style>

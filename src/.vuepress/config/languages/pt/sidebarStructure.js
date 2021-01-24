@@ -13,7 +13,6 @@ module.exports = {
       title: 'Acessibilidade',
       children: [
         'links-uteis',
-        'ferramentas-e-testes',
         'vue-a11y-checklist'
       ]
     },
@@ -69,8 +68,7 @@ module.exports = {
     {
       title: 'Receitas',
       children: [
-        '',
-        'contribua'
+        ''
       ]
     },
     {

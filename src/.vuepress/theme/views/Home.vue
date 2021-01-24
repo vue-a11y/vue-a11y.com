@@ -12,15 +12,15 @@
           <div class="flex mt-10">
             <RouterLink
               :to="$frontmatter.actionLink"
-              class="btn btn-accent"
+              class="text-lg md:text-xl btn btn-accent"
             >
               {{ $frontmatter.actionText }}
             </RouterLink>
 
             <ExternalLink
-              class="ml-4 btn btn-light"
+              class="ml-4 text-lg md:text-xl btn btn-light"
               :href="`https://github.com/${$themeConfig.repo}`"
-              label="Github"
+              label="GitHub"
             />
           </div>
         </div>
@@ -106,16 +106,16 @@
         >
           {{ $frontmatter.supportersText }}:
         </h2>
-        <ul class="flex flex-wrap justify-between flex-grow">
+        <ul class="flex flex-wrap flex-grow">
           <li
             v-for="(supporter, index) in $themeConfig.supporters"
             :key="`supporter-${index}`"
-            class="w-48"
+            class="ml-2"
           >
             <a
               :href="supporter.link"
               :aria-label="`${supporter.name}`"
-              class="block w-12 h-12 overflow-hidden rounded-full"
+              class="block w-12 h-12 overflow-hidden transition-transform transform rounded-full hover:scale-110 hover:shadow"
             >
               <img
                 :src="`/img/supporters/${supporter.image}`"

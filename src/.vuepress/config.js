@@ -12,12 +12,13 @@ module.exports = {
   postcss: require('./config/postcss'),
   locales: {
     '/': require('./config/languages/en/localeConfig'),
-    '/pt/': require('./config/languages/pt/localeConfig')
+    '/pt/': require('./config/languages/pt/localeConfig'),
+    '/jp/': require('./config/languages/jp/localeConfig')
   },
   themeConfig: require('./config/themeConfig'),
   markdown: {
     anchor: {
-      permalinkAttrs: () => ({ 'aria-hidden': 'true', tabindex: '-1' })
+      permalink: false
     },
     extendMarkdown: md => {
       md.renderer.rules.table_open = () => '<div class="table-wrapper" tabindex="0">\n<table>\n'

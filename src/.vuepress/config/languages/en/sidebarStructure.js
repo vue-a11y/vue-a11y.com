@@ -13,7 +13,6 @@ module.exports = {
       title: 'Accessibility',
       children: [
         'resources',
-        'tools-testing',
         'vue-a11y-checklist'
       ]
     },
@@ -69,8 +68,7 @@ module.exports = {
     {
       title: 'Recipes',
       children: [
-        '',
-        'contribute'
+        ''
       ]
     },
     {

@@ -16,7 +16,7 @@
           <a
             :href="href"
             :aria-current="isActive && $route.path.indexOf(item.link) === 0 ? 'page' : null"
-            class="px-3 py-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
+            class="flex px-3 py-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
             :class="{ 'active border-accent-primary': isActive && $route.path.indexOf(item.link) === 0 }"
             @click="navigate"
           >
@@ -26,9 +26,9 @@
       </li>
       <li>
         <ExternalLink
-          class="px-3 py-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
+          class="flex items-center px-3 border-b-4 border-transparent border-solid the-nav-link hover:border-accent-primary"
           :href="`https://github.com/vue-a11y`"
-          label="Github"
+          label="GitHub"
         />
       </li>
     </ul>
@@ -44,7 +44,7 @@ export default {
 <style lang="scss">
 .the-nav {
   &-link {
-    padding-top: 1rem;
+    padding-top: 1.2rem;
     padding-bottom: 1.2rem;
   }
 }

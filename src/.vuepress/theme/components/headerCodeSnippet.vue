@@ -1,41 +1,44 @@
 <template>
-  <div
-    ref="headerCodeSnippet"
-    class="flex items-center justify-between w-full header-code"
-  >
-    <div class="pl-6 text-base">
-      <slot />
-    </div>
-    <div class="flex">
-      <button
-        type="button"
-        class="p-4 text-xs uppercase opacity-0 focus:opacity-100"
-        :aria-label="t.skip.ariaLabel || t.skip.text"
-        @click="skipCodeSnippet"
-      >
-        {{ t.skip.text }}
-      </button>
-      <button
-        type="button"
-        class="flex items-center p-4 text-xs"
-        :aria-label="t.copy.ariaLabel || t.copy.text"
-        @click="copyCondeSnippet"
-      >
-        <vp-icon name="copy" />
-        <span
-          v-show="!copied"
-          class="pl-2 uppercase"
+  <div>
+    <div
+      ref="headerCodeSnippet"
+      class="flex items-center justify-between w-full header-code"
+    >
+      <div class="pl-6 text-sm">
+        {{ info }}
+      </div>
+      <div class="flex">
+        <button
+          type="button"
+          class="p-4 text-xs uppercase opacity-0 focus:opacity-100"
+          :aria-label="t.skip.ariaLabel || t.skip.text"
+          @click="skipCodeSnippet"
         >
-          {{ t.copy.text }}
-        </span>
-        <span
-          v-show="copied"
-          class="pl-2 uppercase"
+          {{ t.skip.text }}
+        </button>
+        <button
+          type="button"
+          class="flex items-center p-4 text-xs"
+          :aria-label="t.copy.ariaLabel || t.copy.text"
+          @click="copyCondeSnippet"
         >
-          {{ t.copy.textCopied }}
-        </span>
-      </button>
+          <vp-icon name="copy" />
+          <span
+            v-show="!copied"
+            class="pl-2 uppercase"
+          >
+            {{ t.copy.text }}
+          </span>
+          <span
+            v-show="copied"
+            class="pl-2 uppercase"
+          >
+            {{ t.copy.textCopied }}
+          </span>
+        </button>
+      </div>
     </div>
+    <slot />
   </div>
 </template>
 
@@ -61,13 +64,13 @@ export default {
 
     function skipCodeSnippet () {
       const parent = refs.headerCodeSnippet.parentElement
-      if (parent) programmaticFocus(parent.nextSibling)
+      if (parent && parent.nextElementSibling) programmaticFocus(parent.nextElementSibling)
     }
 
     function copyCondeSnippet () {
-      const { copy, supported } = useClipboard()
-      if (supported) {
-        copy(refs.headerCodeSnippet.nextSibling && refs.headerCodeSnippet.nextSibling.textContent)
+      const { copy, isSupported } = useClipboard()
+      if (isSupported) {
+        copy(refs.headerCodeSnippet.nextElementSibling && refs.headerCodeSnippet.nextElementSibling.textContent)
         copied.value = true
         root.$announcer.assertive(t.value.copy.textCopied)
         setTimeout(() => {
@@ -98,6 +101,10 @@ export default {
 
   p {
     margin: 0;
+  }
+
+  + div[class*=language-] {
+    @apply mt-0;
   }
 }
 </style>

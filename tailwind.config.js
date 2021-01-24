@@ -1,8 +1,9 @@
 module.exports = {
-  purge: false,
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   },
+  purge: false,
   theme: {
     extend: {
       colors: {
