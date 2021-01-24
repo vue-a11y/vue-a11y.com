@@ -19,4 +19,10 @@ features:
 - title: A11y contents
   details: Useful links, articles, videos, Web accessibility events, both in the context of Vue.js and in others.
 
+meta:
+  - property: 'og:image'
+    content: 'https://vue-a11y.com/img/social-share-jp.png'
+  - name: 'twitter:image'
+    content: 'https://vue-a11y.com/img/social-share-jp.png'
+
 ---
