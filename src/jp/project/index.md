@@ -1,21 +1,33 @@
 ---
-description: Vue A11y is an open-source community project, where the main objective is to create content focused on Vue.js and bringing maximum accessibility
+title: はじめに
+description: Vue A11y は、Vue.js に最大限のアクセシビリティをもたらす事を目的としたオープンソースプロジェクトです。
+
+meta:
+  - property: 'og:image'
+    content: 'https://vue-a11y.com/img/social-share-jp.png'
+  - name: 'twitter:title'
+    content: はじめに
+  - name: 'twitter:description'
+    content: Vue A11y は、Vue.js に最大限のアクセシビリティをもたらす事を目的としたオープンソースプロジェクトです。
+  - name: 'twitter:image'
+    content: 'https://vue-a11y.com/img/social-share-jp.png'
 ---
 
-# Introduction
+# はじめに
 
-**Vue A11y** is an open-source community project, where the main objective is to create content focused on Vue.js and bringing maximum accessibility.
+**Vue A11y** は、Vue.js に最大限のアクセシビリティをもたらす事を目的としたオープンソースプロジェクトです。
 
-The project is open, so anyone who wants to participate is very welcome.
+プロジェクトはオープンなため、どなたでも貢献する事ができます。
 
-Accessibility is super important! We believe that if we join efforts to centralize content that is easy to understand, through recipes, tips, and blog posts, we can help developers and creators of Vue.js libraries to have consistent and more inclusive code.
+アクセシビリティはとても大切です！わかりやすいコンテンツの一元化に取り組むことで、レシピ、ヒント、そしてブログ記事を通じ、開発者や Vue.js ライブラリ制作者がより一貫性のある包括的なコードを書く事に貢献できると信じています。
 
-Feel invited to **[contribute](/project/how-to-contribute.html)** in the development, in the creation of posts, recipes and tips, or by giving an incentive **[supporting](/project/how-to-contribute.html#supporting)** the project.
+記事、レシピ、ヒントを作成またはプロジェクトを **[支援](/jp/project/how-to-contribute.html#supporting)** する事で気軽に開発に **[貢献](/jp/project/how-to-contribute.html)** してください。
 
 ---
 
 <br>
 
 ::: alert Updates  
-We are just getting started. We will always keep you updated through [issues on GitHub](https://github.com/vue-a11y/vue-a11y.com/issues) and our [Twitter account](https://twitter.com/vue_a11y).  
+私たちはまだ始まったばかりです。[GitHub の issue](https://github.com/vue-a11y/vue-a11y.com/issues) や、[Twitterアカウント](https://twitter.com/vue_a11y) を通していつでも最新情報をお知らせします。
+
 :::
