@@ -15,7 +15,7 @@
     }
   }
 
-  p, ol, ul {    
+  p, ol, ul {
     @apply leading-8;
   }
 
@@ -34,11 +34,11 @@
     margin-top: 60px;
     z-index: 2;
     line-height: 1.04em;
-    
+
 
     + p {
       margin-top: 30px;
-    }    
+    }
   }
 
   h3 {
@@ -75,7 +75,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative inline-block bg-primary;
+    @apply relative bg-primary;
     text-decoration: underline;
     text-decoration-color: var(--accent);
 
@@ -191,8 +191,8 @@
       font-family: 'Hack', monospace;
     }
   }
-    
-  div[class*=language-] { 
+
+  div[class*=language-] {
     @apply relative w-full whitespace-normal;
     background-color: var(--bg-code-block);
   }
