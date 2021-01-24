@@ -8,6 +8,13 @@ tags: [live-regions, screen-reader]
 author: marcus-herrmann
 
 date: 2021-01-24 16:42:43
+
+meta:
+  - name: 'twitter:title'
+    content: Using Vue Announcer
+  - name: 'twitter:description'
+    content: Silence isn't always golden in web apps
+
 -------------------------
 
 Screen readers are a form of assistive technology and capable of transforming content displayed on a screen into either speech or braille output. When it comes to websites and browsers,  semantic HTML that is not only a way of helping search engines to understand a web page better. Using "meaningful" (semantic) elements to your app also conveys the information and functionality to screen readers users. Thus, a sound document outline, alternative texts for multimedia content, labeled buttons, form inputs and sensible link texts are necessary to ensure a website can be perceived by everyone.
