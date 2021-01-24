@@ -6,7 +6,7 @@ module.exports = {
         '',
         ['ロードマップ', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
         ['参加者', 'people'],
-        ['コントリビュート', 'how-to-contribute'],
+        ['貢献する方法', 'how-to-contribute'],
       ]
     },
     {
