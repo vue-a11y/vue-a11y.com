@@ -25,9 +25,6 @@ This is why WAI (W3C's Web Accessibility Initiative) established a concept calle
 
 You can install it with npm (`npm install -S @vue-a11y/announcer`) or yarn (`yarn add @vue-a11y/announcer`). For the Vue 3 version you point towards the `next` branch of the project: `npm install -S @vue-a11y/announcer@next`) or yarn (`yarn add -D @vue-a11y/announcer@next`. To include it in your app, import it and register it as a Vue plugin. At first, let's show the Vue 2 way:
 
-::: headerCode
-main.js
-:::
 ```js
 import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
@@ -38,9 +35,6 @@ Vue.use(VueAnnouncer)
 
 If you use the Vue 3 version, the code is as follows:
 
-::: headerCode
-main.js
-:::
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -54,9 +48,6 @@ createApp(App)
 
 The next step of actually using it is to add `<VueAnnouncer />` into your `App.vue`, for example like this:
 
-::: headerCode
-App.vue
-:::
 ```vue
 <template>
   <div>
@@ -77,9 +68,6 @@ In total, `$announcer` has three methods:
 
 Sidenote for the Vue 3 version of `vue-announcer`: The project's `next` branch provides the composable `useAnnouncer()` for using it in a composition API context. Named exports are `announce` (defaulting to polite), `assertive`, `polite` and ` setRouteComplement` for usage after route changes.
 
-::: headerCode
-App.vue (Vue 3)
-:::
 ```js
 export default {
   setup () {
