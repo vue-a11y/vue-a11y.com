@@ -21,7 +21,7 @@
       <VueSkipTo
         v-if="$themeLocaleConfig.skipTo"
         :to="$themeLocaleConfig.skipTo.to"
-        :list-label="$themeLocaleConfig.skipTo.label"
+        :label="$themeLocaleConfig.skipTo.label"
         class="z-20"
       />
     </ClientOnly>
