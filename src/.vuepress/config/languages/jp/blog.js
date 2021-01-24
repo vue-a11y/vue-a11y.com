@@ -25,8 +25,8 @@ const posts = {
 }
 
 const categories = {
-  id: 'categories',
-  keys: ['category', 'categories'],
+  id: 'jpCategories',
+  keys: ['カテゴリー', 'カテゴリ'],
   title: 'カテゴリ',
   scopeLayout: 'Posts',
   path: '/jp/category/',
