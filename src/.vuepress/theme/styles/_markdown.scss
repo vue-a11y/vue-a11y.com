@@ -4,13 +4,17 @@
 
   p {
     word-wrap: break-word;
-    margin: 40px 0;
+    margin-top: 40px;
 
     abbr {
       cursor: help;
       border-bottom: none;
       text-decoration: underline;
       text-decoration-style: dotted;
+    }
+
+    + p {
+      margin-bottom: 40px;
     }
   }
 
@@ -111,14 +115,25 @@
     li:not(:last-child) {
       margin-bottom: 16px;
     }
-  }
 
-  ul li:before {
-    @apply text-accent-primary font-bold inline-block;
-    content: "\2022";
-    width: 1em;
-    margin-left: -1em;
-    speak: none;
+    li {
+      p {
+        margin: 0;
+        display: inline;
+      }
+    }
+  }
+  
+
+
+  ul {
+    li:before {
+      @apply text-accent-primary font-bold inline-block;
+      content: "\2022";
+      width: 1em;
+      margin-left: -1em;
+      speak: none;
+    }
   }
 
   .table-wrapper {
@@ -196,7 +211,7 @@
   }
 
   div[class*=language-] {
-    @apply relative w-full whitespace-normal my-8;
+    @apply relative w-full whitespace-normal mt-4 mb-8;
     background-color: var(--bg-code-block);
 
     + p {

@@ -31,12 +31,12 @@ module.exports = {
       title: 'Categorias',
       type: 'manual',
       children: [
-        ['Novidades', '/pt/categoria/novidades/'],
+        // ['Novidades', '/pt/categoria/novidades/'],
         ['HTML', '/pt/categoria/html/'],
         ['ARIA', '/pt/categoria/aria/'],
-        ['WCAG', '/pt/categoria/wcag/'],
-        ['Tools', '/pt/categoria/tools/'],
-        ['Packages', '/pt/categoria/packages/'],
+        // ['WCAG', '/pt/categoria/wcag/'],
+        // ['Tools', '/pt/categoria/tools/'],
+        // ['Packages', '/pt/categoria/packages/'],
         ['Single Page App', '/pt/categoria/spa/']
       ]
     },
