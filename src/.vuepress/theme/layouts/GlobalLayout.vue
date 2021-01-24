@@ -50,7 +50,6 @@ export default {
   },
 
   setup (_, { root, refs }) {
-    console.log(root.$themeLocaleConfig.skipTo)
     const colorModeConfig = ref(root.$themeConfig.colorMode)
 
     const layout = computed(() => {
