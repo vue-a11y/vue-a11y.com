@@ -8,7 +8,7 @@ meta:
   - name: 'twitter:title'
     content: はじめに
   - name: 'twitter:description'
-    content: Vue A11y は、Vue.js に最大限のアクセシビリティをもたらす事を目的としたオープンソースプロジェクトです。ジェクトです。
+    content: Vue A11y は、Vue.js に最大限のアクセシビリティをもたらす事を目的としたオープンソースプロジェクトです。
   - name: 'twitter:image'
     content: 'https://vue-a11y.com/img/social-share-jp.png'
 ---
