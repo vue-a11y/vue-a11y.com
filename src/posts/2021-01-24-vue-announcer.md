@@ -66,7 +66,7 @@ In total, `$announcer` has three methods:
 - `polite`  is a wrapper of the "set" method that defines the politeness setting as polite: `this.$announcer.polite('Added item to your shopping cart')`.
 - `assertive`  is a wrapper of the "set" method that defines the politeness setting as polite: `this.$announcer.assertive('Could not save file')`.
 
-Sidenote for the Vue 3 version of `vue-announcer`: The project's `next` branch provides the composable `useAnnouncer()` for using it in a composition API context. Named exports are `announce` (defaulting to polite), `assertive`, `polite` and ` setRouteComplement` for usage after route changes.
+Sidenote for the Vue 3 version of `vue-announcer`: The project's `next` branch provides the composable `useAnnouncer()` for using it in a composition API context. Named exports are `announce` (defaulting to polite), `assertive`, `polite` and ` setRouteComplement` for usage after route changes. Find more details in [Readme.md of the libraries `next` branch]( https://github.com/vue-a11y/vue-announcer/blob/next/README.md).
 
 ```js
 export default {
