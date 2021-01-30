@@ -77,14 +77,20 @@ createApp(App)
 ```
 ３つ目のステップは、実際に通知を送ることです。[公式ドキュメントを引用すると](https://vue-announcer-v2.surge.sh/guide/announcer.html#methods)、
 
+:::: fig bq
+::: bq
 > _Vue インスタンスに注入されたプロパティ上で $announcer が利用可能なので、アプリケーション内のどこでも利用可能です。これを使えば、スクリーンリーダーを持った人に必要な情報をリアルタイムで通知することができます。_
+:::
+::::
 
 まとめると、`$announcer` は３つのメソッドがあります:
 - `set` を使用すると、アクセシブルな通知を送信できます。最初のパラメータはメッセージ自体で、２番目のパラメータはメッセージの丁寧さの設定です。具体例:       `this.$announcer.set('Could not save file', 'assertive')`.
 - `polite` は丁寧さの設定を polite として定義するための "set" メソッドのラッパーです: `this.$announcer.polite('Added item to your shopping cart')`.
 - `assertive` は丁寧さの設定を assertive として定義するための "set" メソッドのラッパーです: `this.$announcer.assertive('Could not save file')`.
 
+::: alert tip
 Vue 3 バージョンの `vue-announcer` に関する注釈。プロジェクトの次のブランチでは、Composition API のコンテキストで使用するためのコンポジション可能な `useAnnouncer()` が提供されています。指定されたエクスポートは、`announce` (デフォルトは polite)、`assertive`、`polite`、そしてルート変更後の使用のための `setRouteComplement` です。詳細は[ライブラリの `next` ブランチの Readme.md](https://github.com/vue-a11y/vue-announcer/blob/next/README.md) を参照してください。
+:::
 
 ```js
 export default {
