@@ -79,7 +79,7 @@ The third step is to send the actual announcements. [To quote the official docum
 In total, `$announcer` has three methods:
 - With `set` you can send an accessible annoucement, its first parameter being the message itself and the second being its politeness setting. A concrete example:       `this.$announcer.set('Could not save file', 'assertive')`.
 - `polite`  is a wrapper of the "set" method that defines the politeness setting as polite: `this.$announcer.polite('Added item to your shopping cart')`.
-- `assertive`  is a wrapper of the "set" method that defines the politeness setting as polite: `this.$announcer.assertive('Could not save file')`.
+- `assertive`  is a wrapper of the "set" method that defines the politeness setting as assertive: `this.$announcer.assertive('Could not save file')`.
 
 Sidenote for the Vue 3 version of `vue-announcer`: The project's `next` branch provides the composable `useAnnouncer()` for using it in a composition API context. Named exports are `announce` (defaulting to polite), `assertive`, `polite` and ` setRouteComplement` for usage after route changes. Find more details in [Readme.md of the libraries `next` branch]( https://github.com/vue-a11y/vue-announcer/blob/next/README.md).
 
@@ -87,7 +87,7 @@ Sidenote for the Vue 3 version of `vue-announcer`: The project's `next` branch p
 export default {
   setup () {
     const { assertive } = useAnnouncer()
-    
+
     function someErrorMethod () {
       assertive("Could not save draft");
     }
