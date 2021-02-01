@@ -16,6 +16,6 @@ meta:
 
 <list-people role="team"></list-people>
 
-## Package manteiners
+## Package maintainers
 
 <list-people role="package"></list-people>
