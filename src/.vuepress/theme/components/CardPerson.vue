@@ -22,6 +22,7 @@
       />
 
       <a
+        v-show="person.website"
         :href="person.website"
         class="px-2 py-1 mt-4 uppercase border border-gray-600"
         rel="noopener noreferrer"

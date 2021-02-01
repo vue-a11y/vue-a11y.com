@@ -58,7 +58,7 @@ module.exports = [
   {
     name: 'Andrew Vasilchuk',
     username: 'andrewvasilchuk',
-    website: 'https://kevindeisz.com/',
+    website: '',
     role: 'package',
     social: [],
     avatar: '/img/people/andrewvasilchuk.jpg',
