@@ -45,10 +45,10 @@ module.exports = {
   ],
   sponsors: require('./sponsors'),
   supporters: require('./supporters'),
-  authors: require('./authors'),
+  people: require('./people'),
   locales: {
     '/': require('./languages/en/themeLocaleConfig'),
     '/pt/': require('./languages/pt/themeLocaleConfig'),
-    '/jp/': require('./languages/jp/themeLocaleConfig'),
+    '/jp/': require('./languages/jp/themeLocaleConfig')
   }
 }

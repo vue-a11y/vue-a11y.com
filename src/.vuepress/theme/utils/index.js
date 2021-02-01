@@ -28,7 +28,7 @@ export function getLastUpdateString (lastUpdate, lang) {
 export function programmaticFocus (el) {
   el.setAttribute('tabindex', '-1')
   el.focus()
-  el.removeAttribute('tabindex')
+  setTimeout(() => el.removeAttribute('tabindex'), 1000)
 }
 
 export function prepareSocialShareLinks (path, title, summary) {

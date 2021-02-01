@@ -40,27 +40,11 @@
                 itemscope
                 itemtype="https://schema.org/Person"
               >
-                <RouterLink
+                <AuthorLink
                   v-if="post.author"
-                  ref="authors"
-                  rel="author"
-                  itemprop="url"
-                  :to="{ path: '/authors/', hash: post.author.username }"
-                  class="relative flex hover:underline"
+                  :author="post.author"
                   style="top: 2px;"
-                >
-                  <div class="w-8 h-8 mr-2 overflow-hidden rounded-full">
-                    <img
-                      :src="post.author.avatar"
-                      :alt="`Avatar ${post.author.name}`"
-                      class="object-cover object-top w-full h-fl"
-                    >
-                  </div>
-                  <span class="mt-1">
-                    <span class="sr-only">Post by </span>
-                    <span itemprop="name">{{ post.author.name }}</span>
-                  </span>
-                </RouterLink>
+                />
               </div>
               <div class="w-6 mx-4 border-b-2 border-solid rounded border-accent-primary" />
               <time
@@ -133,6 +117,7 @@
 import { computed } from '@vue/composition-api'
 import { Disqus } from 'vue-disqus'
 
+import AuthorLink from '@/theme/components/AuthorLink'
 import ShareLinks from '@/theme/components/ShareLinks'
 import TableOfContents from '@/theme/components/TableOfContents'
 import WebMentions from '@/theme/components/WebMentions'
@@ -142,6 +127,7 @@ export default {
 
   components: {
     Disqus,
+    AuthorLink,
     ShareLinks,
     WebMentions,
     TableOfContents
@@ -153,7 +139,7 @@ export default {
       title: root.$page.title,
       path: root.$page.path,
       summary: root.$page.frontmatter.summary || '',
-      author: root.$themeConfig.authors.find(author => author.username === root.$page.frontmatter.author),
+      author: root.$themeConfig.people.find(author => author.username === root.$page.frontmatter.author),
       updated_at: root.$page.lastUpdated,
       date: {
         datetime: root.$page.frontmatter.date,

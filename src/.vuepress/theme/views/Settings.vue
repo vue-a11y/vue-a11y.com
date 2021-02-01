@@ -47,10 +47,6 @@ export default {
     SettingMotion,
     SettingLanguage,
     SettingReadingFont
-  },
-
-  setup (_, { root }) {}
+  }
 }
 </script>
-
-<style lang="scss"></style>
