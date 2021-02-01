@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { computed } from '@vue/composition-api'
+import { onMounted } from '@vue/composition-api'
 
 import AuthorLink from '@/theme/components/AuthorLink'
 import { useCard } from '@/theme/composable'
@@ -50,7 +50,13 @@ export default {
   },
 
   setup (_, { refs, root }) {
-    const { onMouseEvent } = useCard(computed(() => refs.cardLink), computed(() => [refs.authors]))
+    // const { onMouseEvent } = useCard(computed(() => refs.cardLink), computed(() => [refs.authors]))
+    const { onMouseEvent, addCardElement, addPreventElements } = useCard()
+
+    onMounted(() => {
+      addCardElement(refs.cardLink)
+      addPreventElements([refs.authors])
+    })
 
     return {
       onMouseEvent
