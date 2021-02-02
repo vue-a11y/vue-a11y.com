@@ -25,7 +25,7 @@ module.exports = [
       }
     ],
     avatar: '/img/people/yamanoku.png',
-    bio: 'FrontEnd Designer • Accessibility Adovocator • I want to be Internet.'
+    bio: 'FrontEnd Designer • Accessibility Adovocator'
   },
   {
     name: 'Marcus Herrmann',
