@@ -61,7 +61,7 @@ export default {
         id: post.key,
         title: post.title,
         to: post.path,
-        author: root.$themeConfig.authors.find(author => author.username === post.frontmatter.author),
+        author: root.$themeConfig.people.find(author => author.username === post.frontmatter.author),
         date: {
           datetime: post.frontmatter.date,
           short: new Intl.DateTimeFormat('default', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(post.frontmatter.date))

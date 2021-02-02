@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { watch, computed, onMounted } from '@vue/composition-api'
+import { watch, computed, onMounted, ref } from '@vue/composition-api'
 
 import { useIntersectionObserver } from '@/theme/composable'
 import { programmaticFocus } from '@/theme/utils'
@@ -53,6 +53,7 @@ export default {
   },
 
   setup (_, { root }) {
+    const initialHash = ref(false)
     const { targetIntercepted } = useIntersectionObserver('.header-anchor') // use { rootMargin: '0px 0px -70%' } to active by header viewport top
 
     const headers = computed(() => {
@@ -64,18 +65,27 @@ export default {
 
     onMounted(() => {
       if (root.$route.hash) {
+        toggleInitialHash()
         const heading = document.getElementById(root.$route.hash.substring(1))
         heading && programmaticFocus(heading)
+        setTimeout(() => {
+          toggleInitialHash()
+          console.log(initialHash.value)
+        }, 2000)
       }
     })
 
     watch(targetIntercepted, val => {
-      if (root.$route.hash && root.$route.hash === val.hash) return
+      if ((root.$route.hash && root.$route.hash === val.hash) || initialHash.value) return
       root.$vuepress.$set('disableScrollBehavior', true)
       root.$router.replace({ path: root.$route.path, hash: val.hash }, () => {
         root.$nextTick(() => root.$vuepress.$set('disableScrollBehavior', false))
       })
     })
+
+    function toggleInitialHash () {
+      initialHash.value = !initialHash.value
+    }
 
     return {
       headers

@@ -6,14 +6,14 @@ module.exports = {
         '',
         ['ロードマップ', 'https://github.com/vue-a11y/vue-a11y.com/projects/2'],
         ['参加者', 'people'],
-        ['貢献する方法', 'how-to-contribute'],
+        ['貢献する方法', 'how-to-contribute']
       ]
     },
     {
       title: 'アクセシビリティ',
       children: [
         ['リソース', 'resources'],
-        ['Vue A11Y チェックリスト', 'vue-a11y-checklist'],
+        ['Vue A11Y チェックリスト', 'vue-a11y-checklist']
       ]
     },
     {
