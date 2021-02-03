@@ -119,11 +119,23 @@ export default {
   --docsearch-primary-color: var(--secondary);
   --docsearch-highlight-color: var(--accent-secondary);
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--accent);
+  --docsearch-text-color: var(--color);
 
   --docsearch-modal-background: var(--secondary);
   --docsearch-searchbox-background: var(--primary);
   --docsearch-searchbox-focus-background: var(--primary);
   --docsearch-muted-color: var(--color);
+}
+
+.mode-dark .DocSearch, .mode-sepia .DocSearch {
+  --docsearch-searchbox-background: var(--secondary);
+  --docsearch-hit-background: var(--primary);
+  --docsearch-hit-color: var(--color);
+  --docsearch-footer-background: var(--primary);
+}
+
+.DocSearch-Button-Key, .DocSearch-Commands-Key {
+  color: theme('colors.gray.800') !important;
 }
 
 .DocSearch-Button {
