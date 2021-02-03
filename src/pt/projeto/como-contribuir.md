@@ -62,8 +62,8 @@ Seu suporte é muito importante para que possamos nos dedicar mais tempo à cria
 <p>
 Separamos algumas recompensas para nossos apoiadores do Open Collective.
 <br>
-<a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial; width: 300px;">
-  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="Doe para o nosso colletivo (abre em uma nova tab)" />
+<a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial;">
+  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline; max-width: 400px;" alt="Doe para o nosso colletivo (abre em uma nova tab)" />
 </a>
 </p>
 

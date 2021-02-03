@@ -62,8 +62,8 @@ description: Find out how to contribute to Vue Accessibility project
 <p>
 Open Collective サポーターの方々のためにいくつかの支援を分けています。
 <br>
-<a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial; width: 300px;">
-  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline;" alt="collective へ寄付をする (新しいタブで開く)" />
+<a href="https://opencollective.com/vue-a11y/donate" target="_blank" rel="noopener" style="background-color: initial;">
+  <img src="https://opencollective.com/vue-a11y/donate/button@2x.png?color=blue" style="box-shadow: none; display: inline; max-width: 400px;" alt="collective へ寄付をする (新しいタブで開く)" />
 </a>
 </p>
 
