@@ -181,8 +181,7 @@ export default {
   setup (_, { root }) {
     const webmentions = ref([])
     const avatarLimits = ref(16)
-    // const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', `${process.env.URL_BASE}${root.$route.fullPath}`)
-    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', 'https://vue-a11y.com/about')
+    const urlFetch = root.$themeConfig.webmentions.endpoint.replace('#URLPOST#', `${process.env.URL_BASE}${root.$route.fullPath}`)
 
     const mentions = computed(() => {
       if (!webmentions.value.length) return []
