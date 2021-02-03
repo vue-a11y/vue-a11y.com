@@ -66,12 +66,6 @@ module.exports = {
 
   recipes: [
     {
-      title: 'Recipes',
-      children: [
-        ''
-      ]
-    },
-    {
       title: 'Widgets',
       children: [
         'widgets/accordion',
