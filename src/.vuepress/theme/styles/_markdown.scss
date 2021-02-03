@@ -4,7 +4,7 @@
 
   p {
     word-wrap: break-word;
-    margin-top: 40px;
+    margin-top: 26px;
 
     abbr {
       cursor: help;
@@ -14,7 +14,7 @@
     }
 
     + p {
-      margin-bottom: 40px;
+      margin-bottom: 26px;
     }
   }
 
@@ -43,12 +43,12 @@
     }
 
     + p {
-      margin-top: 30px;
+      margin-top: 26px;
     }
   }
 
   h3 {
-    @apply text-xl font-bold mt-12 mb-8;
+    @apply text-xl font-bold mt-12;
     line-height: 1.10em;
   }
 
@@ -81,7 +81,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative bg-primary;
+    @apply relative bg-primary inline-block;
     text-decoration: underline;
     text-decoration-color: var(--accent);
 
@@ -90,6 +90,7 @@
     }
 
     .icon.outbound {
+      margin-left: 2px;
       color: inherit;
     }
   }
@@ -169,7 +170,7 @@
   }
 
   hr {
-    @apply border c-border-color;
+    @apply border c-border-color my-4;
   }
 
   video, audio {
