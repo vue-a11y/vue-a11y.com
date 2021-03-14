@@ -12,8 +12,10 @@ module.exports = {
     {
       title: 'Acessibilidade',
       children: [
-        'links-uteis',
-        'vue-a11y-checklist'
+        ['Básico', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-basics.html'],
+        ['Semântica', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-semantics.html'],
+        ['Padrões', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-standards.html'],
+        ['Recursos', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-resources.html']
       ]
     },
     {

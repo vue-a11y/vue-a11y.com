@@ -12,8 +12,10 @@ module.exports = {
     {
       title: 'Accessibility',
       children: [
-        'resources',
-        'vue-a11y-checklist'
+        ['Basics', 'https://v3.vuejs.org/guide/a11y-basics.html'],
+        ['Semantics', 'https://v3.vuejs.org/guide/a11y-semantics.html'],
+        ['Standards', 'https://v3.vuejs.org/guide/a11y-standards.html'],
+        ['Resources', 'https://v3.vuejs.org/guide/a11y-resources.html']
       ]
     },
     {
