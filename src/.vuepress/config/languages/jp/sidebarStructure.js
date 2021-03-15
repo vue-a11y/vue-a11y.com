@@ -15,14 +15,7 @@ module.exports = {
         ['基礎', 'https://v3.ja.vuejs.org/guide/a11y-basics.html'],
         ['セマンティクス', 'https://v3.ja.vuejs.org/guide/a11y-semantics.html'],
         ['標準', 'https://v3.ja.vuejs.org/guide/a11y-standards.html'],
-        ['リソース', 'https://v3.ja.vuejs.org/guide/a11y-resources.html']
-      ]
-    },
-    {
-      title: 'コミュニティ',
-      children: [
-        ['パッケージ', 'https://github.com/vue-a11y/awesome-a11y-vue#components-and-plugins'],
-        ['UI プロジェクト', 'https://github.com/vue-a11y/awesome-a11y-vue#accessible-libraries'],
+        ['リソース', 'https://v3.ja.vuejs.org/guide/a11y-resources.html'],
         ['Awesome', 'https://github.com/vue-a11y/awesome-a11y-vue']
       ]
     }

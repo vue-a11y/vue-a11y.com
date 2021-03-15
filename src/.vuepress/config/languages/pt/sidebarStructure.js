@@ -15,14 +15,7 @@ module.exports = {
         ['Básico', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-basics.html'],
         ['Semântica', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-semantics.html'],
         ['Padrões', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-standards.html'],
-        ['Recursos', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-resources.html']
-      ]
-    },
-    {
-      title: 'Comunidade',
-      children: [
-        ['Plugins', 'https://github.com/vue-a11y/awesome-a11y-vue#components-and-plugins'],
-        ['Projetos UI', 'https://github.com/vue-a11y/awesome-a11y-vue#accessible-libraries'],
+        ['Recursos', 'https://vuejsbr-docs-next.netlify.app/guide/a11y-resources.html'],
         ['Awesome', 'https://github.com/vue-a11y/awesome-a11y-vue']
       ]
     }
