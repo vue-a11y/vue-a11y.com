@@ -98,7 +98,18 @@
             <hr class="my-16">
 
             <div class="disqus-section">
-              <Disqus v-bind="disqus" />
+              <button
+                v-show="!isDisqusOpen"
+                type="button"
+                class="w-full p-4 text-xl font-bold text-center rounded btn btn-accent"
+                @click="loadDisqus"
+              >
+                Show Disqus comments
+              </button>
+              <Disqus
+                v-if="isDisqusOpen"
+                v-bind="disqus"
+              />
             </div>
 
             <hr class="my-16">
@@ -121,6 +132,7 @@ import AuthorLink from '@/theme/components/AuthorLink'
 import ShareLinks from '@/theme/components/ShareLinks'
 import TableOfContents from '@/theme/components/TableOfContents'
 import WebMentions from '@/theme/components/WebMentions'
+import { useDisclosure } from '@/theme/composable'
 
 export default {
   name: 'Post',
@@ -156,9 +168,16 @@ export default {
       }
     }
 
+    const {
+      isOpen: isDisqusOpen,
+      onOpen: loadDisqus
+    } = useDisclosure()
+
     return {
       post,
-      disqus
+      disqus,
+      loadDisqus,
+      isDisqusOpen
     }
   }
 }
