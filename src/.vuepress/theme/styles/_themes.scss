@@ -25,6 +25,15 @@
   --border-color: var(--secondary);
   --bg-input: var(--bg);
 
+  
+  /* Code block */
+  --code-block: #f9f9f9;
+  --token: theme('colors.gray.800');
+  --token-keyword: #651fff;
+  --token-str: #651fff;
+  --token-fn: #d5004d;
+  --token-tag: #d5004d;
+
   // Font
   --rf-open-dyslexic: OpenDyslexic, sans-serif;
   --rf-monospace: Consolas, monospace, Courier;
@@ -54,6 +63,14 @@ html.mode-dark {
   --bg-custom-block-danger: var(--primary);
   --border-color-custom-block-danger: #ffc4bb;
 
+  /* Code block */
+  --code-block: #0e141b;
+  --token: theme('colors.gray.200');
+  --token-keyword: #00beff;
+  --token-str: #c6a3f4;
+  --token-fn: #ffdb10;
+  --token-tag: #FF39A8;
+
   // Color contrast
   body.set-color-contrast {
     --border-color: theme('colors.gray.700');
@@ -74,6 +91,14 @@ html.mode-sepia {
   --border-color-custom-block-tip: var(--accent);
   --bg-custom-block-warning: #f8e1bb;
   --border-color-custom-block-warning: theme('colors.yellow.600');
+
+  /* Code block */
+  --code-block: #0e141b;
+  --token: theme('colors.gray.200');
+  --token-keyword: #00beff;
+  --token-str: #c6a3f4;
+  --token-fn: #ffdb10;
+  --token-tag: #FF39A8;
 
   // Color contrast
   body.set-color-contrast {
