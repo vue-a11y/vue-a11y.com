@@ -124,7 +124,8 @@
       }
 
       pre code {
-        @apply text-base font-normal bg-transparent border-none;
+        @apply font-normal bg-transparent border-none;
+        font-size: inherit !important;
       }
     }
   }
