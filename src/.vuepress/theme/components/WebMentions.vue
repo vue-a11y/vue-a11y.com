@@ -49,7 +49,7 @@
             v-show="likes.length > avatarLimits"
             class="text-sm"
           >
-            +{{ likes.length - avatarLimits }} Gostaram disso
+            +{{ likes.length - avatarLimits }} like this.
           </span>
         </div>
       </div>
@@ -76,13 +76,13 @@
             <a
               :href="repost.author.url"
               :title="repost.author.name"
-              :aria-label="`Ir para o site do ${repost.author.name}`"
+              :aria-label="`${repost.author.name} website`"
               rel="nofollow"
             >
               <img
                 class="rounded-full"
                 :src="repost.author.photo"
-                :alt="`Avatar de ${repost.author.name}`"
+                :alt="`${repost.author.name} Avatar`"
               >
             </a>
           </li>
@@ -94,7 +94,7 @@
             v-show="reposts.length > avatarLimits"
             class="text-sm"
           >
-            +{{ reposts.length - avatarLimits }} Compartilharam
+            +{{ reposts.length - avatarLimits }} Shared
           </span>
         </div>
       </div>
@@ -102,7 +102,7 @@
 
     <div class="mt-24 webmentions-comments">
       <h3 class="mb-12 text-xl">
-        <span class="text-2xl font-bold">Comments <span class="text-accent-primary">.</span></span>
+        <span class="text-2xl font-bold">Comments<span class="text-accent-primary">.</span></span>
       </h3>
       <ul
         v-if="mentions.length"
@@ -129,7 +129,7 @@
               <a
                 :href="mention.author.url"
                 :title="mention.author.name"
-                :aria-label="`Ir para o site do ${mention.author.name}`"
+                :aria-label="`${mention.author.name} website`"
                 rel="nofollow"
                 itemprop="url"
               >
@@ -138,7 +138,7 @@
                   class="rounded-full"
                   itemprop="image"
                   :src="mention.author.photo"
-                  :alt="`Avatar de ${mention.author.name}`"
+                  :alt="`${mention.author.name} Avatar`"
                 >
               </a>
               <p
@@ -153,12 +153,12 @@
                 v-if="mention.content"
                 itemprop="text"
                 class="text-sm"
-                v-html="mention.content.html || mention.content.text"
+                v-html="htmlSanitize(mention.content.html || mention.content.text)"
               />
               <time
                 itemprop="datePublished"
                 :datetime="mention.published"
-                class="text-xs text-gray-600"
+                class="text-xs text-gray-700"
               >
                 {{ new Intl.DateTimeFormat('default', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(mention.published)) }}
               </time>
@@ -174,6 +174,7 @@
 import { ref, watch, computed, onBeforeMount } from '@vue/composition-api'
 
 import { useWindowSize } from '@/theme/composable'
+import lightSanitizeHTML from 'light-sanitize-html'
 
 export default {
   name: 'WebMentions',
@@ -231,11 +232,16 @@ export default {
       }
     }
 
+    function htmlSanitize (data) {
+      return lightSanitizeHTML(data)
+    }
+
     return {
       likes,
       reposts,
       mentions,
       webmentions,
+      htmlSanitize,
       avatarLimits
     }
   }
