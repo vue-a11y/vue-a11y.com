@@ -81,7 +81,7 @@
   }
 
   a:not(.header-anchor) {
-    @apply relative bg-primary inline-block;
+    @apply relative bg-primary inline-block px-1;
     text-decoration: underline;
     text-decoration-color: var(--accent);
 

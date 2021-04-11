@@ -17,6 +17,8 @@ meta:
 
 -------------------------
 
+This article is also available in: [Português](/pt/posts/vue-announcer/), [日本語](/jp/posts/vue-announcer/)
+
 ##  How Screen Readers work
 
 Screen readers are a form of assistive technology and capable of transforming content displayed on a screen into either speech or braille output. 
