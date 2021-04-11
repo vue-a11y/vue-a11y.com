@@ -5,7 +5,6 @@
     rel="noopener noreferrer"
   >
     <span class="mr-1">{{ label }}</span>
-    <span class="sr-only">({{ $themeLocaleConfig.externalLinkText }})</span>
     <OutboundLink />
   </a>
 </template>
