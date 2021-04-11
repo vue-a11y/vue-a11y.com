@@ -23,7 +23,7 @@
           class="w-full py-20 border-b border-solid bg-primary border-secondary"
           aria-labelledby="title-post"
         >
-          <div class="container max-w-2xl mx-auto">
+          <div class="container max-w-3xl mx-auto">
             <h1
               id="title-post"
               class="text-4xl font-bold"
@@ -58,7 +58,7 @@
           </div>
         </header>
 
-        <div class="container max-w-2xl mx-auto">
+        <div class="container max-w-3xl mx-auto">
           <p
             v-show="post.summary"
             class="mt-10 text-lg leading-9 post-page-summary"
