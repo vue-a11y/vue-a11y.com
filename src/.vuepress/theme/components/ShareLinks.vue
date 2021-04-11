@@ -1,8 +1,11 @@
 <template>
   <div class="page-page-share toc">
-    <span class="toc-title">
+    <h2
+      id="a-share-title"
+      class="toc-title"
+    >
       {{ $themeLocaleConfig.shareLinksText }}
-    </span>
+    </h2>
     <ul
       class="toc-list"
       :class="{ 'horizontal': horizontal }"
@@ -13,6 +16,8 @@
         class="toc-list-item"
       >
         <ExternalLink
+          :id="`a-share-link-${index}`"
+          :aria-labelledby="`a-share-title a-share-link-${index}`"
           :href="item.href"
           :label="item.label"
         />
