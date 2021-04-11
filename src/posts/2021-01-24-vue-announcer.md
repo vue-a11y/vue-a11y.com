@@ -81,7 +81,6 @@ import Vue from 'vue'
 import VueAnnouncer from '@vue-a11y/announcer'
 
 Vue.use(VueAnnouncer)
-
 ```
 
 If you use the Vue 3 version, the code is as follows:
@@ -94,7 +93,6 @@ import VueAnnouncer from '@vue-a11y/announcer'
 createApp(App)
   .use(VueAnnouncer)
   .mount('#app')
-
 ```
 
 The next step of actually using it is to add `<VueAnnouncer />` into your `App.vue`, for example like this:
@@ -102,11 +100,15 @@ The next step of actually using it is to add `<VueAnnouncer />` into your `App.v
 ```vue
 <template>
   <div>
-    <VueAnnouncer /> <!-- You can place it anywhere in your application. But you MUST add this custom element in order for vue-announcer to work -->
+    <VueAnnouncer />
     ...
   </div>
 </template>
 ```
+
+::: alert info
+`<VueAnnouncer />` You can place it anywhere in your application. But you MUST add this custom element in order for vue-announcer to work
+:::
 
 The third step is to send the actual announcements. [To quote the official documentation](https://vue-announcer-v2.surge.sh/guide/announcer.html#methods):
 
@@ -165,4 +167,4 @@ export default {
 ```
 ## Learn more
 
-So much for the basics. Vue Announcer's [official documentation](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) has extended information on triggering [announcements on route change](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) and also usage examples in conjunction with a ["vanilla" Vue App](https://vue-announcer-v2.surge.sh/demos/), [Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html) and [Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html).
+So much for the basics. Vue Announcer's [official documentation](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) has extended information on triggering announcements on route change and also usage examples in conjunction with a ["vanilla" Vue App](https://vue-announcer-v2.surge.sh/demos/), [Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html) and [Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html).

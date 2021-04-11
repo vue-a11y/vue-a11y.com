@@ -102,11 +102,15 @@ O próximo passo para realmente usá-lo é adicionar `<VueAnnouncer />` em seu `
 ```vue
 <template>
   <div>
-    <VueAnnouncer /> <!-- Você pode colocá-lo em qualquer lugar em seu aplicativo. Mas você DEVE adicionar este componente funcione -->
+    <VueAnnouncer />
     ...
   </div>
 </template>
 ```
+
+::: alert info
+`<VueAnnouncer />` Você pode colocá-lo em qualquer lugar em seu aplicativo. Mas você DEVE adicionar este componente funcione
+:::
 
 A terceira etapa é enviar os anúncios reais. [Para citar a documentação oficial](https://vue-announcer-v2.surge.sh/guide/announcer.html#methods):
 
@@ -168,4 +172,4 @@ export default {
 
 ## Saiba mais sobre o Vue Announcer
 
-Tanto para o básico. Vue Announcer [Documentação oficial](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) estendeu informações sobre o acionamento [anúncios sobre mudança de rota](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) e também exemplos de uso em conjunto com um ["vanilla" Vue App](https://vue-announcer-v2.surge.sh/demos/), [Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html) and [Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html).
+Tanto para o básico. Vue Announcer [Documentação oficial](https://vue-announcer-v2.surge.sh/guide/announcer-router.html) estendeu informações sobre o acionamento anúncios sobre mudança de rota e também exemplos de uso em conjunto com um ["vanilla" Vue App](https://vue-announcer-v2.surge.sh/demos/), [Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html) and [Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html).

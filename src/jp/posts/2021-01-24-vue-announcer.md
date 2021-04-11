@@ -73,11 +73,16 @@ createApp(App)
 ```vue
 <template>
   <div>
-    <VueAnnouncer /> <!-- アプリケーションのどこにでも配置することができます。しかし、vue-announcer を動作させるためには、このカスタム要素を追加しなければなりません。 -->
+    <VueAnnouncer />
     ...
   </div>
 </template>
 ```
+
+::: alert info
+`<VueAnnouncer />` アプリケーションのどこにでも配置することができます。しかし、vue-announcer を動作させるためには、このカスタム要素を追加しなければなりません。
+:::
+
 ３つ目のステップは、実際に通知を送ることです。[公式ドキュメントを引用すると](https://vue-announcer-v2.surge.sh/guide/announcer.html#methods)、
 
 :::: fig bq
@@ -134,4 +139,4 @@ export default {
 ## より学ぶために
 
 基本的なことはここまでです。
-Vue Announcer の[公式ドキュメント](https://vue-announcer-v2.surge.sh/guide/announcer-router.html)には、[ルート変更時のアナウンス](https://vue-announcer-v2.surge.sh/guide/announcer-router.html)のトリガーに関する拡張情報や、[「バニラな」Vue アプリケーション](https://vue-announcer-v2.surge.sh/demos/)、[Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html)、[Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html) と連携した使用例が掲載されています。
+Vue Announcer の[公式ドキュメント](https://vue-announcer-v2.surge.sh/guide/announcer-router.html)には、ルート変更時のアナウンス のトリガーに関する拡張情報や、[「バニラな」Vue アプリケーション](https://vue-announcer-v2.surge.sh/demos/)、[Nuxt.js](https://vue-announcer-v2.surge.sh/demos/nuxt.html)、[Vuepress](https://vue-announcer-v2.surge.sh/demos/vuepress.html) と連携した使用例が掲載されています。
