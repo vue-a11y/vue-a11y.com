@@ -42,7 +42,10 @@ WAI（W3C の Web Accessibility Initiative）が数年前に「ライブリー�
 
 ## Vue Announcer と出会う
 
-npm（`npm install -S @vue-a11y/announcer`）または yarn（`yarn add @vue-a11y/announcer`）でインストールできます。Vue 3 バージョンの場合は、プロジェクトの次のブランチを指定します。npm（`npm install -S @vue-a11y/announcer@next`）または yarn（`yarn add -D @vue-a11y/announcer@next`）。アプリに組み込むには、インポートしてVueプラグインとして登録します。とりあえず、Vue 2 の方法で表示してみましょう。
+npm（`npm install -S @vue-a11y/announcer`）または yarn（`yarn add @vue-a11y/announcer`）でインストールできます。Vue 3 バージョンの場合は、プロジェクトの次のブランチを指定します。npm（`npm install -S @vue-a11y/announcer@next`）または yarn（`yarn add -D @vue-a11y/announcer@next`）。
+
+アプリに組み込むには、インポートしてVueプラグインとして登録します。  
+とりあえず、Vue 2 の方法で表示してみましょう。
 
 ```js
 import Vue from 'vue'
@@ -84,9 +87,33 @@ createApp(App)
 ::::
 
 まとめると、`$announcer` は３つのメソッドがあります:
-- `set` を使用すると、アクセシブルな通知を送信できます。最初のパラメータはメッセージ自体で、２番目のパラメータはメッセージの丁寧さの設定です。具体例:       `this.$announcer.set('Could not save file', 'assertive')`.
-- `polite` は丁寧さの設定を polite として定義するための "set" メソッドのラッパーです: `this.$announcer.polite('Added item to your shopping cart')`.
-- `assertive` は丁寧さの設定を assertive として定義するための "set" メソッドのラッパーです: `this.$announcer.assertive('Could not save file')`.
+
+- <div style="display: inline">
+    <p><code>set</code> を使用すると、アクセシブルな通知を送信できます。最初のパラメータはメッセージ自体で、２番目のパラメータはメッセージの丁寧さの設定です。具体例:</p>
+    
+    ```js
+    this.$announcer.set('Could not save file', 'assertive')
+    ```
+
+  </div>
+
+- <div style="display: inline">
+    <p> <code>polite</code>  は丁寧さの設定を polite として定義するための "set" メソッドのラッパーです:</p>
+    
+    ```js
+    this.$announcer.polite('Added item to your shopping cart')
+    ```
+
+  </div>
+
+- <div style="display: inline">
+    <p> <code>assertive</code> は丁寧さの設定を assertive として定義するための "set" メソッドのラッパーです:</p>
+    
+    ```js
+    this.$announcer.assertive('Could not save file')
+    ```
+
+  </div>
 
 ::: alert tip
 Vue 3 バージョンの `vue-announcer` に関する注釈。プロジェクトの次のブランチでは、Composition API のコンテキストで使用するためのコンポジション可能な `useAnnouncer()` が提供されています。指定されたエクスポートは、`announce` (デフォルトは polite)、`assertive`、`polite`、そしてルート変更後の使用のための `setRouteComplement` です。詳細は[ライブラリの `next` ブランチの Readme.md](https://github.com/vue-a11y/vue-announcer/blob/next/README.md) を参照してください。

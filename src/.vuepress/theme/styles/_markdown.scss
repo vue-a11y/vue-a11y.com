@@ -122,10 +122,12 @@
         margin: 0;
         display: inline;
       }
+
+      pre code {
+        @apply text-base font-normal bg-transparent border-none;
+      }
     }
   }
-  
-
 
   ul {
     li:before {
