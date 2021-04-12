@@ -56,6 +56,7 @@ module.exports = [
       ]
     }
   ],
+  ['@vuepress/nprogress'],
   [
     // https://github.com/IOriens/vuepress-plugin-canonical
     'vuepress-plugin-canonical', {
