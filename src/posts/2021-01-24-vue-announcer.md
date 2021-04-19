@@ -31,7 +31,7 @@ When the virtual cursor is on an HTML node, its name, role and value will be rea
 
 ## The problem of asynchronous updates
 
-One characteristic of client-side rendered web-apps is their dynamic DOM. Parts of the doucment could and will get updated, added and removed. All of this in an elegant, smooth and asynchronous way, to delivery that reactive, "app-y" experience – but without a page reload. Alas, this causes a problem for screen reader users. 
+One characteristic of client-side rendered web-apps is their dynamic DOM. Parts of the document could and will get updated, added and removed. All of this happens in an elegant, smooth and asynchronous way – to deliver that reactive, "app-y" experience – but without a page reload. Alas, this causes a problem for screen reader users. 
 
 Imagine that they traversed to the last third of a document (their screen reader's virtual cursor is on a link in the footer section for example), and a part of the document's header gets updated. 
 
