@@ -12,10 +12,9 @@ module.exports = {
     {
       title: 'アクセシビリティ',
       children: [
-        ['基礎', 'https://v3.ja.vuejs.org/guide/a11y-basics.html'],
-        ['セマンティクス', 'https://v3.ja.vuejs.org/guide/a11y-semantics.html'],
-        ['標準', 'https://v3.ja.vuejs.org/guide/a11y-standards.html'],
-        ['リソース', 'https://v3.ja.vuejs.org/guide/a11y-resources.html'],
+        ['Vue.js ドキュメント', 'https://ja.vuejs.org/guide/best-practices/accessibility.html'],
+        ['標準規格', 'https://ja.vuejs.org/guide/best-practices/accessibility.html#%E6%A8%99%E6%BA%96%E8%A6%8F%E6%A0%BC'],
+        ['リソース', 'https://ja.vuejs.org/guide/best-practices/accessibility.html#%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9'],
         ['Awesome', 'https://github.com/vue-a11y/awesome-a11y-vue']
       ]
     }
